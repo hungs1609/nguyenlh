@@ -1,0 +1,101 @@
+\section{Phân tích hệ thống hiện tại}
+
+Chương này phân tích cấu trúc, luồng vận hành và các điểm nghẽn của hệ thống truyền thông hiện tại tại Trung tâm Công nghệ Giáo dục (daotao.ai). Bằng cách phân tích các thành phần cấu thành hệ thống và sơ đồ hóa hệ sinh thái, báo cáo sẽ chỉ rõ những điểm đứt gãy truyền thông dưới góc nhìn lý thuyết.
+
+\subsection{Xác định các bên tham gia}
+
+Hệ thống truyền thông của daotao.ai chịu sự tác động tương hỗ từ ba nhóm đối tượng chính với những đặc trưng hành vi và nhu cầu thông tin khác biệt:
+\begin{enumerate}
+    \item \textbf{Ban quản trị và chuyên viên vận hành trung tâm:} Là lực lượng chịu trách nhiệm đăng tải học liệu, xử lý kỹ thuật, giải đáp thắc mắc và báo cáo tiến độ. Chuyên viên đóng vai trò điều phối toàn bộ các luồng thông tin ra và vào hệ thống.
+    \item \textbf{Đối tác biên soạn là giảng viên Đại học Bách khoa Hà Nội:} Chịu trách nhiệm cung cấp nội dung bài giảng, slide và ngân hàng câu hỏi thi. Nhóm này yêu cầu các chỉ dẫn kỹ thuật chính xác để số hóa bài giảng đúng định dạng của hệ thống quản lý học tập.
+    \item \textbf{Người học nhận thông điệp:} Được chia thành 3 phân khúc:
+    \begin{itemize}
+        \item Sinh viên Đại học Bách khoa Hà Nội: Nhóm trẻ, có kỹ năng công nghệ tốt, tiếp thu nhanh và yêu cầu phản hồi nhanh chóng.
+        \item Học viên Đề án 06 gồm cán bộ công chức: Đối tượng trọng tâm của cải tiến. Đây là nhóm lớn tuổi, kỹ năng công nghệ còn hạn chế, dễ gặp khó khăn khi thao tác trên giao diện số. Xét theo thuyết khuếch tán đổi mới của Rogers \parencite{rogers2003}, đây là nhóm học viên thuộc phân khúc nhận thức muộn hoặc chậm thích ứng, đòi hỏi các tác vụ truyền thông phải được thiết kế tối giản để thúc đẩy việc thích ứng công nghệ mới.
+        \item Học viên tự do: Đa dạng về độ tuổi và trình độ, có tính tự chủ cao nhưng cần quy trình đăng ký đơn giản.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Kênh truyền thông, thông điệp và luồng truyền thông}
+
+\subsubsection{Cấu trúc kênh giao tiếp}
+\begin{itemize}
+    \item Giao tiếp nội bộ và đối tác: Sử dụng nhóm chat Zalo làm kênh trao đổi chính, kết hợp họp trực tiếp đối với các vấn đề triển khai lớn.
+    \item Giao tiếp với người học: Triển khai qua ba kênh tiếp nhận gồm Facebook Fanpage để tiếp cận chung, Zalo làm kênh nhắn tin trực tiếp và biểu mẫu hỗ trợ tích hợp trên website daotao.ai.
+\end{itemize}
+
+\subsubsection{Phân loại các nhóm thông điệp}
+\begin{itemize}
+    \item Thông điệp chỉ thị: Hướng dẫn học viên đăng ký, kích hoạt tài khoản và nộp bài thi.
+    \item Thông điệp phối hợp: Chuyên viên gửi giảng viên các yêu cầu kỹ thuật biên soạn học liệu như định dạng học liệu chuẩn SCORM, độ phân giải video, cấu trúc câu hỏi trắc nghiệm.
+    \item Thông điệp báo cáo: Báo cáo tiến độ học tập gửi Ban giám đốc và các cơ quan cử cán bộ đi học.
+    \item Thông điệp hỗ trợ: Giải đáp thắc mắc về lỗi đăng nhập, lỗi hệ thống, vị trí chức năng trên website.
+\end{itemize}
+
+\subsection{Sơ đồ hệ sinh thái truyền thông hiện tại}
+
+Sơ đồ dưới đây mô tả luồng truyền đạt thông tin hiện tại và chỉ ra các điểm nhiễu đang cản trở hiệu suất hệ thống:
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=1.8cm,
+    block/.style={rectangle, draw, fill=blue!10, text width=2.6cm, text centered, rounded corners, minimum height=1cm, font=\fontsize{9}{11}\selectfont},
+    actor/.style={rectangle, draw, fill=green!10, text width=3cm, text centered, rounded corners, minimum height=1cm, font=\fontsize{9}{11}\selectfont},
+    noise/.style={rectangle, draw, dashed, fill=red!10, text width=3cm, text centered, rounded corners, minimum height=1cm, font=\fontsize{8}{10}\selectfont},
+    arrow/.style={draw, <->, >=stealth, thick},
+    oneway/.style={draw, ->, >=stealth, thick},
+    dashedarrow/.style={draw, ->, >=stealth, dashed, red, thick}
+]
+
+% Nodes
+\node (GV) [actor] {Giảng viên\\(Biên soạn học liệu)};
+\node (EdTech) [actor, right of=GV, node distance=5.5cm] {Chuyên viên\\Trung tâm Công nghệ GD};
+\node (HV) [actor, below of=EdTech, node distance=4.5cm, xshift=-2.75cm] {Học viên\\(Đề án 06 / Sinh viên)};
+
+% System Channels
+\node (Email) [block, below of=EdTech, node distance=2.2cm, xshift=-3.9cm] {Email Hướng dẫn / Thông báo};
+\node (FB) [block, below of=EdTech, node distance=2.2cm, xshift=-1.3cm] {Facebook Fanpage};
+\node (Form) [block, below of=EdTech, node distance=2.2cm, xshift=1.3cm] {Biểu mẫu Web};
+\node (Zalo) [block, below of=EdTech, node distance=2.2cm, xshift=3.9cm] {Nhắn tin Zalo OA};
+
+% Arrows
+\draw [arrow] (GV) -- (EdTech) node[midway, above, text width=2.5cm, text centered, font=\fontsize{8}{10}\selectfont] {Nhóm chat Zalo\\(Nhiễu: Trôi tin)};
+\draw [oneway] (EdTech) -- (Email);
+\draw [oneway] (EdTech) -- (FB);
+\draw [oneway] (Email) -- (HV);
+\draw [oneway] (FB) -- (HV);
+\draw [oneway] (HV) -- (Form);
+\draw [oneway] (HV) -- (Zalo);
+\draw [oneway] (Form) -- (EdTech);
+\draw [oneway] (Zalo) -- (EdTech);
+
+% Noises
+\node (N1) [noise, left of=GV, node distance=3.2cm] {Nhiễu vật lý: Tin nhắn trôi khiến GV nhận sai thông số};
+\node (N2) [noise, below of=HV, node distance=2.5cm] {Nhiễu kỹ thuật: Lỗi đăng nhập, ẩn nút đăng ký};
+\node (N3) [noise, right of=EdTech, node distance=3.2cm] {Nhiễu tương tác: Chậm phản hồi do thủ công};
+\node (N4) [noise, below of=GV, node distance=2.5cm] {Nhiễu ngữ nghĩa: Hướng dẫn quá nhiều chữ kỹ thuật};
+
+\draw [dashedarrow] (N1) -- (GV);
+\draw [dashedarrow] (N2) -- (HV);
+\draw [dashedarrow] (N3) -- (EdTech);
+\draw [dashedarrow] (N4) -- (HV);
+
+\end{tikzpicture}
+\caption{Sơ đồ hệ sinh thái truyền thông hiện tại của daotao.ai}
+\label{fig:ecosystem_current}
+\end{figure}
+
+\subsection{Phân tích các điểm nhiễu và bất cập thực tế}
+
+\subsubsection{Nhiễu vật lý trong giao tiếp nội bộ}
+Việc sử dụng nhóm chat Zalo làm kênh truyền thông phối hợp kỹ thuật chính phát sinh hiện tượng quá tải thông tin. Các thông điệp chỉ số kỹ thuật phức tạp như độ phân giải video, định dạng nén, học liệu chuẩn SCORM dễ bị trôi và biến dạng giữa nhiều tin nhắn thảo luận hàng ngày. Theo mô hình Shannon–Weaver \parencite{shannon1949}, đây là loại nhiễu vật lý tác động trực tiếp vào kênh truyền, khiến giảng viên giải mã sai thông số, dẫn đến việc thiết kế học liệu bị lỗi khi tải lên hệ thống quản lý học tập, buộc phải thực hiện lại nhiều lần.
+
+\subsubsection{Đứt gãy vòng phản hồi do quá tải hỗ trợ thủ công}
+Khi số lượng học viên tăng vọt, đặc biệt trong các đợt bồi dưỡng Đề án 06 với nhiều học viên truy cập cùng lúc, hệ thống hỗ trợ qua biểu mẫu web và Zalo rơi vào trạng thái quá tải. Do chuyên viên phải xử lý thủ công từng yêu cầu, thời gian phản hồi trung bình bị kéo dài từ 1 đến 3 tiếng. Dưới góc nhìn của mô hình giao dịch \parencite{barnlund2008}, sự chậm trễ này đã làm đứt gãy vòng phản hồi. Học viên không nhận được tương tác kịp thời khi gặp lỗi kỹ thuật, dẫn đến tâm lý lo lắng, mất kiên nhẫn và tỷ lệ dừng học giữa chừng tăng lên.
+
+\subsubsection{Sự lệch pha về trường kinh nghiệm công nghệ}
+Đối tượng học viên lớn tuổi thuộc Đề án 06 có trường kinh nghiệm công nghệ hạn chế. Họ gặp khó khăn trong việc tự xử lý lỗi đăng nhập hoặc tìm kiếm nút đăng ký khóa học. Các tài liệu hướng dẫn hiện tại do chuyên viên soạn thảo đang bị lệch pha vì chứa nhiều thuật ngữ kỹ thuật phức tạp như xóa bộ nhớ đệm trình duyệt, chuyển chế độ trình duyệt. Học viên không thể giải mã được thông điệp, khiến các tài liệu hướng dẫn trở nên không hiệu quả.
+
+\subsubsection{Tải nhận thức ngoại lai quá lớn từ thiết kế giao diện và thông điệp}
+Giao diện hiện tại của daotao.ai chưa tối ưu, nút đăng ký khóa học được đặt ở vị trí khuất, đòi hỏi học viên phải cuộn trang nhiều lần. Bên cạnh đó, email hướng dẫn kích hoạt tài khoản có mật độ chữ quá dày và thiếu điểm nhấn thị giác. Theo thuyết tải nhận thức \parencite{sweller1988}, các yếu tố này áp đặt một lượng tải nhận thức ngoại lai lớn lên học viên lớn tuổi. Bộ nhớ làm việc của họ bị quá tải để tìm hiểu cách đăng nhập và vị trí nút học, không còn dung lượng nhận thức cho việc tiếp thu nội dung học tập.

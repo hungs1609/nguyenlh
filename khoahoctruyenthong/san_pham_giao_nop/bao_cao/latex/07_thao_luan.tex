@@ -1,0 +1,28 @@
+\section{Thảo luận}
+
+Các kết quả thực nghiệm thu được cung cấp những dữ liệu để phân tích về cơ chế tác động của các giải pháp cải tiến, đồng thời nhận diện các giới hạn và khả năng nhân rộng mô hình trong bối cảnh đào tạo trực tuyến.
+
+\subsection{Đánh giá cơ chế tác động của giải pháp dựa trên lý thuyết}
+
+Sự cải thiện của các chỉ số hiệu suất có thể được giải thích thông qua sự tương thích giữa thiết kế giải pháp và các lý thuyết truyền thông:
+\begin{itemize}
+    \item \textbf{Tối ưu hóa phản hồi theo mô hình tương tác:} Chatbot tích hợp trên website đã khôi phục vòng phản hồi tức thì \parencite{barnlund2008}. Việc phản hồi nhanh chóng giúp người học duy trì trạng thái tương tác với hệ thống. Sự tức thời này tạo ra cảm giác được hỗ trợ, giảm thiểu sự bối rối về mặt kỹ thuật, qua đó cải thiện số học viên hoàn thành bài kiểm tra đúng hạn lên 84\% (so với 70\% của nhóm đối chứng).
+    \item \textbf{Giảm tải nhận thức dựa trên thuyết tải nhận thức:} Thiết kế trực quan của mẫu email mới đã loại bỏ các thông tin kỹ thuật không liên quan, đưa ra chỉ dẫn thị giác rõ ràng cho 3 bước thao tác cốt lõi. Việc này giúp giảm tải nhận thức ngoại lai xuống mức thấp, giúp học viên lớn tuổi giải phóng dung lượng bộ nhớ làm việc \parencite{sweller1988}. Nhờ đó, họ có thể giải mã thông điệp và tự đăng nhập thành công ngay trong ngày đầu tiên đạt tỷ lệ 90\% (so với 64\% của nhóm đối chứng).
+    \item \textbf{Chuẩn hóa thông điệp nội bộ theo mô hình Shannon-Weaver:} Việc chuyển đổi từ nhắn tin Zalo sang bảng Kanban quản trị công việc và áp dụng Coordination Template giúp giảm thiểu nhiễu vật lý do trôi tin và nhiễu ngữ nghĩa do hiểu sai thông số \parencite{shannon1949}. Thông tin truyền đi giữa chuyên viên và giảng viên được mã hóa rõ ràng, có quy trình duyệt cụ thể, bảo đảm học liệu tải lên hệ thống quản lý học tập đạt yêu cầu ngay từ đầu.
+\end{itemize}
+
+\subsection{Khả năng nhân rộng và tổng quát hóa giải pháp}
+
+Hệ thống chatbot tích hợp website và bộ mẫu email trực quan được thiết kế theo hướng module hóa, cho phép nhân rộng:
+\begin{itemize}
+    \item \textbf{Về mặt kỹ thuật:} Kịch bản chatbot và các khung email được chuẩn hóa, có thể cấu hình lại bộ dữ liệu huấn luyện để áp dụng cho các khóa học trực tuyến đại trà khác trên nền tảng daotao.ai mà không cần thiết kế lại từ đầu.
+    \item \textbf{Về mặt vận hành:} Quy trình Kanban nội bộ giúp xây dựng một văn hóa giao tiếp chuẩn hóa, có thể áp dụng cho các dự án đào tạo trực tuyến khác của trung tâm nhằm giảm thiểu sai sót kỹ thuật.
+\end{itemize}
+
+\subsection{Các phát hiện ngoài dự kiến và giới hạn của giải pháp}
+
+Quá trình thử nghiệm bộc lộ một số khía cạnh thực tế bổ sung cho nghiên cứu:
+\begin{itemize}
+    \item \textbf{Nhu cầu hiện diện xã hội:} Khoảng 15\% học viên, phần lớn là cán bộ lớn tuổi, vẫn có xu hướng bỏ qua chatbot để yêu cầu được gọi điện thoại trực tiếp. Điều này cho thấy đối với nhóm người dùng có kỹ năng công nghệ còn hạn chế, họ có nhu cầu giao tiếp trực tiếp với con người. Giọng nói và sự hỗ trợ trực tiếp mang lại cho họ cảm giác an tâm hơn là tương tác với hệ thống tự động, thể hiện lý thuyết về sự hiện diện xã hội trong cộng đồng học tập trực tuyến của Garrison và các cộng sự \parencite{garrison1999}.
+    \item \textbf{Ý nghĩa thiết kế:} Phát hiện này chỉ ra chatbot không thể thay thế hoàn toàn con người. Hệ thống truyền thông tối ưu cần là một hệ thống hỗ trợ lai, trong đó chatbot tự động hóa các tác vụ lặp lại để giải phóng khối lượng công việc, giúp chuyên viên có thời gian tập trung hỗ trợ chuyên sâu và cá nhân hóa qua Zalo cho các học viên gặp khó khăn về công nghệ.
+\end{itemize}

@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage[T5]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage[fontsize=13pt]{scrextend}
+\usepackage{mathptmx}
+\usepackage[top=2.5cm,bottom=2.5cm,left=3.5cm,right=2.0cm]{geometry}
+\usepackage{setspace}
+\setstretch{1.5}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\title{\textbf{Sơ đồ hệ sinh thái truyền thông - Nền tảng daotao.ai}}
+\author{\textbf{Học phần:} Khoa học truyền thông}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+Tài liệu này tổng hợp các sơ đồ hệ sinh thái truyền thông của nền tảng daotao.ai tại Trung tâm Công nghệ Giáo dục (Đại học Bách khoa Hà Nội) trước và sau cải tiến, kèm theo giải thích chi tiết.
+
+\section*{1. Sơ đồ hệ sinh thái truyền thông hiện tại}
+
+Sơ đồ này mô tả các luồng thông tin và các tác nhân tham gia vào hệ thống truyền thông hỗ trợ học tập trước khi cải tiến, chỉ rõ các loại nhiễu kỹ thuật và vật lý gây gián đoạn:
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\linewidth]{so_do_he_sinh_thai_hien_tai.png}
+\caption{Sơ đồ hệ sinh thái truyền thông hiện tại của daotao.ai}
+\label{fig:ecosystem_current}
+\end{figure}
+
+\subsection*{Giải thích các điểm nhiễu hiện tại:}
+\begin{enumerate}
+    \item \textbf{Nhiễu vật lý:} Việc trao đổi thông số kỹ thuật học liệu như định dạng nén video, chuẩn SCORM trên nhóm chat Zalo chung bị trôi tin nhắn nhanh, dẫn đến giảng viên hiểu sai thông số kỹ thuật và thiết kế học liệu bị lỗi khi đẩy lên hệ thống.
+    \item \textbf{Nhiễu kỹ thuật:} Giao diện daotao.ai che khuất nút đăng ký khóa học và lỗi đăng nhập thường gặp hoạt động như các tác nhân nhiễu kỹ thuật ngăn cản học viên tiếp cận bài học.
+    \item \textbf{Nhiễu tương tác:} Việc xử lý phản hồi thủ công qua nhắn tin Zalo và biểu mẫu web mất nhiều thời gian, làm gián đoạn vòng phản hồi tức thì, khiến học viên dễ bỏ cuộc.
+    \item \textbf{Nhiễu ngữ nghĩa:} Các email hướng dẫn sử dụng thuật ngữ chuyên môn gây quá tải nhận thức ngoại lai đối với học viên Đề án 06 lớn tuổi có kỹ năng công nghệ hạn chế.
+\end{enumerate}
+
+\newpage
+
+\section*{2. Sơ đồ hệ sinh thái truyền thông đề xuất}
+
+Sơ đồ này mô tả hệ sinh thái truyền thông tích hợp mới, ứng dụng mô hình hỗ trợ lai lấy người học làm trung tâm:
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\linewidth]{so_do_he_sinh_thai_de_xuat.png}
+\caption{Sơ đồ hệ sinh thái truyền thông đề xuất của daotao.ai}
+\label{fig:ecosystem_proposed}
+\end{figure}
+
+\subsection*{Giải thích các cải tiến đề xuất:}
+\begin{enumerate}
+    \item \textbf{Chuẩn hóa nội bộ:} Sử dụng bảng quản trị công việc Kanban và mẫu yêu cầu kỹ thuật chuẩn hóa để hạn chế hiện tượng trôi tin nhắn và thiết kế sai học liệu.
+    \item \textbf{Tầng tự động hóa:} Chatbot tự động đặt trực tiếp trên giao diện website daotao.ai phản hồi ngay lập tức, giải quyết tự động phần lớn các sự cố kỹ thuật thông thường để khôi phục vòng phản hồi nhanh.
+    \item \textbf{Bộ lọc hỗ trợ lai:} Chatbot tự động đóng vai trò là tầng lọc đầu tiên. Các ca lỗi phức tạp hoặc học viên có nhu cầu tương tác con người cao sẽ được chuyên viên trực tiếp giải quyết thủ công.
+    \item \textbf{Giảm tải nhận thức:} Mẫu email hướng dẫn kích hoạt tài khoản được tinh giản cấu trúc thông tin theo thuyết tải nhận thức giúp học viên dễ dàng thực hiện hành vi kích hoạt thành công ngay trong ngày đầu tiên.
+\end{enumerate}
+
+\end{document}

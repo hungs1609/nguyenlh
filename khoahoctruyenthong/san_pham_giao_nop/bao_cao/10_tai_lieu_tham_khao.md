@@ -1,6 +1,6 @@
-# 10. Tài liệu tham khảo (References)
+# 10. Tài liệu tham khảo
 
-Danh mục tài liệu tham khảo được trình bày theo chuẩn APA (7th edition):
+Danh mục tài liệu tham khảo được trình bày theo chuẩn APA 7:
 
 1.  Barnlund, D. C. (2008). A transactional model of communication. In C. D. Mortensen (Ed.), *Communication theory* (2nd ed., pp. 47-57). Transaction Publishers.
 2.  Daft, R. L., & Lengel, R. H. (1986). Organizational information requirements, media richness and structural design. *Management Science*, 32(5), 554-571. https://doi.org/10.1287/mnsc.32.5.554

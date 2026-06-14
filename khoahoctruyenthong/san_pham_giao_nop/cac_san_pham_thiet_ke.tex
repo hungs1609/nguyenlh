@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+\usepackage[T5]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage[fontsize=13pt]{scrextend}
+\usepackage{mathptmx}
+\usepackage[top=2.5cm,bottom=2.5cm,left=3.5cm,right=2.0cm]{geometry}
+\usepackage{setspace}
+\setstretch{1.5}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\title{\textbf{Các sản phẩm thiết kế truyền thông cải tiến}}
+\author{\textbf{Học phần:} Khoa học truyền thông}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+Tài liệu này trình bày chi tiết nội dung, cấu trúc và quy trình của ba sản phẩm cải tiến truyền thông được đề xuất áp dụng tại Trung tâm Công nghệ Giáo dục (daotao.ai), Đại học Bách khoa Hà Nội.
+
+\section*{1. Tích hợp chatbot tự động trên website daotao.ai}
+
+Hệ thống chatbot tương tác được đặt trực tiếp ở góc phải giao diện website daotao.ai nhằm phản hồi lập tức các lỗi kỹ thuật lặp lại phổ biến nhất của học viên.
+
+\subsection*{1.1. Kịch bản phân nhánh của chatbot}
+
+Chatbot được lập trình phân luồng xử lý thông tin dựa trên các nhóm câu hỏi lặp lại phổ biến nhất của học viên:
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\linewidth]{phan_nhanh_chatbot.png}
+\caption{Sơ đồ luồng phân nhánh hội thoại của chatbot}
+\label{fig:chatbot_flow}
+\end{figure}
+
+\subsection*{1.2. Kịch bản hội thoại mẫu}
+
+\begin{itemize}
+    \item \textbf{Học viên:} ``Chào ban hỗ trợ, tôi tham gia lớp bồi dưỡng Đề án 06 của địa phương nhưng không đăng nhập được.''
+    \item \textbf{Chatbot (Phản hồi sau 1 giây):}
+    \begin{quote}
+        ``Xin chào Anh/Chị! Để hỗ trợ đăng nhập nhanh nhất vào lớp học Chuyển đổi số (Đề án 06), vui lòng thực hiện theo hướng dẫn:
+        \begin{itemize}
+            \item \textbf{Tên đăng nhập (Username):} Nhập chính xác số căn cước công dân (12 chữ số) của Anh/Chị.
+            \item \textbf{Mật khẩu mặc định:} \texttt{Daotao@123} (Lưu ý chữ D viết hoa, không có khoảng cách).
+        \end{itemize}
+        Nếu hệ thống báo lỗi 'Tài khoản không tồn tại', rất có thể số căn cước công dân trong danh sách đăng ký ban đầu từ đơn vị của Anh/Chị bị sai lệch. Anh/Chị vui lòng bấm vào nút \textbf{Yêu cầu đối soát CCCD} ngay bên dưới để chuyên viên kiểm tra và sửa đổi thông tin cho Anh/Chị nhé!''
+    \end{quote}
+\end{itemize}
+
+\newpage
+
+\section*{2. Mẫu email hướng dẫn trực quan}
+
+Mẫu email hướng dẫn kích hoạt tài khoản được thiết kế lại nhằm tối thiểu hóa tải nhận thức ngoại lai thông qua cấu trúc thông tin đơn giản, trực quan và có chỉ dẫn thị giác.
+
+\begin{itemize}
+    \item \textbf{Tiêu đề Email:} \texttt{[daotao.ai] Hướng dẫn kích hoạt tài khoản học tập Đề án 06 (Chỉ với 3 bước)}
+    \item \textbf{Bản phác thảo cấu trúc giao diện Email:}
+\end{itemize}
+
+\begingroup
+\fontsize{10}{12}\selectfont
+\begin{verbatim}
++-------------------------------------------------------------+
+|  [Logo Bách khoa Hà Nội - Trung tâm Công nghệ Giáo dục]     |
++-------------------------------------------------------------+
+|  Chào anh/chi [Tên học viên],                               |
+|  Chúc mừng anh/chị đã tham gia lớp bồi dưỡng Đề án 06.      |
+|  Để bắt đầu học tập ngay, anh/chị chỉ cần hoàn thành 3 bước:|
+|                                                             |
+|  [BƯỚC 1: NHẬN THÔNG TIN ĐĂNG NHẬP]                         |
+|  * Tài khoản: [Địa chỉ email của học viên]                  |
+|  * Mật khẩu tạm thời: [Mật khẩu ngẫu nhiên]                 |
+|                                                             |
+|  [BƯỚC 2: TRUY CẬP WEBSITE]                                 |
+|  * Anh/chị bấm vào nút lớn bên dưới để mở trang học:        |
+|    =========================================                |
+|    ||        NÚT: TRUY CẬP TRANG HỌC TẬP      || (Màu cam)  |
+|    =========================================                |
+|                                                             |
+|  [BƯỚC 3: ĐỔI MẬT KHẨU MỚI]                                 |
+|  * Nhập mật khẩu tạm thời ở trên, sau đó hệ thống sẽ tự động|
+|    hiện ra ô nhập mật khẩu mới.                             |
+|                                                             |
+|  * Lưu ý: Nếu gặp bất kỳ khó khăn nào, anh/chị chỉ cần bấm  |
+|    vào biểu tượng Chatbox ở góc dưới bên phải màn hình      |
+|    daotao.ai để được hỗ trợ tự động 24/7.                   |
++-------------------------------------------------------------+
+\end{verbatim}
+\endgroup
+
+\newpage
+
+\section*{3. Quy trình truyền thông nội bộ}
+
+Quy trình giao tiếp nội bộ nhằm giảm thiểu hiện tượng trôi tin nhắn và hiểu sai thông số kỹ thuật bài giảng khi làm việc với giảng viên.
+
+\subsection*{3.1. Chuyển đổi công cụ quản trị}
+Thay thế việc trao đổi yêu cầu qua nhóm chat Zalo bằng bảng quản trị công việc Kanban dùng chung, phân quyền rõ ràng theo trạng thái: Cần làm $\rightarrow$ Đang làm $\rightarrow$ Rà soát kỹ thuật $\rightarrow$ Đã duyệt.
+
+\subsection*{3.2. Mẫu phối hợp yêu cầu kỹ thuật}
+Mọi yêu cầu bàn giao học liệu từ giảng viên hoặc chuyên viên phải điền đầy đủ các trường thông tin cố định sau:
+
+\begin{table}[htbp]
+\centering
+\fontsize{11}{14}\selectfont
+\begin{tabular}{|p{5.5cm}|p{8.5cm}|}
+\hline
+\textbf{Trường thông tin} & \textbf{Nội dung chi tiết cần nhập} \\ \hline
+Mã \& Tên khóa học & Ví dụ: Đề án 06 - Lớp Chuyển đổi số cấp xã \\ \hline
+Tên bài giảng số hóa & Ví dụ: Bài 3 - Mô hình Truyền thông \\ \hline
+Định dạng bàn giao & Bắt buộc chọn: Học liệu chuẩn SCORM 2004 hoặc Video MP4 nén H.264 \\ \hline
+Độ phân giải video & Bắt buộc chọn: 1080p (1920x1080) \\ \hline
+Người gửi yêu cầu & Tên giảng viên hoặc chuyên viên gửi \\ \hline
+Người duyệt chất lượng & Tên chuyên viên kiểm soát chất lượng của trung tâm \\ \hline
+Ghi chú kỹ thuật & Các lưu ý về âm thanh hoặc thời lượng \\ \hline
+\end{tabular}
+\caption{Mẫu phối hợp yêu cầu kỹ thuật}
+\label{tab:collab_spec}
+\end{table}
+
+\subsection*{3.3. Quy trình phê duyệt}
+\begin{enumerate}
+    \item \textbf{Bước 1 (Gửi yêu cầu):} Giảng viên tải học liệu lên thư mục dùng chung và cập nhật thẻ công việc trên bảng quản trị kèm biểu mẫu phối hợp yêu cầu kỹ thuật.
+    \item \textbf{Bước 2 (Kiểm duyệt):} Chuyên viên kiểm tra học liệu trên hệ thống chạy thử.
+    \item \textbf{Bước 3 (Duyệt hoặc yêu cầu sửa):} 
+    \begin{itemize}
+        \item Nếu lỗi: Thẻ chuyển về cột ``Cần làm'' kèm ghi nhận lỗi cụ thể, không thông báo qua nhóm chat Zalo.
+        \item Nếu đạt: Thẻ chuyển sang ``Đã duyệt'' và chuyên viên tiến hành đẩy lên website daotao.ai chính thức.
+    \end{itemize}
+\end{enumerate}
+
+\end{document}

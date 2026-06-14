@@ -1,0 +1,129 @@
+\section*{11. Phụ lục}
+\addcontentsline{toc}{section}{11. Phụ lục}
+
+\subsection*{Phụ lục A. Sơ đồ hệ sinh thái truyền thông đề xuất tại daotao.ai}
+
+Dưới đây là sơ đồ chi tiết biểu diễn luồng truyền thông hỗ trợ học viên đa kênh sau cải tiến, minh họa cho mô hình hỗ trợ lai kết hợp chatbot tự động và chuyên viên hỗ trợ trực tiếp:
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=1.5cm,
+    block/.style={rectangle, draw, fill=blue!10, text width=3.5cm, text centered, rounded corners, minimum height=0.8cm, font=\fontsize{9}{11}\selectfont},
+    decision/.style={diamond, draw, fill=orange!10, text width=2.2cm, text centered, minimum height=0.8cm, font=\fontsize{8}{10}\selectfont},
+    arrow/.style={draw, ->, >=stealth, thick}
+]
+
+% Nodes
+\node (A) [block] {Học viên gặp lỗi kỹ thuật};
+\node (B) [decision, below of=A, node distance=1.6cm] {Kênh tiếp nhận?};
+\node (C) [block, below of=B, node distance=2cm, xshift=-2.5cm] {Chatbot trợ giúp tự động};
+\node (D) [block, below of=B, node distance=2cm, xshift=2.5cm] {Chuyên viên trung tâm};
+
+\node (E) [decision, below of=C, node distance=2cm] {Tự phân loại lỗi?};
+\node (F) [block, below of=E, node distance=2.2cm, xshift=-1.8cm] {Chatbot tự động hướng dẫn};
+\node (G) [block, below of=E, node distance=2.2cm, xshift=1.8cm] {Chuyển tiếp Zalo/Fanpage};
+
+\node (H) [decision, below of=F, node distance=2.2cm] {Học viên phản hồi?};
+\node (I) [block, below of=H, node distance=2cm] {Đóng yêu cầu hỗ trợ};
+
+\node (J) [block, below of=D, node distance=4.5cm] {Hỗ trợ trực tiếp / Gọi điện};
+
+% Arrows
+\draw [arrow] (A) -- (B);
+\draw [arrow] (B) -- node[left, font=\fontsize{8}{10}\selectfont, text width=1.5cm, text centered] {Truy cập Website} (C);
+\draw [arrow] (B) -- node[right, font=\fontsize{8}{10}\selectfont, text width=1.5cm, text centered] {Biểu mẫu/Zalo} (D);
+\draw [arrow] (C) -- (E);
+\draw [arrow] (E) -- node[left, font=\fontsize{8}{10}\selectfont] {Lỗi thường gặp} (F);
+\draw [arrow] (E) -- node[right, font=\fontsize{8}{10}\selectfont] {Lỗi phức tạp} (G);
+\draw [arrow] (F) -- (H);
+\draw [arrow] (H) -- node[left, font=\fontsize{8}{10}\selectfont] {Đã xong} (I);
+\draw [arrow] (H) -| node[above, pos=0.2, font=\fontsize{8}{10}\selectfont] {Chưa xong} (G);
+\draw [arrow] (G) -- (D);
+\draw [arrow] (D) -- (J);
+\draw [arrow] (J) |- (I);
+
+\end{tikzpicture}
+\caption{Quy trình hỗ trợ học viên đa kênh (mô hình lai chatbot và con người)}
+\label{fig:support_workflow}
+\end{figure}
+
+\newpage
+
+\subsection*{Phụ lục B. Kịch bản hội thoại phân nhánh chi tiết của chatbot trên website}
+
+Mô tả luồng kịch bản hội thoại của chatbot khi tiếp cận học viên gặp sự cố đăng nhập trên daotao.ai:
+
+\begingroup
+\fontsize{9}{11}\selectfont
+\begin{verbatim}
+[Hệ thống]: Chào mừng bạn đến với daotao.ai! Tôi là Trợ lý ảo hỗ trợ học tập.
+            Tôi có thể giúp gì cho bạn?
+  +- [Lựa chọn 1: Tôi không đăng nhập được tài khoản]
+  |   +- [Hệ thống]: Bạn đang đăng nhập bằng phương thức nào?
+  |       +- [Lựa chọn 1.1: Đăng nhập bằng tài khoản email Bách khoa]
+  |       |   +- [Hệ thống]: Đối với sinh viên, vui lòng sử dụng tài khoản email 
+  |       |                 trường qua cổng đăng nhập tập trung.
+  |       |       +- [Hệ thống]: Bạn đã đăng nhập được chưa? (Có / Chưa)
+  |       +- [Lựa chọn 1.2: Đăng nhập bằng tài khoản Đề án 06]
+  |           +- [Hệ thống]: Bạn có nhận được mã kích hoạt tài khoản không?
+  |               +- [Có]: Nhập mã vào ô kích hoạt. Hướng dẫn: [Xem tại đây]
+  |               +- [Không]: Hãy cung cấp địa chỉ email để tôi kiểm tra.
+  +- [Lựa chọn 2: Tôi muốn đăng ký khóa học mới]
+      +- [Hệ thống]: Bạn hãy di chuột lên góc phải màn hình, bấm vào nút màu 
+                    cam "ĐĂNG KÝ NGAY". Hướng dẫn tại đây: [Xem tại đây]
+\end{verbatim}
+\endgroup
+
+\subsection*{Phụ lục C. Bản phác thảo cấu trúc email hướng dẫn kích hoạt tài khoản tối giản}
+
+Bản phác thảo mẫu thư điện tử mới được thiết kế nhằm tối thiểu hóa tải nhận thức ngoại lai:
+
+\begingroup
+\fontsize{10}{12}\selectfont
+\begin{verbatim}
++-------------------------------------------------------------+
+|  [Logo Bách khoa Hà Nội - Trung tâm Công nghệ Giáo dục]     |
++-------------------------------------------------------------+
+|  Chào anh/chi [Tên học viên],                               |
+|  Chúc mừng anh/chị đã tham gia lớp bồi dưỡng Đề án 06.      |
+|  Để bắt đầu học tập ngay, anh/chị chỉ cần hoàn thành 3 bước:|
+|                                                             |
+|  [BƯỚC 1: NHẬN THÔNG TIN ĐĂNG NHẬP]                         |
+|  * Tài khoản: [Địa chỉ email của học viên]                  |
+|  * Mật khẩu tạm thời: [Mật khẩu ngẫu nhiên]                 |
+|                                                             |
+|  [BƯỚC 2: TRUY CẬP WEBSITE]                                 |
+|  * Anh/chị bấm vào nút lớn bên dưới để mở trang học:        |
+|    =========================================                |
+|    ||        NÚT: TRUY CẬP TRANG HỌC TẬP      || (Màu cam)  |
+|    =========================================                |
+|                                                             |
+|  [BƯỚC 3: ĐỔI MẬT KHẨU MỚI]                                 |
+|  * Nhập mật khẩu tạm thời ở trên, sau đó hệ thống sẽ tự động|
+|    hiện ra ô nhập mật khẩu mới.                             |
+|                                                             |
+|  * Lưu ý: Nếu gặp bất kỳ khó khăn nào, anh/chị chỉ cần bấm  |
+|    vào biểu tượng Chatbox ở góc dưới bên phải màn hình      |
+|    daotao.ai để được hỗ trợ tự động 24/7.                   |
++-------------------------------------------------------------+
+\end{verbatim}
+\endgroup
+
+\subsection*{Phụ lục D. Dữ liệu khảo sát mức độ hài lòng định tính trước và sau cải tiến}
+
+Phân loại các phản hồi định tính của học viên Đề án 06 lớn tuổi qua các kênh tiếp nhận phản hồi và Zalo:
+
+\begin{table}[htbp]
+\centering
+\fontsize{9}{12}\selectfont
+\begin{tabular}{|p{3.5cm}|p{6cm}|p{6cm}|}
+\hline
+\textbf{Kênh khảo sát} & \textbf{Nội dung phản hồi trước cải tiến (Email cũ \& Hỗ trợ Zalo)} & \textbf{Nội dung phản hồi sau cải tiến (Email trực quan \& Chatbot Website)} \\ \hline
+Email hướng dẫn & ``Thư hướng dẫn quá dài, có nhiều từ chuyên ngành như LMS, SCORM làm tôi không biết phải click vào đâu.'' (Học viên 52 tuổi) & ``Thư hướng dẫn rất rõ ràng, có 3 bước lớn chữ to nên tôi đọc và tự làm theo được ngay.'' (Học viên 48 tuổi) \\ \hline
+Tốc độ phản hồi & ``Tôi gửi yêu cầu lấy lại mật khẩu từ sáng nhưng đến chiều muộn mới nhận được câu trả lời từ chuyên viên.'' (Học viên 45 tuổi) & ``Hỏi chatbot trên website trả lời ngay lập tức, hướng dẫn đúng chỗ tôi đang bị kẹt nên tôi tự làm được.'' (Học viên 50 tuổi) \\ \hline
+Trải nghiệm sử dụng & ``Tìm mãi không thấy nút đăng ký ở đâu trên điện thoại vì giao diện quá nhiều chữ.'' (Học viên 55 tuổi) & ``Tôi bấm vào hỗ trợ là chatbot chỉ ngay nút đăng ký màu cam ở góc màn hình, rất dễ tìm.'' (Học viên 53 tuổi) \\ \hline
+\end{tabular}
+\caption{Dữ liệu phản hồi định tính của học viên qua phỏng vấn}
+\label{tab:qualitative_results}
+\end{table}

@@ -1,0 +1,41 @@
+\section{Triển khai thử nghiệm}
+
+Để chứng minh tính khả thi và đo lường hiệu quả thực tế của các giải pháp thiết kế lại hệ thống truyền thông, Trung tâm Công nghệ Giáo dục đã tiến hành chương trình thử nghiệm thực tế trong thời gian hai tuần, từ ngày 01/06/2026 đến ngày 15/06/2026. Chương trình thử nghiệm được áp dụng trên một nhóm đối tượng cụ thể nhằm thu thập cả dữ liệu định lượng và định tính phục vụ cho việc đối chiếu.
+
+\subsection{Thiết kế và phương án thử nghiệm}
+
+Thử nghiệm được triển khai cho khóa học bồi dưỡng Chuyển đổi số thuộc Đề án 06 với quy mô lớp học gồm 100 học viên, phần lớn là cán bộ công chức cấp xã lớn tuổi, kỹ năng công nghệ còn hạn chế. Lớp học này được chia ngẫu nhiên thành hai nhóm có quy mô bằng nhau:
+\begin{itemize}
+    \item \textbf{Nhóm đối chứng gồm 50 học viên:} Tiếp tục nhận hướng dẫn đăng ký và kích hoạt tài khoản qua email truyền thống nhiều chữ, thiếu minh họa và thực hiện gửi câu hỏi hỗ trợ qua nhắn tin hoặc gọi điện trực tiếp cho chuyên viên vận hành.
+    \item \textbf{Nhóm thử nghiệm gồm 50 học viên:} Nhận hướng dẫn qua mẫu email mới trực quan dựa trên thuyết tải nhận thức \parencite{sweller1988}. Khi đăng nhập và thao tác trên website daotao.ai, nhóm này sử dụng chatbot trợ lý học tập tích hợp ở góc phải màn hình để tự động khắc phục các sự cố thường gặp như lỗi đăng nhập, vị trí nút đăng ký và chuyển tiếp chuyên viên khi gặp lỗi phức tạp.
+\end{itemize}
+
+\subsection{Đo lường hiệu quả định lượng}
+
+Dữ liệu hệ thống ghi nhận trong hai tuần chạy thử nghiệm được tổng hợp và đối chiếu chi tiết trong bảng dưới đây:
+
+\begin{table}[htbp]
+\centering
+\fontsize{10}{13}\selectfont
+\begin{tabular}{|p{5.2cm}|p{2.6cm}|p{3.2cm}|p{2.2cm}|}
+\hline
+\textbf{Chỉ số đo lường hiệu quả (quy mô 50 học viên/nhóm)} & \textbf{Nhóm đối chứng (Cách cũ)} & \textbf{Nhóm thử nghiệm (Cách mới)} & \textbf{Hiệu quả thay đổi} \\ \hline
+Số học viên tự đăng nhập thành công trong ngày đầu & 32 học viên & 45 học viên & Tăng 40,6\% \\ \hline
+Số cuộc gọi/tin nhắn yêu cầu hỗ trợ trực tiếp & 24 cuộc gọi & 4 cuộc gọi & Giảm 83,3\% \\ \hline
+Thời gian học viên phải chờ chuyên viên trả lời & từ 1 đến 3 tiếng & phản hồi ngay (ca khó gọi lại sau 10 phút) & Nhanh hơn đáng kể \\ \hline
+Số học viên hoàn thành bài kiểm tra đúng hạn & 35 học viên & 42 học viên & Tăng 20\% \\ \hline
+\end{tabular}
+\caption{Dữ liệu so sánh hiệu quả định lượng giữa hai nhóm thử nghiệm}
+\label{tab:results_quant}
+\end{table}
+
+Số liệu định lượng chỉ ra việc tích hợp chatbot trên website và cải tiến email đã giúp phần lớn học viên tự xử lý được các sự cố kỹ thuật thông thường mà không cần đến sự hỗ trợ trực tiếp của chuyên viên. Điều này giúp giảm tải đáng kể cuộc gọi hỗ trợ trực tiếp cho chuyên viên vận hành (giảm từ 24 cuộc gọi xuống còn 4 cuộc gọi).
+
+\subsection{Đo lường hiệu quả định tính}
+
+Để thu thập dữ liệu định tính, Trung tâm Công nghệ Giáo dục đã thực hiện phỏng vấn nhanh qua điện thoại với 30 học viên lớn tuổi thuộc cả hai nhóm sau khi kết thúc thử nghiệm.
+
+\begin{itemize}
+    \item \textbf{Phản hồi từ học viên nhóm thử nghiệm:} Học viên đánh giá tốt tính rõ ràng của mẫu email mới. Một cán bộ xã 52 tuổi chia sẻ: \textit{``Email hướng dẫn mới dễ hiểu vì có hình ảnh chỉ rõ chỗ cần bấm chuột. Trước đây tôi đọc email cũ thấy khó hiểu vì nhiều chữ kỹ thuật.''}
+    \item \textbf{Phản hồi về chatbot trên website:} Học viên đánh giá chatbot hỗ trợ kịp thời và dễ thao tác. Tuy nhiên, khảo sát cũng chỉ ra một nhóm nhỏ học viên lớn tuổi (chiếm khoảng 15\%, tương đương 7 học viên) vẫn gặp bối rối khi tương tác với chatbot và có xu hướng muốn gọi điện thoại trực tiếp hoặc nhắn tin với người thật trên Zalo để yên tâm hơn.
+\end{itemize}
