@@ -85,7 +85,7 @@ graph TD
   * **Chiến lược tổng thể:** Chuyển dịch hệ thống truyền thông sang mô hình tương tác lấy người học làm trung tâm.
   * **Sản phẩm 1 - Chatbot hỗ trợ tự động (dựa trên dữ liệu chat lịch sử):**
     * Thu thập, phân loại dữ liệu hội thoại cũ để lọc ra FAQ (lỗi đăng ký, đăng nhập).
-    * Quy trình hoạt động của Chatbot trên Zalo OA để cung cấp phản hồi tức thì (*Instant feedback*).
+    * Quy trình hoạt động của Chatbot tích hợp trên Website daotao.ai để cung cấp phản hồi tức thì (*Instant feedback*).
   * **Sản phẩm 2 - Bộ Template Email mới trực quan:**
     * Thiết kế email theo chuẩn CLT (giảm tối đa extraneous load).
     * Hướng dẫn từng bước bằng hình ảnh (visual cues), ngôn từ đơn giản hóa thuật ngữ kỹ thuật.
@@ -97,7 +97,7 @@ graph TD
 * **Dung lượng mục tiêu:** ~600 từ.
 * **Thứ tự viết:** **Viết thứ ba.**
 * **Nội dung cần có:**
-  * Mô tả kịch bản thử nghiệm: Áp dụng chatbot tự động trên Zalo OA và gửi mẫu email mới cho một nhóm học viên Đề án 06 trong 1–2 tuần.
+  * Mô tả kịch bản thử nghiệm: Áp dụng chatbot tự động tích hợp trên website daotao.ai và gửi mẫu email mới cho một nhóm học viên Đề án 06 trong 1–2 tuần.
   * Đo lường kết quả định lượng:
     * Tỷ lệ chatbot tự xử lý thành công (giảm bao nhiêu % tin nhắn hỗ trợ thủ công).
     * Tốc độ phản hồi trung bình giảm từ bao nhiêu giờ xuống giây.
