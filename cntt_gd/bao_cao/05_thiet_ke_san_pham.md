@@ -1,0 +1,34 @@
+# 5. THIẾT KẾ VÀ ĐÁNH GIÁ SẢN PHẨM DEMO
+
+### 5.1. Kết quả khảo sát nhu cầu thực tế của giảng viên tại Đại học Bách khoa Hà Nội
+Để xây dựng một giải pháp công nghệ đáp ứng đúng yêu cầu thực tiễn, nghiên cứu đã tiến hành khảo sát nhu cầu thực tế của các giảng viên đang tham gia giảng dạy tại Đại học Bách khoa Hà Nội. Nội dung khảo sát tập trung vào việc đánh giá quỹ thời gian dành cho công tác chuẩn bị bài giảng, xác định các điểm nghẽn tiêu tốn nhiều công sức nhất và đo lường mức độ sẵn sàng đón nhận công nghệ trí tuệ nhân tạo tạo sinh trong hoạt động học thuật.
+
+Kết quả thu thập được cho thấy đa số giảng viên phải đối mặt với áp lực thời gian lớn khi thực hiện công tác chuẩn bị học liệu hàng tuần. Cụ thể, một nửa số giảng viên tham gia khảo sát cho biết họ phải dành từ năm đến mười giờ mỗi tuần để nghiên cứu và thiết kế nội dung bài giảng. Bên cạnh đó, có một tỷ lệ giảng viên phải tiêu tốn trên mười giờ mỗi tuần cho công tác này. Số lượng giảng viên có thể hoàn thành việc soạn thảo học liệu dưới năm giờ chiếm tỷ lệ ít hơn. Điều này chứng minh rằng việc chuẩn bị bài giảng cho các học phần chuyên sâu thuộc khối kỹ thuật và công nghệ yêu cầu một quỹ thời gian lớn từ người dạy.
+
+Khi đi sâu phân tích các công đoạn cụ thể trong quy trình soạn bài, kết quả khảo sát xác định hai công đoạn tiêu tốn nhiều thời gian và công sức nhất của giảng viên là đọc, chắt lọc, tóm tắt lượng lớn tài liệu chuyên môn và cấu trúc lại kiến thức thành các ý chính để đưa lên bản trình chiếu. Các công đoạn khác như tìm kiếm ví dụ thực tế hoặc rà soát cập nhật thông tin tuy có đòi hỏi công sức nhưng không phải là nguyên nhân chính gây ra áp lực thời gian. Áp lực từ việc tổng hợp tài liệu chuyên môn sâu cũng được phản ánh qua nhận định của giảng viên, khi có đến hơn tám mươi phần trăm giảng viên hoàn toàn đồng ý hoặc đồng ý rằng hoạt động này tạo ra áp lực lớn về mặt thời gian cho họ.
+
+Về mức độ sẵn sàng ứng dụng nội dung do trí tuệ nhân tạo tạo ra, phần lớn giảng viên thể hiện thái độ cẩn trọng. Khoảng hai phần ba số giảng viên được hỏi cho biết họ khá sẵn sàng sử dụng các nội dung do công nghệ tạo ra nhưng chỉ dưới dạng một bản nháp thô để tự tinh chỉnh, thay vì đưa vào sử dụng trực tiếp mà không qua kiểm duyệt. Xu hướng này cho thấy giảng viên ý thức rõ tầm quan trọng của việc kiểm soát chất lượng thông tin học thuật và mong muốn giữ vai trò chủ đạo trong việc quyết định nội dung bài giảng.
+
+Cuối cùng, khi được hỏi về các tính năng ưu tiên phát triển cho một sản phẩm hỗ trợ học liệu, giảng viên tập trung lựa chọn hai tính năng cốt lõi là tóm tắt tài liệu dài thành dàn ý bài giảng và chuyển đổi văn bản thành cấu trúc ý cô đọng làm bản trình chiếu. Tính năng tự động sinh ngân hàng câu hỏi đánh giá đa dạng cũng được quan tâm nhưng xếp sau hai nhu cầu trên. Kết quả này là cơ sở thực hiện thiết kế cấu trúc chức năng và các nguyên tắc xây dựng cho sản phẩm thử nghiệm.
+
+---
+
+### 5.2. Các nguyên tắc trong xây dựng sản phẩm thử nghiệm
+Dựa trên kết quả khảo sát thực tế và các khung lý thuyết sư phạm, nghiên cứu đề xuất ba nguyên tắc cốt lõi làm nền tảng cho việc xây dựng công cụ thử nghiệm hỗ trợ giảng viên:
+
+Nguyên tắc thứ nhất là lấy người dạy làm trung tâm, hay còn gọi là nguyên lý *human-in-the-loop*. Trong nguyên tắc này, công cụ trí tuệ nhân tạo tạo sinh chỉ đóng vai trò một trợ lý hỗ trợ xây dựng bản thảo hoặc gợi ý ý tưởng ban đầu. Giảng viên luôn là người nắm giữ quyền quyết định cuối cùng, thực hiện việc rà soát, hiệu chỉnh và phê duyệt mọi nội dung trước khi đưa vào giảng dạy. Nguyên tắc này giúp giải quyết lo ngại của giảng viên về tính chính xác của dữ liệu và bảo đảm vai trò định hướng chuyên môn của người dạy trong môi trường sư phạm.
+
+Nguyên tắc thứ hai là chuẩn hóa sư phạm. Sản phẩm thử nghiệm không đơn thuần là một công cụ xử lý văn bản tự động mà phải được thiết kế để tuân thủ các chuẩn mực sư phạm. Cụ thể, chức năng sinh câu hỏi kiểm tra phải được ràng buộc để tạo ra các câu hỏi tương thích với sáu bậc nhận thức của thang đo Bloom cải tiến. Đồng thời, chức năng gợi ý hoạt động dạy học phải bám sát thuyết kiến tạo, tập trung vào việc kích thích sự tương tác của sinh viên và thúc đẩy tư duy giải quyết vấn đề thực tế thay vì chỉ truyền thụ kiến thức một chiều.
+
+Nguyên tắc thứ ba là bảo đảm liêm chính học thuật và an toàn thông tin. Việc sử dụng các mô hình ngôn ngữ lớn để xử lý tài liệu giảng dạy đòi hỏi cơ chế bảo mật dữ liệu nhằm bảo vệ quyền sở hữu trí tuệ của giảng viên đối với các bài giảng chuyên ngành. Đồng thời, thiết kế kỹ thuật của hệ thống phải có các cơ chế thiết kế câu lệnh gợi ý chặt chẽ để hạn chế hiện tượng ảo tưởng thông tin của mô hình ngôn ngữ, bảo đảm kiến thức kỹ thuật được cung cấp cho sinh viên Đại học Bách khoa Hà Nội luôn chính xác.
+
+---
+
+### 5.3. Ứng dụng lý thuyết vào thiết kế chức năng sản phẩm
+Để chuyển hóa các cơ sở lý thuyết vào sản phẩm thực tế, nghiên cứu đã xây dựng các phương án kỹ thuật và thiết kế cấu trúc câu lệnh gợi ý cho từng chức năng cốt lõi của công cụ.
+
+Đối với chức năng sinh câu hỏi đánh giá dựa trên thang đo Bloom cải tiến, hệ thống ứng dụng kỹ thuật thiết kế câu lệnh gợi ý để hướng dẫn mô hình ngôn ngữ lớn hoạt động theo đúng mục tiêu sư phạm. Thay vì yêu cầu mô hình sinh câu hỏi chung chung, câu lệnh gợi ý hệ thống sẽ thiết lập vai trò cho mô hình là một chuyên gia khảo thí trong lĩnh vực kỹ thuật. Câu lệnh quy định rõ các tiêu chí kỹ thuật bao gồm việc sử dụng các động từ hành động tương ứng với từng bậc nhận thức được giảng viên lựa chọn. Đối với cấp độ nhớ, mô hình được yêu cầu dùng các động từ như liệt kê hoặc trình bày định nghĩa. Đối với các cấp độ tư duy bậc cao như phân tích hoặc đánh giá, câu lệnh buộc mô hình phải xây dựng các kịch bản tình huống thực tế và yêu cầu sinh viên chỉ ra nguyên nhân hoặc lựa chọn phương án khắc phục phù hợp.
+
+Đối với chức năng đề xuất hoạt động dạy học theo thuyết kiến tạo, công cụ được thiết kế để phân tích nội dung tài liệu học tập được tải lên, sau đó gợi ý các hoạt động học tập tương tác tương ứng. Câu lệnh gợi ý được xây dựng để định hướng mô hình ngôn ngữ lớn tạo ra kịch bản lớp học đảo ngược hoặc các bài tập giải quyết vấn đề nhóm. Nội dung gợi ý bao gồm cách thức chia nhóm sinh viên, chủ đề thảo luận mở gắn liền với thực tiễn ngành học và bộ câu hỏi phản biện dành cho giảng viên để điều phối buổi học. Phương pháp này giúp sinh viên chủ động vận dụng kiến thức để giải quyết nhiệm vụ.
+
+Trong toàn bộ quá trình thiết kế hệ thống, các kỹ thuật *prompt engineering* được áp dụng một cách nhất quán. Nghiên cứu sử dụng kỹ thuật gợi ý kèm ví dụ mẫu nhằm cung cấp cho mô hình các cặp học liệu mẫu đạt chất lượng cao về cả định dạng văn bản lẫn chiều sâu kiến thức chuyên ngành. Ngoài ra, việc thiết lập các tham số điều khiển của mô hình ngôn ngữ lớn như độ sáng tạo của văn bản được đặt ở mức thấp để ưu tiên tính chính xác và logic của kiến thức kỹ thuật, giảm thiểu hiện tượng sai lệch thông tin trong giáo dục đại học.

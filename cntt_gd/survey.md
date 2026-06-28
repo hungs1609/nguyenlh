@@ -1,0 +1,14 @@
+| ID | Email | Name | Last modified time | Thời gian nghiên cứu và thiết kế nội dung bài giảng mỗi tuần | Công đoạn tiêu tốn nhiều thời gian và công sức nhất | Đánh giá nhận định "Tổng hợp tài liệu chuyên môn sâu tạo áp lực lớn về thời gian" | Mức độ sẵn sàng sử dụng nội dung do AI tạo ra | Tính năng ưu tiên phát triển cho bản Demo |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **1** | anonymous |  |  | Trên 10 giờ | Đọc, chắt lọc và tóm tắt lượng lớn tài liệu | Hoàn toàn đồng ý | Khá sẵn sàng (Dùng như bản nháp để tự tinh chỉnh) | Tóm tắt tài liệu dài thành dàn ý bài giảng |
+| **2** | anonymous |  |  | Từ 5 đến 10 giờ | Cấu trúc lại kiến thức thành các ý chính để đưa lên Slide | Hoàn toàn đồng ý | Khá sẵn sàng (Dùng như bản nháp để tự tinh chỉnh) | Chuyển đổi văn bản thành cấu trúc ý cô đọng làm Slide |
+| **3** | anonymous |  |  | Từ 5 đến 10 giờ | Đọc, chắt lọc và tóm tắt lượng lớn tài liệu | Hoàn toàn đồng ý | Rất sẵn sàng (Đưa vào dùng ngay) | Tóm tắt tài liệu dài thành dàn ý bài giảng |
+| **4** | anonymous |  |  | Từ 2 đến dưới 5 giờ | Tìm kiếm ví dụ thực tế/tình huống minh họa | Đồng ý | Ngần ngại (Chỉ tham khảo góc nhìn) | Tự động sinh ngân hàng câu hỏi đa dạng |
+| **5** | anonymous |  |  | Từ 5 đến 10 giờ | Cấu trúc lại kiến thức thành các ý chính để đưa lên Slide | Đồng ý | Khá sẵn sàng (Dùng như bản nháp để tự tinh chỉnh) | Chuyển đổi văn bản thành cấu trúc ý cô đọng làm Slide |
+| **6** | anonymous |  |  | Trên 10 giờ | Đọc, chắt lọc và tóm tắt lượng lớn tài liệu | Hoàn toàn đồng ý | Khá sẵn sàng (Dùng như bản nháp để tự tinh chỉnh) | Tóm tắt tài liệu dài thành dàn ý bài giảng |
+| **7** | anonymous |  |  | Từ 5 đến 10 giờ | Cấu trúc lại kiến thức thành các ý chính để đưa lên Slide | Hoàn toàn đồng ý | Khá sẵn sàng (Dùng như bản nháp để tự tinh chỉnh) | Chuyển đổi văn bản thành cấu trúc ý cô đọng làm Slide |
+| **8** | anonymous |  |  | Từ 2 đến dưới 5 giờ | Rà soát và cập nhật thông tin mới | Phân vân/Không ý kiến | Ngần ngại (Chỉ tham khảo góc nhìn) | Tự động sinh ngân hàng câu hỏi đa dạng |
+| **9** | anonymous |  |  | Từ 5 đến 10 giờ | Đọc, chắt lọc và tóm tắt lượng lớn tài liệu | Hoàn toàn đồng ý | Rất sẵn sàng (Đưa vào dùng ngay) | Tóm tắt tài liệu dài thành dàn ý bài giảng |
+| **10** | anonymous |  |  | Từ 5 đến 10 giờ | Cấu trúc lại kiến thức thành các ý chính để đưa lên Slide | Hoàn toàn đồng ý | Khá sẵn sàng (Dùng như bản nháp để tự tinh chỉnh) | Chuyển đổi văn bản thành cấu trúc ý cô đọng làm Slide |
+| **11** | anonymous |  |  | Từ 2 đến dưới 5 giờ | Tìm kiếm ví dụ thực tế/tình huống minh họa | Đồng ý | Khá sẵn sàng (Dùng như bản nháp để tự tinh chỉnh) | Tự động sinh ngân hàng câu hỏi đa dạng |
+| **12** | anonymous |  |  | Dưới 2 giờ | Đọc, chắt lọc và tóm tắt lượng lớn tài liệu | Phân vân/Không ý kiến | Khá sẵn sàng (Dùng như bản nháp để tự tinh chỉnh) | Tóm tắt tài liệu dài thành dàn ý bài giảng |
