@@ -1,0 +1,29 @@
+# Phần 7. KẾT LUẬN, HẠN CHẾ VÀ KIẾN NGHỊ
+
+## 7.1. Tóm lược quá trình thực hiện
+
+Nghiên cứu đã thực hiện thành công quy trình phân tích thực nghiệm hai tầng trên khóa học trực tuyến SoDiTEC (mã lớp TDC01, tháng 5 năm 2024):
+1.  Trích xuất và tiền xử lý khoảng **46.000 sự kiện log hành vi** từ hệ thống edX của 200 học viên.
+2.  Áp dụng các kỹ thuật khai phá quy trình (Process Mining) để dựng biểu đồ chuyển tiếp trực tiếp, xác định 156 biến thể trình tự học tập và phân bố thành 4 nhóm hồ sơ quy trình.
+3.  Xác định điểm nghẽn tiến độ tại Chương 6 và các khung giờ học tập cao điểm của sinh viên.
+4.  Tiến hành phân cụm học viên thành 3 nhóm lộ trình tự nhiên (Có kế hoạch, Khám phá, Nguy cơ) và đối chiếu với dữ liệu khảo sát tâm lý chủ quan trước, trong và sau khóa học.
+5.  Thực hiện các kiểm định thống kê nghiêm ngặt (Welch t-test, Change-score, ANCOVA) để đánh giá hiệu quả thực chất của lộ trình cá nhân hóa lên kết quả học tập và niềm tin năng lực bản thân của sinh viên.
+
+## 7.2. Hạn chế của nghiên cứu
+
+Nghiên cứu tồn tại một số hạn chế quan trọng về mặt phương pháp luận cần được ghi nhận. Trước hết, do sử dụng thiết kế bán thực nghiệm (NEGD), hai nhóm so sánh (thực nghiệm A và đối chứng C) không được phân bổ ngẫu nhiên ngay từ đầu. Điều này dẫn đến sự chênh lệch lớn ở đường cơ sở về kỹ năng tự điều chỉnh học tập ($d = 2,64$) và niềm tin năng lực bản thân ($d = 0,70$). Sự lệch nền này gây ảnh hưởng lớn đến hiệu lực nội tại của thực nghiệm và dẫn đến Nghịch lý Lord khi đối chiếu kết quả giữa các phương pháp phân tích thống kê khác nhau.
+
+Thứ hai, phương pháp chọn mẫu có chủ đích dựa trên tiêu chuẩn dữ liệu đầy đủ ($N = 200$) có thể tạo ra thiên lệch chọn mẫu tự nhiên. Nhóm đối tượng này có mức độ tích cực học tập cao hơn so với mặt bằng chung của tổng thể 1.531 học viên, làm giới hạn khả năng khái quát hóa kết quả cho nhóm người học thụ động. Ngoài ra, việc đo lường các biến số tâm lý như SRL, động lực hay niềm tin năng lực bản thân phụ thuộc vào nhận thức chủ quan của học viên khi điền phiếu khảo sát tự báo cáo.
+
+Cuối cùng, nghiên cứu chỉ thực hiện trên một khóa học trực tuyến SoDiTEC trong thời gian một tháng. Các bối cảnh đào tạo chuyên ngành khác với những ràng buộc học thuật và động cơ học tập khác biệt có thể dẫn đến những đặc trưng hành vi và kết quả thực nghiệm khác nhau, đòi hỏi sự thận trọng khi áp dụng kết quả nghiên cứu này.
+
+## 7.3. Kiến nghị và hàm ý sư phạm
+
+Dựa trên các phát hiện thực nghiệm, nghiên cứu đề xuất một số kiến nghị cụ thể đối với việc thiết kế và vận hành các khóa học trực tuyến đại học:
+1.  **Tích hợp công cụ khảo sát vi mô định kỳ vào LMS:** Nhà trường nên tích hợp các câu hỏi khảo sát ngắn (1-2 câu theo thang đo Likert) để đánh giá trạng thái cảm xúc tiêu cực hoặc trở ngại nhận thức phát sinh của người học ngay sau các bài trắc nghiệm hoặc chương học phức tạp, nhằm bổ khuyết dữ liệu nhật ký hệ thống.
+2.  **Tự động hóa hệ thống cảnh báo sớm dựa trên nhịp độ học tập:** Hệ thống LMS cần được lập trình để tự động gắn cờ cảnh báo sớm đối với học viên có chỉ số đều đặn giảm sâu (dưới ngưỡng $0,08$) hoặc có thời gian ngừng hoạt động liên tiếp vượt quá 14 ngày.
+3.  **Xây dựng thiết kế can thiệp sư phạm phân hóa:**
+    *   *Đối với sinh viên nhóm Nguy cơ:* Chủ động giảm tải nhận thức ngoại lai bằng cách tối giản hóa giao diện học tập, cung cấp chỉ dẫn trực quan rõ ràng và thiết lập các kênh hỗ trợ trực tiếp từ giảng viên hoặc trợ giảng thay vì các chatbot tự động.
+    *   *Đối với sinh viên nhóm Khám phá:* Cung cấp các công cụ tự đánh giá SRL và hỗ trợ thiết lập mục tiêu học tập hàng tuần nhằm giúp họ chuyển dịch sang nhóm có kế hoạch.
+4.  **Cấu trúc lại các chương học phức tạp:** Rà soát, chia nhỏ nội dung bài giảng và đa dạng hóa hình thức học liệu tại các chương học ghi nhận tỷ lệ hao hụt lớn (như Chương 6 của khóa học này).
+

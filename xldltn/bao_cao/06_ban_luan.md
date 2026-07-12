@@ -1,0 +1,61 @@
+# Phần 6. BÀN LUẬN
+
+Mục đích của phần này là phân tích và phiên giải kết quả thực nghiệm thu được từ quá trình khai phá quy trình và kiểm định thống kê. Phần thảo luận này bám sát bối cảnh lớp học trực tuyến SoDiTEC và trả lời 6 câu hỏi học thuật cốt lõi:
+
+## 6.1. Ý nghĩa của các kết quả tìm được
+
+Kết quả ANCOVA (cả đối với niềm tin năng lực bản thân hậu kiểm và điểm số cuối kỳ) cho thấy hiệu ứng nhóm biến mất hoàn toàn sau khi đã hiệu chỉnh các chênh lệch ở đường cơ sở. 
+
+Ý nghĩa thực chất của phát hiện này là: **sự vượt trội về mặt kết quả học tập và thái độ của nhóm có kế hoạch (A) so với nhóm nguy cơ (C) ở hậu kiểm chủ yếu phản chiếu những đặc điểm năng lực và tâm lý sẵn có (năng lực tự điều chỉnh học tập SRL và self-efficacy đầu vào) của học viên, chứ không phải do hiệu quả thực chất của can thiệp phân nhóm.**
+
+Điều này trả lời trực tiếp câu hỏi nghiên cứu số 3: Lộ trình cá nhân hóa hình thành tự nhiên từ log hành vi thực tế chỉ đóng vai trò như một bộ lọc phân loại chính xác các đặc tính người học có sẵn, chứ chưa tự tạo ra một cơ chế can thiệp đủ mạnh để cải thiện đáng kể kết quả học tập của nhóm nguy cơ C nếu không có tác động sư phạm chủ động khác.
+
+## 6.2. Đối chiếu và so sánh với các nghiên cứu khác
+
+Phát hiện của nghiên cứu này tương đồng và củng cố lý thuyết tự điều chỉnh học tập (SRL) trong e-learning của Cerezo và cộng sự (2020), khi chỉ ra rằng quy trình học tập của nhóm học viên đạt kết quả cao (nhóm A) và nhóm nguy cơ bỏ học (nhóm C) có sự khác biệt rất lớn về tính tuần tự và đều đặn hành vi. 
+
+Tuy nhiên, nghiên cứu của chúng tôi đi xa hơn bằng cách chỉ ra sự lệch nền nghiêm trọng về SRL ($d = 2,64$) giữa hai nhóm ngay từ trước khóa học. Kết quả này bổ khuyết cho các nghiên cứu EPM trước đây (như Bogarín và cộng sự, 2018), vốn thường quy kết hiệu quả học tập cho can thiệp công nghệ mà bỏ qua kiểm soát thống kê đối với các biến đồng biến ở đường cơ sở của người học.
+
+## 6.3. Giải thích kết quả ngoài mong đợi và Nghịch lý Lord
+
+### Lý giải Nghịch lý Lord
+Trong nghiên cứu này, việc phân tích change-score cho thấy sự khác biệt có ý nghĩa thống kê về mức độ thay đổi self-efficacy giữa cụm A ($+0,10$) và cụm C ($-0,07$, $p = 0,025$), trong khi ANCOVA lại đưa ra kết quả null ($p = 0,627$). 
+
+Nghịch lý Lord xảy ra do hai phương pháp này xử lý sự lệch nền cơ sở theo các giả định toán học khác nhau:
+*   **Change-score** giả định rằng nếu không có can thiệp, khoảng cách chênh lệch giữa hai nhóm sẽ giữ nguyên không đổi theo thời gian. Do đó, việc nhóm A tăng điểm và nhóm C giảm điểm được xem là có hiệu ứng.
+*   **ANCOVA** sử dụng mô hình hồi quy tuyến tính để dự báo hậu kiểm dựa trên tiền kiểm, giả định rằng có sự hội tụ về phía giá trị trung bình. Vì nhóm A có điểm tiền kiểm cao hơn nên điểm hậu kiểm dự báo của họ cũng cao hơn. Khi hiệu chỉnh chênh lệch này, hiệu ứng nhóm thực chất bị triệt tiêu.
+
+Trong thiết kế bán thực nghiệm quan sát, ANCOVA thường được ưu tiên vì nó kiểm soát hiệu quả hơn các nhiễu đo lường và xu hướng hồi quy về trung bình, cho thấy kết quả null của ANCOVA phản ánh đúng thực tế hơn.
+
+### Khắc phục điểm mù của log dữ liệu bằng dữ liệu chủ quan
+Nghiên cứu phát hiện ra rằng log hành vi thô tồn tại các điểm mù nghiêm trọng:
+*   **Hành vi tua lùi video:** Nhóm tua lùi nhiều (top 40%) có điểm số phân tán lớn từ 0 đến 1. Chỉ khi kết hợp với dữ liệu chủ quan về khảo sát định hướng mục tiêu, chúng ta mới phân biệt được: những học viên tua lùi video để ôn tập chủ động (SRL cao, định hướng làm chủ kiến thức đạt điểm TB $54,6$) đối lập với những học viên tua lùi do bế tắc hoặc quá tải nhận thức (SRL thấp, chỉ đạt điểm TB $46,0$).
+*   Điều này chứng minh log hành vi là điều kiện cần nhưng chưa đủ; việc cá nhân hóa bắt buộc phải tích hợp các trạng thái nhận thức và cảm xúc của người học.
+
+## 6.4. Khả năng nhân rộng và tổng quát hóa sang bối cảnh khác
+
+### Phân tích bối cảnh tổ chức
+Để trả lời câu hỏi: *Nếu áp dụng vào bối cảnh khác hoặc đưa kết quả vào bối cảnh khác thì có làm được không?*, nghiên cứu đã đối chiếu kết quả hoàn thành của sinh viên giữa các lớp/đợt học khác nhau:
+*   Lớp **Ban Giám đốc Hà Nội** có tỷ lệ hoàn thành cao nhất ($64,7\%$). Đây là nhóm học viên có vị thế công tác cao, tính kỷ luật tổ chức mạnh, và động lực hoàn thành khóa học được thúc đẩy bởi yêu cầu công vụ.
+*   Ngược lại, **Lớp tháng 7.2025** có tỷ lệ hoàn thành thấp nhất ($29,2\%$). Đây là nhóm đăng ký tự do, thiếu sự giám sát hành chính trực tiếp.
+
+### Giới hạn tổng quát hóa
+Sự chênh lệch lớn này chỉ ra rằng **bối cảnh tổ chức và đặc điểm lớp học là biến nhiễu quan trọng**. Nếu chúng ta nhân rộng quy trình phân tích và công cụ gợi ý lộ trình này sang một bối cảnh giáo dục khác (ví dụ: học sinh phổ thông hoặc các lớp học bắt buộc chuyên ngành):
+1.  **Làm được về mặt kỹ thuật:** Quy trình trích xuất và xử lý log 5 bước là chuẩn hóa và module hóa, hoàn toàn có thể triển khai trên bất kỳ hệ thống edX/LMS nào khác.
+2.  **Khó tổng quát hóa về mặt kết quả:** Mức độ hiệu quả và các ngưỡng cảnh báo hành vi sẽ thay đổi hoàn toàn phụ thuộc vào động lực nền tảng của đối tượng người học. Do đó, không thể áp dụng trực tiếp các tham số gán cụm từ khóa học SoDiTEC sang bối cảnh khác mà không thực hiện hiệu chỉnh lại đường cơ sở tại chỗ.
+
+## 6.5. Hướng nghiên cứu tiếp theo trong tương lai
+
+Do thiết kế hiện tại là bán thực nghiệm NEGD dựa trên dữ liệu hồi cứu, các kết luận nhân quả chưa thể xác lập chắc chắn. Trong tương lai, nghiên cứu cần:
+1.  Triển khai thiết kế **Thực nghiệm ngẫu nhiên có đối chứng (RCT)** hoặc thử nghiệm A/B trên hệ thống LMS: ngẫu nhiên hóa sinh viên ngay từ đầu vào hai nhóm: Nhóm Thực nghiệm (nhận gợi ý lộ trình cá nhân hóa tự động theo thời gian thực) và Nhóm Đối chứng (học theo lộ trình tuyến tính cố định).
+2.  Áp dụng các thuật toán khai phá quy trình nâng cao (như Inductive Miner hoặc Heuristics Miner) kết hợp với các kỹ thuật học máy để xây dựng mô hình dự báo sớm nguy cơ bỏ học ngay từ tuần học đầu tiên.
+
+## 6.6. Hàm ý sư phạm và khuyến nghị ứng dụng
+
+Dựa trên các phát hiện thực nghiệm, một số giải pháp sư phạm cần sớm được triển khai nhằm tối ưu hóa hiệu quả khóa học:
+1.  **Cấu hình hệ thống gửi nhắc nhở tự động:** Gửi thông báo trước các khung giờ học tập cao điểm đã được xác định của học viên (6:00, 13:00 và 15:00) nhằm khuyến khích và duy trì tính đều đặn trong hành vi học tập.
+2.  **Tái cấu trúc nội dung tại Chương 6:** Chia nhỏ các bài giảng video dài, bổ sung các ví dụ trực quan nhằm giảm thiểu tải nhận thức ngoại lai tại chương học có tỷ lệ hao hụt lớn nhất ($8,0\%$).
+3.  **Triển khai hỗ trợ phân hóa theo nhóm lộ trình:**
+    *   *Nhóm Có kế hoạch (Cụm A):* Khuyến khích duy trì nhịp độ tự học độc lập.
+    *   *Nhóm Nguy cơ (Cụm C):* Chủ động liên hệ hỗ trợ trực tiếp khi hệ thống gắn cờ cảnh báo (học viên không hoạt động liên tục quá 14 ngày hoặc mức độ đều đặn giảm sâu).
+

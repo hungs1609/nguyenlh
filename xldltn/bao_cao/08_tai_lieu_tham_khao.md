@@ -1,0 +1,10 @@
+# Tài liệu tham khảo
+
+*   Bogarín, A., Cerezo, R., & Romero, C. (2018). A survey on educational process mining. *Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery*, 8(1), Article e1230. [https://doi.org/10.1002/widm.1230](https://doi.org/10.1002/widm.1230)
+*   Cerezo, R., Bogarín, A., Esteban, M., & Romero, C. (2020). Process mining for self-regulated learning assessment in e-learning. *Journal of Computing in Higher Education*, 32(1), 74–88. [https://doi.org/10.1007/s12528-019-09225-y](https://doi.org/10.1007/s12528-019-09225-y) (Bản mở truy cập: [https://arxiv.org/abs/2403.12068](https://arxiv.org/abs/2403.12068))
+*   Romero, C., & Ventura, S. (2020). Educational data mining and learning analytics: An updated survey. *Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery*, 10(3), Article e1355. [https://doi.org/10.1002/widm.1355](https://doi.org/10.1002/widm.1355)
+*   Siemens, G. (2013). Learning analytics: The emergence of a discipline. *American Behavioral Scientist*, 57(10), 1380–1400. [https://doi.org/10.1177/0002764213498851](https://doi.org/10.1177/0002764213498851)
+*   Song, M., Günther, C. W., & van der Aalst, W. M. P. (2009). Trace clustering in process mining. Trong D. Ardagna, M. Mecella, & J. Yang (Chủ biên), *Business process management workshops* (trang 109–120). Springer. [https://doi.org/10.1007/978-3-642-00328-8_11](https://doi.org/10.1007/978-3-642-00328-8_11)
+*   Van der Aalst, W. M. P. (2016). *Process mining: Data science in action* (Ấn bản lần 2). Springer. [https://doi.org/10.1007/978-3-662-49851-4](https://doi.org/10.1007/978-3-662-49851-4)
+*   Van der Aalst, W. M. P., Weijters, T., & Maruster, L. (2004). Workflow mining: Discovering process models from event logs. *IEEE Transactions on Knowledge and Data Engineering*, 16(9), 1128–1142. [https://doi.org/10.1109/TKDE.2004.47](https://doi.org/10.1109/TKDE.2004.47)
+*   Winne, P. H., & Hadwin, A. F. (1998). Studying as self-regulated learning. Trong D. J. Hacker, J. Dunlosky, & A. C. Graesser (Chủ biên), *Metacognition in educational theory and practice* (trang 277–304). Lawrence Erlbaum Associates.

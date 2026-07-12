@@ -1,0 +1,10 @@
+# TÓM TẮT
+
+Bài báo nghiên cứu này đánh giá hiệu quả ứng dụng khai phá quy trình (Process Mining) trong phân tích học tập nhằm tối ưu hóa lộ trình cá nhân hóa của sinh viên đại học. Thiết kế nghiên cứu áp dụng khung bán thực nghiệm nhóm không tương đương với đo lường tiền kiểm và hậu kiểm trên mẫu học viên tham gia khóa học trực tuyến. 
+
+Nghiên cứu thực hiện phân tích hành vi nhật ký hệ thống của người học để phát hiện các biến thể trình tự học tập và xác định các điểm nghẽn tiến độ. Các phân tích thống kê thô ở hậu kiểm ban đầu cho thấy sự khác biệt rõ rệt của nhóm học tập có kế hoạch so với nhóm có nguy cơ về cả điểm số cuối kỳ và tỷ lệ bỏ học. 
+
+Tuy nhiên, khi kiểm soát sự lệch nền ở đường cơ sở về niềm tin năng lực bản thân và khả năng tự điều chỉnh học tập bằng phân tích hiệp biến, hiệu ứng nhóm lên kết quả học tập và niềm tin năng lực bản thân hậu kiểm không còn ý nghĩa thống kê. Sự mâu thuẫn giữa kết quả phân tích điểm chênh lệch và phân tích hiệp biến minh chứng rõ nét nghịch lý Lord trong thiết kế quan sát thực tế. Kết quả này chỉ ra khác biệt đầu ra chủ yếu phản ánh đặc điểm sẵn có của người học hơn là hiệu quả thực chất của quá trình can thiệp. Nghiên cứu thảo luận chi tiết về các giới hạn của dữ liệu nhật ký hệ thống và đề xuất hướng can thiệp sư phạm phân hóa kết hợp dữ liệu khảo sát chủ quan.
+
+**Từ khóa:** Khai phá quy trình (Process Mining), Phân tích học tập, Thiết kế bán thực nghiệm, Kiểm soát đường cơ sở, Nghịch lý Lord.
+

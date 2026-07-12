@@ -1,0 +1,31 @@
+# Phần 1. MỞ ĐẦU
+
+## 1.1. Lý do chọn đề tài
+
+Sự phát triển mạnh mẽ của các hệ thống quản lý học tập trực tuyến (LMS) và giáo dục số tại các trường đại học đã tạo ra một lượng dữ liệu nhật ký hệ thống lớn về hành vi của người học. Mặc dù vậy, các phương pháp phân tích học tập (Learning Analytics) truyền thống chủ yếu tập trung vào những số liệu thống kê tĩnh như tổng thời gian truy cập, số lần tương tác hay điểm số, mà chưa đi sâu vào khía cạnh động - tức là trình tự, tần suất và cách thức sinh viên thực hiện các hoạt động học tập theo tiến trình thời gian.
+
+Đồng thời, mô hình đào tạo truyền thống với các lộ trình học tập áp dụng chung cho mọi đối tượng (tuyến tính) đang bộc lộ hạn chế trong việc đáp ứng nhu cầu, năng lực và tốc độ học tập riêng biệt của từng cá nhân. Điều này góp phần dẫn đến tỷ lệ học viên giảm sút động lực hoặc bỏ học cao, đặc biệt trong môi trường học tập trực tuyến đại trà mang tính tự điều phối.
+
+Để giải quyết vấn đề này, khai phá quy trình (Process Mining) được ứng dụng như một giải pháp kết hợp giữa khoa học dữ liệu và quản lý quy trình, hỗ trợ trực quan hóa, kiểm định và tối ưu hóa các quy trình học tập thực tế dựa trên nhật ký sự kiện. Việc áp dụng khai phá quy trình vào phân tích học tập giúp tái hiện trực quan hành trình học tập thực tế của sinh viên, phát hiện các điểm nghẽn nhận thức và những chuỗi hành vi học tập kém hiệu quả. Đây là cơ sở thực tế vững chắc để xây dựng và điều chỉnh lộ trình học tập cá nhân hóa một cách chính xác.
+
+Tuy nhiên, dữ liệu nhật ký hệ thống trên LMS chỉ phản ánh những hoạt động bề nổi của sinh viên, chưa lý giải được nguyên nhân sâu xa của các hành vi đó. Để tối ưu hóa hiệu quả lộ trình cá nhân hóa, việc đối chiếu chéo dữ liệu hành vi khách quan với các đặc điểm tâm lý, động lực và kỹ năng tự điều chỉnh học tập (Self-Regulated Learning - SRL) của sinh viên là yêu cầu bắt buộc nhằm khắc phục triệt để các giới hạn của log hành vi đơn thuần.
+
+## 1.2. Mục tiêu nghiên cứu
+
+Nghiên cứu này hướng tới các mục tiêu cụ thể sau:
+*   Thiết kế, thử nghiệm và đánh giá một quy trình chuẩn hóa từ khâu trích xuất nhật ký sự kiện trên LMS đến áp dụng các thuật toán khai phá quy trình phục vụ phân tích học tập.
+*   Phát hiện các đặc trưng hành vi và sai lệch trong lộ trình học tập thực tế của các nhóm học viên có học lực và đặc điểm SRL khác nhau trong khóa học trực tuyến.
+*   Đánh giá thực chất hiệu quả của lộ trình học tập cá nhân hóa được xây dựng trên kết quả phân tích Process Mining kết hợp dữ liệu chủ quan đối với kết quả học tập và mức độ hài lòng của sinh viên đại học.
+*   Kiểm chứng giả thuyết hiệu quả can thiệp dưới các phương pháp kiểm soát đường cơ sở nghiêm ngặt nhằm hạn chế các kết luận thiếu khách quan do chênh lệch sẵn có của người học.
+
+## 1.3. Câu hỏi nghiên cứu và Giả thuyết thực nghiệm
+
+### Câu hỏi nghiên cứu
+*   **Câu hỏi 1:** Làm thế nào để xây dựng một quy trình chuẩn hóa, đi từ việc trích xuất dữ liệu nhật ký trên hệ thống quản lý học tập đến việc áp dụng các thuật toán khai phá quy trình phục vụ phân tích học tập?
+*   **Câu hỏi 2:** Việc ứng dụng Process Mining giúp phát hiện những đặc trưng và sai lệch nào trong hành trình học tập thực tế của các nhóm sinh viên có học lực khác nhau?
+*   **Câu hỏi 3:** Lộ trình học tập được cá nhân hóa dựa trên kết quả phân tích Process Mining kết hợp dữ liệu chủ quan có thực sự giúp nâng cao kết quả học tập và mức độ hài lòng của sinh viên hơn so với lộ trình cố định ban đầu hay không?
+
+### Giả thuyết thực nghiệm
+*   **Giả thuyết không ($H_0$):** Không có sự khác biệt về kết quả học tập và mức độ hài lòng giữa nhóm sinh viên được định hướng theo lộ trình cá nhân hóa (được tối ưu hóa từ Process Mining và dữ liệu chủ quan) so với nhóm học theo lộ trình cố định ban đầu, sau khi đã kiểm soát các chênh lệch ở đường cơ sở.
+*   **Giả thuyết đối chiếu ($H_1$):** Sinh viên được học tập theo lộ trình cá nhân hóa có kết quả học tập cao hơn và mức độ hài lòng cao hơn có ý nghĩa thống kê so với khi học theo lộ trình cố định ban đầu, ngay cả khi kiểm soát các chênh lệch ở đường cơ sở.
+
