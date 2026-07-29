@@ -87,7 +87,7 @@ Trước khóa học, kiểm định Welch t-test được thực hiện để �
 | **Nền tảng học lực** | $2,94 \pm 0,93$ | $3,21 \pm 0,99$ | $-1,66$ | $0,099$ | $-0,28$ |
 | **Định hướng làm chủ** | $3,06 \pm 0,84$ | $3,02 \pm 1,19$ | $0,24$ | $0,810$ | $0,04$ |
 
-Kết quả so sánh chỉ ra hai nhóm có sự chênh lệch lớn ở đường cơ sở (baseline non-equivalence) ngay trước khi khóa học diễn ra. Nhóm A xuất phát cao hơn hẳn nhóm C về niềm tin năng lực bản thân ($d = 0,70$) và đặc biệt là kỹ năng tự điều chỉnh học tập SRL ($d = 2,64$). Do đó, bất kỳ sự so sánh trực tiếp nào ở hậu kiểm mà không kiểm soát các biến nền này sẽ dẫn đến kết luận sai lệch về hiệu quả can thiệp.��n kiểm (Welch t-test)
+Kết quả so sánh chỉ ra hai nhóm có sự chênh lệch lớn ở đường cơ sở (baseline non-equivalence) ngay trước khi khóa học diễn ra. Nhóm A xuất phát cao hơn hẳn nhóm C về niềm tin năng lực bản thân ($d = 0,70$) và đặc biệt là kỹ năng tự điều chỉnh học tập SRL ($d = 2,64$). Do đó, bất kỳ sự so sánh trực tiếp nào ở hậu kiểm mà không kiểm soát các biến nền này sẽ dẫn đến kết luận sai lệch về hiệu quả can thiệp.n kiểm (Welch t-test)
 
 Trước khóa học, kiểm định Welch t-test được thực hiện để đánh giá tính tương đương giữa hai nhóm lộ trình tự hình thành: Cụm A (Có kế hoạch) và Cụm C (Nguy cơ).
 

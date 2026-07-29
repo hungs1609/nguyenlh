@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage[T5]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage[fontsize=13pt]{scrextend}
+\usepackage{mathptmx}
+\usepackage[top=2.5cm,bottom=2.5cm,left=3.5cm,right=2.0cm]{geometry}
+\usepackage{setspace}
+\setstretch{1.5}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes.geometric,arrows}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+
+% Cấu hình đánh số trang ở góc dưới bên phải
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+
+% Trang bìa
+\input{trang_bia}
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% Tóm tắt (Abstract)
+\input{01_tom_tat}
+\addcontentsline{toc}{section}{1. Tóm tắt}
+\newpage
+
+% Trang mục lục
+\renewcommand{\contentsname}{Mục lục}
+\tableofcontents
+\newpage
+
+\setcounter{section}{1} % Để chương tiếp theo (Mở đầu) tự động đánh số 2
+% Các chương nội dung chính
+\input{02_mo_dau}
+\newpage
+
+\input{03_khung_ly_thuyet}
+\newpage
+
+\input{04_phuong_phap}
+\newpage
+
+\input{05_ket_qua_nghien_cuu}
+\newpage
+
+\input{06_ban_luan}
+\newpage
+
+\input{07_ket_luan}
+\newpage
+
+% Tài liệu tham khảo
+\input{08_tai_lieu_tham_khao}
+\newpage
+
+\end{document}

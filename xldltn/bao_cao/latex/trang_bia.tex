@@ -1,0 +1,51 @@
+\begin{titlepage}
+    % Khung viền đơn mảnh bám theo lề giấy 
+    \begin{tikzpicture}[overlay,remember picture]
+        \draw [line width=1.5pt] ($ (current page.north west) + (3cm,-2cm) $) rectangle ($ (current page.south east) + (-2cm,1.5cm) $);
+    \end{tikzpicture}
+    
+    \centering
+    
+    % Tên Trường & Khoa chủ quản
+    {\fontsize{14}{16}\selectfont\textbf{ĐẠI HỌC BÁCH KHOA HÀ NỘI}\\} 
+    {\fontsize{12}{14}\selectfont\textbf{KHOA KHOA HỌC VÀ CÔNG NGHỆ GIÁO DỤC}\\} 
+    
+    \vspace{1.5cm}
+    
+    % Khối định vị LOGO Trường
+    \includegraphics[height=4.5cm]{hust_logo.png}
+    
+    \vspace{1.5cm}
+    
+    % Loại hình tài liệu (Màu đỏ, in hoa đậm)
+    {\fontsize{16}{18}\selectfont\textbf{\color{red}BÁO CÁO CUỐI KỲ}\\} 
+    
+    \vspace{0.8cm}
+    
+    % Tên đề tài/báo cáo phân tích
+    {\fontsize{14}{18}\selectfont\textbf{Đánh giá hiệu quả ứng dụng khai phá quy trình (Process Mining)\\ trong phân tích học tập nhằm tối ưu hóa lộ trình cá nhân hóa\\ của sinh viên đại học}\\} 
+    
+    \vspace{0.4cm}
+    \noindent\rule{0.65\textwidth}{0.6pt} % Đường kẻ ngang phân cách tiêu đề
+    \vspace{0.6cm}
+    
+    % Tên Học phần tương ứng
+    {\fontsize{12}{14}\selectfont\textit{\textbf{Học phần:} Xử lý dữ liệu thực nghiệm}\\} 
+    
+    \vspace{2.5cm}
+    
+    % Khối thông tin Học viên & Giảng viên hướng dẫn
+    \begin{flushleft}
+        \hspace{2.5cm} 
+        \begin{tabular}{ll}
+            \fontsize{12}{14}\selectfont\textbf{Học viên thực hiện:} & \fontsize{12}{14}\selectfont Lê Hạnh Nguyên - 20252233M
+        \end{tabular}
+    \end{flushleft}
+    
+    \vfill
+    
+    % Địa điểm và thời gian xuất bản ở cuối trang
+    {\fontsize{12}{14}\selectfont\textbf{Hà Nội – 2026}\\}
+    \vspace*{0.4cm}
+    
+\end{titlepage}
