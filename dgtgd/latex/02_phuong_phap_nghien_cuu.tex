@@ -1,0 +1,41 @@
+\section{II. PHƯƠNG PHÁP NGHIÊN CỨU}
+
+\subsection{2.1. Phương pháp nghiên cứu}
+Nghiên cứu áp dụng phương pháp Design Science Research (Nghiên cứu Khoa học Thiết kế) làm định hướng chủ đạo, kết hợp với phương pháp phân tích định lượng dữ liệu lớn. Nghiên cứu Khoa học Thiết kế đặc biệt phù hợp cho mục tiêu sáng tạo một Artifact (Sản phẩm nghiên cứu) công nghệ hoặc mô hình đánh giá mới, đồng thời tiến hành hoàn thiện sản phẩm đó qua các vòng lặp thử nghiệm.
+
+Trong phạm vi báo cáo tiền khả thi này, nghiên cứu thực hiện hai bước đầu tiên của chu trình Nghiên cứu Khoa học Thiết kế bao gồm nhận diện vấn đề và xác lập mục tiêu giải pháp kèm phác thảo thiết kế. Các bước thực thi và đánh giá thực nghiệm còn lại thuộc phạm vi của nghiên cứu đầy đủ tiếp theo.
+
+\subsection{2.2. Thiết kế nghiên cứu}
+Lộ trình nghiên cứu tổng thể được thiết kế bao gồm 5 giai đoạn nối tiếp nhau. Báo cáo tiền khả thi này tiến hành triển khai hai giai đoạn đầu:
+\begin{itemize}
+    \item Giai đoạn 1 tập trung thu thập và tiền xử lý dữ liệu nhật ký sự kiện từ Hệ thống Quản lý Học tập.
+    \item Giai đoạn 2 thực hiện phân tích Process Mining bao gồm Khám phá quy trình và Kiểm tra độ phù hợp quy trình trên tập dữ liệu rà soát.
+\end{itemize}
+
+Ba giai đoạn còn lại được mô tả ở mức thiết kế khái niệm bao gồm: Giai đoạn 3 xây dựng Mô hình Đánh giá Sự Tiến bộ hoàn chỉnh dựa trên dữ liệu chuỗi thời gian; Giai đoạn 4 thiết kế Động cơ Gợi ý Lộ trình Học tập Cá nhân hóa; và Giai đoạn 5 triển khai thử nghiệm thực nghiệm, kiểm định độ tin cậy cùng đánh giá hiệu quả tác động.
+
+\subsection{2.3. Khung lý thuyết, đánh giá}
+Khung lý thuyết của nghiên cứu được xây dựng trên sự hợp nhất của hai trụ cột chuyên môn:
+
+Trụ cột thứ nhất là Khung lý thuyết Process Mining của van der Aalst (2016), ứng dụng thuật toán Inductive Miner cho tác vụ Khám phá quy trình và phương pháp đối sánh chuỗi (Alignment-based Conformance Checking) cho tác vụ Kiểm tra độ phù hợp quy trình.
+
+Trụ cột thứ hai là Khung lý thuyết Tự điều chỉnh học tập của Zimmerman (2002), dùng để giải thích và đánh giá mức độ chủ động, khả năng tự nhận biết sai lệch cùng năng lực điều chỉnh chiến lược học tập của sinh viên qua các mốc thời gian.
+
+\subsection{2.4. Đối tượng khảo sát}
+Ở bước đánh giá tiền khả thi, đối tượng khảo sát dữ liệu là tập dữ liệu thứ cấp công khai Open University Learning Analytics Dataset (Tập dữ liệu Phân tích Học tập Đại học Mở Anh Quốc - OULAD). Việc rà soát tập dữ liệu OULAD nhằm mục đích kiểm tra tính sẵn có, độ chi tiết của nhật ký sự kiện và tính khả thi khi chuyển đổi dữ liệu thô sang cấu trúc quy trình.
+
+Dữ liệu nhật ký thực tế từ hệ thống Moodle của một học phần học tập kết hợp (Blended Learning) sẽ được thu thập ở giai đoạn thực nghiệm tiếp theo.
+
+\subsection{2.5. Các bộ công cụ}
+Nghiên cứu sử dụng ngôn ngữ lập trình Python làm công cụ phân tích chính với các thư viện chuyên dụng như PM4Py, Pandas, Scikit-learn và NumPy. Bên cạnh đó, các phần mềm Process Mining chuyên dụng như ProM 6.11 và Disco (Fluxicon) được sử dụng để trực quan hóa và kiểm tra mô hình. Toàn bộ môi trường thử nghiệm được thực hiện trên Jupyter Notebook và Google Colab.
+
+\subsection{2.6. Thu thập dữ liệu}
+Dữ liệu nhật ký sự kiện được trích xuất dưới dạng các bản ghi có cấu trúc tối thiểu gồm ba trường thuộc tính bắt buộc: Mã định danh sinh viên (Case ID), Tên hoạt động học tập (Activity) và Dấu thời gian (Timestamp). Bên cạnh đó, dữ liệu bổ trợ bao gồm loại tài nguyên học tập, tuần học và kết quả các bài đánh giá ngắn.
+
+\subsection{2.7. Phân tích dữ liệu}
+Quy trình phân tích dữ liệu tiền khả thi được triển khai theo 3 bước kỹ thuật chính:
+\begin{enumerate}
+    \item Làm sạch và chuẩn hóa dữ liệu: Loại bỏ các bản ghi nhiễu, xử lý dữ liệu trùng lặp và chuyển đổi dữ liệu thô sang định dạng chuẩn XES (eXtensible Event Stream) hoặc CSV.
+    \item Khám phá quy trình: Áp dụng thuật toán Inductive Miner để rút ra Mô hình quy trình tham chiếu do giảng viên thiết kế và Mô hình quy trình thực tế của từng sinh viên.
+    \item Tính toán chỉ số tiến bộ: Sử dụng phép đối sánh chuỗi để xác định điểm số phù hợp và đo lường mức độ trôi lệch hành vi qua từng cửa sổ thời gian.
+\end{enumerate}

@@ -1,0 +1,173 @@
+Xây dựng mô hình đánh giá sự tiến bộ của sinh viên đại học dựa trên Process Mining trong phân tích học tập
+Đối tượng tác động: Sinh viên đại học
+Bối cảnh: Phân tích học tập trên hệ thống E-learning/LMS
+Phương pháp đánh giá: Kỹ thuật Khai phá Quy trình - Process Mining
+Loại hình báo cáo: Đánh giá tiền khả thi (Pre-feasibility Assessment)
+I. ĐẶT VẤN ĐỀ
+1.1. Bối cảnh nghiên cứu
+Sự bùng nổ của các Hệ thống Quản lý Học tập (LMS) như Moodle, Canvas trong giáo dục đại học đã tạo ra lượng dữ liệu nhật ký học tập (Event Logs) khổng lồ. Tuy nhiên, đa số các hệ thống phân tích học tập (Learning Analytics - LA) hiện nay chỉ dừng lại ở các chỉ số thống kê mô tả tĩnh (như tổng số lần truy cập, thời gian online, điểm số bài tập). Các chỉ số này không phản ánh được quá trình học tập diễn ra như thế nào theo thời gian. Đổi mới giáo dục hiện đại đòi hỏi chuyển dịch từ đánh giá tổng kết (summative evaluation) sang đánh giá tiến trình (formative/process evaluation) để kịp thời hỗ trợ và cá nhân hóa lộ trình cho từng sinh viên.
+1.2. Tổng quan nghiên cứu
+Khai phá Quy trình (Process Mining - PM) trong giáo dục là một nhánh phát triển mạnh thuộc Khai phá Dữ liệu Giáo dục (Educational Data Mining - EDM). Các nghiên cứu tiền đề (van der Aalst, 2016; Romero & Ventura, 2020) chỉ ra rằng PM cho phép tái hiện chính xác hành vi thực tế của người học dưới dạng mô hình quy trình (Process Discovery) và so sánh hành vi đó với lộ trình chuẩn do giảng viên thiết kế (Conformance Checking). Việc ứng dụng PM trong việc phân tích các chiến lược Tự điều chỉnh học tập (Self-Regulated Learning - SRL) ngày càng được quan tâm (Jovanović et al., 2017).
+1.3. Khoảng trống nghiên cứu
+Mặc dù PM đã được ứng dụng để trực quan hóa luồng học tập hoặc phát hiện các điểm nghẽn (bottlenecks) chung, hầu hết các nghiên cứu hiện tại còn tồn tại hai khoảng trống lớn:
+1.    Thiếu một mô hình định lượng hóa "sự tiến bộ" (progress indicators) theo thời gian thực dựa trên các kỹ thuật Conformance Checking và Temporal Drift Analysis.
+2.    Chưa kết nối trực tiếp kết quả đánh giá sự tiến bộ từ PM với một cơ chế khuyến nghị lộ trình học tập cá nhân hóa tự động (Personalized Learning Pathways) đáp ứng cho từng nhóm sinh viên có tốc độ học khác nhau.
+1.4. Mục đích nghiên cứu
+●     Mục tiêu tổng quát: Đánh giá tính khả thi bước đầu của việc xây dựng mô hình đánh giá sự tiến bộ của sinh viên thông qua khai phá quy trình từ nhật ký học tập LMS, làm căn cứ quyết định có triển khai nghiên cứu đầy đủ hay không.
+●     Mục tiêu cụ thể:
+1.    Xác định yêu cầu dữ liệu tối thiểu và rà soát mức độ sẵn có của nhật ký sự kiện LMS phục vụ việc mô hình hóa chuỗi quy trình học tập.
+2.    Đề xuất khung chỉ số định lượng sự tiến bộ dựa trên độ phù hợp quy trình (Fitness/Alignment) và nhịp độ hoàn thành hoạt động, ở mức thiết kế khái niệm.
+3.    Xác lập bộ tiêu chí và ngưỡng go/no-go làm căn cứ quyết định chuyển sang giai đoạn nghiên cứu đầy đủ.
+1.5. Câu hỏi đánh giá tiền khả thi
+RQ1: "Sự tiến bộ" trong học tập có thể được định lượng từ dữ liệu nhật ký LMS bằng các kỹ thuật Process Mining theo khung khái niệm nào?
+RQ2: Dữ liệu, hạ tầng kỹ thuật và điều kiện tổ chức hiện có đáp ứng đến đâu các yêu cầu tối thiểu của mô hình đánh giá sự tiến bộ?
+RQ3: Những rủi ro nào có thể khiến mô hình không sử dụng được, và cần thỏa mãn các ngưỡng nào để quyết định triển khai nghiên cứu đầy đủ?
+II. PHƯƠNG PHÁP ĐÁNH GIÁ TIỀN KHẢ THI
+2.1. Phương pháp nghiên cứu
+Nghiên cứu áp dụng phương pháp Nghiên cứu Khoa học Thiết kế (Design Science Research - DSR) kết hợp phân tích định lượng dữ liệu lớn. DSR phù hợp để vừa tạo ra một sản phẩm công nghệ/mô hình mới (Artifact), vừa đánh giá và hoàn thiện sản phẩm đó qua các vòng lặp thử nghiệm. Ở phạm vi tiền khả thi, nghiên cứu chỉ thực hiện hai bước đầu của chu trình DSR là nhận diện vấn đề và xác lập mục tiêu giải pháp, kèm phác thảo thiết kế; các bước hiện thực hóa và đánh giá thực nghiệm thuộc giai đoạn nghiên cứu đầy đủ.
+2.2. Thiết kế nghiên cứu
+Lộ trình nghiên cứu đầy đủ gồm 5 giai đoạn. Báo cáo tiền khả thi này chỉ thực hiện Giai đoạn 1 và Giai đoạn 2; các Giai đoạn 3 - 5 được mô tả ở mức thiết kế, chưa triển khai:
+[Giai đoạn 1] Thu thập & Tiền xử lý Dữ liệu Log (LMS Event Logs) - phạm vi tiền khả thi
+  │
+[Giai đoạn 2] Khai phá Quy trình (Process Discovery & Conformance Checking) - phạm vi tiền khả thi
+  │
+[Giai đoạn 3] Xây dựng Mô hình Đánh giá Sự Tiến bộ (Progress Evaluation Model) - nghiên cứu đầy đủ
+ │
+[Giai đoạn 4] Thiết kế Động cơ Gợi ý Lộ trình Cá nhân hóa (Recommendation Engine) - nghiên cứu đầy đủ
+ │
+[Giai đoạn 5] Thử nghiệm, Đánh giá Thực nghiệm (Validation & Benchmark) - nghiên cứu đầy đủ
+ 
+2.3. Khung lý thuyết và đánh giá
+●     Khung lý thuyết Khai phá Quy trình (Process Mining Framework - van der Aalst, 2016): Sử dụng các thuật toán Inductive Miner (Process Discovery) và Alignment-based Conformance Checking.
+●     Mô hình Tự điều chỉnh học tập (SRL Framework - Zimmerman, 2002): Đánh giá mức độ chủ động, khả năng tự sửa lỗi và điều chỉnh chiến lược học tập của sinh viên.
+2.4. Đối tượng khảo sát
+Ở bước tiền khả thi, báo cáo chỉ rà soát tập dữ liệu công khai OULAD - Open University Learning Analytics Dataset để kiểm tra tính sẵn có và mức chi tiết của nhật ký sự kiện. Dữ liệu log Moodle thực tế từ một môn học Blended Learning chưa được thu thập; việc này thuộc giai đoạn nghiên cứu đầy đủ.
+2.5. Các bộ công cụ
+Ngôn ngữ xử lý & Phân tích: Python (PM4Py, Pandas, Scikit-learn, NumPy).
+Phần mềm khai phá quy trình chuyên dụng: ProM 6.11 và Disco (Fluxicon).
+Môi trường thử nghiệm: Jupyter Notebook / Google Colab.
+2.6. Thu thập dữ liệu
+Dữ liệu nhật ký được trích xuất dưới dạng các bản ghi có cấu trúc cơ bản gồm: tên tài khoản(Case ID), tên hoạt động học tập (Activity) và dấu thời gian (Timestamp), kèm theo các thuộc tính bổ sung như loại tài nguyên và kết quả bài tập.
+2.7. Phân tích dữ liệu
+1.    Làm sạch dữ liệu: Lọc nhiễu, xử lý bản ghi trùng lặp và chuyển đổi định dạng dữ liệu thành định dạng chuẩn XES (eXtensible Event Stream) hoặc CSV.
+2.    Khai phá Quy trình: Sử dụng Inductive Miner để rút ra Quy trình Tham chiếu (Reference Model) do giảng viên định nghĩa và Quy trình Thực tế (Discovered Model) của từng sinh viên.
+3.    Tính toán chỉ số tiến bộ: Áp dụng phương pháp so sánh chuỗi (Alignments) để tính toán điểm số phù hợp và chỉ số lệch hướng (Deviations) qua các mốc thời gian
+III. KẾT QUẢ ĐÁNH GIÁ TIỀN KHẢ THI
+3.1. Khả thi về khái niệm (RQ1): khung chỉ số đánh giá sự tiến bộ được đề xuất
+Báo cáo đề xuất khung Bộ chỉ số Tiến bộ Quy trình (Process Progress Metrics - PPM) gồm 3 chiều đánh giá. Đây là thiết kế ở mức khái niệm, chưa được kiểm chứng trên dữ liệu thực tế:
+Chiều đánh giá
+Chỉ số thành phần
+Ý nghĩa / Công thức đo lường
+Độ tuân thủ lộ trình (Alignment Fitness)
+Fscore(t)
+Mức độ học sinh bám sát lộ trình bài học tối ưu tại tuần t.
+Độ linh hoạt & Tự điều chỉnh (Adaptability)
+DCI (Deviation Correction Index)
+Khả năng giảm thiểu các bước học lặp lại/thừa thãi sau khi nhận phản hồi.
+Vận tốc học tập (Temporal Velocity)
+Vlearn
+Tỷ lệ hoàn thành các nút quy trình (activities) trên một đơn vị thời gian.
+
+Ba chỉ số này dự kiến được tổng hợp thành Điểm Tiến bộ Chuỗi (Longitudinal Progress Score - LPS) để phân loại sinh viên theo từng thời điểm vào 3 nhóm tiến trình: Tiến bộ vượt bậc, Tiến bộ ổn định, và Nguy cơ thụt lùi/Gặp điểm nghẽn. Công thức tổng hợp và trọng số của từng chỉ số chưa được xác định; nội dung này thuộc giai đoạn nghiên cứu đầy đủ.
+3.2. Khả thi về thiết kế: phác thảo cơ chế phản hồi theo nhóm tiến bộ
+Dựa trên phân loại dự kiến từ mô hình đánh giá sự tiến bộ, báo cáo phác thảo ở mức luật nghiệp vụ một Động cơ Gợi ý dựa trên Luật (Rule-based & Process-aware Recommender Engine):
+Đánh giá LPS & Mẫu hành vi (Process Pattern)
+ 
+Nhóm Tiến bộ vượt bậc
+Nhóm Tiến bộ ổn định
+Nhóm Nguy cơ / Bị nghẽn
+- Bỏ qua nội dung phụ
+- Gợi ý bài tập nâng cao 
+- Mở khóa module sớm
+- Tiếp tục lộ trình chuẩn
+- Gợi ý câu hỏi tự luyện 
+- Nhắc nhở bài chưa hoàn thành
+ - Đề xuất clip ngắn ôn tập lại
+- Cảnh báo giảng viên can thiệp
+
+ 
+            
+3.3. Khả thi về dữ liệu, kỹ thuật và tổ chức (RQ2)
+●    Về dữ liệu: Tập OULAD ghi nhận tương tác ở mức phiên và ngày, đủ để dựng chuỗi hoạt động nhưng không lưu thứ tự thao tác bên trong một tài nguyên. Log Moodle thực tế cho phép ghi vết chi tiết hơn nếu bật chuẩn xAPI hoặc Caliper Analytics, song điều này phụ thuộc cấu hình của từng cơ sở đào tạo và chưa được xác nhận.
+●  Về kỹ thuật: Các thuật toán Inductive Miner và Alignment-based Conformance Checking đã có thư viện mã nguồn mở ổn định (PM4Py, ProM), nên rào cản triển khai ở mức thấp. Tuy nhiên chi phí tính toán của Alignment tăng nhanh theo độ dài chuỗi và số biến thể quy trình; cần đo trên dữ liệu thật trước khi cam kết quy mô.
+●  Về tổ chức: Mô hình chỉ vận hành được khi có Quy trình Tham chiếu do giảng viên định nghĩa. Đây là điều kiện phụ thuộc con người, không thể thay thế bằng giải pháp kỹ thuật, và là rủi ro khả thi lớn nhất của đề tài.
+●  Về đạo đức và pháp lý: Việc chấm điểm tiến bộ tự động cho từng người học đặt ra yêu cầu về minh bạch, quyền được giải thích và phân quyền truy cập dữ liệu. Cần có ý kiến của hội đồng đạo đức nghiên cứu trước khi thu thập dữ liệu thật.
+3.4. Rủi ro và tiêu chí go/no-go cho giai đoạn nghiên cứu đầy đủ (RQ3)
+Báo cáo tiền khả thi này không đưa ra kết quả thực nghiệm. Thay vào đó, các ngưỡng dưới đây được xác lập trước để làm căn cứ quyết định dừng hay tiếp tục sau thử nghiệm quy mô nhỏ. Không đạt bất kỳ tiêu chí nào trong bốn tiêu chí đầu thì đề tài nên dừng hoặc thu hẹp phạm vi.
+Tiêu chí
+Ngưỡng tối thiểu để tiếp tục
+Cách kiểm chứng
+Độ sẵn có của nhật ký
+Ít nhất 1 môn học có log liên tục ≥ 10 tuần, ≥ 150 sinh viên
+Rà soát cơ sở dữ liệu LMS
+Chất lượng chuỗi sự kiện
+≥ 90% bản ghi đủ Case ID, Activity, Timestamp sau làm sạch
+Thống kê mô tả trên log thô
+Tính khả dụng của Quy trình Tham chiếu
+Ít nhất 2 giảng viên mô tả được lộ trình chuẩn ở mức hoạt động
+Phỏng vấn giảng viên phụ trách môn
+Độ hội tụ của chỉ số LPS
+Tương quan giữa LPS và mức tăng điểm chuẩn hóa đạt r ≥ 0,40
+Đối chứng với điểm kiểm tra trước và sau
+Độ ổn định theo thời gian
+LPS tại tuần 4 và tuần 8 tương quan r ≥ 0,50
+Đo lặp trên cùng một nhóm sinh viên
+Chi phí tính toán
+Tính Alignment cho 200 sinh viên hoàn tất dưới 30 phút trên máy tính tiêu chuẩn
+Đo thời gian chạy thử
+Điều kiện đạo đức
+Có chấp thuận của hội đồng đạo đức và cơ chế đồng ý tham gia
+Hồ sơ phê duyệt
+
+ 
+IV. THẢO LUẬN VỀ TÍNH KHẢ THI
+4.1. Về tính khả thi khái niệm của mô hình đánh giá sự tiến bộ
+Phân tích tiền khả thi cho thấy hướng sử dụng Process Mining có tiềm năng vượt qua hạn chế của các chỉ số tĩnh. Sự tiến bộ không chỉ đo bằng việc "học bao nhiêu giờ" hay "đạt bao nhiêu điểm", mà đo bằng "cách thức sinh viên di chuyển qua các hoạt động học tập". Việc tính toán độ phù hợp quy trình (Fitness) theo từng mốc thời gian được kỳ vọng mang lại góc nhìn đa chiều hơn về nỗ lực của người học; mức độ công bằng của cách đo này cần được kiểm chứng chứ chưa thể khẳng định ở bước này.
+4.2. Về tính khả thi của cơ chế phản hồi cá nhân hóa
+Về mặt lập luận, cơ chế gợi ý dựa trên Process Mining có ưu thế so với gợi ý dựa trên nội dung (Content-based filtering), do khai thác được vị trí của người học trong chuỗi hoạt động thay vì chỉ dựa vào đặc trưng của tài liệu. Nếu xác định được bước học bị nghẽn (ví dụ: sinh viên lặp đi lặp lại ở bài tập tuần 2 mà không xem video hướng dẫn), hệ thống có cơ sở đề xuất tài liệu bổ trợ phù hợp hơn. Ưu thế này hiện mới ở mức lập luận, chưa có dữ liệu đối chứng.
+4.3. Những điểm chưa thể kết luận ở bước tiền khả thi
+Do chưa thực hiện thử nghiệm trên dữ liệu thật, báo cáo chưa có căn cứ kết luận về độ chính xác, độ nhạy hay hiệu quả can thiệp của mô hình. Ba câu hỏi còn để ngỏ: (i) chỉ số LPS có tương quan với các thước đo tiến bộ độc lập hay không; (ii) chuỗi thứ tự hành động có thật sự bổ sung thông tin so với các chỉ số tần suất sẵn có hay không; (iii) phản hồi tự động về tiến độ tác động tích cực hay tiêu cực tới động lực của nhóm sinh viên yếu. Cả ba đều thuộc phạm vi giai đoạn nghiên cứu đầy đủ.
+4.4. Hạn chế của bước tiền khả thi và điều kiện chuyển tiếp
+●     Hạn chế:
+1.    Dữ liệu log chỉ ghi nhận các tương tác trên nền tảng trực tuyến; các hoạt động học tập ngoại tuyến (offline, tự học nhóm không qua LMS) chưa được phản ánh.
+2.    Kích thước dữ liệu log lớn gây ra chi phí tính toán cao khi thực hiện Conformance Checking trên quy mô hàng nghìn sinh viên cùng lúc.
+3.    Báo cáo dựa trên tổng quan tài liệu và rà soát dữ liệu thứ cấp; chưa có số liệu sơ cấp thu thập từ bối cảnh triển khai cụ thể, nên các nhận định về tính khả thi tổ chức còn mang tính dự báo.
+●     Điều kiện chuyển sang nghiên cứu đầy đủ: Nếu các ngưỡng ở mục 3.4 được thỏa mãn, bước tiếp theo là thử nghiệm quy mô nhỏ trên một môn học trong một học kỳ (n ≈ 200 sinh viên), xây dựng Quy trình Tham chiếu cùng giảng viên phụ trách, và kiểm định độ hội tụ của chỉ số LPS với mức tăng điểm chuẩn hóa cùng đánh giá độc lập của giảng viên. Phạm vi dừng ở đánh giá sự tiến bộ trong giáo dục, không mở rộng sang dự báo hành vi.
+
+V. ĐỀ XUẤT KHUYẾN NGHỊ
+5.1. Đối với các cơ sở giáo dục đại học
+●     Đầu tư chuẩn hóa hạ tầng dữ liệu: Cần thiết kế hạ tầng LMS có khả năng ghi vết chi tiết (High-granularity event logging) theo chuẩn dữ liệu xAPI hoặc Caliper Analytics.
+●     Xây dựng Trung tâm Phân tích Học tập (Learning Analytics Center): Đưa mô hình đánh giá quy trình vào bảng điều khiển (Dashboard) dành cho cố vấn học tập và giảng viên để chủ động phát hiện sinh viên cần hỗ trợ.
+5.2. Đối với giảng viên và người thiết kế khóa học
+●     Xây dựng Quy trình Tham chiếu (Reference Learning Models): Giảng viên cần thiết kế các kịch bản học tập (Learning Designs) rõ ràng, chuẩn hóa các mốc tiến trình để mô hình Process Mining có cơ sở đối sánh chính xác.
+5.3. Đối với các đơn vị phát triển giải pháp EdTech
+●     Tích hợp Module Process Mining vào LMS: Phát triển các Plugin hoặc API kết nối công cụ Khai phá Quy trình trực tiếp vào Moodle/Canvas để tự động hóa việc đưa ra gợi ý lộ trình học tập cá nhân hóa cho người học.
+TÀI LIỆU THAM KHẢO
+1.    Baker, R. S., & Yacef, K. (2009). The state of educational data mining in 2009: A review and future visions. Journal of Educational Data Mining, 1(1), 3–17.
+2.    Bannert, M., Reimann, P., & Sonnenberg, C. (2014). Process mining techniques for analysing patterns and strategies in students’ self-regulated learning. Metacognition and Learning, 9(2), 161–185. https://doi.org/10.1007/s11409-013-9107-6
+3.    Bogarín, A., Cerezo, R., & Romero, C. (2018). A survey on educational process mining. WIREs Data Mining and Knowledge Discovery, 8(1), e1230. https://doi.org/10.1002/widm.1230
+4.    Carmona, J., van Dongen, B., Solti, A., & Weidlich, M. (2018). Conformance checking: Relating processes and models. Springer. https://doi.org/10.1007/978-3-319-99414-7
+5.    Chen, X., Zou, D., & Xie, H. (2021). Fifty years of personalized learning: A critical review and dynamic meta-analysis. Educational Research Review, 33, 100388. https://doi.org/10.1016/j.edurev.2021.100388
+6.    De Weerdt, J., De Backer, M., Vanthienen, J., & Baesens, B. (2012). A multi-dimensional quality assessment framework for process mining output. IEEE Transactions on Knowledge and Data Engineering, 24(7), 1330–1343.
+7.    Gašević, D., Dawson, S., & Siemens, G. (2015). Let’s not forget: Learning analytics are about learning. TechTrends, 59(1), 64–71. https://doi.org/10.1007/s11528-014-0822-x
+8.    Jovanović, J., Gašević, D., Dawson, S., Pardo, A., & Mirriahi, N. (2017). Learning analytics to unveil self-regulated learning strategies. The Internet and Higher Education, 33, 74–85. https://doi.org/10.1016/j.iheduc.2017.01.001
+9.    Kinnebrew, J. S., Loretz, K. M., & Biswas, G. (2013). A contextualized sequence mining approach for analyzing student behavior in open-ended learning environments. IEEE Transactions on Learning Technologies, 6(3), 225–237.
+10.                  Kuzilek, J., Hlosta, M., & Zdrahal, Z. (2017). Open University Learning Analytics dataset. Scientific Data, 4, 170171. https://doi.org/10.1038/sdata.2017.171
+11.                  Leemans, S. J., Fahland, D., & van der Aalst, W. (2013). Discovering block-structured process models from event logs - a robust mining technique. In Petri Nets and Other Models of Concurrency (pp. 310–329). Springer.
+12.                  Maldonado-Mahauad, J., Pérez-Sanagustín, M., Moreno-Marcos, P. M., Kovanović, V., & Dawson, S. (2018). Mining theory-based self-regulated learning behaviors in MOOCs. Computers & Education, 127, 261–276. https://doi.org/10.1016/j.compedu.2018.09.003
+13.                  Matcha, W., Gašević, D., & Pardo, A. (2019). A systematic review of empirical studies on learning analytics dashboards. IEEE Transactions on Learning Technologies, 13(2), 226–243.
+14.                  Mukala, P., Buijs, J. C., Leemans, S. J., & van der Aalst, W. (2015). Learning patterns analysis using process mining. Proceedings of the 8th International Conference on Educational Data Mining, 320–327.
+15.                  Nguyen, A., & Gardner, L. (2021). Process mining in higher education: A systematic literature review. Educational Information Technologies, 26(3), 3415–3439. https://doi.org/10.1007/s10639-020-10416-2
+16.                  Romero, C., & Ventura, S. (2020). Educational data mining and learning analytics: An updated survey. WIREs Data Mining and Knowledge Discovery, 10(3), e1355. https://doi.org/10.1002/widm.1355
+17.                  Schoor, C., & Bannert, M. (2012). Exploring regulatory processes during a computer-supported collaborative learning task using process mining. Computers in Human Behavior, 28(4), 1321–1331.
+18.                  Sedrakyan, G., Snoeck, M., & De Weerdt, J. (2018). Process mining for tracking student learning trajectories in higher education. IEEE Transactions on Learning Technologies, 11(4), 488–501. https://doi.org/10.1109/TLT.2018.2830325
+19.                  Siemens, G., & Long, P. (2011). Penetrating the fog: Analytics in learning and education. EDUCAUSE Review, 46(5), 30–32.
+20.                  Tempelaar, D. T., Rienties, B., & Giesbers, B. (2015). In search of the most informative data for learning analytics. Computers in Human Behavior, 47, 157–167. https://doi.org/10.1016/j.chb.2014.05.038
+21.                  Trčka, N., Pechenizkiy, M., & van der Aalst, W. (2010). Process mining from educational data. In C. Romero, S. Ventura, M. Pechenizkiy, & R. Baker (Eds.), Handbook of Educational Data Mining (pp. 123–142). CRC Press.
+22.                  Van der Aalst, W. M. P. (2016). Process mining: Data science in action (2nd ed.). Springer. https://doi.org/10.1007/978-3-662-49851-4
+23.                  Vibo, M., & Schoor, C. (2021). Analyzing sequential and temporal learning process data. Journal of Educational Psychology, 113(4), 812–829.
+24.                  Winne, P. H., & Baker, R. S. J. d. (2013). The potentials of educational data mining for researching metacognition, motivation and self-regulated learning. Journal of Educational Data Mining, 5(1), 1–8.
+25.                  Zheng, J., Li, S., & Huang, L. (2022). Personalized learning path recommendation based on process mining and reinforcement learning. Computers & Education, 182, 104478. https://doi.org/10.1016/j.compedu.2022.104478
+26.                  Zimmerman, B. J. (2002). Becoming a self-regulated learner: An overview. Theory Into Practice, 41(2), 64–70. https://doi.org/10.1207/s15430421tip4102_2
+
+

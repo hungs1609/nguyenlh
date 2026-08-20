@@ -71,17 +71,19 @@
     *   Mức độ sẵn sàng dùng AI: Khá sẵn sàng dưới dạng dùng như bản nháp để tự tinh chỉnh, cho thấy nhu cầu kiểm soát nội dung của giảng viên là rất cao.
     *   Tính năng ưu tiên: Tóm tắt tài liệu dài thành dàn ý bài giảng và chuyển đổi văn bản thô thành cấu trúc slide cô đọng.
 
-### 5.2. Các nguyên tắc trong xây dựng sản phẩm Demo
-*   **Nguyên tắc lấy giảng viên làm trung tâm (Human-in-the-loop):** AI chỉ đóng vai trò trợ lý (Co-pilot) tạo bản nháp thô, giảng viên luôn là người duyệt và chỉnh sửa cuối cùng nhằm đảm bảo tính chính xác chuyên môn.
-*   **Nguyên tắc chuẩn hóa sư phạm:** Mọi nội dung câu hỏi sinh ra phải tuân thủ Thang đo Bloom; các hoạt động dạy học đề xuất phải bám sát Thuyết kiến tạo.
-*   **Nguyên tắc an toàn và liêm chính học thuật:** Bảo mật tài liệu giảng dạy của giảng viên, hạn chế hiện tượng AI ảo tưởng (hallucination) làm sai lệch kiến thức chuyên ngành.
+### 5.2. Các nguyên tắc trong xây dựng sản phẩm thử nghiệm
+*   **Nguyên tắc lấy người dạy làm trung tâm (Human-in-the-loop):** AI đóng vai trò trợ lý xây dựng bản thảo, giảng viên giữ quyền quyết định và phê duyệt cuối cùng.
+*   **Nguyên tắc chuẩn hóa sư phạm:** Ràng buộc học liệu tuân thủ Thang đo Bloom cải tiến và Thuyết kiến tạo.
+*   **Nguyên tắc an toàn và liêm chính học thuật:** Áp dụng Prompt Engineering và thiết lập tham số điều khiển để hạn chế hiện tượng ảo tưởng thông tin.
+*   **Nguyên tắc tích hợp đa phương thức (All-in-One):** Tiếp nhận một tài liệu nguồn duy nhất để chuyển hóa thành hệ thống học liệu đa dạng, đồng bộ.
 
-### 5.3. Ứng dụng lý thuyết vào thiết kế chức năng sản phẩm
-*   **Áp dụng Thang đo Bloom vào chức năng sinh câu hỏi (Bloom-based Quiz Generator):** 
-    *   Thiết kế prompt định hướng để AI không chỉ sinh câu hỏi trắc nghiệm thông thường (cấp độ Nhớ/Hiểu) mà còn tạo được các câu hỏi tình huống phức tạp (cấp độ Áp dụng/Phân tích) phù hợp với sinh viên kỹ thuật HUST.
-*   **Áp dụng Thuyết kiến tạo vào chức năng gợi ý hoạt động dạy học (Activity Suggestion):**
-    *   AI dựa trên tài liệu tải lên để đề xuất các hoạt động tương tác cụ thể (thảo luận nhóm, tình huống đóng vai, giải quyết case study thực tế).
-*   **Áp dụng kỹ thuật Prompt Engineering tối ưu:** Thiết kế các khung mẫu prompt (system prompts, few-shot prompts) giúp mô hình AI giữ vững ngữ cảnh kỹ thuật chuyên sâu và đầu ra có định dạng cấu trúc chuẩn.
+### 5.3. Ứng dụng lý thuyết vào thiết kế và triển khai sản phẩm thực tế "Không gian Học liệu số HUST"
+*   **5.3.1. Tổng quan kiến trúc hệ thống All-in-One:** Mô hình ứng dụng web tự động hóa quy trình xử lý ngữ cảnh tài liệu nguồn.
+*   **5.3.2. Triển khai 4 phân hệ học liệu cốt lõi:**
+    *   *Phân hệ 1 - Sơ đồ tư duy tri thức tương tác (Interactive Mindmap):* Biểu diễn cấu trúc tri thức đa cấp, hỗ trợ tương tác xem chi tiết và thảo luận chuyên môn trực tiếp trên từng node.
+    *   *Phân hệ 2 - Khởi tạo kịch bản Slide bài giảng:* Tự động chắt lọc thuật ngữ và cô đọng nội dung văn bản thành kịch bản trình chiếu.
+    *   *Phân hệ 3 - Ngân hàng câu hỏi chuẩn Thang Bloom cải tiến:* Sinh câu hỏi MCQ cho 5 cấp độ đầu (Nhớ -> Đánh giá) và câu hỏi tự luận / bài tập tình huống mở cho cấp độ Sáng tạo (Creating).
+    *   *Phân hệ 4 - Hệ thống Phản biện sư phạm (Pedagogical Critique System):* Tiếp nhận nhận xét tinh chỉnh từ giảng viên; tích hợp bộ phản biện gợi ý tự động (Preset Critics) hỗ trợ kiểm định sư phạm nhanh.
 ---
 
 ## 6. KẾT LUẬN

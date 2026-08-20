@@ -1,0 +1,35 @@
+\section{I. ĐẶT VẤN ĐỀ}
+
+\subsection{1.1. Bối cảnh nghiên cứu}
+Sự ứng dụng rộng rãi của các Hệ thống Quản lý Học tập (Learning Management System - LMS) như Moodle hay Canvas trong giáo dục đại học đã tạo ra nguồn dữ liệu Event Logs (Nhật ký Sự kiện) vô cùng phong phú. Dữ liệu này ghi vết lại toàn bộ quá trình tương tác của người học trên nền tảng trực tuyến theo chuỗi thời gian thực.
+
+Mặc dù vậy, phần lớn các hệ thống Learning Analytics (Phân tích Học tập) hiện nay mới chỉ dừng lại ở việc cung cấp các chỉ số thống kê mô tả mang tính chất tĩnh, chẳng hạn như tổng số lần truy cập hệ thống, tổng thời lượng trực tuyến hoặc điểm số bài tập đơn lẻ. Những chỉ số mang tính bề nổi này chưa thể phản ánh một cách toàn diện và sâu sắc quá trình học tập thực tế diễn ra như thế nào. Yêu cầu đổi mới giáo dục đại học hiện đại đòi hỏi một sự chuyển dịch căn bản từ Formative Evaluation (Đánh giá tiến trình) song song với Summative Evaluation (Đánh giá tổng kết), nhằm kịp thời phát hiện khó khăn, hỗ trợ người học và cá nhân hóa lộ trình cho từng sinh viên.
+
+\subsection{1.2. Tổng quan nghiên cứu}
+Khai phá Dữ liệu Giáo dục (Educational Data Mining) và Phân tích Học tập ngày càng khẳng định vai trò quan trọng trong việc thấu hiểu hành vi người học. Trong đó, việc ứng dụng Process Mining trong giáo dục nổi lên như một hướng đi nhiều triển vọng. Các nghiên cứu tiền đề của van der Aalst (2016) cũng như Romero và Ventura (2020) đã chứng minh rằng Process Mining cho phép tái hiện chính xác luồng hành vi thực tế của người học thông qua kỹ thuật Process Discovery (Khám phá quy trình), đồng thời kiểm tra mức độ tuân thủ của luồng hành vi đó so với lộ trình chuẩn do giảng viên thiết kế bằng kỹ thuật Conformance Checking (Kiểm tra độ phù hợp quy trình).
+
+Bên cạnh đó, các công trình của Jovanović và cộng sự (2017) đã bắt đầu kết nối các mẫu quy trình với khung lý thuyết Self-Regulated Learning (Tự điều chỉnh học tập). Hướng tiếp cận này mở ra khả năng đánh giá các chiến lược tự học của sinh viên một cách tự động và định lượng.
+
+\subsection{1.3. Khoảng trống nghiên cứu}
+Dù Process Mining đã được sử dụng để trực quan hóa tiến trình học tập hoặc phát hiện các Bottlenecks (Điểm nghẽn) chung, rà soát tài liệu cho thấy hai khoảng trống nghiên cứu cốt lõi vẫn còn tồn tại:
+
+Thứ nhất, thiếu hụt một mô hình định lượng hóa "sự tiến bộ" học tập theo thời gian thực dựa trên sự kết hợp giữa kỹ thuật Kiểm tra độ phù hợp quy trình và Phân tích trôi lệch theo thời gian (Temporal Drift Analysis).
+
+Thứ hai, chưa thiết lập được cơ chế kết nối trực tiếp kết quả đánh giá sự tiến bộ từ Process Mining với Động cơ gợi ý lộ trình học tập cá nhân hóa tự động (Personalized Learning Pathways) đáp ứng nhu cầu của từng nhóm sinh viên có nhịp độ học tập khác nhau.
+
+\subsection{1.4. Mục đích nghiên cứu}
+Mục tiêu tổng quát của nghiên cứu là đánh giá tính khả thi bước đầu của việc xây dựng mô hình đánh giá sự tiến bộ của sinh viên đại học thông qua Process Mining từ nhật ký sự kiện trên Hệ thống Quản lý Học tập, làm căn cứ khoa học quyết định có triển khai nghiên cứu thực nghiệm đầy đủ hay không.
+
+Để đạt được mục tiêu tổng quát, nghiên cứu xác định ba mục tiêu cụ thể:
+\begin{enumerate}
+    \item Xác định các yêu cầu dữ liệu tối thiểu và rà soát mức độ sẵn có của nhật ký sự kiện trên Hệ thống Quản lý Học tập phục vụ việc mô hình hóa chuỗi quy trình học tập.
+    \item Đề xuất khung bộ chỉ số định lượng sự tiến bộ dựa trên độ phù hợp quy trình và nhịp độ hoàn thành hoạt động học tập ở mức thiết kế khái niệm.
+    \item Xác lập bộ tiêu chí và các ngưỡng quyết định tiếp tục hoặc dừng nghiên cứu (Go/No-go) làm căn cứ chuyển sang giai đoạn thực nghiệm đầy đủ.
+\end{enumerate}
+
+\subsection{1.5. Câu hỏi nghiên cứu}
+\begin{enumerate}
+    \item Sự tiến bộ học tập của sinh viên đại học có thể được định lượng từ dữ liệu nhật ký sự kiện trên Hệ thống Quản lý Học tập bằng các kỹ thuật Process Mining theo khung khái niệm và bộ chỉ số nào?
+    \item Dữ liệu nhật ký sự kiện, hạ tầng kỹ thuật, điều kiện tổ chức và các yêu cầu đạo đức hiện có đáp ứng ở mức độ nào so với các yêu cầu tối thiểu của mô hình đánh giá sự tiến bộ?
+    \item Những rủi ro chính nào có thể phát sinh, và bộ tiêu chí cùng các ngưỡng quyết định nào cần được thỏa mãn để quyết định triển khai nghiên cứu thực nghiệm đầy đủ và đề xuất giải pháp?
+\end{enumerate}

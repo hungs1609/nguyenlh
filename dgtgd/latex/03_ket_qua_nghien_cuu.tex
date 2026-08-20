@@ -1,0 +1,79 @@
+\section{III. KẾT QUẢ NGHIÊN CỨU}
+
+\subsection{3.1. Câu hỏi nghiên cứu 1: Khả thi về khái niệm -- Khung bộ chỉ số Tiến bộ Quy trình (PPM)}
+Để giải đáp Câu hỏi nghiên cứu 1, báo cáo đề xuất thiết kế khái niệm cho Bộ chỉ số Tiến bộ Quy trình (Process Progress Metrics - PPM) gồm 3 chiều đánh giá định lượng được trình bày trong Bảng 1:
+
+\begin{table}[h!]
+\centering
+\caption{Khung bộ chỉ số Tiến bộ Quy trình (PPM)}
+\label{tab:ppm}
+\begin{tabular}{>{\raggedright\arraybackslash}p{4cm} c >{\raggedright\arraybackslash}p{7.5cm}}
+\toprule
+\textbf{Chiều đánh giá} & \textbf{Chỉ số} & \textbf{Ý nghĩa và Công thức đo lường} \\
+\midrule
+Độ tuân thủ lộ trình & $F_{score}(t)$ & Đo lường mức độ sinh viên bám sát lộ trình bài học tối ưu tại tuần $t$ (Alignment Fitness). \\
+\addlinespace
+Độ linh hoạt \& Tự điều chỉnh & $DCI$ & Chỉ số khắc phục sai lệch (Deviation Correction Index), phản ánh khả năng giảm thiểu các bước học lặp lại hoặc thừa thãi sau khi nhận phản hồi. \\
+\addlinespace
+Vận tốc học tập & $V_{learn}$ & Tỷ lệ hoàn thành các nút hoạt động quy trình trên một đơn vị thời gian (Temporal Velocity). \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Ba chỉ số thành phần này dự kiến được tổng hợp thành Điểm Tiến bộ Chuỗi (Longitudinal Progress Score - LPS) theo từng mốc thời gian. Chỉ số LPS cho phép phân loại sinh viên thành 3 nhóm tiến trình học tập:
+\begin{enumerate}
+    \item Nhóm Tiến bộ vượt bậc bao gồm các sinh viên hoàn thành tốt lộ trình chuẩn, học tập linh hoạt và duy trì vận tốc cao.
+    \item Nhóm Tiến bộ ổn định bao gồm các sinh viên duy trì nhịp độ đạt yêu cầu và tuân thủ lộ trình học tập.
+    \item Nhóm Nguy cơ thụt lùi hoặc Gặp điểm nghẽn bao gồm các sinh viên có chỉ số tuân thủ thấp, lặp lại sai sót hoặc dậm chân tại một bài học.
+\end{enumerate}
+
+\subsection{3.2. Câu hỏi nghiên cứu 2: Khả thi về dữ liệu, kỹ thuật, tổ chức và đạo đức}
+Kết quả đánh giá tiền khả thi giải đáp cho Câu hỏi nghiên cứu 2 thể hiện mức độ đáp ứng cụ thể trên 4 khía cạnh:
+
+Xét trên phương diện dữ liệu, tập dữ liệu OULAD ghi nhận tương tác học tập ở mức phiên làm việc và ngày, đủ điều kiện dựng chuỗi hoạt động tổng quát nhưng chưa ghi nhận thứ tự thao tác sâu bên trong từng tài nguyên. Nhật ký sự kiện Moodle thực tế cho phép ghi vết chi tiết hơn nếu được cấu hình theo chuẩn xAPI hoặc Caliper Analytics.
+
+Về mặt kỹ thuật, thuật toán Inductive Miner và kỹ thuật Kiểm tra độ phù hợp quy trình dựa trên phép đối sánh chuỗi đã được hỗ trợ ổn định bởi các thư viện mã nguồn mở như PM4Py và phần mềm ProM. Rào cản công nghệ ở mức thấp, tuy nhiên chi phí tính toán đối sánh chuỗi có xu hướng tăng nhanh khi quy mô dữ liệu lớn.
+
+Đối với khía cạnh tổ chức, mô hình đòi hỏi phải có Mô hình quy trình tham chiếu do giảng viên phụ trách học phần chủ động xây dựng. Đây là điều kiện phụ thuộc vào yếu tố con người và là điểm cần chuẩn bị kỹ lưỡng nhất về mặt tổ chức.
+
+Liên quan đến vấn đề đạo đức và pháp lý, việc tự động hóa đánh giá tiến bộ yêu cầu tính minh bạch cao, bảo mật thông tin cá nhân của sinh viên và phải nhận được sự phê duyệt của Hội đồng Đạo đức Nghiên cứu trước khi thu thập dữ liệu thực tế.
+
+\subsection{3.3. Câu hỏi nghiên cứu 3: Cơ chế gợi ý lộ trình cá nhân hóa \& Bộ tiêu chí Go/No-go}
+Để giải đáp Câu hỏi nghiên cứu 3, báo cáo thiết kế ma trận gợi ý lộ trình dựa trên phân loại chỉ số tiến bộ và xây dựng bộ tiêu chí quyết định chuyển sang giai đoạn thực nghiệm:
+
+\subsubsection{3.3.1. Ma trận Động cơ Gợi ý Lộ trình Học tập Cá nhân hóa}
+Dựa trên kết quả phân loại từ Điểm Tiến bộ Chuỗi (LPS), Động cơ gợi ý đề xuất các tác động tương ứng cho từng nhóm học viên:
+\begin{itemize}
+    \item Đối với Nhóm Tiến bộ vượt bậc, hệ thống tự động gợi ý bỏ qua các nội dung phụ trùng lặp, mở khóa sớm các bài học tiếp theo và đề xuất các bài tập nâng cao.
+    \item Đối với Nhóm Tiến bộ ổn định, hệ thống khuyến nghị tiếp tục duy trì lộ trình chuẩn, đồng thời bổ sung các câu hỏi tự luyện để củng cố kiến thức.
+    \item Đối với Nhóm Nguy cơ hoặc Gặp điểm nghẽn, hệ thống tự động nhắc nhở các bài học chưa hoàn thành, đề xuất các đoạn video ngắn ôn tập nội dung bị nghẽn, đồng thời gửi cảnh báo đến giảng viên để kịp thời can thiệp trực tiếp.
+\end{itemize}
+
+\subsubsection{3.3.2. Bộ tiêu chí và Ngưỡng quyết định (Go/No-go) cho giai đoạn nghiên cứu đầy đủ}
+Các ngưỡng quyết định được xác lập cụ thể trong Bảng 2 nhằm làm căn cứ quyết định dừng hay tiếp tục nghiên cứu sau thử nghiệm quy mô nhỏ:
+
+\begin{table}[h!]
+\centering
+\caption{Bộ tiêu chí và ngưỡng quyết định (Go/No-go) cho giai đoạn nghiên cứu đầy đủ}
+\label{tab:gonogo}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.5cm} >{\raggedright\arraybackslash}p{5.5cm} >{\raggedright\arraybackslash}p{4.5cm}}
+\toprule
+\textbf{Tiêu chí đánh giá} & \textbf{Ngưỡng tối thiểu để tiếp tục (Go)} & \textbf{Phương pháp kiểm chứng} \\
+\midrule
+Độ sẵn có của nhật ký & Ít nhất 1 học phần có nhật ký sự kiện liên tục $\ge 10$ tuần, quy mô $\ge 150$ sinh viên. & Rà soát cơ sở dữ liệu trên LMS. \\
+\addlinespace
+Chất lượng chuỗi sự kiện & $\ge 90\%$ số lượng bản ghi đầy đủ trường thông tin sau tiền xử lý. & Thống kê mô tả trên dữ liệu thô. \\
+\addlinespace
+Tính khả dụng của quy trình chuẩn & Ít nhất 2 giảng viên xây dựng được Mô hình quy trình tham chiếu chi tiết. & Phỏng vấn chuyên sâu giảng viên phụ trách. \\
+\addlinespace
+Độ hội tụ của chỉ số LPS & Hệ số tương quan giữa LPS và mức tăng điểm chuẩn hóa đạt $r \ge 0{,}40$. & Đối chứng với kết quả bài kiểm tra trước và sau học phần. \\
+\addlinespace
+Độ ổn định theo thời gian & Hệ số tương quan điểm LPS giữa tuần thứ 4 và tuần thứ 8 đạt $r \ge 0{,}50$. & Đo lường lặp lại trên cùng một tập sinh viên. \\
+\addlinespace
+Chi phí tính toán & Thời gian tính toán đối sánh chuỗi cho 200 sinh viên hoàn thành dưới 30 phút. & Đo thời gian thực thi trên phần cứng tiêu chuẩn. \\
+\addlinespace
+Điều kiện đạo đức nghiên cứu & Được sự phê duyệt của Hội đồng Đạo đức và sự đồng thuận của sinh viên. & Hồ sơ chấp thuận chính thức. \\
+\bottomrule
+\end{tabular}
+\end{table}

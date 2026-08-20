@@ -29,8 +29,8 @@ Trước thực tế đó, các công cụ AI tạo sinh mở ra khả năng t�
 
 ### 4. Khung phân tích và phát triển sản phẩm
 * Khảo sát nhu cầu thực tế của giảng viên về các tác vụ thường xuyên trong quá trình chuẩn bị bài giảng như xây dựng câu hỏi kiểm tra, tóm tắt nội dung và thiết kế hoạt động học tập.
-* Xây dựng các nguyên tắc thiết kế nội dung đầu ra dựa trên Thang đo nhận thức Bloom và các yêu cầu sư phạm trong giáo dục đại học.
-* Thiết kế và phát triển công cụ AI tạo sinh cho phép tiếp nhận nội dung bài giảng (slide hoặc văn bản đầu vào) và tự động tạo: Câu hỏi kiểm tra theo các mức độ nhận thức Bloom; Bản tóm tắt nội dung trọng tâm; Gợi ý hoạt động học tập và thảo luận trên lớp.
+* Xây dựng các nguyên tắc thiết kế nội dung đầu ra dựa trên Thang đo nhận thức Bloom, Thuyết kiến tạo và nguyên lý Human-in-the-loop.
+* Thiết kế và phát triển ứng dụng web "Không gian Học liệu số HUST" cung cấp giải pháp sinh học liệu All-in-One tự động từ tài liệu học thuật nguồn bao gồm 4 phân hệ: Sơ đồ tư duy bài giảng tương tác (Mindmap), Kịch bản Slide trình chiếu, Ngân hàng câu hỏi chuẩn Thang Bloom (MCQ & Tự luận sáng tạo), và Hệ thống Phản biện sư phạm (Pedagogical Critique System với gợi ý Preset Critics).
 * Thực nghiệm triển khai và kiểm thử công cụ trên các học phần thuộc khối ngành kỹ thuật/CNTT tại ĐHBK Hà Nội; đánh giá chất lượng đầu ra và mức độ tiết kiệm thời gian của giảng viên khi sử dụng công cụ.
 
 > **Câu hỏi đánh giá thực nghiệm:** AI tạo sinh có hỗ trợ giảm tải quy trình chuẩn bị học liệu cho giảng viên tại ĐHBK Hà Nội không? Mức độ hiệu quả của AI trong các tác vụ tự động tạo câu hỏi kiểm tra, tóm tắt nội dung và gợi ý hoạt động học tập là như thế nào?
