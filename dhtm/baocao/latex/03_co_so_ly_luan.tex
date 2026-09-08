@@ -1,0 +1,115 @@
+\section{Cơ sở lý luận và các khung tham chiếu}
+
+\subsection{Khái niệm Đại học thông minh và Sự chuyển dịch từ Digital sang Smart}
+Khái niệm Smart University (Đại học thông minh) thường bị ngộ nhận đồng nhất với việc trang bị các công nghệ đắt tiền như phòng học ảo, màn hình tương tác, hệ thống điểm danh nhận diện khuôn mặt hay hàng loạt phần mềm chuyên biệt. Tuy nhiên, các nghiên cứu nền tảng quốc tế, đặc biệt là công trình của \citet{uskov2018}, khẳng định sự phân biệt rành mạch giữa hai giai đoạn chuyển đổi.
+
+Giai đoạn Digital University (Đại học số) chủ yếu tập trung vào việc số hóa các nguồn tài nguyên, văn bản và quy trình vật lý sẵn có. Điển hình cho giai đoạn này là việc đưa đề cương bài giảng lên trang tin điện tử, thay thế sổ liên lạc bằng cổng thông tin, hoặc sử dụng hệ thống quản trị học tập để lưu trữ bài giảng và nộp bài tập. Ở trạng thái này, công nghệ chủ yếu đóng vai trò là công cụ hỗ trợ hiệu năng tác nghiệp. Dữ liệu phát sinh ở đâu lưu trữ cục bộ tại đó, tạo nên các ốc đảo thông tin biệt lập, trong khi trải nghiệm của người dùng vẫn bị chia cắt theo ranh giới hành chính của từng phòng ban.
+
+Ngược lại, giai đoạn Smart University (Đại học thông minh) được định nghĩa là một hệ thống kinh tế xã hội kỹ thuật phức hợp, có khả năng liên tục thu nhận dữ liệu từ môi trường dạy và học, kết nối thông tin giữa các thực thể, suy diễn ý nghĩa bối cảnh, từ đó tự động thích ứng hoặc cung cấp thông tin kịp thời để hỗ trợ con người tối ưu hóa các quyết định giáo dục \citep{uskov2018}. Trọng tâm của một đại học thông minh không nằm ở số lượng thiết bị công nghệ được mua sắm, mà nằm ở năng lực tạo ra giá trị giáo dục đo lường được, nâng cao trải nghiệm học tập và tối ưu hóa vận hành dịch vụ.
+
+\vspace{0.3cm}
+\noindent\textbf{Bảng 3.1. So sánh đặc trưng giữa Đại học số và Đại học thông minh}
+\vspace{0.1cm}
+
+\noindent
+\begin{tabularx}{\textwidth}{|L{3.2cm}|Y|Y|}
+\hline
+\textbf{Tiêu chí so sánh} & \textbf{Đại học số (Digital University)} & \textbf{Đại học thông minh (Smart University)} \\
+\hline
+\textbf{Mục tiêu cốt lõi} & Số hóa quy trình, giảm thủ tục giấy tờ, tăng tốc độ xử lý & Tạo ra giá trị giáo dục, cá nhân hóa học tập và tối ưu hóa dịch vụ \\
+\hline
+\textbf{Kiến trúc dữ liệu} & Phân tán trong từng hệ sinh thái phần mềm riêng lẻ & Tích hợp liên thông, có nguồn dữ liệu thẩm quyền duy nhất \\
+\hline
+\textbf{Cơ chế phản hồi} & Bị động, định kỳ, hồi cứu sau khi sự việc đã xảy ra & Chủ động, thời gian thực, có khả năng dự báo và cảnh báo sớm \\
+\hline
+\textbf{Vai trò công nghệ} & Công cụ hỗ trợ hành chính tác nghiệp đơn thuần & Nền tảng kết nối năng lực, cảm nhận và hỗ trợ quyết định \\
+\hline
+\textbf{Tác động người học} & Tự tìm kiếm thông tin qua nhiều cổng khác nhau & Trải nghiệm học tập liền mạch, được nhận diện khó khăn kịp thời \\
+\hline
+\end{tabularx}
+
+\subsection{Sáu đặc tính thông minh của Đại học thông minh}
+Theo khung lý thuyết của \citet{uskov2018}, tính thông minh của một hệ thống giáo dục đại học được cấu thành từ sáu năng lực cốt lõi. Trong giải pháp Dịch vụ Cố vấn học tập và Hỗ trợ sớm, sáu đặc tính này được cụ thể hóa thành một chuỗi năng lực tương hỗ.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=0.4cm,
+    feat/.style={rectangle, draw=blue!80, fill=blue!6, text width=2.1cm, text centered, rounded corners=3pt, minimum height=1.2cm, font=\fontsize{8.5}{10.5}\selectfont},
+    arrow/.style={draw=blue!80, ->, >=stealth, line width=1pt}
+]
+\node (A) [feat] {\textbf{01. Cảm nhận}\\(Sensing)};
+\node (B) [feat, right=of A] {\textbf{02. Suy diễn}\\(Inferring)};
+\node (C) [feat, right=of B] {\textbf{03. Tự học}\\(Learning)};
+\node (D) [feat, right=of C] {\textbf{04. Dự đoán}\\(Anticipating)};
+\node (E) [feat, right=of D] {\textbf{05. Thích ứng}\\(Adapting)};
+\node (F) [feat, right=of E] {\textbf{06. Tự tổ chức}\\(Self-org.)};
+
+\draw [arrow] (A) -- (B);
+\draw [arrow] (B) -- (C);
+\draw [arrow] (C) -- (D);
+\draw [arrow] (D) -- (E);
+\draw [arrow] (E) -- (F);
+\end{tikzpicture}
+\caption{Chuỗi sáu đặc tính thông minh tương hỗ theo khung lý thuyết Uskov et al. (2018)}
+\label{fig:six_features}
+\end{figure}
+
+Trước hết, đặc tính Cảm nhận (Sensing) đại diện cho khả năng thu nhận dữ liệu đa kênh theo thời gian thực về sự tham gia của sinh viên. Năng lực này không chỉ ghi nhận kết quả điểm số định kỳ mà tập trung vào dữ liệu hành vi vi mô trên hệ thống quản trị học tập như tần suất truy cập học liệu, thời gian xem video bài giảng, số bài thảo luận trên diễn đàn và dữ liệu chuyên cần trên lớp. 
+
+Tiếp theo, đặc tính Suy diễn (Inferring) giúp phân tích và bối cảnh hóa các tín hiệu thô thành thông tin có ý nghĩa sư phạm. Ví dụ cụ thể là từ dữ liệu một sinh viên vắng hai buổi học liên tiếp kết hợp không nộp bài tập tuần thứ ba, hệ thống có thể suy diễn ra nguy cơ đứt gãy kiến thức cơ sở đối với học phần toán đại cương. 
+
+Song song với đó, đặc tính Tự học (Learning) cho phép hệ thống học hỏi từ các chu kỳ dữ liệu lịch sử của các khóa sinh viên trước nhằm tinh chỉnh các ngưỡng cảnh báo, nhận diện những mẫu hình hành vi đặc trưng dẫn đến nguy cơ trượt môn. 
+
+Trên cơ sở đó, đặc tính Dự đoán (Anticipating) mang lại năng lực nhận diện sớm nguy cơ sa sút học tập trước khi kỳ thi diễn ra từ tám đến mười tuần, ước tính xác suất sinh viên rơi vào diện cảnh báo học vụ ngay tại giai đoạn giữa kỳ. 
+
+Đối với khía cạnh can thiệp, đặc tính Thích ứng (Adapting) giúp hệ thống và quy trình tự động điều chỉnh kênh liên lạc cùng nội dung khuyến nghị. Đối với sinh viên có mức độ nguy cơ nhẹ, hệ thống đề xuất tài liệu tự học bổ trợ; đối với sinh viên có nguy cơ cao, hệ thống điều hướng thông báo để thiết lập buổi gặp mặt trực tiếp với cố vấn học tập. 
+
+Cuối cùng, đặc tính Tự tổ chức (Self-organizing) phản ánh khả năng của toàn bộ tổ chức trong việc tự động điều phối lịch làm việc của cố vấn học tập, phân bổ lại khối lượng công việc tư vấn hoặc bố trí thêm nguồn lực trợ giảng đến những lớp học phần có tỷ lệ sinh viên gặp khó khăn cao nhất.
+
+\subsection{Lý thuyết Phân tích học tập và Vòng đời dữ liệu khép kín}
+Learning Analytics (Phân tích Học tập) được định nghĩa là việc đo lường, thu thập, phân tích và báo cáo dữ liệu về người học cùng bối cảnh của họ, nhằm mục đích hiểu và tối ưu hóa việc học cũng như môi trường nơi hoạt động học tập diễn ra \citep{long2011, lang2017}.
+
+Trong công tác cố vấn học tập, kết quả phân tích dữ liệu dù chính xác đến đâu cũng không mang lại giá trị nếu không dẫn đến một hành động can thiệp sư phạm kịp thời. Nghiên cứu áp dụng chu trình năm bước chuyển đổi giá trị từ dữ liệu đến hiểu biết, phản hồi, hành động và giá trị giáo dục.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=0.5cm,
+    stepb/.style={rectangle, draw=green!60!black, fill=green!6, text width=2.4cm, text centered, rounded corners=3pt, minimum height=1.3cm, font=\fontsize{8.5}{10.5}\selectfont},
+    arrow/.style={draw=green!60!black, ->, >=stealth, line width=1pt},
+    looparrow/.style={draw=green!60!black, ->, >=stealth, dashed, line width=0.8pt}
+]
+\node (S1) [stepb] {\textbf{1. Thu thập}\\SIS, LMS, Điểm danh};
+\node (S2) [stepb, right=of S1] {\textbf{2. Phân tích}\\Engine cảnh báo sớm};
+\node (S3) [stepb, right=of S2] {\textbf{3. Phản hồi}\\Bảng điều khiển bối cảnh};
+\node (S4) [stepb, right=of S3] {\textbf{4. Can thiệp}\\Tư vấn \& Phụ đạo};
+\node (S5) [stepb, right=of S4] {\textbf{5. Đánh giá}\\Phục hồi học vụ};
+
+\draw [arrow] (S1) -- (S2);
+\draw [arrow] (S2) -- (S3);
+\draw [arrow] (S3) -- (S4);
+\draw [arrow] (S4) -- (S5);
+\draw [looparrow] (S5.south) -- ++(0,-0.4) -| (S1.south) node[pos=0.25, below, font=\fontsize{8}{10}\selectfont] {Vòng lặp tinh chỉnh dữ liệu};
+\end{tikzpicture}
+\caption{Vòng đời phân tích học tập khép kín từ dữ liệu đến can thiệp sư phạm}
+\label{fig:la_loop}
+\end{figure}
+
+Xét trên tiến trình vận hành, bước thứ nhất tập trung vào việc tiếp nhận dữ liệu sạch, có cấu trúc từ hệ thống quản trị học tập và hệ thống thông tin sinh viên. Bước thứ hai tiến hành phân tích thông qua mô hình thuật toán nhằm nhận diện nhóm sinh viên có chỉ số tương tác sụt giảm bất thường. Bước thứ ba thực hiện phản hồi thông tin trực quan đến cố vấn học tập và bản thân sinh viên, loại bỏ hoàn toàn các ngôn từ mang tính phán xét tiêu cực. Bước thứ tư là khâu can thiệp sư phạm then chốt, nơi cố vấn học tập trực tiếp gặp gỡ sinh viên để tìm hiểu nguyên nhân gốc rễ về tâm lý, tài chính hoặc phương pháp học tập, từ đó xây dựng kế hoạch phục hồi. Bước thứ năm tiến hành đánh giá tác động sau hai tuần nhằm kiểm tra sự tiến bộ của người học, đồng thời gửi dữ liệu phản hồi để hiệu chuẩn lại mô hình phân tích ban đầu.
+
+\subsection{Nguyên tắc Sư phạm Đạo đức và Cơ chế Human-in-the-loop}
+Thực tiễn triển khai các hệ thống cảnh báo sớm quốc tế cho thấy nhiều dự án đã thất bại do tiếp cận thuần túy theo hướng kỹ thuật số, dẫn đến những hệ lụy đạo đức và tâm lý xã hội sâu sắc. Để ngăn ngừa các rủi ro này, đề tài thiết lập ba nguyên tắc đạo đức cốt lõi dựa trên khuyến nghị của \citet{prinsloo2017} và Tổ chức Hợp tác và Phát triển Kinh tế \citep{oecd2023}.
+
+Trước hết là nguyên tắc giữ con người trong trung tâm quyết định (Human-in-the-loop). Theo nguyên tắc này, thuật toán phân tích học tập chỉ đóng vai trò là công cụ hỗ trợ thị giác và cung cấp thông tin bối cảnh. Thuật toán tuyệt đối không được trao quyền tự động ra phán quyết kỷ luật học vụ, không tự động hủy tư cách học phần hoặc gửi thông báo kỷ luật chính thức khi chưa có sự thẩm định và phê duyệt của cố vấn học tập cùng giảng viên phụ trách.
+
+Nguyên tắc thứ hai là triệt tiêu nguy cơ dán nhãn định kiến đối với người học. Việc gắn nhãn sinh viên là đối tượng yếu kém hoặc có nguy cơ thôi học dễ tạo ra hiệu ứng tâm lý tiêu cực tự hoàn thành, khiến người học nảy sinh tâm lý mặc cảm và từ bỏ nỗ lực phấn đấu. Hệ thống bắt buộc phải sử dụng ngôn ngữ hướng tới sự phát triển, truyền tải các thông điệp mang tính đồng hành và khích lệ thay vì thông báo cảnh cáo nặng nề.
+
+Nguyên tắc thứ ba là bảo đảm quyền riêng tư và tối thiểu hóa dữ liệu thu thập. Cơ sở giáo dục chỉ được phép thu thập và xử lý các trường dữ liệu thực sự cần thiết phục vụ trực tiếp cho mục tiêu cải thiện học tập. Mọi dữ liệu đời tư nhạy cảm như thông tin gia đình, tín ngưỡng hoặc hồ sơ y tế không được đưa vào mô hình thuật toán khi chưa có sự đồng thuận rõ ràng của sinh viên.
+
+\subsection{Các Khung Đánh giá Trưởng thành}
+Để chuyển đổi từ hiện trạng sang trạng thái thông minh, nhà trường cần căn cứ vào các khung đánh giá trưởng thành đã được thừa nhận rộng rãi nhằm bảo đảm tính hệ thống và khả thi.
+
+Mô hình Smart University Maturity Model (Mô hình Trưởng thành Đại học Thông minh - SMM) do \citet{uskov2018} đề xuất đánh giá năng lực của nhà trường qua năm cấp độ phát triển. Cấp độ một là Khởi phát, đặc trưng bởi các hoạt động tự phát, manh mún mang tính thử nghiệm cá nhân. Cấp độ hai là Có thể lặp lại, khi một số đơn vị đã hình thành quy trình riêng nhưng chưa có chuẩn mực chung toàn trường. Cấp độ ba là Được chuẩn hóa, thể hiện qua việc ban hành các quy định thống nhất về kiến trúc và dịch vụ. Cấp độ bốn là Được quản trị định lượng, khi các quy trình được điều hành dựa trên số liệu thực tế và hiệu quả được đo lường bằng chỉ số. Cấp độ năm là Tối ưu hóa liên tục, thể hiện khả năng tự động học hỏi, thích ứng và cải tiến liên tục của hệ thống.
+
+Song song với đó, khung mô hình trưởng thành số của \citet{amiri2026} mở rộng phạm vi sang tám chiều năng lực toàn diện gồm quản trị chiến lược, văn hóa số, năng lực số, hạ tầng số, dữ liệu và thông tin chuyên sâu, dạy và học, vận hành dịch vụ, cùng nghiên cứu và đổi mới. Mỗi chiều năng lực được định lượng theo bốn mức độ từ Mới nổi, Thiết lập, Tăng cường đến Trưởng thành. Việc áp dụng đồng thời cả hai mô hình theo phương pháp đánh giá kép giúp nhà trường có cái nhìn toàn diện, tránh ngộ nhận rằng việc sở hữu hạ tầng máy chủ mạnh đã đồng nghĩa với việc đạt mức trưởng thành cao trong quy trình hỗ trợ người học.

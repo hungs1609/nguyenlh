@@ -1,0 +1,94 @@
+\section{Quản trị và quản trị rủi ro có trách nhiệm}
+
+\subsection{Ma trận Phân định Trách nhiệm}
+Để giải quyết triệt để điểm nghẽn về việc có dữ liệu nhưng không có đơn vị chịu trách nhiệm hành động, giải pháp thiết lập ma trận phân định trách nhiệm RACI quy định rõ vai trò của từng bên liên quan qua từng khâu vận hành dịch vụ.
+
+Trong ma trận này, chữ R đại diện cho chủ thể trực tiếp thực hiện công việc (Responsible); chữ A quy định người chịu trách nhiệm giải trình cuối cùng về kết quả và có thẩm quyền phê duyệt (Accountable); chữ C thể hiện các bên được tham vấn chuyên môn hai chiều (Consulted); và chữ I đại diện cho các đối tượng được thông báo kết quả thực hiện (Informed).
+
+\vspace{0.3cm}
+\noindent\textbf{Bảng 7.1. Ma trận phân định trách nhiệm RACI cho Dịch vụ Cố vấn học tập và Hỗ trợ sớm}
+\vspace{0.1cm}
+
+\begin{table}[htbp]
+\centering
+\fontsize{8.5}{10.5}\selectfont
+\begin{tabularx}{\textwidth}{|L{5.2cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{2.0cm}|C{2.0cm}|}
+\hline
+\textbf{Hoạt động nghiệp vụ} & \textbf{Sinh viên} & \textbf{Cố vấn HT} & \textbf{Giảng viên} & \textbf{Đào tạo / CTSV} & \textbf{CNTT / Dữ liệu} \\
+\hline
+1. Thu thập \& chuẩn hóa LMS, SIS & I & I & C & A & \textbf{R} \\
+\hline
+2. Cập nhật điểm danh \& điểm quá trình & I & I & \textbf{R / A} & C & I \\
+\hline
+3. Phân tích rủi ro \& kích hoạt cảnh báo & I & I & I & A & \textbf{R} \\
+\hline
+4. Tiếp nhận \& đánh giá hồ sơ bối cảnh & I & \textbf{R / A} & C & I & I \\
+\hline
+5. Liên hệ \& tổ chức phiên tư vấn cá nhân & C & \textbf{R / A} & I & I & I \\
+\hline
+6. Lập kế hoạch can thiệp phục hồi & \textbf{R} & \textbf{A} & C & I & I \\
+\hline
+7. Phối hợp phụ đạo \& hỗ trợ tâm lý & \textbf{R} & C & \textbf{R} & \textbf{A} & I \\
+\hline
+8. Ghi nhật ký \& đóng hồ sơ can thiệp & I & \textbf{R / A} & I & C & I \\
+\hline
+9. Đánh giá hiệu quả KPI toàn trường & I & C & C & \textbf{R / A} & C \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Sổ đăng ký rủi ro}
+Trong các dự án ứng dụng dữ liệu và phân tích học tập trong giáo dục đại học, rủi ro không chỉ dừng lại ở vấn đề kỹ thuật phần mềm mà nghiêm trọng hơn là rủi ro đạo đức, tâm lý và xã hội \citep{prinsloo2017, oecd2023}. Bảng dưới đây định danh năm nhóm rủi ro trọng yếu kèm theo chiến lược giảm thiểu tương ứng.
+
+\vspace{0.3cm}
+\noindent\textbf{Bảng 7.2. Sổ đăng ký rủi ro cho Dịch vụ Cố vấn học tập và Hỗ trợ sớm}
+\vspace{0.1cm}
+
+\begin{table}[htbp]
+\centering
+\fontsize{8}{10}\selectfont
+\begin{tabularx}{\textwidth}{|C{0.8cm}|L{3.0cm}|C{0.9cm}|C{0.9cm}|C{0.9cm}|C{1.1cm}|Y|L{2.2cm}|}
+\hline
+\textbf{Mã} & \textbf{Tên rủi ro \& Bản chất} & \textbf{L} & \textbf{I} & \textbf{L$\times$I} & \textbf{Mức độ} & \textbf{Biện pháp kiểm soát \& Giảm thiểu} & \textbf{Chủ sở hữu} \\
+\hline
+\textbf{R01} & \textbf{Dán nhãn định kiến:} Sinh viên bị gán mác kém cỏi, tự ti và từ bỏ nỗ lực. & 3 & 5 & \textbf{15} & \textbf{Rất cao} & Không gửi từ ``cảnh báo'' cho sinh viên mà chỉ dùng ngôn ngữ khích lệ; chỉ cố vấn mới xem chỉ số rủi ro bảo mật. & Cố vấn học tập, Ban CTSV \\
+\hline
+\textbf{R02} & \textbf{Thiên lệch \& Báo sai:} Đánh giá sai do học nhóm hoặc mô hình định kiến. & 4 & 3 & \textbf{12} & \textbf{Cao} & Áp dụng Human-in-the-loop; cố vấn thẩm định bối cảnh trước khi gửi tin; kiểm định tỷ lệ báo sai $< 15\%$. & Bộ phận Dữ liệu, Hội đồng SP \\
+\hline
+\textbf{R03} & \textbf{Xâm phạm riêng tư:} Thu thập quá mức dẫn đến rò rỉ dữ liệu nhạy cảm. & 2 & 5 & \textbf{10} & \textbf{Cao} & Tuân thủ Nghị định 13/2023/NĐ-CP; tối thiểu hóa dữ liệu chỉ thu thập hành vi học tập; mã hóa cơ sở dữ liệu. & Giám đốc CNTT, Pháp chế \\
+\hline
+\textbf{R04} & \textbf{Quá tải Cố vấn:} Quá nhiều cảnh báo khiến giảng viên bị trơ lì thông tin. & 4 & 3 & \textbf{12} & \textbf{Cao} & Phân tầng 3 mức rủi ro; chỉ gửi mức nguy cơ cao cho cố vấn; quy đổi giờ tư vấn vào định mức giảng dạy năm. & Ban Đào tạo, Lãnh đạo Khoa \\
+\hline
+\textbf{R05} & \textbf{Đứt gãy bàn giao:} Cố vấn không kết nối được sang bộ phận phụ đạo hoặc tâm lý. & 3 & 4 & \textbf{12} & \textbf{Cao} & Tích hợp hồ sơ can thiệp liên thông đa bên; ban hành cam kết xử lý trong vòng 48 giờ đối với đơn vị chuyên môn. & Ban Đào tạo, Ban CTSV \\
+\hline
+\end{tabularx}
+\begin{flushleft}
+\textit{\fontsize{8}{10}\selectfont Ghi chú: L (Xác suất: 1--5); I (Tác động: 1--5). Điểm rủi ro = $L \times I$. Mức độ: 1--5 (Thấp), 6--9 (Trung bình), 10--14 (Cao), 15--25 (Rất cao).}
+\end{flushleft}
+\end{table}
+
+\subsection{Khung Pháp lý và Chính sách Dữ liệu có Trách nhiệm}
+Để vận hành dịch vụ bền vững, Đại học Bách khoa Hà Nội cần ban hành Quy chế Quản trị và Sử dụng Dữ liệu Học tập có Trách nhiệm với bốn trụ cột pháp lý và đạo đức.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=0.4cm,
+    pil/.style={rectangle, draw=blue!70, fill=blue!6, text width=3.3cm, text centered, rounded corners=3pt, minimum height=1.3cm, font=\fontsize{8}{10}\selectfont}
+]
+\node (P1) [pil] {\textbf{1. Quyền giải thích}\\(XAI)\\Minh bạch căn cứ vi mô};
+\node (P2) [pil, right=of P1] {\textbf{2. Quyền kiểm soát}\\(Nghị định 13)\\Bảo mật \& đồng thuận};
+\node (P3) [pil, right=of P2] {\textbf{3. Phân quyền vai trò}\\(RBAC)\\Truy cập đúng thẩm quyền};
+\node (P4) [pil, right=of P3] {\textbf{4. Nhật ký kiểm toán}\\(Audit Logs)\\Lưu vết mọi thao tác};
+\end{tikzpicture}
+\caption{Bốn trụ cột trong khung chính sách dữ liệu học tập có trách nhiệm}
+\label{fig:four_pillars}
+\end{figure}
+
+Trụ cột thứ nhất là tính minh bạch và quyền được giải thích. Khi một sinh viên được thuật toán xếp vào diện có nguy cơ, hệ thống phải giải thích rõ ràng các căn cứ định lượng dẫn đến kết luận đó như số buổi vắng học hoặc điểm bài tập quá trình sụt giảm, tuyệt đối không sử dụng các mô hình hộp đen không thể giải trình lý do sư phạm.
+
+Trụ cột thứ hai là quyền đồng thuận và bảo vệ quyền riêng tư theo tinh thần Nghị định 13/2023/NĐ-CP. Sinh viên được thông báo đầy đủ về mục đích sử dụng dữ liệu nhằm hỗ trợ học tập, có quyền tra cứu hồ sơ của chính mình và yêu cầu đính chính nếu thông tin ghi nhận chưa chính xác.
+
+Trụ cột thứ ba là cơ chế phân quyền truy cập nghiêm ngặt dựa trên vai trò. Sinh viên chỉ có quyền xem dữ liệu của bản thân; giảng viên bộ môn chỉ tiếp cận dữ liệu của lớp học phần mình giảng dạy; cố vấn học tập xem dữ liệu tổng hợp của sinh viên trong lớp phụ trách; và bộ phận kỹ thuật dữ liệu chỉ làm việc với dữ liệu đã được ẩn danh hóa.
+
+Trụ cột thứ tư là hệ thống nhật ký kiểm toán minh bạch. Mọi thao tác truy cập, tra cứu hoặc xuất dữ liệu hồ sơ sinh viên đều được hệ thống tự động lưu vết nhật ký về danh tính người truy cập, thời gian và nội dung tra cứu nhằm ngăn chặn triệt để hành vi lạm dụng dữ liệu ngoài mục đích giáo dục.

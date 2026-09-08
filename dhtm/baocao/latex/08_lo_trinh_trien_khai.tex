@@ -1,0 +1,106 @@
+\section{Lộ trình triển khai ba giai đoạn và các cổng kiểm soát}
+
+\subsection{Lộ trình chuyển đổi ba giai đoạn}
+Chuyển đổi một quy trình hỗ trợ sinh viên tại đại học quy mô hơn 35.000 người học như Đại học Bách khoa Hà Nội không thể thực hiện dàn trải trong một thời gian ngắn. Theo khuyến nghị từ mô hình ba chân trời đổi mới (Three Horizons Framework) trong bài giảng chuyên đề, nghiên cứu đề xuất Lộ trình triển khai 36 tháng với các mục tiêu, phạm vi và sản phẩm cụ thể qua từng giai đoạn.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=0.5cm,
+    phase/.style={rectangle, draw=blue!80, fill=blue!6, text width=4.3cm, rounded corners=3pt, inner sep=6pt, font=\fontsize{8.2}{10.5}\selectfont},
+    gate/.style={rectangle, draw=orange!80!black, fill=orange!10, text width=4.3cm, text centered, rounded corners=3pt, inner sep=4pt, font=\fontsize{8}{9.5}\selectfont\textbf}
+]
+\node (H1) [phase] {
+    \textbf{\color{blue!80!black}GIAI ĐOẠN 1 (0--12 THÁNG)}\\
+    \textit{Thiết lập nền tảng \& Thí điểm}\\
+    $\bullet$ Ban hành Quy chế Dữ liệu \& RACI\\
+    $\bullet$ Xây dựng đường ống LMS--SIS\\
+    $\bullet$ Phát triển Cổng cố vấn \& tập huấn\\
+    $\bullet$ Thí điểm với 1.500 sinh viên CNTT
+};
+
+\node (H2) [phase, right=of H1] {
+    \textbf{\color{blue!80!black}GIAI ĐOẠN 2 (12--24 THÁNG)}\\
+    \textit{Mở rộng \& Tích hợp liên thông}\\
+    $\bullet$ Mở rộng toàn trường cho K68, K69\\
+    $\bullet$ Liên thông Ban Đào tạo \& CTSV\\
+    $\bullet$ Mạng lưới trợ giảng đồng đẳng\\
+    $\bullet$ Tối ưu hóa mô hình Explainable AI
+};
+
+\node (H3) [phase, right=of H2] {
+    \textbf{\color{blue!80!black}GIAI ĐOẠN 3 (24--36 THÁNG)}\\
+    \textit{Thể chế hóa \& Tự thích ứng}\\
+    $\bullet$ Văn hóa ra quyết định từ dữ liệu\\
+    $\bullet$ Mô hình học máy tự thích ứng\\
+    $\bullet$ Tự cân bằng tải công tác cố vấn\\
+    $\bullet$ Đánh giá tác động tỷ lệ tốt nghiệp
+};
+
+\node (G1) [gate, below=0.35cm of H1] {CỔNG KIỂM SOÁT 1\\(Cuối tháng 12: Đánh giá thí điểm)};
+\node (G2) [gate, below=0.35cm of H2] {CỔNG KIỂM SOÁT 2\\(Cuối tháng 24: Đánh giá toàn diện)};
+
+\draw [->, >=stealth, line width=1.2pt, draw=blue!70] (H1) -- (H2);
+\draw [->, >=stealth, line width=1.2pt, draw=blue!70] (H2) -- (H3);
+\draw [->, >=stealth, line width=0.8pt, draw=orange!80!black, dashed] (H1) -- (G1);
+\draw [->, >=stealth, line width=0.8pt, draw=orange!80!black, dashed] (H2) -- (G2);
+\end{tikzpicture}
+\caption{Lộ trình chuyển đổi số ba giai đoạn trong 36 tháng kèm các cổng kiểm soát}
+\label{fig:roadmap}
+\end{figure}
+
+\subsubsection{Chi tiết ba giai đoạn chuyển đổi}
+Giai đoạn một kéo dài từ tháng thứ 0 đến tháng thứ 12, tập trung vào việc Thiết lập nền tảng và thí điểm phạm vi hẹp. Mục tiêu cốt lõi của giai đoạn này là xây dựng đường ống tích hợp dữ liệu ban đầu, chuẩn hóa quy trình sư phạm và kiểm chứng tính khả thi của giải pháp ở quy mô hẹp. Phạm vi triển khai được chọn là Trường Công nghệ Thông tin và Truyền thông thuộc Đại học Bách khoa Hà Nội với quy mô khoảng 1.500 sinh viên năm thứ nhất và năm thứ hai. Các nhiệm vụ trọng tâm gồm ban hành quy chế sử dụng dữ liệu học tập có trách nhiệm, xây dựng phiên bản phần mềm thử nghiệm ban đầu kết nối giữa hệ thống quản trị học tập và hệ thống thông tin sinh viên, phát triển Cổng cố vấn học tập và tổ chức tập huấn kỹ năng tư vấn bối cảnh cho 30 giảng viên làm cố vấn học tập tại đơn vị thí điểm.
+
+Giai đoạn hai kéo dài từ tháng thứ 12 đến tháng thứ 24, hướng tới việc Mở rộng quy mô toàn trường và tích hợp dịch vụ liên thông. Mục tiêu là mở rộng giải pháp ra toàn bộ các trường và khoa chuyên ngành, phục vụ toàn bộ khoảng 15.000 sinh viên năm nhất và năm hai của Đại học Bách khoa Hà Nội. Trong giai đoạn này, nhà trường nâng cấp hạ tầng tính toán để đáp ứng dữ liệu quy mô lớn, chuyển đổi mô hình phân tích rủi ro sang học máy có khả năng giải thích nhằm giảm tỷ lệ cảnh báo sai, đồng thời kết nối liên thông dòng công việc giữa cố vấn học tập với phòng tư vấn tâm lý, ban công tác sinh viên và mạng lưới trợ giảng sinh viên hỗ trợ học tập đồng đẳng.
+
+Giai đoạn ba kéo dài từ tháng thứ 24 đến tháng thứ 36, tập trung vào việc Thể chế hóa toàn diện và tự thích ứng. Mục tiêu là đưa năng lực tổ chức đạt cấp độ Được quản trị định lượng và Tối ưu hóa liên tục, hình thành văn hóa ra quyết định dựa trên bằng chứng dữ liệu trong toàn trường. Hệ thống kích hoạt tính năng tự tổ chức và thích ứng, tự động nhận diện các học phần có tỷ lệ sinh viên gặp khó khăn bất thường để cảnh báo điều chỉnh đề cương môn học, tự động cân bằng tải tư vấn cho cố vấn học tập, mở rộng kết nối với mạng lưới cựu sinh viên và thực hiện đánh giá tác động dài hạn đối với tỷ lệ tốt nghiệp đúng hạn.
+
+\subsection{Các Cổng Kiểm soát Quyết định}
+Để bảo đảm kiểm soát rủi ro và tránh lãng phí nguồn lực đầu tư, lộ trình thiết lập hai cổng kiểm soát quyết định nghiêm ngặt.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=0.6cm,
+    gateb/.style={diamond, draw=orange!80!black, fill=orange!10, text width=2.5cm, text centered, font=\fontsize{8}{9.5}\selectfont\textbf, inner sep=0pt},
+    boxh/.style={rectangle, draw=blue!70, fill=blue!6, text width=3.2cm, text centered, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{8.5}{10.5}\selectfont},
+    fallback/.style={rectangle, draw=red!70, fill=red!6, text width=3.2cm, text centered, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{8}{9.5}\selectfont}
+]
+\node (H1) [boxh] {Chân trời 1: Thí điểm\\(0 đến 12 tháng)};
+\node (G1) [gateb, right=of H1] {CỔNG 1\\(Cuối T12)};
+\node (H2) [boxh, right=of G1] {Chân trời 2: Mở rộng\\(12 đến 24 tháng)};
+\node (G2) [gateb, right=of H2] {CỔNG 2\\(Cuối T24)};
+\node (H3) [boxh, right=of G2] {Chân trời 3: Bền vững\\(24 đến 36 tháng)};
+
+\node (F1) [fallback, below=0.6cm of G1] {Tạm dừng mở rộng,\\tinh chỉnh thuật toán};
+\node (F2) [fallback, below=0.6cm of G2] {Củng cố cơ chế,\\tháo gỡ định mức giờ};
+
+\draw [->, >=stealth, line width=1pt] (H1) -- (G1);
+\draw [->, >=stealth, line width=1pt] (G1) -- node[above, font=\fontsize{7.5}{9}\selectfont] {Đạt} (H2);
+\draw [->, >=stealth, line width=0.8pt, draw=red!70] (G1) -- node[right, font=\fontsize{7.5}{9}\selectfont] {Không đạt} (F1);
+\draw [->, >=stealth, line width=1pt] (H2) -- (G2);
+\draw [->, >=stealth, line width=1pt] (G2) -- node[above, font=\fontsize{7.5}{9}\selectfont] {Đạt} (H3);
+\draw [->, >=stealth, line width=0.8pt, draw=red!70] (G2) -- node[right, font=\fontsize{7.5}{9}\selectfont] {Không đạt} (F2);
+\end{tikzpicture}
+\caption{Cơ chế kiểm soát chất lượng tại hai cổng quyết định (Gateways)}
+\label{fig:decision_gates}
+\end{figure}
+
+\vspace{0.3cm}
+\noindent\textbf{Bảng 8.1. Tiêu chí đánh giá tại các cổng kiểm soát quyết định}
+\vspace{0.1cm}
+
+\begin{table}[htbp]
+\centering
+\fontsize{8.5}{10.5}\selectfont
+\begin{tabularx}{\textwidth}{|L{2.8cm}|C{1.8cm}|Y|Y|}
+\hline
+\textbf{Cổng kiểm soát} & \textbf{Thời điểm} & \textbf{Tiêu chí phê duyệt để tiếp tục mở rộng} & \textbf{Hành động nếu không đạt tiêu chí} \\
+\hline
+\textbf{Cổng kiểm soát 1 (Đánh giá Thí điểm)} & Cuối tháng 12 & Tỷ lệ cảnh báo sai dưới 18\%; tỷ lệ cố vấn học tập tại đơn vị thí điểm sử dụng thường xuyên đạt từ 70\% trở lên; mức hài lòng sinh viên đạt từ 75\% trở lên; không có sự cố lộ dữ liệu. & Tạm dừng việc mở rộng toàn trường; dành thêm ba tháng để rà soát trọng số thuật toán và tối ưu giao diện cố vấn học tập. \\
+\hline
+\textbf{Cổng kiểm soát 2 (Đánh giá Toàn diện)} & Cuối tháng 24 & Tỷ lệ sinh viên nguy cơ tiếp nhận can thiệp đạt từ 75\% trở lên; tỷ lệ sinh viên vượt qua cảnh báo học vụ đạt từ 55\% trở lên; thời gian phản hồi của cố vấn $< 72$ giờ; 100\% đóng hồ sơ đúng hạn. & Giữ nguyên quy mô vận hành hiện tại; đối thoại với các trường khoa để tháo gỡ cơ chế tính giờ làm việc cho cố vấn học tập. \\
+\hline
+\end{tabularx}
+\end{table}

@@ -1,0 +1,119 @@
+\section{Hệ thống KPI và phương án đánh giá kiểm chứng}
+
+\subsection{Bảng ma trận KPI kiểm chứng được}
+Để bảo đảm tính khả thi, minh bạch và có thể kiểm chứng được, hệ thống chỉ số đo lường hiệu quả của Dịch vụ Cố vấn học tập và Hỗ trợ sớm tại Đại học Bách khoa Hà Nội được xây dựng bao gồm cả nhóm chỉ số dẫn dắt đo lường quá trình vận hành và nhóm chỉ số kết quả đo lường giá trị giáo dục thực chất tạo ra.
+
+\vspace{0.3cm}
+\noindent\textbf{Bảng 9.1. Ma trận chỉ số hiệu quả cho Dịch vụ Cố vấn học tập và Hỗ trợ sớm}
+\vspace{0.1cm}
+
+\begin{table}[htbp]
+\centering
+\fontsize{7.5}{9.5}\selectfont
+\begin{tabularx}{\textwidth}{|L{1.5cm}|C{1.0cm}|L{2.8cm}|L{1.8cm}|C{1.3cm}|C{1.3cm}|C{1.3cm}|Y|C{1.1cm}|L{1.8cm}|}
+\hline
+\textbf{Nhóm} & \textbf{Mã} & \textbf{Tên chỉ số} & \textbf{Baseline} & \textbf{GĐ 1} & \textbf{GĐ 2} & \textbf{GĐ 3} & \textbf{Nguồn kiểm chứng} & \textbf{Tần suất} & \textbf{Chủ sở hữu} \\
+\hline
+\multirow{4}{1.5cm}{\textbf{Chỉ số Quá trình}} 
+& \textbf{KPI-01} & Nhận diện nguy cơ & Tuần 17--19 sau kỳ thi & Tuần 5--6 & Tuần 4 & Tuần 3--4 & Log động cơ phân tích & Tuần & Kỹ thuật Dữ liệu \\
+\cline{2-10}
+& \textbf{KPI-02} & Thời gian phản hồi & Chưa quy định & $< 120$h & $< 72$h & $< 48$h & Log cổng cố vấn & Tháng & Trưởng Khoa Viện \\
+\cline{2-10}
+& \textbf{KPI-03} & Tỷ lệ cảnh báo sai & Không đo lường & $< 20\%$ & $< 15\%$ & $< 10\%$ & Báo cáo đối soát giữa kỳ & Kỳ & Hội đồng Sư phạm \\
+\cline{2-10}
+& \textbf{KPI-04} & Sinh viên nhận hỗ trợ & $< 20\%$ & $\ge 60\%$ & $\ge 75\%$ & $\ge 85\%$ & Nhật ký tư vấn trên portal & Kỳ & Ban CTSV \\
+\hline
+\multirow{4}{1.5cm}{\textbf{Chỉ số Kết quả}} 
+& \textbf{KPI-05} & Thoát cảnh báo học vụ & $\approx 30\%$ & $\ge 45\%$ & $\ge 60\%$ & $\ge 70\%$ & Dữ liệu điểm SIS & Kỳ & Ban Đào tạo \\
+\cline{2-10}
+& \textbf{KPI-06} & Cải thiện điểm GPA & Không rõ rệt & $+0.2$ & $+0.35$ & $+0.5$ & Bảng điểm đối chứng & Kỳ & Ban Đào tạo \\
+\cline{2-10}
+& \textbf{KPI-07} & Giảm thôi học năm & 700--800 SV/năm & Giảm 5\% & Giảm 15\% & Giảm 25\% & Quyết định xử lý học vụ & Năm & Ban Giám đốc \\
+\cline{2-10}
+& \textbf{KPI-08} & Hài lòng sinh viên & Chưa khảo sát & $\ge 70\%$ & $\ge 80\%$ & $\ge 90\%$ & Khảo sát ẩn danh ĐBCL & Năm & TT ĐBCL \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Phương pháp Kiểm định và Đo lường Hiệu quả Can thiệp}
+Để khẳng định sự cải thiện kết quả học tập của sinh viên là do tác động thực tế của dịch vụ hỗ trợ sớm chứ không phải do các yếu tố ngẫu nhiên bên ngoài, nhà trường áp dụng thiết kế nghiên cứu bán thực nghiệm kết hợp kỹ thuật ghép cặp điểm xu hướng Propensity Score Matching.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=0.6cm,
+    block/.style={rectangle, draw=blue!70, fill=blue!6, text width=4.2cm, text centered, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{8.5}{10.5}\selectfont},
+    group/.style={rectangle, draw=green!60!black, fill=green!6, text width=4cm, text centered, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{8}{10}\selectfont},
+    eval/.style={rectangle, draw=orange!80!black, fill=orange!6, text width=4.2cm, text centered, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{8.5}{10.5}\selectfont}
+]
+\node (A) [block] {\textbf{Sinh viên có Nguy cơ Học tập}\\(Phát hiện ở tuần 3--4)};
+\node (M) [block, below=0.6cm of A] {\textbf{Ghép cặp tương đương}\\Propensity Score Matching};
+
+\node (G1) [group, below left=0.8cm and 0.5cm of M] {\textbf{NHÓM CAN THIỆP}\\Nhận tư vấn cố vấn \& phụ đạo};
+\node (G2) [group, below right=0.8cm and 0.5cm of M] {\textbf{NHÓM ĐỐI CHỨNG}\\Chỉ nhận thông báo thông thường};
+
+\node (E) [eval, below=2.5cm of M] {\textbf{Phân tích Đối sánh Tác động Ròng}\\Net Treatment Effect (GPA, cảnh báo)};
+
+\draw [->, >=stealth, line width=1pt] (A) -- (M);
+\draw [->, >=stealth, line width=1pt] (M) -| (G1);
+\draw [->, >=stealth, line width=1pt] (M) -| (G2);
+\draw [->, >=stealth, line width=1pt] (G1) |- (E);
+\draw [->, >=stealth, line width=1pt] (G2) |- (E);
+\end{tikzpicture}
+\caption{Thiết kế nghiên cứu bán thực nghiệm đo lường tác động ròng của dịch vụ}
+\label{fig:psm_design}
+\end{figure}
+
+Phương pháp được tiến hành bằng việc chia đối tượng nghiên cứu thành hai nhóm có đặc điểm tương đồng. Nhóm can thiệp gồm các sinh viên thuộc diện nguy cơ nhận được đầy đủ gói dịch vụ gồm tư vấn trực tiếp với cố vấn học tập, tham gia lớp phụ đạo của trợ giảng và điều chỉnh kế hoạch học tập cá nhân. Nhóm đối chứng gồm các sinh viên có cùng mức điểm tuyển sinh đầu vào, cùng ngành học và có mức độ sụt giảm tương tác tương đương ở tuần thứ tư nhưng học tập tại các đơn vị chưa triển khai thí điểm dịch vụ. 
+
+Bằng việc phân tích đối sánh mức độ cải thiện điểm trung bình học kỳ và tỷ lệ trượt môn giữa hai nhóm sau khi kết thúc học kỳ, nhà trường có thể bóc tách tác động ròng của dịch vụ, khẳng định giá trị gia tăng thực chất mà giải pháp mang lại cho chất lượng đào tạo.
+
+\subsection{Chu trình Cải tiến Liên tục}
+Dữ liệu chỉ số hiệu quả không chỉ dùng để lập báo cáo thành tích mà đóng vai trò là nguồn thông tin phản hồi sống động để vận hành chu trình cải tiến chất lượng liên tục PDCA cho toàn bộ hệ sinh thái dịch vụ.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=0.5cm,
+    pdca/.style={rectangle, draw=blue!70, fill=blue!6, text width=3.2cm, rounded corners=3pt, inner sep=5pt, font=\fontsize{8}{9.5}\selectfont}
+]
+\node (P) [pdca] {
+    \textbf{\color{blue!80!black}1. KẾ HOẠCH (PLAN)}\\
+    $\bullet$ Mục tiêu chỉ số học kỳ\\
+    $\bullet$ Cập nhật trọng số thuật toán\\
+    $\bullet$ Phân bổ chỉ tiêu cố vấn
+};
+
+\node (D) [pdca, right=of P] {
+    \textbf{\color{blue!80!black}2. THỰC HIỆN (DO)}\\
+    $\bullet$ Thu nhận nhật ký LMS\\
+    $\bullet$ Báo nguy cơ tuần 3--5\\
+    $\bullet$ Cố vấn tư vấn bối cảnh
+};
+
+\node (C) [pdca, below=0.5cm of D] {
+    \textbf{\color{blue!80!black}3. KIỂM TRA (CHECK)}\\
+    $\bullet$ Rà soát tỷ lệ báo sai\\
+    $\bullet$ Đo thời gian phản hồi\\
+    $\bullet$ Khảo sát sinh viên ẩn danh
+};
+
+\node (A) [pdca, below=0.5cm of P] {
+    \textbf{\color{blue!80!black}4. ĐIỀU CHỈNH (ACT)}\\
+    $\bullet$ Tinh chỉnh ngưỡng thuật toán\\
+    $\bullet$ Tái bổ trợ môn học khó\\
+    $\bullet$ Biểu dương cố vấn xuất sắc
+};
+
+\draw [->, >=stealth, line width=1pt, draw=blue!70] (P) -- (D);
+\draw [->, >=stealth, line width=1pt, draw=blue!70] (D) -- (C);
+\draw [->, >=stealth, line width=1pt, draw=blue!70] (C) -- (A);
+\draw [->, >=stealth, line width=1pt, draw=blue!70] (A) -- (P);
+\end{tikzpicture}
+\caption{Chu trình cải tiến chất lượng liên tục PDCA cho hệ sinh thái dịch vụ}
+\label{fig:pdca_cycle}
+\end{figure}
+
+Ở khía cạnh công nghệ, nếu tỷ lệ cảnh báo sai vượt quá ngưỡng 15\%, hội đồng chuyên môn sẽ tiến hành rà soát lại các trọng số cấu thành chỉ số tham gia học tập; chẳng hạn như giảm bớt tỷ trọng của việc xem bài giảng trực tuyến nếu học phần đó chủ yếu giảng dạy trên lớp. 
+
+Ở khía cạnh sư phạm, nếu dữ liệu ghi nhận trên 40\% sinh viên trong một lớp học phần đồng loạt rơi vào diện nguy cơ cao, hệ thống sẽ tự động gửi tín hiệu đến trưởng bộ môn để rà soát lại phương pháp giảng dạy hoặc độ khó của bài kiểm tra quá trình, bảo đảm việc can thiệp được thực hiện hai chiều giữa người học và người dạy.

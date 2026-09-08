@@ -1,0 +1,163 @@
+\section{Thiết kế giải pháp kiến trúc và dịch vụ}
+
+\subsection{Sơ đồ kiến trúc tổng thể sáu lớp}
+Vận dụng khung kiến trúc hệ sinh thái Đại học thông minh được tổng hợp từ \citet{uskov2018}, Tổ chức Hợp tác và Phát triển Kinh tế \citep{oecd2023} cùng nội dung bài giảng chuyên đề, giải pháp Dịch vụ Cố vấn học tập và Hỗ trợ sớm thông minh tại Đại học Bách khoa Hà Nội được thiết kế theo cấu trúc sáu lớp đồng bộ. Kiến trúc này bảo đảm tính truy vết giá trị xuyên suốt: mọi quyết định công nghệ và hạ tầng ở các lớp dưới đều hướng tới việc phục vụ quy trình, dịch vụ và giá trị giáo dục ở các lớp phía trên.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    layer/.style={rectangle, draw=blue!80, fill=blue!5, text width=14cm, rounded corners=3pt, inner sep=6pt, font=\fontsize{8.5}{10.5}\selectfont},
+    titlel/.style={font=\fontsize{9}{11}\selectfont\textbf, text=blue!90!black}
+]
+\node (L1) [layer] {
+    \textbf{\color{blue!80!black}LỚP 1: GIÁ TRỊ VÀ CHỦ THỂ (VALUES \& ACTORS)}\\
+    $\bullet$ Sinh viên: Nhận hỗ trợ sớm tuần 3--5, tôn trọng quyền riêng tư, không bị dán nhãn tiêu cực.\\
+    $\bullet$ Cố vấn học tập: Có thông tin bối cảnh đa chiều, giảm 70\% thời gian thủ tục hành chính giấy tờ.\\
+    $\bullet$ Nhà trường: Giảm tỷ lệ thôi học, tối ưu nguồn lực trợ giảng, minh bạch giải trình xã hội.
+};
+
+\node (L2) [layer, below=0.35cm of L1] {
+    \textbf{\color{blue!80!black}LỚP 2: DỊCH VỤ (SERVICES)}\\
+    $\bullet$ Dịch vụ 1: Nhận diện nguy cơ học tập sớm ở giai đoạn giữa kỳ (tuần 3 đến tuần 5).\\
+    $\bullet$ Dịch vụ 2: Điều phối dòng công việc can thiệp sư phạm cá nhân hóa.\\
+    $\bullet$ Dịch vụ 3: Đánh giá phục hồi học tập và khép kín vòng lặp tự học của hệ thống.
+};
+
+\node (L3) [layer, below=0.35cm of L2] {
+    \textbf{\color{blue!80!black}LỚP 3: QUY TRÌNH (BUSINESS PROCESSES)}\\
+    Kích hoạt tín hiệu vi mô $\rightarrow$ Cố vấn đánh giá bối cảnh $\rightarrow$ Tiếp cận sinh viên (trong 72 giờ) $\rightarrow$ Thiết lập kế hoạch học tập $\rightarrow$ Đánh giá tiến bộ sau 14 ngày.
+};
+
+\node (L4) [layer, below=0.35cm of L3] {
+    \textbf{\color{blue!80!black}LỚP 4: DỮ LIỆU (DATA)}\\
+    $\bullet$ Dữ liệu học vụ lịch sử từ SIS (GPA, CPA, số tín chỉ tích lũy, tiền sử cảnh báo học vụ).\\
+    $\bullet$ Dữ liệu tiến trình vi mô từ LMS (điểm danh, thời gian đọc tài liệu, tiến độ nộp bài, điểm quá trình).\\
+    $\bullet$ Dữ liệu nhật ký can thiệp sư phạm lưu trữ tập trung tại nền tảng Data Lakehouse của trường.
+};
+
+\node (L5) [layer, below=0.35cm of L4] {
+    \textbf{\color{blue!80!black}LỚP 5: ỨNG DỤNG VÀ NĂNG LỰC SỐ (APPLICATIONS \& DIGITAL CAPABILITIES)}\\
+    $\bullet$ Động cơ phân tích rủi ro học tập có khả năng giải thích (Explainable Machine Learning).\\
+    $\bullet$ Bảng điều khiển bối cảnh dành cho cố vấn học tập và phân hệ thông báo đa kênh bảo mật.
+};
+
+\node (L6) [layer, below=0.35cm of L5] {
+    \textbf{\color{blue!80!black}LỚP 6: HẠ TẦNG VÀ AN TOÀN (INFRASTRUCTURE \& SECURITY)}\\
+    Hạ tầng đám mây lai (Hybrid Cloud), định danh tập trung SSO của Đại học Bách khoa Hà Nội, phân quyền theo vai trò (RBAC), mã hóa dữ liệu theo Nghị định 13/2023/NĐ-CP.
+};
+
+\draw [<->, >=stealth, line width=1pt, draw=blue!70] (L1) -- (L2);
+\draw [<->, >=stealth, line width=1pt, draw=blue!70] (L2) -- (L3);
+\draw [<->, >=stealth, line width=1pt, draw=blue!70] (L3) -- (L4);
+\draw [<->, >=stealth, line width=1pt, draw=blue!70] (L4) -- (L5);
+\draw [<->, >=stealth, line width=1pt, draw=blue!70] (L5) -- (L6);
+\end{tikzpicture}
+\caption{Sơ đồ kiến trúc tổng thể sáu lớp của Dịch vụ Cố vấn học tập và Hỗ trợ sớm}
+\label{fig:six_layers}
+\end{figure}
+
+\subsubsection{Phân tích chi tiết sáu lớp kiến trúc}
+Xét ở Lớp 1 là Giá trị và Chủ thể, kiến trúc định vị rõ người thụ hưởng và các giá trị cốt lõi được cam kết. Mọi giải pháp công nghệ bên dưới đều quy tụ về mục tiêu giúp sinh viên được nhận diện khó khăn kịp thời để phục hồi học kỳ, hỗ trợ cố vấn học tập có đủ bức tranh bối cảnh sư phạm, và nâng cao hiệu quả đào tạo chung của nhà trường.
+
+Về phương diện Lớp 2 là Dịch vụ, hệ thống chuyển dịch từ việc cung cấp các phần mềm rời rạc sang ba gói dịch vụ liên thông gồm Dịch vụ nhận diện nguy cơ sớm ở giai đoạn giữa kỳ, Dịch vụ điều phối can thiệp đa bên và Dịch vụ theo dõi phục hồi kết hợp đánh giá sau can thiệp.
+
+Đối với Lớp 3 là Quy trình, thiết kế xác lập chu trình năm bước với trách nhiệm bàn giao rõ ràng. Thời hạn cam kết xử lý dịch vụ được quy định nghiêm ngặt: kể từ khi xuất hiện tín hiệu rủi ro đến khi cố vấn học tập tiếp cận người học không được vượt quá 72 giờ.
+
+Về mặt Lớp 4 là Dữ liệu, kiến trúc phá vỡ các ốc đảo thông tin bằng việc tích hợp hai nguồn dữ liệu thẩm quyền gồm dữ liệu học vụ lịch sử từ hệ thống SIS và dữ liệu tiến trình học tập thời gian thực từ hệ thống LMS, lưu trữ tập trung tại nền tảng dữ liệu chung của trường.
+
+Ở Lớp 5 là Ứng dụng và Năng lực số, hệ thống tích hợp động cơ phân tích rủi ro học tập ứng dụng mô hình học máy có khả năng giải thích, Cổng cố vấn học tập trực quan và phân hệ quản lý hồ sơ can thiệp giúp lưu trữ lịch sử tư vấn an toàn.
+
+Cuối cùng, Lớp 6 là Hạ tầng và An toàn bảo đảm tính sẵn sàng cao và tuân thủ pháp lý thông qua hệ thống định danh tập trung của Đại học Bách khoa Hà Nội, cơ chế phân quyền dựa trên vai trò nghiêm ngặt, mã hóa cơ sở dữ liệu và lưu vết toàn bộ nhật ký truy cập theo quy định pháp luật.
+
+\subsection{Service Blueprint và Luồng dữ liệu can thiệp}
+Bản đồ dịch vụ Service Blueprint trực quan hóa toàn bộ hành trình trải nghiệm, phân định ranh giới giữa tương tác trực tiếp của người dùng, hoạt động nghiệp vụ hậu trường và các luồng công nghệ hỗ trợ bên dưới.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=0.5cm,
+    stepb/.style={rectangle, draw=blue!70, fill=blue!6, text width=2.4cm, text centered, rounded corners=3pt, minimum height=1.4cm, font=\fontsize{8}{10}\selectfont},
+    arrow/.style={draw=blue!80, ->, >=stealth, line width=1pt}
+]
+\node (P1) [stepb] {\textbf{Giai đoạn 1: Cảm nhận}\\(Tuần 1--4)\\LMS/SIS ghi nhận suy giảm tương tác};
+\node (P2) [stepb, right=of P1] {\textbf{Giai đoạn 2: Suy diễn}\\(Tuần 4--5)\\Engine tính điểm; Cố vấn thẩm định bối cảnh};
+\node (P3) [stepb, right=of P2] {\textbf{Giai đoạn 3: Can thiệp}\\(Trong 72 giờ)\\Tư vấn trực tiếp, lập kế hoạch phục hồi};
+\node (P4) [stepb, right=of P3] {\textbf{Giai đoạn 4: Đánh giá}\\(Sau 14 ngày)\\Cải thiện điểm; đóng hồ sơ can thiệp};
+
+\draw [arrow] (P1) -- (P2);
+\draw [arrow] (P2) -- (P3);
+\draw [arrow] (P3) -- (P4);
+\end{tikzpicture}
+\caption{Tiến trình bốn giai đoạn trong Service Blueprint dịch vụ hỗ trợ sớm}
+\label{fig:blueprint_flow}
+\end{figure}
+
+\vspace{0.3cm}
+\noindent\textbf{Bảng 6.1. Ma trận chi tiết Service Blueprint dịch vụ hỗ trợ sớm}
+\vspace{0.1cm}
+
+\begin{table}[htbp]
+\centering
+\fontsize{8}{10}\selectfont
+\begin{tabularx}{\textwidth}{|L{2.4cm}|Y|Y|Y|Y|Y|}
+\hline
+\textbf{Tầng kiến trúc} & \textbf{Bước 1: Tín hiệu} & \textbf{Bước 2: Bối cảnh} & \textbf{Bước 3: Tiếp cận} & \textbf{Bước 4: Can thiệp} & \textbf{Bước 5: Đánh giá} \\
+\hline
+\textbf{Bằng chứng vật lý \& số} & Giao diện nộp bài tập; bảng điểm danh lớp học. & Bảng điều khiển bối cảnh Cổng cố vấn học tập. & Thông điệp mời gặp; phòng tư vấn trực tiếp/online. & Bản cam kết kế hoạch học tập; lịch phụ đạo trợ giảng. & Biểu đồ phục hồi học tập; điểm thi giữa kỳ. \\
+\hline
+\textbf{Hành động của Sinh viên} & Vắng học không phép hoặc nộp bài tập quá hạn. & Chưa nhận thông báo rủi ro (tránh áp lực dán nhãn). & Nhận lời mời đồng hành; xác nhận lịch hẹn cố vấn. & Tham gia tư vấn; chia sẻ khó khăn và dự lớp phụ đạo. & Hoàn thành bài tập bổ sung; cải thiện điểm số. \\
+\hline
+\textbf{Tương tác trực tiếp} & Giảng viên ghi nhận vắng mặt trên hệ thống. & Không có tương tác trực tiếp với sinh viên. & Cố vấn học tập trực tiếp lắng nghe và thấu cảm. & Giảng viên hoặc trợ giảng hỗ trợ bù đắp kiến thức. & Cố vấn gửi thông điệp biểu dương sự nỗ lực. \\
+\hline
+\textbf{Hành động hậu trường} & Tự động đẩy nhật ký vi mô vào kho dữ liệu chung. & Cố vấn tra cứu lịch sử học tập, chuẩn bị phương án. & Cố vấn lựa chọn gói hỗ trợ học thuật hoặc tâm lý. & Ban Đào tạo bố trí trợ giảng; Ban CTSV hỗ trợ. & Cố vấn xác nhận đóng hồ sơ trên hệ thống. \\
+\hline
+\textbf{Hệ thống \& Dữ liệu} & Đường ống dữ liệu đồng bộ định kỳ 00:00 hàng ngày. & Động cơ phân tích tính toán điểm rủi ro học tập. & Phân hệ gửi thông báo bảo mật mã hóa đến cố vấn. & Phân hệ quản lý hồ sơ lưu kế hoạch hành động số. & Thuật toán đối sánh chỉ số trước và sau can thiệp. \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Quy trình Can thiệp Sư phạm và Ma trận Phân tầng Nguy cơ}
+Để bảo đảm tính công bằng và cá nhân hóa, hệ thống phân loại rủi ro thành ba cấp độ với các kịch bản can thiệp tương ứng.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=0.6cm,
+    eval/.style={rectangle, draw=blue!70, fill=blue!10, text width=4cm, text centered, rounded corners=3pt, minimum height=1cm, font=\fontsize{8.5}{10.5}\selectfont\textbf},
+    pac1/.style={rectangle, draw=green!60!black, fill=green!6, text width=4.2cm, text left, rounded corners=3pt, font=\fontsize{8}{10}\selectfont, inner sep=4pt},
+    pac2/.style={rectangle, draw=orange!80!black, fill=orange!6, text width=4.2cm, text left, rounded corners=3pt, font=\fontsize{8}{10}\selectfont, inner sep=4pt},
+    pac3/.style={rectangle, draw=red!70, fill=red!6, text width=4.2cm, text left, rounded corners=3pt, font=\fontsize{8}{10}\selectfont, inner sep=4pt}
+]
+\node (E) [eval] {Động cơ phân tích đánh giá nguy cơ (Tuần 3--5)};
+
+\node (P1) [pac1, below left=0.8cm and 0.5cm of E] {
+    \textbf{GÓI 1: TỰ THÍCH ỨNG}\\
+    \textit{Điểm rủi ro $< 0.4$ (Nguy cơ Thấp)}\\
+    Gửi học liệu bổ trợ và hướng dẫn tự học qua LMS; không làm phiền cố vấn.
+};
+
+\node (P2) [pac2, below=0.8cm of E] {
+    \textbf{GÓI 2: ĐỒNG ĐẲNG}\\
+    \textit{Điểm rủi ro $0.4 \le R \le 0.7$ (Nguy cơ Vừa)}\\
+    Kết nối trợ giảng sinh viên và nhóm học tập bổ trợ học phần khó.
+};
+
+\node (P3) [pac3, below right=0.8cm and 0.5cm of E] {
+    \textbf{GÓI 3: CHUYÊN SÂU}\\
+    \textit{Điểm rủi ro $> 0.7$ (Nguy cơ Cao)}\\
+    Cố vấn gặp trực tiếp trong 72h; lập kế hoạch phục hồi cá nhân hóa.
+};
+
+\draw [->, >=stealth, draw=green!60!black, thick] (E) -| (P1);
+\draw [->, >=stealth, draw=orange!80!black, thick] (E) -- (P2);
+\draw [->, >=stealth, draw=red!70, thick] (E) -| (P3);
+\end{tikzpicture}
+\caption{Quy trình phân tầng ba cấp độ nguy cơ và các gói can thiệp sư phạm tương ứng}
+\label{fig:three_tiers}
+\end{figure}
+
+Đối với nhóm sinh viên có mức độ nguy cơ thấp tương ứng với điểm rủi ro dưới 0.4 do chỉ quên nộp một bài tập hoặc vắng một buổi học, hệ thống tự động gửi thông báo nhắc nhở nhẹ nhàng trên hệ thống quản trị học tập kèm tài liệu hướng dẫn tự học mà không làm phiền đến cố vấn học tập. 
+
+Đối với nhóm sinh viên có mức độ nguy cơ trung bình tương ứng với điểm rủi ro từ 0.4 đến 0.7 khi có dấu hiệu vắng hai buổi học và điểm kiểm tra nhanh dưới trung bình, hệ thống đề xuất sinh viên tham gia nhóm hỗ trợ học tập đồng đẳng do các trợ giảng sinh viên khóa trên phụ trách. 
+
+Đối với nhóm sinh viên có mức độ nguy cơ cao tương ứng với điểm rủi ro từ 0.7 trở lên do vắng trên 30\% thời lượng hoặc không tương tác liên tục trong hai tuần, hệ thống lập tức kích hoạt cảnh báo gửi đến cố vấn học tập. Cố vấn học tập bắt buộc phải tổ chức phiên tư vấn trực tiếp trong vòng 72 giờ và phối hợp cùng ban đào tạo để thiết lập kế hoạch can thiệp cá nhân hóa.

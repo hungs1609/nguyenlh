@@ -1,0 +1,95 @@
+\section{Trạng thái mục tiêu và tuyên bố giá trị}
+
+\subsection{Tuyên bố Giá trị Đa chiều}
+Quá trình chuyển đổi từ mô hình cảnh báo học vụ truyền thống sang Dịch vụ Cố vấn học tập và Hỗ trợ sớm thông minh nhằm xác lập lại lời hứa giá trị đối với từng chủ thể trong hệ sinh thái giáo dục của Đại học Bách khoa Hà Nội.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=0.5cm,
+    root/.style={rectangle, draw=blue!80, fill=blue!10, text width=4cm, text centered, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{9}{11}\selectfont\textbf},
+    stakeholder/.style={rectangle, draw=blue!60, fill=blue!5, text width=3.4cm, text centered, rounded corners=3pt, minimum height=0.9cm, font=\fontsize{8.5}{10.5}\selectfont\textbf},
+    val/.style={rectangle, draw=gray!40, fill=gray!5, text width=4.2cm, text left, rounded corners=2pt, font=\fontsize{8}{9.5}\selectfont, inner sep=4pt}
+]
+\node (A) [root] {Hệ sinh thái Hỗ trợ sớm\\Thông minh (IAES)};
+
+\node (B) [stakeholder, below left=1.2cm and 1.2cm of A] {Người học -- Sinh viên};
+\node (C) [stakeholder, below=1.2cm of A] {Cố vấn \& Giảng viên};
+\node (D) [stakeholder, below right=1.2cm and 1.2cm of A] {Nhà trường \& Quản lý};
+
+\node (B1) [val, below=0.4cm of B] {$\bullet$ Nhận diện khó khăn tuần 3--5\\$\bullet$ Hỗ trợ bảo mật, tôn trọng\\$\bullet$ Tuyệt đối không bị dán nhãn};
+\node (C1) [val, below=0.4cm of C] {$\bullet$ Hồ sơ bối cảnh súc tích\\$\bullet$ Gợi ý can thiệp sư phạm\\$\bullet$ Giảm 70\% thủ tục giấy tờ};
+\node (D1) [val, below=0.4cm of D] {$\bullet$ Giảm tỷ lệ thôi học\\$\bullet$ Dữ liệu liên thông minh bạch\\$\bullet$ Tăng trách nhiệm giải trình};
+
+\draw [->, >=stealth, draw=blue!70, thick] (A) -| (B);
+\draw [->, >=stealth, draw=blue!70, thick] (A) -- (C);
+\draw [->, >=stealth, draw=blue!70, thick] (A) -| (D);
+\draw [->, >=stealth, draw=gray!60] (B) -- (B1);
+\draw [->, >=stealth, draw=gray!60] (C) -- (C1);
+\draw [->, >=stealth, draw=gray!60] (D) -- (D1);
+\end{tikzpicture}
+\caption{Bản đồ tuyên bố giá trị đa chiều cho các chủ thể trong hệ sinh thái}
+\label{fig:value_map}
+\end{figure}
+
+Đối với người học, giá trị lớn nhất nhận được là khả năng nhận diện khó khăn ngay từ giai đoạn khởi đầu của học kỳ, cụ thể từ tuần thứ ba đến tuần thứ năm khi cơ hội cải thiện kết quả học tập còn nguyên vẹn, thay vì nhận các thông báo xử lý kỷ luật sau khi đã trượt môn. Trải nghiệm sư phạm của sinh viên được nâng tầm thông qua sự đồng hành thấu cảm, các khuyến nghị học tập mang tính khích lệ tư duy phát triển, cùng cơ hội kết nối kịp thời với các nguồn lực bổ trợ như lớp phụ đạo của trợ giảng, tư vấn phương pháp tự học ở bậc đại học, hỗ trợ tâm lý hoặc học bổng hỗ trợ hoàn cảnh khó khăn. Quan trọng hơn cả, quyền tự chủ của người học được bảo vệ tuyệt đối: sinh viên không bị dán nhãn yếu kém, mọi thông tin khó khăn được bảo mật nghiêm ngặt và người học luôn giữ quyền chủ động trong việc lựa chọn các gói giải pháp can thiệp.
+
+Đối với cố vấn học tập và giảng viên bộ môn, giải pháp cung cấp một bảng điều khiển bối cảnh thông minh, giúp người thầy nhận biết nhanh chóng những trường hợp sinh viên thực sự cần trợ giúp mà không phải rà soát thủ công qua hàng trăm dòng số liệu bảng tính. Bên cạnh tín hiệu cảnh báo, cố vấn học tập còn được cung cấp bản phân tích nguyên nhân gốc rễ xuất phát từ việc vắng học, nợ bài tập quá trình hay rỗng kiến thức tiên quyết, kèm theo danh mục các giải pháp can thiệp khả thi được hệ thống đề xuất. Nền tảng còn tự động hóa các khâu hành chính tác nghiệp như lên lịch hẹn tư vấn, gửi tin nhắn nhắc nhở và ghi nhận biên bản làm việc số, giúp cố vấn học tập tiết kiệm tới 70\% thời gian sự vụ để tập trung vào việc lắng nghe, thấu cảm và hướng dẫn người học.
+
+Đối với nhà trường và các cấp quản lý, dịch vụ giúp xóa bỏ tình trạng cát cứ dữ liệu giữa các phòng ban, hình thành dòng dữ liệu sống động xuyên suốt từ lớp học đến cấp điều hành chiến lược. Nhờ đó, việc phân bổ ngân sách trợ giảng và học bổng được thực hiện tối ưu, dựa trên nhu cầu thực tế của từng đơn vị. Về mặt chiến lược, việc giảm thiểu tỷ lệ sinh viên bị cảnh báo học vụ và buộc thôi học sẽ trực tiếp nâng cao tỷ lệ tốt nghiệp đúng hạn, bảo vệ uy tín học thuật và bảo đảm trách nhiệm giải trình xã hội của một đại học trọng điểm quốc gia.
+
+\subsection{Định vị Sáu Đặc tính Thông minh Mục tiêu}
+Trong trạng thái mục tiêu, hệ thống dịch vụ tại Đại học Bách khoa Hà Nội được nâng cấp năng lực tương ứng với sáu đặc tính thông minh theo khung phân loại của \citet{uskov2018}.
+
+\vspace{0.3cm}
+\noindent\textbf{Bảng 5.1. Định vị sáu đặc tính thông minh mục tiêu của hệ thống}
+\vspace{0.1cm}
+
+\noindent
+\begin{tabularx}{\textwidth}{|L{2.8cm}|Y|Y|Y|}
+\hline
+\textbf{Đặc tính thông minh} & \textbf{Hiện tại (AS-IS)} & \textbf{Mục tiêu (TO-BE)} & \textbf{Cơ chế hiện thực hóa} \\
+\hline
+\textbf{01. Cảm nhận (Sensing)} & Dữ liệu điểm thi cuối kỳ, ghi nhận thủ công sau 18 tuần. & Thu nhận đa nguồn theo thời gian thực từ nhật ký LMS và điểm danh tuần 1--5. & Nền tảng dữ liệu tập trung tự động thu thập sự kiện qua API. \\
+\hline
+\textbf{02. Suy diễn (Inferring)} & Không có suy diễn; chỉ biết điểm số thuần túy khi có điểm F. & Tự động chuyển đổi tương tác vi mô thành chỉ số rủi ro có bối cảnh sư phạm. & Mô hình tính điểm tham gia học tập dựa trên trọng số học phần. \\
+\hline
+\textbf{03. Tự học (Learning)} & Không có khả năng học hỏi từ dữ liệu lịch sử các khóa trước. & Học từ dữ liệu các khóa trước để tinh chỉnh trọng số rủi ro qua từng kỳ. & Tự động hiệu chuẩn ngưỡng cảnh báo theo từng học kỳ dựa trên phản hồi cố vấn. \\
+\hline
+\textbf{04. Dự đoán (Anticipating)} & Hoàn toàn bị động; chỉ thống kê sau khi sinh viên đã trượt môn. & Nhận diện nguy cơ sa sút trước kỳ thi 8--10 tuần với độ chính xác cao. & Mô hình phân tầng ba mức độ cảnh báo ở tuần thứ 3 đến tuần thứ 5. \\
+\hline
+\textbf{05. Thích ứng (Adapting)} & Quy trình cứng nhắc; áp dụng chung một thông báo hành chính. & Cá nhân hóa nội dung thông điệp và gợi ý lộ trình hỗ trợ cho từng sinh viên. & Phân hệ khuyến nghị tự động đề xuất học liệu hoặc kết nối cố vấn. \\
+\hline
+\textbf{06. Tự tổ chức (Self-org.)} & Phân bổ cố vấn tĩnh; không điều phối nguồn lực theo nhu cầu thực. & Tự động điều phối lịch làm việc của cố vấn và bố trí trợ giảng đến lớp khó. & Tự động cân bằng tải tư vấn và đề xuất mở lớp phụ đạo học phần khó. \\
+\hline
+\end{tabularx}
+
+\subsection{Tuyên bố Ranh giới Hệ thống}
+Để bảo đảm tính khả thi và giữ vững nguyên tắc đạo đức học thuật, trạng thái mục tiêu xác định ranh giới rõ ràng giữa những hành vi hệ thống được phép thực hiện và những hành vi tuyệt đối không được thực hiện.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    boxgood/.style={rectangle, draw=green!60!black, fill=green!5, text width=6.5cm, rounded corners=4pt, inner sep=8pt, font=\fontsize{8.5}{11}\selectfont},
+    boxbad/.style={rectangle, draw=red!70, fill=red!5, text width=6.5cm, rounded corners=4pt, inner sep=8pt, font=\fontsize{8.5}{11}\selectfont}
+]
+\node (Good) [boxgood] {
+    \textbf{\color{green!50!black}HỆ THỐNG ĐƯỢC PHÉP THỰC HIỆN}\\[4pt]
+    $\checkmark$ Phát hiện sớm dấu hiệu suy giảm tương tác\\
+    $\checkmark$ Cung cấp bức tranh bối cảnh đa chiều cho cố vấn\\
+    $\checkmark$ Đề xuất các phương án can thiệp sư phạm khả thi\\
+    $\checkmark$ Tự động hóa thủ tục đặt lịch hẹn và theo dõi tiến độ
+};
+\node (Bad) [boxbad, right=0.6cm of Good] {
+    \textbf{\color{red!70!black}TUYỆT ĐỐI KHÔNG ĐƯỢC THỰC HIỆN}\\[4pt]
+    $\times$ \textbf{KHÔNG} tự động ra quyết định kỷ luật học vụ\\
+    $\times$ \textbf{KHÔNG} dán nhãn tiêu cực hay phân loại phẩm chất\\
+    $\times$ \textbf{KHÔNG} thay thế phán đoán và sự thấu cảm của cố vấn\\
+    $\times$ \textbf{KHÔNG} thu thập dữ liệu đời tư ngoài phạm vi học tập
+};
+\end{tikzpicture}
+\caption{Ranh giới chức năng và nguyên tắc đạo đức của hệ thống hỗ trợ sớm}
+\label{fig:boundaries}
+\end{figure}
+
+Nguyên tắc bất biến trong thiết kế là công nghệ chỉ đóng vai trò như một chiếc ống nhòm giúp người cố vấn nhìn xa và rõ hơn trên hành trình đồng hành cùng người học, tuyệt đối không bao giờ là người cầm lái thay thế con người.

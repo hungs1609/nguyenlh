@@ -26,8 +26,11 @@
 8. **Trường Đại học Bách khoa Hà Nội.** (2023). *Quy chế đào tạo đại học chính quy theo hệ thống tín chỉ* (Ban hành kèm theo Quyết định của Giám đốc Đại học Bách khoa Hà Nội). Nhà xuất bản Bách khoa Hà Nội.  
    *(Văn bản quy chế về xử lý học vụ, thang điểm trung bình tích lũy và vai trò của cố vấn học tập).*
 
-9. **UNESCO.** (2023). *Guidance for generative AI in education and research*. UNESCO Publishing. https://unesdoc.unesco.org/ark:/48223/pf0000386693  
-   *(Hướng dẫn toàn cầu của UNESCO về việc sử dụng trí tuệ nhân tạo có trách nhiệm trong giáo dục).*
+9. **Phùng Nhung.** (2022, 10 tháng 10). Tân sinh viên căng thẳng vì áp lực học tập. *Báo Lao Động*. https://laodong.vn/tuyen-sinh/tan-sinh-vien-cang-thang-vi-ap-luc-hoc-tap-1101714.ldo  
+   *(Nguồn dữ liệu thứ cấp công bố phỏng vấn lãnh đạo Đại học Bách khoa Hà Nội về thực trạng trung bình mỗi năm có từ 700 đến 800 sinh viên hệ chính quy bị buộc thôi học, trong đó 70% đến 80% trường hợp rơi vào sinh viên các năm đầu do khó khăn trong thích ứng).*
 
-10. **Uskov, V. L., Bakken, J. P., Pandey, A., Singh, U., Yalamanchili, M., & Penumatsa, A.** (2018). Smart university taxonomy: Features, components, systems. In V. L. Uskov, R. J. Howlett, & R. K. Jain (Eds.), *Smart universities: Concepts, systems, and technologies* (pp. 3–46). Springer. https://doi.org/10.1007/978-3-319-59454-5_1  
+10. **UNESCO.** (2023). *Guidance for generative AI in education and research*. UNESCO Publishing. https://unesdoc.unesco.org/ark:/48223/pf0000386693  
+    *(Hướng dẫn toàn cầu của UNESCO về việc sử dụng trí tuệ nhân tạo có trách nhiệm trong giáo dục).*
+
+11. **Uskov, V. L., Bakken, J. P., Pandey, A., Singh, U., Yalamanchili, M., & Penumatsa, A.** (2018). Smart university taxonomy: Features, components, systems. In V. L. Uskov, R. J. Howlett, & R. K. Jain (Eds.), *Smart universities: Concepts, systems, and technologies* (pp. 3–46). Springer. https://doi.org/10.1007/978-3-319-59454-5_1  
     *(Tài liệu nền tảng định nghĩa đại học thông minh, sáu đặc tính thông minh và mô hình trưởng thành SMM).*
