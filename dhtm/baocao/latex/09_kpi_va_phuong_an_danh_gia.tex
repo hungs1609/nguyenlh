@@ -9,12 +9,13 @@
 
 \begin{table}[htbp]
 \centering
+\setlength{\tabcolsep}{2.8pt}
 \fontsize{7.5}{9.5}\selectfont
-\begin{tabularx}{\textwidth}{|L{1.5cm}|C{1.0cm}|L{2.8cm}|L{1.8cm}|C{1.3cm}|C{1.3cm}|C{1.3cm}|Y|C{1.1cm}|L{1.8cm}|}
+\begin{tabularx}{\textwidth}{|C{1.2cm}|C{0.9cm}|L{2.2cm}|L{1.8cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|Y|C{0.85cm}|L{1.8cm}|}
 \hline
 \textbf{Nhóm} & \textbf{Mã} & \textbf{Tên chỉ số} & \textbf{Baseline} & \textbf{GĐ 1} & \textbf{GĐ 2} & \textbf{GĐ 3} & \textbf{Nguồn kiểm chứng} & \textbf{Tần suất} & \textbf{Chủ sở hữu} \\
 \hline
-\multirow{4}{1.5cm}{\textbf{Chỉ số Quá trình}} 
+\multirow{4}{*}{\shortstack{\textbf{Chỉ số}\\\textbf{Quá trình}}} 
 & \textbf{KPI-01} & Nhận diện nguy cơ & Tuần 17--19 sau kỳ thi & Tuần 5--6 & Tuần 4 & Tuần 3--4 & Log động cơ phân tích & Tuần & Kỹ thuật Dữ liệu \\
 \cline{2-10}
 & \textbf{KPI-02} & Thời gian phản hồi & Chưa quy định & $< 120$h & $< 72$h & $< 48$h & Log cổng cố vấn & Tháng & Trưởng Khoa Viện \\
@@ -23,7 +24,7 @@
 \cline{2-10}
 & \textbf{KPI-04} & Sinh viên nhận hỗ trợ & $< 20\%$ & $\ge 60\%$ & $\ge 75\%$ & $\ge 85\%$ & Nhật ký tư vấn trên portal & Kỳ & Ban CTSV \\
 \hline
-\multirow{4}{1.5cm}{\textbf{Chỉ số Kết quả}} 
+\multirow{4}{*}{\shortstack{\textbf{Chỉ số}\\\textbf{Kết quả}}} 
 & \textbf{KPI-05} & Thoát cảnh báo học vụ & $\approx 30\%$ & $\ge 45\%$ & $\ge 60\%$ & $\ge 70\%$ & Dữ liệu điểm SIS & Kỳ & Ban Đào tạo \\
 \cline{2-10}
 & \textbf{KPI-06} & Cải thiện điểm GPA & Không rõ rệt & $+0.2$ & $+0.35$ & $+0.5$ & Bảng điểm đối chứng & Kỳ & Ban Đào tạo \\
@@ -42,9 +43,9 @@
 \centering
 \begin{tikzpicture}[
     node distance=0.6cm,
-    block/.style={rectangle, draw=blue!70, fill=blue!6, text width=4.2cm, text centered, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{8.5}{10.5}\selectfont},
-    group/.style={rectangle, draw=green!60!black, fill=green!6, text width=4cm, text centered, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{8}{10}\selectfont},
-    eval/.style={rectangle, draw=orange!80!black, fill=orange!6, text width=4.2cm, text centered, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{8.5}{10.5}\selectfont}
+    block/.style={rectangle, draw=blue!70, fill=blue!6, text width=4.2cm, align=center, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{8.5}{10.5}\selectfont},
+    group/.style={rectangle, draw=green!60!black, fill=green!6, text width=4cm, align=center, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{8}{10}\selectfont},
+    eval/.style={rectangle, draw=orange!80!black, fill=orange!6, text width=4.2cm, align=center, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{8.5}{10.5}\selectfont}
 ]
 \node (A) [block] {\textbf{Sinh viên có Nguy cơ Học tập}\\(Phát hiện ở tuần 3--4)};
 \node (M) [block, below=0.6cm of A] {\textbf{Ghép cặp tương đương}\\Propensity Score Matching};
@@ -75,7 +76,7 @@ Dữ liệu chỉ số hiệu quả không chỉ dùng để lập báo cáo th�
 \centering
 \begin{tikzpicture}[
     node distance=0.5cm,
-    pdca/.style={rectangle, draw=blue!70, fill=blue!6, text width=3.2cm, rounded corners=3pt, inner sep=5pt, font=\fontsize{8}{9.5}\selectfont}
+    pdca/.style={rectangle, draw=blue!70, fill=blue!6, text width=3.2cm, align=left, rounded corners=3pt, inner sep=5pt, font=\fontsize{8}{10}\selectfont}
 ]
 \node (P) [pdca] {
     \textbf{\color{blue!80!black}1. KẾ HOẠCH (PLAN)}\\

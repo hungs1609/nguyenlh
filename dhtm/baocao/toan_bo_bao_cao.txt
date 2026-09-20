@@ -1,0 +1,706 @@
+================================================================================
+                          ĐẠI HỌC BÁCH KHOA HÀ NỘI
+                   KHOA KHOA HỌC VÀ CÔNG NGHỆ GIÁO DỤC
+
+                            TIỂU LUẬN HỌC PHẦN
+
+    DỊCH VỤ CỐ VẤN HỌC TẬP VÀ HỖ TRỢ SỚM THÔNG MINH DỰA TRÊN PHÂN TÍCH HỌC TẬP
+               VÀ KIẾN TRÚC HỆ SINH THÁI TẠI ĐẠI HỌC BÁCH KHOA HÀ NỘI
+
+    Học phần: Đại học thông minh - ED6211
+
+    Học viên thực hiện:
+        1. Lê Hạnh Nguyên
+        2. Nguyễn Thị Hiếu Anh
+    Giảng viên hướng dẫn:
+        Th.S Lê Huy Cường
+
+                              Hà Nội - 2026
+================================================================================
+
+
+
+================================================================================
+
+# 01. TÓM TẮT
+
+### Bối cảnh và Vấn đề nghiên cứu
+Trong giáo dục đại học đương đại, đặc biệt tại các cơ sở đào tạo khối khoa học và kỹ thuật quy mô lớn như Đại học Bách khoa Hà Nội với hơn 35.000 sinh viên, việc duy trì tỷ lệ học tập bền vững và giảm thiểu tỷ lệ thôi học là một thách thức trọng yếu. Mặc dù nhà trường đã xây dựng hạ tầng số tương đối hoàn chỉnh với Hệ thống Thông tin Sinh viên (Student Information System - SIS), Hệ thống Quản trị Học tập (Learning Management System - LMS) và các bảng điều khiển thống kê, thực tiễn vận hành cho thấy dữ liệu vẫn bị phân mảnh trong các ốc đảo dữ liệu biệt lập.
+
+Hậu quả nghiêm trọng nhất của tình trạng phân mảnh này là quy trình cảnh báo học vụ hiện hành mang tính thụ động và độ trễ cao. Sinh viên gặp khó khăn thường chỉ được nhận diện sau khi kỳ học đã kết thúc thông qua kết quả thi cuối kỳ hoặc quyết định xử lý học vụ chính thức. Tại thời điểm này, các can thiệp sư phạm đã quá muộn để cứu vãn một học kỳ thất bại. Đội ngũ cố vấn học tập đóng vai trò là mắt xích hỗ trợ trực tiếp nhưng vừa thiếu thông tin bối cảnh đa chiều theo thời gian thực, vừa thiếu một quy trình liên thông để phối hợp can thiệp cùng giảng viên bộ môn và các đơn vị hỗ trợ chuyên trách.
+
+### Phương pháp tiếp cận
+Tiểu luận này tiếp cận bài toán theo định hướng nghiên cứu ứng dụng, tích hợp lý thuyết hệ sinh thái Đại học thông minh và Phân tích Học tập (Learning Analytics). Nghiên cứu vận dụng ba trụ cột phương pháp luận chính. Trước hết, nghiên cứu áp dụng Khung kiến trúc sáu lớp theo đề xuất của Uskov và cộng sự (2018) cùng Tổ chức Hợp tác và Phát triển Kinh tế (OECD, 2023) nhằm bảo đảm tính truy vết giá trị từ mục tiêu sư phạm xuống hạ tầng kỹ thuật. Song song với đó, nghiên cứu triển khai mô hình đánh giá trưởng thành kép kết hợp giữa Mô hình Trưởng thành Đại học Thông minh (Smart University Maturity Model - SMM) gồm năm cấp độ và Khung Trưởng thành Số Giáo dục Đại học của Amiri và cộng sự (2026) gồm tám chiều năng lực nhằm định vị chính xác khoảng cách năng lực hiện trạng. Cuối cùng, giải pháp bám sát vòng đời phân tích học tập khép kín từ dữ liệu, hiểu biết, phản hồi, can thiệp đến đánh giá, bảo đảm nguyên tắc sư phạm đạo đức và giữ con người trong trung tâm quyết định.
+
+### Giải pháp đề xuất Dịch vụ Cố vấn học tập và Hỗ trợ sớm thông minh (IAES)
+Giải pháp được thiết kế là một dịch vụ tích hợp liên thông, chuyển dịch từ cơ chế báo cáo thụ động sang nhận diện sớm chủ động và can thiệp có trách nhiệm. Cấu trúc cốt lõi của giải pháp bao gồm bốn thành phần được kết nối chặt chẽ.
+
+Xét về phương diện cảm nhận và thu nhận dữ liệu, giải pháp thực hiện thu thập và chuẩn hóa dữ liệu vi mô từ hệ thống LMS như nhật ký tương tác học liệu, tiến độ nộp bài, điểm đánh giá quá trình, kết hợp với dữ liệu vĩ mô từ hệ thống SIS như điểm trung bình tích lũy, lịch sử học tập, số tín chỉ đăng ký thông qua nền tảng dữ liệu tập trung. Trên cơ sở dữ liệu đó, động cơ phân tích rủi ro học tập có kiểm soát ứng dụng các chỉ báo học tập nhằm nhận diện sự suy giảm tương tác của người học từ tuần thứ ba đến tuần thứ năm của học kỳ. Mô hình thực hiện phân cấp nguy cơ thành ba mức độ mà tuyệt đối không tự động gán nhãn tiêu cực cho người học. 
+
+Đối với khía cạnh tương tác sư phạm, Cổng cố vấn học tập bối cảnh hóa cung cấp hồ sơ học tập đa chiều cho đội ngũ cố vấn học tập, hỗ trợ gợi ý các chiến lược can thiệp phù hợp như bổ trợ kiến thức, điều chỉnh phương pháp tự học, hỗ trợ tâm lý hoặc tư vấn tài chính. Toàn bộ chu trình được bao bọc bởi một khung quản trị và đạo đức tin cậy, thiết lập cơ chế kiểm soát quyền riêng tư tuân thủ Nghị định 13/2023/NĐ-CP, bảo đảm nguyên tắc thu thập dữ liệu tối thiểu, phân quyền truy cập nghiêm ngặt và sổ đăng ký rủi ro nhằm loại trừ nguy cơ thiên lệch thuật toán.
+
+### Kết quả kỳ vọng và Giá trị tạo ra
+Giải pháp được cụ thể hóa bằng lộ trình chuyển đổi ba giai đoạn trong thời gian 36 tháng với hệ thống sáu nhóm chỉ số đo lường hiệu quả có thể kiểm chứng. Khi vận hành trọn vẹn, giải pháp được kỳ vọng mang lại các giá trị đo lường rõ rệt. Về mặt thời gian phát hiện, thời điểm nhận diện sinh viên có nguy cơ được rút ngắn từ tuần thứ 16 đến tuần thứ 18 xuống tuần thứ ba đến tuần thứ năm ngay trong tiến trình học tập. Về tốc độ và chất lượng hỗ trợ, thời gian phản hồi của cố vấn học tập đạt mức dưới 72 giờ kể từ khi xuất hiện tín hiệu nguy cơ, đồng thời tỷ lệ sinh viên chủ động tiếp nhận can thiệp đạt từ 75% trở lên. Về hiệu quả giáo dục, tỷ lệ cảnh báo sai được kiểm soát dưới mức 15%, nâng tỷ lệ sinh viên vượt qua diện cảnh báo học vụ đạt trên 60%, góp phần giảm 20% tỷ lệ sinh viên bị buộc thôi học tại đơn vị thí điểm sau hai năm triển khai.
+
+Báo cáo khẳng định thông điệp cốt lõi: Công nghệ thông minh chỉ phát huy giá trị khi được đặt trong một kiến trúc dịch vụ nhân văn, nơi dữ liệu phục vụ sự thấu cảm và trách nhiệm nghề nghiệp của con người.
+
+================================================================================
+
+# 02. ĐẶT VẤN ĐỀ
+
+## 1. Bối cảnh thực tiễn tại Đại học Bách khoa Hà Nội
+Trường Đại học Bách khoa Hà Nội là một trong những cơ sở giáo dục đại học kỹ thuật và công nghệ trọng điểm tại Việt Nam, với quy mô đào tạo chính quy hiện vượt quá 35.000 sinh viên. Với đặc thù khối lượng kiến thức khoa học cơ bản và kỹ thuật cơ sở rất nặng như các học phần Giải tích, Đại số, Vật lý đại cương và Lập trình cơ bản, tỷ lệ sinh viên gặp khó khăn trong việc thích ứng với phương pháp tự học ở môi trường đại học là rất lớn. Tình trạng này diễn ra nghiêm trọng nhất trong hai năm đầu tiên, vốn là giai đoạn chuyển tiếp quan trọng từ môi trường trung học phổ thông lên đại học.
+
+Xét về phương diện hạ tầng số, Đại học Bách khoa Hà Nội đã đầu tư và vận hành nhiều hệ thống quản trị và dạy học quy mô lớn. Nền tảng Student Information System (Hệ thống Thông tin Sinh viên - SIS) đảm nhiệm việc quản lý chương trình đào tạo, đăng ký tín chỉ, thời khóa biểu và bảng điểm lịch sử của người học. Song song với đó, nền tảng Learning Management System (Hệ thống Quản trị Học tập - LMS) được triển khai trên nền tảng Moodle và Microsoft Teams kết hợp Office 365, đóng vai trò là không gian diễn ra các hoạt động giao nhận bài tập, thảo luận trực tuyến, bài kiểm tra nhanh và phân phối học liệu số. Ngoài ra, Cổng thông tin sinh viên và ứng dụng di động eHUST hỗ trợ tra cứu lịch học và kết quả học tập.
+
+Mặc dù có nguồn tài nguyên dồi dào, nhà trường vẫn đối mặt với nghịch lý mà Uskov và cộng sự (2018) đã cảnh báo: cơ sở giáo dục có thể rất giàu có về mặt hệ thống nhưng lại nghèo nàn về trải nghiệm và thiếu hụt hành động phối hợp liên thông. Dù hàng triệu bản ghi tương tác được sinh ra mỗi tuần trên hệ thống LMS và SIS, nhà trường vẫn ghi nhận tỷ lệ sinh viên sa sút học vụ ở mức đáng lo ngại. Theo số liệu thứ cấp do lãnh đạo Đại học Bách khoa Hà Nội công bố chính thức trên báo chí, trung bình mỗi năm có từ 700 đến 800 sinh viên hệ chính quy bị buộc thôi học, trong đó có tới 70% đến 80% trường hợp xuất phát từ việc sinh viên mất phương hướng hoặc không kịp thích ứng với phương pháp học tập ở giai đoạn chuyển tiếp các năm đầu (Phùng Nhung, 2022). Xuất phát từ số liệu thực tế đó, trong khuôn khổ nghiên cứu tình huống của đề án, nhóm tác giả xây dựng giả định bối cảnh: tỷ lệ sinh viên nhận cảnh báo học vụ mức một hoặc mức hai trước khi rơi vào nguy cơ thôi học ước tính dao động từ 5% đến 8% mỗi học kỳ, trong đó trên 65% trường hợp tập trung vào sinh viên năm thứ nhất và năm thứ hai khi đối mặt với các học phần khoa học cơ bản.
+
+## 2. Các điểm nghẽn hiện trạng và khoảng trống từ dữ liệu đến hành động
+Qua phân tích chu trình vận hành hiện tại, nghiên cứu chỉ ra bốn điểm nghẽn mang tính hệ thống đang cản trở việc trợ giúp người học.
+
+```mermaid
+flowchart LR
+    A[Dữ liệu phân mảnh<br>LMS và SIS biệt lập] --> B[Nhận diện trễ<br>Sau kỳ thi tuần 18]
+    B --> C[Thiếu thông tin bối cảnh<br>Cố vấn chỉ thấy điểm F]
+    C --> D[Hành động đứt gãy<br>Không can thiệp kịp thời]
+    D --> E[Hậu quả giáo dục<br>Buộc thôi học và sa sút]
+```
+
+Trước hết, điểm nghẽn lớn nhất nằm ở sự phân mảnh dữ liệu giữa các hệ thống biệt lập. Toàn bộ dữ liệu phản ánh hành vi học tập thực tế của sinh viên như mức độ chuyên cần, thời gian xem video bài giảng, tiến độ nộp bài và tương tác diễn đàn trên LMS hoàn toàn tách biệt với dữ liệu hành chính học vụ lưu tại SIS. Giảng viên phụ trách lớp học phần nhận biết được sinh viên vắng học nhưng không có cơ chế chuyển giao thông tin sang cho cố vấn học tập. Ngược lại, bộ phận quản lý đào tạo nắm giữ điểm trung bình tích lũy nhưng hoàn toàn không biết sinh viên đang gặp khủng hoảng tâm lý hay bế tắc về phương pháp tự học.
+
+Điểm nghẽn thứ hai thể hiện ở quy trình cảnh báo mang tính hồi cứu với độ trễ thời gian quá lớn. Quy trình cảnh báo học vụ hiện hành của trường chỉ được kích hoạt sau khi đã có đầy đủ điểm thi kết thúc học phần, thường rơi vào tuần thứ 16 đến tuần thứ 18 hoặc thậm chí đầu học kỳ kế tiếp. Khi sinh viên nhận quyết định cảnh báo học vụ, điểm số kém đã chính thức ghi vào học bạ và số tín chỉ đã bị tích lũy nợ, khiến các nỗ lực can thiệp sư phạm trở nên muộn màng.
+
+Ở khía cạnh nhân lực hỗ trợ, đội ngũ cố vấn học tập đang thiếu hụt cả công cụ phân tích lẫn thông tin bối cảnh. Mỗi giảng viên kiêm nhiệm công tác cố vấn thường phụ trách từ 50 đến 120 sinh viên. Với áp lực giảng dạy và nghiên cứu khoa học lớn, cố vấn học tập không thể nắm bắt tình trạng của từng sinh viên nếu chỉ nhìn vào bảng điểm tổng kết học kỳ. Khi tiếp xúc với sinh viên thuộc diện cảnh báo, cố vấn học tập chỉ thấy kết quả học lực yếu mà hoàn toàn thiếu vắng các dữ liệu bối cảnh để tìm ra căn nguyên của vấn đề.
+
+Cuối cùng, quy trình can thiệp hiện nay thiếu vắng sự phân quyền và trách nhiệm khép kín giữa các đơn vị liên quan. Khi phát hiện một trường hợp sa sút, hành động xử lý chủ yếu dừng lại ở việc gửi thông báo giấy hoặc thư điện tử nhắc nhở mang tính thủ tục hành chính. Nhà trường chưa thiết lập được một dòng công việc liên thông quy định rõ thời hạn phản hồi, cơ chế kết nối giữa cố vấn học tập với các đơn vị trợ giúp chuyên biệt như phòng tư vấn tâm lý, ban công tác sinh viên hay các lớp phụ đạo kiến thức.
+
+## 3. Bản đồ các bên liên quan trong hệ sinh thái dịch vụ
+Dịch vụ hỗ trợ sớm là một cam kết giá trị đòi hỏi sự phối hợp đồng bộ giữa nhiều chủ thể trong nhà trường.
+
+**Bảng 2.1. Phân tích các bên liên quan trong hệ sinh thái dịch vụ hỗ trợ sớm**
+
+| Bên liên quan | Vai trò trong hệ sinh thái | Giá trị mong đợi nhận được | Rủi ro và Điểm nghẽn lớn nhất |
+| :--- | :--- | :--- | :--- |
+| **Sinh viên** | Chủ thể trung tâm, người tiếp nhận dịch vụ và tạo dữ liệu | Được nhận diện khó khăn sớm từ giữa kỳ; nhận hỗ trợ tôn trọng, bảo đảm quyền riêng tư | Bị dán nhãn tiêu cực là sinh viên yếu kém, lo ngại bị giám sát đời tư |
+| **Cố vấn học tập** | Cầu nối sư phạm, người đánh giá bối cảnh và trực tiếp can thiệp | Được cung cấp thông tin bối cảnh súc tích; gợi ý can thiệp phù hợp; giảm tải thủ tục hành chính | Quá tải do nhận quá nhiều cảnh báo nhiễu; thiếu thẩm quyền kết nối can thiệp |
+| **Giảng viên bộ môn** | Nguồn tạo dữ liệu tiến trình học tập của lớp học phần | Biết được sinh viên nào trong lớp cần trợ giúp; nhận phản hồi về chất lượng giảng dạy | Tăng thêm gánh nặng nhập liệu điểm danh và cập nhật điểm quá trình |
+| **Ban Đào tạo và Ban Công tác Sinh viên** | Đơn vị chủ trì chính sách, điều phối nguồn lực hỗ trợ | Giảm tỷ lệ sinh viên trượt môn và thôi học; quản lý dữ liệu học tập tập trung, minh bạch | Xung đột thẩm quyền giải quyết; dữ liệu không đồng nhất giữa các phòng ban |
+| **Lãnh đạo Đại học và Khoa Viện** | Cấp phê duyệt chiến lược, phân bổ nguồn lực | Nâng cao chất lượng đào tạo, tăng tỷ lệ tốt nghiệp đúng hạn, bảo đảm uy tín của trường | Đầu tư công nghệ tốn kém nhưng không tạo ra thay đổi hành vi thực tế |
+
+## 4. Câu hỏi nghiên cứu và Phạm vi giới hạn của đề tài
+
+### 4.1. Câu hỏi nghiên cứu trọng tâm
+Để giải quyết các điểm nghẽn nêu trên, tiểu luận tập trung trả lời ba câu hỏi nghiên cứu:
+1. Làm thế nào để kiến trúc một hệ sinh thái dữ liệu liên thông giữa SIS, LMS và các hệ thống hỗ trợ, nhằm chuyển đổi tín hiệu học tập vi mô thành chỉ báo cảnh báo sớm có ý nghĩa sư phạm?
+2. Làm thế nào để thiết kế một quy trình hỗ trợ sớm bảo đảm tính nhân văn, đặt con người làm trung tâm (Human-in-the-loop), nơi công nghệ hỗ trợ cố vấn học tập ra quyết định mà không tự động phán quyết hay dán nhãn người học?
+3. Cần thiết lập khung quản trị, đạo đức dữ liệu và lộ trình triển khai như thế nào để dịch vụ có thể mở rộng bền vững từ thử nghiệm cục bộ sang chuẩn hóa trên toàn trường?
+
+### 4.2. Phạm vi và Giới hạn đề tài
+Về đối tượng nghiên cứu, đề tài tập trung vào sinh viên đại học chính quy năm thứ nhất và năm thứ hai thuộc khối ngành kỹ thuật và công nghệ của Đại học Bách khoa Hà Nội, do đây là nhóm đối tượng có tỷ lệ sa sút học vụ cao nhất. 
+
+Về phạm vi dịch vụ, nghiên cứu giới hạn trong chu trình năm bước gồm cảm nhận tín hiệu học tập, suy diễn nguy cơ, cố vấn học tập đánh giá bối cảnh, thực hiện can thiệp sư phạm và đánh giá hiệu quả phục hồi. 
+
+Về mặt kỹ thuật, báo cáo không đi sâu vào việc lập trình chi tiết mã nguồn thuật toán hoặc cấu hình máy chủ, mà tập trung thiết kế kiến trúc hệ sinh thái dịch vụ, mô hình luồng dữ liệu, quy trình phối hợp đa bên, khung quản trị rủi ro và bộ chỉ số đo lường hiệu quả kiểm chứng được.
+
+================================================================================
+
+# 03. CƠ SỞ LÝ LUẬN VÀ CÁC KHUNG THAM CHIẾU
+
+## 1. Khái niệm Đại học thông minh và Sự chuyển dịch từ Digital sang Smart
+Khái niệm Smart University (Đại học thông minh) thường bị ngộ nhận đồng nhất với việc trang bị các công nghệ đắt tiền như phòng học ảo, màn hình tương tác, hệ thống điểm danh nhận diện khuôn mặt hay hàng loạt phần mềm chuyên biệt. Tuy nhiên, các nghiên cứu nền tảng quốc tế, đặc biệt là công trình của Uskov và cộng sự (2018), khẳng định sự phân biệt rành mạch giữa hai giai đoạn chuyển đổi.
+
+Giai đoạn Digital University (Đại học số) chủ yếu tập trung vào việc số hóa các nguồn tài nguyên, văn bản và quy trình vật lý sẵn có. Điển hình cho giai đoạn này là việc đưa đề cương bài giảng lên trang tin điện tử, thay thế sổ liên lạc bằng cổng thông tin, hoặc sử dụng hệ thống quản trị học tập để lưu trữ bài giảng và nộp bài tập. Ở trạng thái này, công nghệ chủ yếu đóng vai trò là công cụ hỗ trợ hiệu năng tác nghiệp. Dữ liệu phát sinh ở đâu lưu trữ cục bộ tại đó, tạo nên các ốc đảo thông tin biệt lập, trong khi trải nghiệm của người dùng vẫn bị chia cắt theo ranh giới hành chính của từng phòng ban.
+
+Ngược lại, giai đoạn Smart University (Đại học thông minh) được định nghĩa là một hệ thống kinh tế xã hội kỹ thuật phức hợp, có khả năng liên tục thu nhận dữ liệu từ môi trường dạy và học, kết nối thông tin giữa các thực thể, suy diễn ý nghĩa bối cảnh, từ đó tự động thích ứng hoặc cung cấp thông tin kịp thời để hỗ trợ con người tối ưu hóa các quyết định giáo dục (Uskov et al., 2018). Trọng tâm của một đại học thông minh không nằm ở số lượng thiết bị công nghệ được mua sắm, mà nằm ở năng lực tạo ra giá trị giáo dục đo lường được, nâng cao trải nghiệm học tập và tối ưu hóa vận hành dịch vụ.
+
+**Bảng 3.1. So sánh đặc trưng giữa Đại học số và Đại học thông minh**
+
+| Tiêu chí so sánh | Đại học số (Digital University) | Đại học thông minh (Smart University) |
+| :--- | :--- | :--- |
+| **Mục tiêu cốt lõi** | Số hóa quy trình, giảm thủ tục giấy tờ, tăng tốc độ xử lý | Tạo ra giá trị giáo dục, cá nhân hóa học tập và tối ưu hóa dịch vụ |
+| **Kiến trúc dữ liệu** | Phân tán trong từng hệ sinh thái phần mềm riêng lẻ | Tích hợp liên thông, có nguồn dữ liệu thẩm quyền duy nhất |
+| **Cơ chế phản hồi** | Bị động, định kỳ, hồi cứu sau khi sự việc đã xảy ra | Chủ động, thời gian thực, có khả năng dự báo và cảnh báo sớm |
+| **Vai trò công nghệ** | Công cụ hỗ trợ hành chính tác nghiệp đơn thuần | Nền tảng kết nối năng lực, cảm nhận và hỗ trợ quyết định |
+| **Tác động người học** | Tự tìm kiếm thông tin qua nhiều cổng khác nhau | Trải nghiệm học tập liền mạch, được nhận diện khó khăn kịp thời |
+
+## 2. Sáu đặc tính thông minh của Đại học thông minh
+Theo khung lý thuyết của Uskov và cộng sự (2018), tính thông minh của một hệ thống giáo dục đại học được cấu thành từ sáu năng lực cốt lõi. Trong giải pháp Dịch vụ Cố vấn học tập và Hỗ trợ sớm, sáu đặc tính này được cụ thể hóa thành một chuỗi năng lực tương hỗ.
+
+```mermaid
+graph TD
+    A[01. Cảm nhận - Sensing] --> B[02. Suy diễn - Inferring]
+    B --> C[03. Tự học - Learning]
+    C --> D[04. Dự đoán - Anticipating]
+    D --> E[05. Thích ứng - Adapting]
+    E --> F[06. Tự tổ chức - Self-organizing]
+```
+
+Trước hết, đặc tính Cảm nhận (Sensing) đại diện cho khả năng thu nhận dữ liệu đa kênh theo thời gian thực về sự tham gia của sinh viên. Năng lực này không chỉ ghi nhận kết quả điểm số định kỳ mà tập trung vào dữ liệu hành vi vi mô trên hệ thống quản trị học tập như tần suất truy cập học liệu, thời gian xem video bài giảng, số bài thảo luận trên diễn đàn và dữ liệu chuyên cần trên lớp. 
+
+Tiếp theo, đặc tính Suy diễn (Inferring) giúp phân tích và bối cảnh hóa các tín hiệu thô thành thông tin có ý nghĩa sư phạm. Ví dụ cụ thể là từ dữ liệu một sinh viên vắng hai buổi học liên tiếp kết hợp không nộp bài tập tuần thứ ba, hệ thống có thể suy diễn ra nguy cơ đứt gãy kiến thức cơ sở đối với học phần toán đại cương. 
+
+Song song với đó, đặc tính Tự học (Learning) cho phép hệ thống học hỏi từ các chu kỳ dữ liệu lịch sử của các khóa sinh viên trước nhằm tinh chỉnh các ngưỡng cảnh báo, nhận diện những mẫu hình hành vi đặc trưng dẫn đến nguy cơ trượt môn. 
+
+Trên cơ sở đó, đặc tính Dự đoán (Anticipating) mang lại năng lực nhận diện sớm nguy cơ sa sút học tập trước khi kỳ thi diễn ra từ tám đến mười tuần, ước tính xác suất sinh viên rơi vào diện cảnh báo học vụ ngay tại giai đoạn giữa kỳ. 
+
+Đối với khía cạnh can thiệp, đặc tính Thích ứng (Adapting) giúp hệ thống và quy trình tự động điều chỉnh kênh liên lạc cùng nội dung khuyến nghị. Đối với sinh viên có mức độ nguy cơ nhẹ, hệ thống đề xuất tài liệu tự học bổ trợ; đối với sinh viên có nguy cơ cao, hệ thống điều hướng thông báo để thiết lập buổi gặp mặt trực tiếp với cố vấn học tập. 
+
+Cuối cùng, đặc tính Tự tổ chức (Self-organizing) phản ánh khả năng của toàn bộ tổ chức trong việc tự động điều phối lịch làm việc của cố vấn học tập, phân bổ lại khối lượng công việc tư vấn hoặc bố trí thêm nguồn lực trợ giảng đến những lớp học phần có tỷ lệ sinh viên gặp khó khăn cao nhất.
+
+## 3. Lý thuyết Phân tích học tập và Vòng đời dữ liệu khép kín
+Learning Analytics (Phân tích Học tập) được định nghĩa là việc đo lường, thu thập, phân tích và báo cáo dữ liệu về người học cùng bối cảnh của họ, nhằm mục đích hiểu và tối ưu hóa việc học cũng như môi trường nơi hoạt động học tập diễn ra (Long & Siemens, 2011; Lang et al., 2017).
+
+Trong công tác cố vấn học tập, kết quả phân tích dữ liệu dù chính xác đến đâu cũng không mang lại giá trị nếu không dẫn đến một hành động can thiệp sư phạm kịp thời. Nghiên cứu áp dụng chu trình năm bước chuyển đổi giá trị từ dữ liệu đến hiểu biết, phản hồi, hành động và giá trị giáo dục.
+
+```mermaid
+flowchart LR
+    D[1. Thu thập dữ liệu<br>SIS, LMS, Điểm danh] --> I[2. Phân tích & Suy diễn<br>Engine cảnh báo sớm]
+    I --> F[3. Phản hồi thông tin<br>Contextual Dashboard]
+    F --> A[4. Can thiệp sư phạm<br>Cố vấn tư vấn cá nhân]
+    A --> E[5. Đánh giá tác động<br>Cải thiện điểm, vượt khó]
+    E -.->|Vòng lặp tinh chỉnh| D
+```
+
+Xét trên tiến trình vận hành, bước thứ nhất tập trung vào việc tiếp nhận dữ liệu sạch, có cấu trúc từ hệ thống quản trị học tập và hệ thống thông tin sinh viên. Bước thứ hai tiến hành phân tích thông qua mô hình thuật toán nhằm nhận diện nhóm sinh viên có chỉ số tương tác sụt giảm bất thường. Bước thứ ba thực hiện phản hồi thông tin trực quan đến cố vấn học tập và bản thân sinh viên, loại bỏ hoàn toàn các ngôn từ mang tính phán xét tiêu cực. Bước thứ tư là khâu can thiệp sư phạm then chốt, nơi cố vấn học tập trực tiếp gặp gỡ sinh viên để tìm hiểu nguyên nhân gốc rễ về tâm lý, tài chính hoặc phương pháp học tập, từ đó xây dựng kế hoạch phục hồi. Bước thứ năm tiến hành đánh giá tác động sau hai tuần nhằm kiểm tra sự tiến bộ của người học, đồng thời gửi dữ liệu phản hồi để hiệu chuẩn lại mô hình phân tích ban đầu.
+
+## 4. Nguyên tắc Sư phạm Đạo đức và Cơ chế Human-in-the-loop
+Thực tiễn triển khai các hệ thống cảnh báo sớm quốc tế cho thấy nhiều dự án đã thất bại do tiếp cận thuần túy theo hướng kỹ thuật số, dẫn đến những hệ lụy đạo đức và tâm lý xã hội sâu sắc. Để ngăn ngừa các rủi ro này, đề tài thiết lập ba nguyên tắc đạo đức cốt lõi dựa trên khuyến nghị của Prinsloo & Slade (2017) và Tổ chức Hợp tác và Phát triển Kinh tế (OECD, 2023).
+
+Trước hết là nguyên tắc giữ con người trong trung tâm quyết định (Human-in-the-loop). Theo nguyên tắc này, thuật toán phân tích học tập chỉ đóng vai trò là công cụ hỗ trợ thị giác và cung cấp thông tin bối cảnh. Thuật toán tuyệt đối không được trao quyền tự động ra phán quyết kỷ luật học vụ, không tự động hủy tư cách học phần hoặc gửi thông báo kỷ luật chính thức khi chưa có sự thẩm định và phê duyệt của cố vấn học tập cùng giảng viên phụ trách.
+
+Nguyên tắc thứ hai là triệt tiêu nguy cơ dán nhãn định kiến đối với người học. Việc gắn nhãn sinh viên là đối tượng yếu kém hoặc có nguy cơ thôi học dễ tạo ra hiệu ứng tâm lý tiêu cực tự hoàn thành, khiến người học nảy sinh tâm lý mặc cảm và từ bỏ nỗ lực phấn đấu. Hệ thống bắt buộc phải sử dụng ngôn ngữ hướng tới sự phát triển, truyền tải các thông điệp mang tính đồng hành và khích lệ thay vì thông báo cảnh cáo nặng nề.
+
+Nguyên tắc thứ ba là bảo đảm quyền riêng tư và tối thiểu hóa dữ liệu thu thập. Cơ sở giáo dục chỉ được phép thu thập và xử lý các trường dữ liệu thực sự cần thiết phục vụ trực tiếp cho mục tiêu cải thiện học tập. Mọi dữ liệu đời tư nhạy cảm như thông tin gia đình, tín ngưỡng hoặc hồ sơ y tế không được đưa vào mô hình thuật toán khi chưa có sự đồng thuận rõ ràng của sinh viên.
+
+## 5. Các Khung Đánh giá Trưởng thành
+Để chuyển đổi từ hiện trạng sang trạng thái thông minh, nhà trường cần căn cứ vào các khung đánh giá trưởng thành đã được thừa nhận rộng rãi nhằm bảo đảm tính hệ thống và khả thi.
+
+Mô hình Smart University Maturity Model (Mô hình Trưởng thành Đại học Thông minh - SMM) do Uskov và cộng sự (2018) đề xuất đánh giá năng lực của nhà trường qua năm cấp độ phát triển. Cấp độ một là Khởi phát, đặc trưng bởi các hoạt động tự phát, manh mún mang tính thử nghiệm cá nhân. Cấp độ hai là Có thể lặp lại, khi một số đơn vị đã hình thành quy trình riêng nhưng chưa có chuẩn mực chung toàn trường. Cấp độ ba là Được chuẩn hóa, thể hiện qua việc ban hành các quy định thống nhất về kiến trúc và dịch vụ. Cấp độ bốn là Được quản trị định lượng, khi các quy trình được điều hành dựa trên số liệu thực tế và hiệu quả được đo lường bằng chỉ số. Cấp độ năm là Tối ưu hóa liên tục, thể hiện khả năng tự động học hỏi, thích ứng và cải tiến liên tục của hệ thống.
+
+Song song với đó, khung mô hình trưởng thành số của Amiri và cộng sự (2026) mở rộng phạm vi sang tám chiều năng lực toàn diện gồm quản trị chiến lược, văn hóa số, năng lực số, hạ tầng số, dữ liệu và thông tin chuyên sâu, dạy và học, vận hành dịch vụ, cùng nghiên cứu và đổi mới. Mỗi chiều năng lực được định lượng theo bốn mức độ từ Mới nổi, Thiết lập, Tăng cường đến Trưởng thành. Việc áp dụng đồng thời cả hai mô hình theo phương pháp đánh giá kép giúp nhà trường có cái nhìn toàn diện, tránh ngộ nhận rằng việc sở hữu hạ tầng máy chủ mạnh đã đồng nghĩa với việc đạt mức trưởng thành cao trong quy trình hỗ trợ người học.
+
+================================================================================
+
+# 04. ĐÁNH GIÁ HIỆN TRẠNG VÀ KHOẢNG TRỐNG NĂNG LỰC
+
+## 1. Bằng chứng hiện trạng tại Đại học Bách khoa Hà Nội
+Để bảo đảm tính khách quan và liêm chính học thuật, hiện trạng công tác cố vấn học tập và cảnh báo học vụ tại Đại học Bách khoa Hà Nội được tổng hợp thông qua sự kết hợp giữa dữ liệu thứ cấp được công bố chính thức (Phùng Nhung, 2022), văn bản quy chế đào tạo tín chỉ hiện hành (Trường Đại học Bách khoa Hà Nội, 2023), và các giả định tham số hóa bối cảnh của nhóm nghiên cứu.
+
+Xét trên phương diện hạ tầng kỹ thuật và dữ liệu, hệ thống thông tin sinh viên của trường hiện lưu trữ hơn 35.000 hồ sơ sinh viên và cập nhật điểm học phần theo từng học kỳ. Hệ thống quản trị học tập ghi nhận trung bình hơn 200.000 lượt tương tác mỗi tuần, nhưng toàn bộ nguồn dữ liệu này mới chỉ được lưu trữ dưới dạng nhật ký thô mà chưa được trích xuất để phân tích tương quan với kết quả học tập. Đáng lưu ý là giữa hai hệ thống này chưa có giao diện lập trình ứng dụng hay đường ống dữ liệu tự động kết nối theo thời gian thực; việc chuyển giao điểm số từ hệ thống quản trị học tập sang hệ thống quản lý đào tạo vẫn thực hiện thủ công thông qua việc xuất và nhập các tệp bảng tính Excel.
+
+Đối với khía cạnh công tác cố vấn học tập, mỗi giảng viên đảm nhiệm vai trò cố vấn hiện phụ trách trung bình từ 60 đến 100 sinh viên. Theo quy chế đào tạo hiện hành, cố vấn học tập chủ yếu thực hiện nhiệm vụ họp lớp từ một đến hai lần mỗi kỳ nhằm phổ biến quy chế đăng ký học tập. Khi nhận danh sách sinh viên bị cảnh báo học vụ sau khi đã có kết quả thi cuối kỳ, cố vấn học tập chỉ có thể lập biên bản nhắc nhở mà không có bất kỳ công cụ sư phạm nào để hỗ trợ phục hồi điểm số cho học kỳ đã khép lại.
+
+Về tỷ lệ sa sút học vụ, bên cạnh con số 700 đến 800 sinh viên bị buộc thôi học mỗi năm đã được công bố chính thức (Phùng Nhung, 2022), mô hình nghiên cứu tình huống giả định tỷ lệ sinh viên chớm nhận cảnh báo học vụ mức một và mức hai chiếm khoảng 5% đến 8% tổng số sinh viên chính quy toàn trường, trong đó hơn 65% số trường hợp rơi vào sinh viên năm thứ nhất và năm thứ hai do nợ các học phần toán và vật lý đại cương. Thời điểm phát hiện sinh viên có nguy cơ thường diễn ra ở tuần thứ 17 đến tuần thứ 19, tức khoảng ba đến bốn tuần sau khi kết thúc đợt thi cuối kỳ. Tại thời điểm này, sinh viên đã tích lũy điểm không đạt và điểm trung bình tích lũy đã tụt xuống dưới ngưỡng xử lý học vụ.
+
+## 2. Bảng đánh giá trưởng thành kép
+Để đánh giá toàn diện năng lực của nhà trường, nghiên cứu áp dụng phương pháp Đánh giá trưởng thành kép, trình bày song song hai khung đánh giá độc lập gồm Smart University Maturity Model (Mô hình Trưởng thành Đại học Thông minh - SMM) do Uskov và cộng sự (2018) đề xuất gồm năm cấp độ và Khung trưởng thành số giáo dục đại học của Amiri và cộng sự (2026) gồm tám chiều năng lực được đánh giá theo bốn cấp độ.
+
+Quá trình đánh giá tuân thủ nguyên tắc không quy đổi cơ học giữa hai thang đo do hai khung có đối tượng và logic đánh giá khác nhau. Khung SMM phản ánh mức độ thể chế hóa và năng lực thông minh của hệ thống công nghệ, trong khi khung của Amiri và cộng sự phản ánh năng lực vận hành tổ chức số toàn diện.
+
+**Bảng 4.1. Đánh giá trưởng thành kép cho Dịch vụ Cố vấn học tập và Hỗ trợ sớm**
+
+| Khung đánh giá | Chiều năng lực hoặc Đặc tính | Hiện tại (AS-IS) | Mục tiêu (TO-BE) | Độ tin cậy minh chứng | Mức độ ưu tiên | Minh chứng thực tế hỗ trợ đánh giá |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| **SMM (Uskov et al., 2018)** *(Thang 1–5)* | **01. Cảm nhận (Sensing)** | **2** (Repeatable) | **4** (Managed) | Cao | Đã thu thập nhật ký truy cập hệ thống quản trị học tập và điểm danh, nhưng chưa đồng bộ hóa theo thời gian thực. |
+| | **02. Suy diễn (Inferring)** | **1** (Initial) | **4** (Managed) | Trung bình | Hiện tại không có công cụ suy diễn; cố vấn học tập tự suy đoán nguyên nhân khi sinh viên giải trình. |
+| | **03. Tự học (Learning)** | **1** (Initial) | **3** (Defined) | Cao | Chưa có mô hình thuật toán học từ dữ liệu các khóa trước; việc phân tích hoàn toàn thủ công. |
+| | **04. Dự đoán (Anticipating)** | **1** (Initial) | **4** (Managed) | Cao | Hoàn toàn không có dự đoán; cảnh báo mang tính hồi cứu sau khi kỳ thi đã kết thúc. |
+| | **05. Thích ứng (Adapting)** | **2** (Repeatable) | **3** (Defined) | Trung bình | Một số giảng viên tự điều chỉnh đề cương phụ đạo, nhưng nhà trường chưa có cơ chế thích ứng hệ thống. |
+| | **06. Tự tổ chức (Self-organizing)**| **1** (Initial) | **3** (Defined) | Thấp | Phân bổ cố vấn học tập theo niên chế cố định; chưa tự động phân bổ nguồn lực theo mức độ rủi ro của người học. |
+| **Amiri et al. (2026)** *(Thang 1–4)* | **01. Quản trị chiến lược** | **2** (Established) | **3** (Enhanced) | Cao | Chiến lược chuyển đổi số đã ban hành, nhưng chưa có văn bản chính sách riêng cho phân tích học tập. |
+| | **02. Văn hóa số** | **2** (Established) | **3** (Enhanced) | Trung bình | Đội ngũ sẵn sàng sử dụng phần mềm, nhưng còn tâm lý e ngại dữ liệu giám sát và định kiến dán nhãn sinh viên. |
+| | **03. Năng lực số** | **2** (Established) | **3** (Enhanced) | Cao | Giảng viên thành thạo sử dụng phần mềm dạy học, nhưng thiếu kỹ năng khai thác bảng điều khiển phân tích học tập. |
+| | **04. Hạ tầng số** | **3** (Enhanced) | **3** (Enhanced) | Rất cao | Hạ tầng mạng, máy chủ, tài khoản Microsoft Office 365 và Moodle đã phủ sóng toàn trường. |
+| | **05. Dữ liệu và Phân tích** | **2** (Established) | **3** (Enhanced) | Rất cao | Dữ liệu lớn nhưng tồn tại ở các ốc đảo biệt lập; thiếu kiến trúc dữ liệu tập trung và quy chuẩn chia sẻ liên thông. |
+| | **06. Dạy và học** | **2** (Established) | **3** (Enhanced) | Cao | Đào tạo kết hợp phổ biến; các hoạt động đánh giá quá trình chưa được chuẩn hóa thời hạn nhập điểm. |
+| | **07. Vận hành dịch vụ** | **2** (Established) | **3** (Enhanced) | Trung bình | Dịch vụ sinh viên một cửa đã vận hành, nhưng chưa tích hợp dòng công việc can thiệp học vụ của cố vấn học tập. |
+| | **08. Nghiên cứu và Đổi mới** | **2** (Established) | **3** (Enhanced) | Thấp | Trường có các nhóm nghiên cứu trí tuệ nhân tạo mạnh nhưng chưa ứng dụng vào chính bài toán quản trị đào tạo. |
+
+*(Quy ước cấp độ SMM: 1-Khởi phát, 2-Có thể lặp lại, 3-Được chuẩn hóa, 4-Được quản trị định lượng, 5-Tối ưu hóa liên tục. Quy ước cấp độ Amiri et al.: 1-Mới nổi, 2-Thiết lập, 3-Tăng cường, 4-Trưởng thành).*
+
+## 3. Hai Nhận định Ưu tiên Cốt lõi và Điều kiện Nền tảng
+Từ kết quả đối chiếu trên bảng đánh giá trưởng thành kép và phân tích ma trận khoảng cách, nghiên cứu rút ra hai nhận định ưu tiên mang tính quyết định đối với sự thành công của dịch vụ.
+
+Nhận định ưu tiên thứ nhất chỉ ra rằng điểm nghẽn cổ chai lớn nhất hiện nay nằm ở năng lực suy diễn, dự đoán và sự phân mảnh của dữ liệu. Mặc dù nhà trường đã đạt mức Tăng cường về hạ tầng số với hệ thống máy chủ và mạng diện rộng sẵn sàng, nhưng năng lực suy diễn và dự đoán của hệ sinh thái đào tạo vẫn chỉ dừng ở mức Khởi phát. Nguyên nhân gốc rễ là nguồn dữ liệu hành vi trên hệ thống quản trị học tập và dữ liệu học vụ trên hệ thống thông tin sinh viên bị giam cầm trong các cơ sở dữ liệu riêng rẽ. Việc tiếp tục đầu tư các mô hình trí tuệ nhân tạo phức tạp sẽ không mang lại giá trị nếu chưa giải quyết được việc đồng bộ luồng dữ liệu thời gian thực. Do đó, ưu tiên kỹ thuật số một trong giai đoạn khởi đầu là xây dựng đường ống tích hợp dữ liệu và động cơ phân tích rủi ro học tập.
+
+Nhận định ưu tiên thứ hai khẳng định sự lệch pha nghiêm trọng giữa năng lực công nghệ và văn hóa quy trình can thiệp sư phạm. Sự chênh lệch giữa công nghệ sẵn có và khả năng hành động thực tế là một rủi ro lớn. Nếu hệ thống công nghệ đưa ra cảnh báo sớm ở tuần thứ ba nhưng nhà trường không thiết lập một quy trình bàn giao trách nhiệm rõ ràng và cố vấn học tập không được bồi dưỡng kỹ năng tư vấn bối cảnh, các tín hiệu cảnh báo sẽ nhanh chóng bị bỏ qua do hiện tượng trơ lì cảnh báo. Vì vậy, ưu tiên tổ chức hàng đầu cần triển khai song song với kỹ thuật là thể chế hóa sổ tay quy trình hỗ trợ sớm và ban hành chính sách công nhận giờ làm việc cho cố vấn học tập khi thực hiện tư vấn cá nhân hóa.
+
+Để bảo đảm việc mở rộng dịch vụ diễn ra bền vững, nhà trường bắt buộc phải thỏa mãn hai điều kiện nền tảng. Thứ nhất, trường cần hoàn thiện chính sách quản trị và bảo vệ dữ liệu cá nhân thông qua việc ban hành quy chế sử dụng dữ liệu học tập có trách nhiệm tuân thủ Nghị định 13/2023/NĐ-CP, bảo đảm sinh viên có quyền kiểm soát thông tin cá nhân. Thứ hai, trường cần chuẩn hóa quy trình đánh giá quá trình bằng việc yêu cầu giảng viên bộ môn cam kết cập nhật điểm danh và tối thiểu hai đầu điểm đánh giá quá trình hoặc tiến độ nộp bài trước tuần thứ năm của học kỳ nhằm cung cấp dữ liệu đầu vào chuẩn xác cho hệ thống phân tích.
+
+================================================================================
+
+# 05. TRẠNG THÁI MỤC TIÊU VÀ TUYÊN BỐ GIÁ TRỊ
+
+## 1. Tuyên bố Giá trị Đa chiều
+Quá trình chuyển đổi từ mô hình cảnh báo học vụ truyền thống sang Dịch vụ Cố vấn học tập và Hỗ trợ sớm thông minh nhằm xác lập lại lời hứa giá trị đối với từng chủ thể trong hệ sinh thái giáo dục của Đại học Bách khoa Hà Nội.
+
+```mermaid
+graph TD
+    A[Hệ sinh thái Hỗ trợ sớm Thông minh] --> B[Người học - Sinh viên]
+    A --> C[Cố vấn học tập và Giảng viên]
+    A --> D[Nhà trường và Cấp Quản lý]
+    
+    B --> B1[Nhận biết khó khăn kịp thời tuần 3 đến 5]
+    B --> B2[Hỗ trợ cá nhân hóa, tôn trọng quyền riêng tư]
+    B --> B3[Không bị dán nhãn tiêu cực]
+    
+    C --> C1[Hồ sơ bối cảnh súc tích, đa chiều]
+    C --> C2[Gợi ý can thiệp sư phạm có cơ sở]
+    C --> C3[Giảm thủ tục hành chính giấy tờ]
+    
+    D --> D1[Giảm tỷ lệ buộc thôi học]
+    D --> D2[Dữ liệu liên thông, minh bạch]
+    D --> D3[Nâng cao trách nhiệm giải trình xã hội]
+```
+
+Đối với người học, giá trị lớn nhất nhận được là khả năng nhận diện khó khăn ngay từ giai đoạn khởi đầu của học kỳ, cụ thể từ tuần thứ ba đến tuần thứ năm khi cơ hội cải thiện kết quả học tập còn nguyên vẹn, thay vì nhận các thông báo xử lý kỷ luật sau khi đã trượt môn. Trải nghiệm sư phạm của sinh viên được nâng tầm thông qua sự đồng hành thấu cảm, các khuyến nghị học tập mang tính khích lệ tư duy phát triển, cùng cơ hội kết nối kịp thời với các nguồn lực bổ trợ như lớp phụ đạo của trợ giảng, tư vấn phương pháp tự học ở bậc đại học, hỗ trợ tâm lý hoặc học bổng hỗ trợ hoàn cảnh khó khăn. Quan trọng hơn cả, quyền tự chủ của người học được bảo vệ tuyệt đối: sinh viên không bị dán nhãn yếu kém, mọi thông tin khó khăn được bảo mật nghiêm ngặt và người học luôn giữ quyền chủ động trong việc lựa chọn các gói giải pháp can thiệp.
+
+Đối với cố vấn học tập và giảng viên bộ môn, giải pháp cung cấp một bảng điều khiển bối cảnh thông minh, giúp người thầy nhận biết nhanh chóng những trường hợp sinh viên thực sự cần trợ giúp mà không phải rà soát thủ công qua hàng trăm dòng số liệu bảng tính. Bên cạnh tín hiệu cảnh báo, cố vấn học tập còn được cung cấp bản phân tích nguyên nhân gốc rễ xuất phát từ việc vắng học, nợ bài tập quá trình hay rỗng kiến thức tiên quyết, kèm theo danh mục các giải pháp can thiệp khả thi được hệ thống đề xuất. Nền tảng còn tự động hóa các khâu hành chính tác nghiệp như lên lịch hẹn tư vấn, gửi tin nhắn nhắc nhở và ghi nhận biên bản làm việc số, giúp cố vấn học tập tiết kiệm tới 70% thời gian sự vụ để tập trung vào việc lắng nghe, thấu cảm và hướng dẫn người học.
+
+Đối với nhà trường và các cấp quản lý, dịch vụ giúp xóa bỏ tình trạng cát cứ dữ liệu giữa các phòng ban, hình thành dòng dữ liệu sống động xuyên suốt từ lớp học đến cấp điều hành chiến lược. Nhờ đó, việc phân bổ ngân sách trợ giảng và học bổng được thực hiện tối ưu, dựa trên nhu cầu thực tế của từng đơn vị. Về mặt chiến lược, việc giảm thiểu tỷ lệ sinh viên bị cảnh báo học vụ và buộc thôi học sẽ trực tiếp nâng cao tỷ lệ tốt nghiệp đúng hạn, bảo vệ uy tín học thuật và bảo đảm trách nhiệm giải trình xã hội của một đại học trọng điểm quốc gia.
+
+## 2. Định vị Sáu Đặc tính Thông minh Mục tiêu
+Trong trạng thái mục tiêu, hệ thống dịch vụ tại Đại học Bách khoa Hà Nội được nâng cấp năng lực tương ứng với sáu đặc tính thông minh theo khung phân loại của Uskov và cộng sự (2018).
+
+**Bảng 5.1. Định vị sáu đặc tính thông minh mục tiêu của hệ thống**
+
+| Đặc tính thông minh | Trạng thái hiện tại (AS-IS) | Trạng thái mục tiêu (TO-BE) | Cơ chế hiện thực hóa trong giải pháp |
+| :--- | :--- | :--- | :--- |
+| **01. Cảm nhận (Sensing)** | Dữ liệu điểm thi cuối kỳ, ghi nhận thủ công sau 18 tuần. | Thu nhận đa nguồn theo thời gian thực từ nhật ký hệ thống quản trị học tập và điểm danh tuần một đến tuần năm. | Nền tảng dữ liệu tập trung tự động thu thập sự kiện tương tác qua giao diện lập trình ứng dụng. |
+| **02. Suy diễn (Inferring)** | Không có suy diễn; chỉ biết điểm số thuần túy khi có điểm không đạt. | Tự động chuyển đổi các tương tác vi mô thành chỉ số rủi ro học tập có bối cảnh sư phạm rõ ràng. | Mô hình tính toán điểm số tham gia học tập dựa trên trọng số của từng học phần. |
+| **03. Tự học (Learning)** | Không có khả năng học hỏi từ dữ liệu lịch sử các khóa trước. | Thuật toán học từ dữ liệu các khóa trước để liên tục tinh chỉnh trọng số rủi ro qua từng học kỳ. | Tự động hiệu chuẩn ngưỡng cảnh báo theo từng học kỳ dựa trên phản hồi của cố vấn học tập. |
+| **04. Dự đoán (Anticipating)** | Hoàn toàn bị động; chỉ thống kê sau khi sinh viên đã trượt môn. | Nhận diện nguy cơ sa sút học vụ trước kỳ thi từ tám đến mười tuần với độ chính xác cao. | Mô hình phân loại rủi ro phân tầng thành ba mức độ cảnh báo ở tuần thứ ba đến tuần thứ năm. |
+| **05. Thích ứng (Adapting)** | Quy trình cứng nhắc; áp dụng chung một thông báo nhắc nhở hành chính. | Cá nhân hóa nội dung thông điệp và gợi ý lộ trình hỗ trợ cho từng trường hợp cụ thể. | Phân hệ khuyến nghị tự động đề xuất tài liệu bổ trợ hoặc kết nối cố vấn tùy mức nguy cơ. |
+| **06. Tự tổ chức (Self-organizing)** | Phân bổ cố vấn học tập tĩnh; không điều phối nguồn lực theo nhu cầu thực. | Tự động điều phối lịch làm việc của cố vấn và bố trí trợ giảng đến lớp học phần có rủi ro cao. | Tự động cân bằng tải công việc tư vấn và đề xuất mở lớp phụ đạo cho học phần khó. |
+
+## 3. Tuyên bố Ranh giới Hệ thống
+Để bảo đảm tính khả thi và giữ vững nguyên tắc đạo đức học thuật, trạng thái mục tiêu xác định ranh giới rõ ràng giữa những hành vi hệ thống được phép thực hiện và những hành vi tuyệt đối không được thực hiện.
+
+```mermaid
+flowchart TD
+    subgraph SẼ_THỰC_HIỆN [HỆ THỐNG ĐƯỢC PHÉP THỰC HIỆN]
+        A1[Phát hiện sớm các dấu hiệu suy giảm tương tác]
+        A2[Cung cấp bức tranh bối cảnh đa chiều cho cố vấn học tập]
+        A3[Đề xuất các phương án can thiệp sư phạm khả thi]
+        A4[Tự động hóa thủ tục đặt lịch hẹn và theo dõi tiến độ]
+    end
+    
+    subgraph TUYỆT_ĐỐI_KHÔNG [TUYỆT ĐỐI KHÔNG ĐƯỢC THỰC HIỆN]
+        B1[KHÔNG tự động ra quyết định kỷ luật hoặc cảnh báo học vụ]
+        B2[KHÔNG dán nhãn tiêu cực hoặc phân loại phẩm chất sinh viên]
+        B3[KHÔNG thay thế phán đoán chuyên môn và sự thấu cảm của cố vấn]
+        B4[KHÔNG thu thập hoặc sử dụng dữ liệu đời tư ngoài phạm vi học tập]
+    end
+```
+
+Nguyên tắc bất biến trong thiết kế là công nghệ chỉ đóng vai trò như một chiếc ống nhòm giúp người cố vấn nhìn xa và rõ hơn trên hành trình đồng hành cùng người học, tuyệt đối không bao giờ là người cầm lái thay thế con người.
+
+================================================================================
+
+# 06. THIẾT KẾ GIẢI PHÁP KIẾN TRÚC VÀ DỊCH VỤ
+
+## 1. Sơ đồ kiến trúc tổng thể sáu lớp
+Vận dụng khung kiến trúc hệ sinh thái Đại học thông minh được tổng hợp từ Uskov và cộng sự (2018), Tổ chức Hợp tác và Phát triển Kinh tế (OECD, 2023) cùng nội dung bài giảng chuyên đề, giải pháp Dịch vụ Cố vấn học tập và Hỗ trợ sớm thông minh tại Đại học Bách khoa Hà Nội được thiết kế theo cấu trúc sáu lớp đồng bộ. Kiến trúc này bảo đảm tính truy vết giá trị xuyên suốt: mọi quyết định công nghệ và hạ tầng ở các lớp dưới đều hướng tới việc phục vụ quy trình, dịch vụ và giá trị giáo dục ở các lớp phía trên.
+
+```mermaid
+flowchart TD
+    subgraph L1 [LỚP 1: GIÁ TRỊ VÀ CHỦ THỂ]
+        V1["Sinh viên: Được hỗ trợ kịp thời, bảo mật, không bị dán nhãn"]
+        V2["Cố vấn học tập: Có thông tin bối cảnh, giảm thủ tục hành chính"]
+        V3["Nhà trường: Giảm tỷ lệ thôi học, minh bạch trách nhiệm giải trình"]
+    end
+
+    subgraph L2 [LỚP 2: DỊCH VỤ]
+        S1["Dịch vụ Nhận diện Nguy cơ Sớm từ tuần thứ 3 đến tuần thứ 5"]
+        S2["Dịch vụ Điều phối và Can thiệp Cá nhân hóa"]
+        S3["Dịch vụ Đánh giá và Khép kín Vòng lặp"]
+    end
+
+    subgraph L3 [LỚP 3: QUY TRÌNH]
+        P1["Kích hoạt Tín hiệu Dữ liệu"] --> P2["Cố vấn Đánh giá Bối cảnh"]
+        P2 --> P3["Thiết lập Kế hoạch Can thiệp"]
+        P3 --> P4["Theo dõi Tiến độ Phục hồi"]
+        P4 --> P5["Đánh giá và Tinh chỉnh Thuật toán"]
+    end
+
+    subgraph L4 [LỚP 4: DỮ LIỆU]
+        D1["Dữ liệu Học vụ Lịch sử từ SIS"]
+        D2["Dữ liệu Tiến trình Thực tế từ LMS"]
+        D3["Dữ liệu Bối cảnh và Nhật ký Can thiệp"]
+        D4["Nền tảng Dữ liệu Tập trung Data Lakehouse"]
+    end
+
+    subgraph L5 [LỚP 5: ỨNG DỤNG VÀ NĂNG LỰC SỐ]
+        A1["Động cơ Phân tích Rủi ro Sớm"]
+        A2["Cổng Cố vấn Bối cảnh hóa"]
+        A3["Trung tâm Thông báo Đa kênh"]
+        A4["Phân hệ Quản lý Hồ sơ Can thiệp"]
+    end
+
+    subgraph L6 [LỚP 6: HẠ TẦNG VÀ AN TOÀN]
+        I1["Hạ tầng Định danh Tập trung SSO"]
+        I2["Phân quyền Truy cập Dựa trên Vai trò RBAC"]
+        I3["Mã hóa Dữ liệu và Nhật ký Giám sát"]
+        I4["Hạ tầng Đám mây Lai"]
+    end
+
+    L1 === L2
+    L2 === L3
+    L3 === L4
+    L4 === L5
+    L5 === L6
+```
+
+### Phân tích chi tiết sáu lớp kiến trúc
+Xét ở Lớp 1 là Giá trị và Chủ thể, kiến trúc định vị rõ người thụ hưởng và các giá trị cốt lõi được cam kết. Mọi giải pháp công nghệ bên dưới đều quy tụ về mục tiêu giúp sinh viên được nhận diện khó khăn kịp thời để phục hồi học kỳ, hỗ trợ cố vấn học tập có đủ bức tranh bối cảnh sư phạm, và nâng cao hiệu quả đào tạo chung của nhà trường.
+
+Về phương diện Lớp 2 là Dịch vụ, hệ thống chuyển dịch từ việc cung cấp các phần mềm rời rạc sang ba gói dịch vụ liên thông gồm Dịch vụ nhận diện nguy cơ sớm ở giai đoạn giữa kỳ, Dịch vụ điều phối can thiệp đa bên và Dịch vụ theo dõi phục hồi kết hợp đánh giá sau can thiệp.
+
+Đối với Lớp 3 là Quy trình, thiết kế xác lập chu trình năm bước với trách nhiệm bàn giao rõ ràng. Thời hạn cam kết xử lý dịch vụ được quy định nghiêm ngặt: kể từ khi xuất hiện tín hiệu rủi ro đến khi cố vấn học tập tiếp cận người học không được vượt quá 72 giờ.
+
+Về mặt Lớp 4 là Dữ liệu, kiến trúc phá vỡ các ốc đảo thông tin bằng việc tích hợp hai nguồn dữ liệu thẩm quyền gồm dữ liệu học vụ lịch sử từ hệ thống SIS và dữ liệu tiến trình học tập thời gian thực từ hệ thống LMS, lưu trữ tập trung tại nền tảng dữ liệu chung của trường.
+
+Ở Lớp 5 là Ứng dụng và Năng lực số, hệ thống tích hợp động cơ phân tích rủi ro học tập ứng dụng mô hình học máy có khả năng giải thích, Cổng cố vấn học tập trực quan và phân hệ quản lý hồ sơ can thiệp giúp lưu trữ lịch sử tư vấn an toàn.
+
+Cuối cùng, Lớp 6 là Hạ tầng và An toàn bảo đảm tính sẵn sàng cao và tuân thủ pháp lý thông qua hệ thống định danh tập trung của Đại học Bách khoa Hà Nội, cơ chế phân quyền dựa trên vai trò nghiêm ngặt, mã hóa cơ sở dữ liệu và lưu vết toàn bộ nhật ký truy cập theo quy định pháp luật.
+
+## 2. Service Blueprint và Luồng dữ liệu can thiệp
+Bản đồ dịch vụ Service Blueprint trực quan hóa toàn bộ hành trình trải nghiệm, phân định ranh giới giữa tương tác trực tiếp của người dùng, hoạt động nghiệp vụ hậu trường và các luồng công nghệ hỗ trợ bên dưới.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor SinhVien as Sinh viên
+    participant LMS_SIS as LMS và SIS
+    participant EWE as Động cơ Phân tích Rủi ro
+    actor CoVan as Cố vấn Học tập
+    participant Portal as Cổng Cố vấn và Hồ sơ
+    actor GiangVien as Giảng viên và Đơn vị Hỗ trợ
+
+    Note over SinhVien,LMS_SIS: GIAI ĐOẠN 1: CẢM NHẬN TÍN HIỆU (TUẦN 1 ĐẾN 4)
+    SinhVien->>LMS_SIS: Tương tác học tập (vắng 2 buổi, không nộp bài tập tuần 3)
+    LMS_SIS->>EWE: Đồng bộ dữ liệu nhật ký và điểm quá trình qua API
+
+    Note over EWE,CoVan: GIAI ĐOẠN 2: SUY DIỄN VÀ ĐÁNH GIÁ BỐI CẢNH (TUẦN 4 ĐẾN 5)
+    EWE->>EWE: Tính toán chỉ số nguy cơ học tập mức cao
+    EWE->>Portal: Chuyển thông tin bối cảnh vào danh sách chờ của Cố vấn
+    Portal->>CoVan: Thông báo bảo mật về sinh viên cần xem xét bối cảnh
+    CoVan->>Portal: Kiểm tra hồ sơ đa chiều gồm điểm tích lũy và ghi chú liên quan
+
+    Note over CoVan,SinhVien: GIAI ĐOẠN 3: CAN THIỆP CÓ TRÁCH NHIỆM (TRONG VÒNG 72 GIỜ)
+    CoVan->>SinhVien: Gửi lời mời trao đổi trực tiếp bằng ngôn ngữ khích lệ
+    SinhVien->>CoVan: Tham gia buổi tư vấn và chia sẻ khó khăn thực tế
+    CoVan->>Portal: Lập Kế hoạch Phục hồi Học tập cá nhân hóa
+    CoVan->>GiangVien: Kết nối sinh viên với lớp phụ đạo của Trợ giảng môn học
+
+    Note over SinhVien,EWE: GIAI ĐOẠN 4: ĐÁNH GIÁ VÀ KHÉP KÍN VÒNG LẶP (SAU 14 NGÀY)
+    SinhVien->>LMS_SIS: Tăng cường tương tác và hoàn thành bài tập bổ sung
+    LMS_SIS->>EWE: Ghi nhận sự phục hồi của các chỉ số học tập
+    EWE->>Portal: Cập nhật trạng thái nguy cơ đã được giải tỏa
+    CoVan->>Portal: Đóng hồ sơ can thiệp và gửi phản hồi tinh chỉnh thuật toán
+```
+
+**Bảng 6.1. Ma trận chi tiết Service Blueprint dịch vụ hỗ trợ sớm**
+
+| Tầng kiến trúc dịch vụ | Bước 1: Phát hiện tín hiệu | Bước 2: Đánh giá bối cảnh | Bước 3: Tiếp cận và Tư vấn | Bước 4: Thực hiện can thiệp | Bước 5: Đánh giá phục hồi |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Bằng chứng vật lý và số** | Giao diện nộp bài tập; Bảng điểm danh lớp học. | Bảng điều khiển bối cảnh trên Cổng cố vấn học tập. | Thông điệp mời gặp gỡ; Phòng tư vấn trực tiếp hoặc trực tuyến. | Bản cam kết kế hoạch học tập cá nhân; Lịch phụ đạo. | Biểu đồ phục hồi học tập; Kết quả bài thi giữa kỳ. |
+| **Hành động của Sinh viên** | Vắng học không phép hoặc chậm nộp bài tập quá trình. | Chưa nhận thông báo rủi ro để tránh áp lực tâm lý. | Nhận thông điệp đồng hành; Xác nhận lịch hẹn với cố vấn. | Tham gia buổi tư vấn; Chia sẻ khó khăn và tham gia lớp phụ đạo. | Hoàn thành bài tập bổ sung; Cải thiện kết quả học tập. |
+| **Tương tác trực tiếp** | Giảng viên ghi nhận vắng mặt trên hệ thống. | Không có tương tác trực tiếp. | Cố vấn học tập trực tiếp lắng nghe và thấu cảm khó khăn. | Giảng viên bộ môn hoặc trợ giảng hỗ trợ bù đắp kiến thức rỗng. | Cố vấn học tập gửi thông điệp biểu dương sự tiến bộ. |
+| **Hành động hậu trường** | Hệ thống tự động tổng hợp dữ liệu vi mô vào kho dữ liệu. | Cố vấn học tập tra cứu lịch sử học tập và chuẩn bị phương án. | Cố vấn học tập lựa chọn gói can thiệp học thuật hoặc tâm lý. | Ban Đào tạo phân bổ trợ giảng; Ban Công tác Sinh viên hỗ trợ thủ tục. | Cố vấn học tập xác nhận đóng hồ sơ can thiệp trên hệ thống. |
+| **Hệ thống hỗ trợ và Luồng dữ liệu** | Đường ống dữ liệu tự động đồng bộ dữ liệu lúc 00:00 hàng ngày. | Động cơ phân tích tính toán điểm số nguy cơ học tập. | Phân hệ thông báo bảo mật gửi thư điện tử mã hóa. | Phân hệ quản lý hồ sơ ghi nhận kế hoạch hành động. | Thuật toán so sánh chỉ số trước và sau can thiệp để tự học. |
+
+## 3. Quy trình Can thiệp Sư phạm và Ma trận Phân tầng Nguy cơ
+Để bảo đảm tính công bằng và cá nhân hóa, hệ thống phân loại rủi ro thành ba cấp độ với các kịch bản can thiệp tương ứng.
+
+```mermaid
+graph TD
+    A[Dữ liệu học tập tuần 1 đến 4] --> B{Động cơ phân tích đánh giá nguy cơ}
+    B -- "Điểm số dưới 0.4 (Nguy cơ Thấp)" --> C[GÓI 1: TỰ THÍCH ỨNG<br>Gửi tài liệu bổ trợ và hướng dẫn tự học qua LMS]
+    B -- "Điểm số từ 0.4 đến 0.7 (Nguy cơ Vừa)" --> D[GÓI 2: ĐỒNG ĐẲNG<br>Kết nối Trợ giảng và nhóm học tập sinh viên]
+    B -- "Điểm số trên 0.7 (Nguy cơ Cao)" --> E[GÓI 3: CAN THIỆP CHUYÊN SÂU<br>Cố vấn trực tiếp tư vấn và phối hợp đa bên]
+```
+
+Đối với nhóm sinh viên có mức độ nguy cơ thấp tương ứng với điểm rủi ro dưới 0.4 do chỉ quên nộp một bài tập hoặc vắng một buổi học, hệ thống tự động gửi thông báo nhắc nhở nhẹ nhàng trên hệ thống quản trị học tập kèm tài liệu hướng dẫn tự học mà không làm phiền đến cố vấn học tập. 
+
+Đối với nhóm sinh viên có mức độ nguy cơ trung bình tương ứng với điểm rủi ro từ 0.4 đến 0.7 khi có dấu hiệu vắng hai buổi học và điểm kiểm tra nhanh dưới trung bình, hệ thống đề xuất sinh viên tham gia nhóm hỗ trợ học tập đồng đẳng do các trợ giảng sinh viên khóa trên phụ trách. 
+
+Đối với nhóm sinh viên có mức độ nguy cơ cao tương ứng với điểm rủi ro từ 0.7 trở lên do vắng trên 30% thời lượng hoặc không tương tác liên tục trong hai tuần, hệ thống lập tức kích hoạt cảnh báo gửi đến cố vấn học tập. Cố vấn học tập bắt buộc phải tổ chức phiên tư vấn trực tiếp trong vòng 72 giờ và phối hợp cùng ban đào tạo để thiết lập kế hoạch can thiệp cá nhân hóa.
+
+================================================================================
+
+# 07. QUẢN TRỊ VÀ QUẢN TRỊ RỦI RO CÓ TRÁCH NHIỆM
+
+## 1. Ma trận Phân định Trách nhiệm
+Để giải quyết triệt để điểm nghẽn về việc có dữ liệu nhưng không có đơn vị chịu trách nhiệm hành động, giải pháp thiết lập ma trận phân định trách nhiệm RACI quy định rõ vai trò của từng bên liên quan qua từng khâu vận hành dịch vụ.
+
+Trong ma trận này, chữ R đại diện cho chủ thể trực tiếp thực hiện công việc; chữ A quy định người chịu trách nhiệm giải trình cuối cùng về kết quả và có thẩm quyền phê duyệt; chữ C thể hiện các bên được tham vấn chuyên môn hai chiều; và chữ I đại diện cho các đối tượng được thông báo kết quả thực hiện.
+
+**Bảng 7.1. Ma trận phân định trách nhiệm RACI cho Dịch vụ Cố vấn học tập và Hỗ trợ sớm**
+
+| Giai đoạn và Hoạt động nghiệp vụ | Sinh viên | Cố vấn học tập | Giảng viên bộ môn | Ban Đào tạo và Ban Công tác Sinh viên | Bộ phận Công nghệ Thông tin và Dữ liệu |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **1. Thu thập và chuẩn hóa dữ liệu LMS và SIS** | I | I | C | A | **R** |
+| **2. Cập nhật điểm danh và điểm quá trình** | I | I | **R / A** | C | I |
+| **3. Phân tích rủi ro và kích hoạt cảnh báo** | I | I | I | A | **R** |
+| **4. Tiếp nhận và đánh giá hồ sơ bối cảnh** | I | **R / A** | C | I | I |
+| **5. Liên hệ và tổ chức phiên tư vấn cá nhân** | C | **R / A** | I | I | I |
+| **6. Lập kế hoạch can thiệp phục hồi học tập** | **R** | **A** | C | I | I |
+| **7. Phối hợp phụ đạo và hỗ trợ tâm lý** | **R** | C | **R** | **A** | I |
+| **8. Ghi nhận nhật ký và đóng hồ sơ can thiệp** | I | **R / A** | I | C | I |
+| **9. Đánh giá hiệu quả KPI toàn trường** | I | C | C | **R / A** | C |
+
+## 2. Sổ đăng ký rủi ro
+Trong các dự án ứng dụng dữ liệu và phân tích học tập trong giáo dục đại học, rủi ro không chỉ dừng lại ở vấn đề kỹ thuật phần mềm mà nghiêm trọng hơn là rủi ro đạo đức, tâm lý và xã hội (Prinsloo & Slade, 2017; OECD, 2023). Bảng dưới đây định danh năm nhóm rủi ro trọng yếu kèm theo chiến lược giảm thiểu tương ứng.
+
+**Bảng 7.2. Sổ đăng ký rủi ro cho Dịch vụ Cố vấn học tập và Hỗ trợ sớm**
+
+| Mã | Tên rủi ro và Bản chất | Xác suất (L: 1-5) | Tác động (I: 1-5) | Điểm rủi ro (L×I) | Mức độ rủi ro | Biện pháp kiểm soát và Giảm thiểu cụ thể | Chủ sở hữu rủi ro |
+| :---: | :--- | :---: | :---: | :---: | :---: | :--- | :--- |
+| **R01** | **Dán nhãn định kiến:** Sinh viên bị gán mác kém cỏi, dẫn đến tâm lý mặc cảm, tự ti và từ bỏ nỗ lực phấn đấu. | 3 | 5 | **15** | **Rất cao** | Hệ thống không gửi thông báo trực tiếp chữ cảnh báo rủi ro cho sinh viên mà chỉ dùng ngôn ngữ phát triển để gợi ý hỗ trợ học thuật; chỉ có cố vấn học tập mới tiếp cận chỉ số phân tích rủi ro trong hồ sơ bảo mật. | Cố vấn học tập và Ban Công tác Sinh viên |
+| **R02** | **Thiên lệch thuật toán và Cảnh báo sai:** Thuật toán đánh giá sai do sinh viên học nhóm, nộp bài qua kênh khác, hoặc mô hình phân biệt đối xử với nhóm yếu thế. | 4 | 3 | **12** | **Cao** | Bắt buộc áp dụng nguyên tắc Human-in-the-loop để mọi cảnh báo đều qua bước cố vấn học tập thẩm định bối cảnh; kiểm định mô hình định kỳ bảo đảm tỷ lệ cảnh báo sai dưới 15%; không đưa các thuộc tính nhạy cảm vào mô hình. | Bộ phận Dữ liệu và Hội đồng Sư phạm |
+| **R03** | **Xâm phạm riêng tư và Giám sát quá mức:** Thu thập quá nhiều dữ liệu cá nhân ngoài học tập dẫn đến nguy cơ rò rỉ thông tin nhạy cảm của người học. | 2 | 5 | **10** | **Cao** | Tuân thủ nghiêm ngặt Nghị định 13/2023/NĐ-CP; áp dụng nguyên tắc tối thiểu hóa dữ liệu chỉ thu thập tương tác học tập; thực hiện mã hóa cơ sở dữ liệu và kiểm soát truy cập nghiêm ngặt. | Giám đốc Công nghệ Thông tin và Pháp chế |
+| **R04** | **Quá tải cho Cố vấn học tập:** Quá nhiều cảnh báo đổ về cùng lúc khiến giảng viên kiêm nhiệm cố vấn bị trơ lì và bỏ qua thông báo. | 4 | 3 | **12** | **Cao** | Phân tầng rủi ro để chỉ gửi cảnh báo mức nguy cơ cao cho cố vấn học tập; nhóm nguy cơ nhẹ tự động nhận học liệu qua hệ thống; quy đổi giờ làm việc chuẩn cho công tác cố vấn vào định mức lao động năm. | Ban Đào tạo và Lãnh đạo Khoa Viện |
+| **R05** | **Đứt gãy quy trình bàn giao:** Cố vấn học tập phát hiện sinh viên khó khăn nhưng không thể kết nối sang đơn vị phụ đạo hoặc hỗ trợ tâm lý và tài chính. | 3 | 4 | **12** | **Cao** | Tích hợp phân hệ quản lý hồ sơ can thiệp liên thông giữa các phòng ban; ban hành quy định thời hạn xử lý cam kết trong vòng 48 giờ đối với đơn vị chuyên môn. | Ban Đào tạo và Ban Công tác Sinh viên |
+
+*(Quy ước: Điểm rủi ro = Xác suất nhân Tác động. Mức độ: 1–5: Thấp; 6–9: Trung bình; 10–14: Cao; 15–25: Rất cao).*
+
+## 3. Khung Pháp lý và Chính sách Dữ liệu có Trách nhiệm
+Để vận hành dịch vụ bền vững, Đại học Bách khoa Hà Nội cần ban hành Quy chế Quản trị và Sử dụng Dữ liệu Học tập có Trách nhiệm với bốn trụ cột pháp lý và đạo đức.
+
+```mermaid
+graph LR
+    A[Chính sách Dữ liệu có Trách nhiệm] --> B[1. Quyền được Giải thích XAI]
+    A --> C[2. Quyền Kiểm soát và Đồng thuận]
+    A --> D[3. Phân quyền Truy cập RBAC]
+    A --> E[4. Nhật ký Kiểm toán Minh bạch]
+```
+
+Trụ cột thứ nhất là tính minh bạch và quyền được giải thích. Khi một sinh viên được thuật toán xếp vào diện có nguy cơ, hệ thống phải giải thích rõ ràng các căn cứ định lượng dẫn đến kết luận đó như số buổi vắng học hoặc điểm bài tập quá trình sụt giảm, tuyệt đối không sử dụng các mô hình hộp đen không thể giải trình lý do sư phạm.
+
+Trụ cột thứ hai là quyền đồng thuận và bảo vệ quyền riêng tư theo tinh thần Nghị định 13/2023/NĐ-CP. Sinh viên được thông báo đầy đủ về mục đích sử dụng dữ liệu nhằm hỗ trợ học tập, có quyền tra cứu hồ sơ của chính mình và yêu cầu đính chính nếu thông tin ghi nhận chưa chính xác.
+
+Trụ cột thứ ba là cơ chế phân quyền truy cập nghiêm ngặt dựa trên vai trò. Sinh viên chỉ có quyền xem dữ liệu của bản thân; giảng viên bộ môn chỉ tiếp cận dữ liệu của lớp học phần mình giảng dạy; cố vấn học tập xem dữ liệu tổng hợp của sinh viên trong lớp phụ trách; và bộ phận kỹ thuật dữ liệu chỉ làm việc với dữ liệu đã được ẩn danh hóa.
+
+Trụ cột thứ tư là hệ thống nhật ký kiểm toán minh bạch. Mọi thao tác truy cập, tra cứu hoặc xuất dữ liệu hồ sơ sinh viên đều được hệ thống tự động lưu vết nhật ký về danh tính người truy cập, thời gian và nội dung tra cứu nhằm ngăn chặn triệt để hành vi lạm dụng dữ liệu ngoài mục đích giáo dục.
+
+================================================================================
+
+# 08. LỘ TRÌNH TRIỂN KHAI BA GIAI ĐOẠN VÀ CÁC CỔNG KIỂM SOÁT
+
+## 1. Lộ trình chuyển đổi ba giai đoạn
+Chuyển đổi một quy trình hỗ trợ sinh viên tại đại học quy mô hơn 35.000 người học như Đại học Bách khoa Hà Nội không thể thực hiện dàn trải trong một thời gian ngắn. Theo khuyến nghị từ mô hình ba chân trời đổi mới (Three Horizons Framework) trong bài giảng chuyên đề, nghiên cứu đề xuất Lộ trình triển khai 36 tháng với các mục tiêu, phạm vi và sản phẩm cụ thể qua từng giai đoạn.
+
+```mermaid
+gantt
+    title LỘ TRÌNH CHUYỂN ĐỔI 36 THÁNG DỊCH VỤ HỖ TRỢ SỚM THÔNG MINH
+    dateFormat  YYYY-MM
+    section GIAI ĐOẠN 1 (0 ĐẾN 12 THÁNG)
+    Ban hành Quy chế Đạo đức Dữ liệu và RACI       :2026-09, 3M
+    Tích hợp Đường ống Dữ liệu LMS SIS            :2026-11, 5M
+    Xây dựng Cổng Cố vấn và Tập huấn Cố vấn       :2027-02, 4M
+    Thí điểm tại 01 Trường với 1500 Sinh viên     :2027-04, 5M
+    CỔNG KIỂM SOÁT 1 GATEWAY 1                    :milestone, 2027-08, 0d
+    
+    section GIAI ĐOẠN 2 (12 ĐẾN 24 THÁNG)
+    Mở rộng quy mô toàn trường cho Khóa K68 K69   :2027-09, 6M
+    Tích hợp Liên thông Ban Công tác Sinh viên    :2028-01, 5M
+    Triển khai Mạng lưới Trợ giảng Đồng đẳng      :2028-03, 4M
+    Tối ưu hóa Thuật toán Phân tích Rủi ro        :2028-05, 4M
+    CỔNG KIỂM SOÁT 2 GATEWAY 2                    :milestone, 2028-08, 0d
+    
+    section GIAI ĐOẠN 3 (24 ĐẾN 36 THÁNG)
+    Thể chế hóa Văn hóa Quyết định Dựa trên Dữ liệu:2028-09, 6M
+    Nâng cấp Mô hình Học máy Tự thích ứng         :2029-01, 5M
+    Liên thông Hướng nghiệp và Cựu Sinh viên      :2029-03, 4M
+    Tổng kết Đánh giá Tác động Dài hạn Tốt nghiệp :2029-06, 3M
+```
+
+### Chi tiết ba giai đoạn chuyển đổi
+
+Giai đoạn một kéo dài từ tháng thứ 0 đến tháng thứ 12, tập trung vào việc Thiết lập nền tảng và thí điểm phạm vi hẹp. Mục tiêu cốt lõi của giai đoạn này là xây dựng đường ống tích hợp dữ liệu ban đầu, chuẩn hóa quy trình sư phạm và kiểm chứng tính khả thi của giải pháp ở quy mô hẹp. Phạm vi triển khai được chọn là Trường Công nghệ Thông tin và Truyền thông thuộc Đại học Bách khoa Hà Nội với quy mô khoảng 1.500 sinh viên năm thứ nhất và năm thứ hai. Các nhiệm vụ trọng tâm gồm ban hành quy chế sử dụng dữ liệu học tập có trách nhiệm, xây dựng phiên bản phần mềm thử nghiệm ban đầu kết nối giữa hệ thống quản trị học tập và hệ thống thông tin sinh viên, phát triển Cổng cố vấn học tập và tổ chức tập huấn kỹ năng tư vấn bối cảnh cho 30 giảng viên làm cố vấn học tập tại đơn vị thí điểm.
+
+Giai đoạn hai kéo dài từ tháng thứ 12 đến tháng thứ 24, hướng tới việc Mở rộng quy mô toàn trường và tích hợp dịch vụ liên thông. Mục tiêu là mở rộng giải pháp ra toàn bộ các trường và khoa chuyên ngành, phục vụ toàn bộ khoảng 15.000 sinh viên năm nhất và năm hai của Đại học Bách khoa Hà Nội. Trong giai đoạn này, nhà trường nâng cấp hạ tầng tính toán để đáp ứng dữ liệu quy mô lớn, chuyển đổi mô hình phân tích rủi ro sang học máy có khả năng giải thích nhằm giảm tỷ lệ cảnh báo sai, đồng thời kết nối liên thông dòng công việc giữa cố vấn học tập với phòng tư vấn tâm lý, ban công tác sinh viên và mạng lưới trợ giảng sinh viên hỗ trợ học tập đồng đẳng.
+
+Giai đoạn ba kéo dài từ tháng thứ 24 đến tháng thứ 36, tập trung vào việc Thể chế hóa toàn diện và tự thích ứng. Mục tiêu là đưa năng lực tổ chức đạt cấp độ Được quản trị định lượng và Tối ưu hóa liên tục, hình thành văn hóa ra quyết định dựa trên bằng chứng dữ liệu trong toàn trường. Hệ thống kích hoạt tính năng tự tổ chức và thích ứng, tự động nhận diện các học phần có tỷ lệ sinh viên gặp khó khăn bất thường để cảnh báo điều chỉnh đề cương môn học, tự động cân bằng tải tư vấn cho cố vấn học tập, mở rộng kết nối với mạng lưới cựu sinh viên và thực hiện đánh giá tác động dài hạn đối với tỷ lệ tốt nghiệp đúng hạn.
+
+## 2. Các Cổng Kiểm soát Quyết định
+Để bảo đảm kiểm soát rủi ro và tránh lãng phí nguồn lực đầu tư, lộ trình thiết lập hai cổng kiểm soát quyết định nghiêm ngặt.
+
+```mermaid
+flowchart LR
+    H1[Chân trời 1: Thí điểm 0 đến 12 tháng] --> GW1{CỔNG KIỂM SOÁT 1<br>Đánh giá cuối tháng 12}
+    GW1 -- "Đạt toàn bộ tiêu chí" --> H2[Chân trời 2: Mở rộng 12 đến 24 tháng]
+    GW1 -- "Chưa đạt tiêu chí" --> R1[Tạm dừng mở rộng, Tinh chỉnh thuật toán]
+    
+    H2 --> GW2{CỔNG KIỂM SOÁT 2<br>Đánh giá cuối tháng 24}
+    GW2 -- "Đạt toàn bộ tiêu chí" --> H3[Chân trời 3: Thể chế hóa 24 đến 36 tháng]
+    GW2 -- "Chưa đạt tiêu chí" --> R2[Củng cố liên thông, Hoàn thiện cơ chế]
+```
+
+**Bảng 8.1. Tiêu chí đánh giá tại các cổng kiểm soát quyết định**
+
+| Cổng kiểm soát | Thời điểm | Tiêu chí phê duyệt để tiếp tục mở rộng | Hành động nếu không đạt tiêu chí |
+| :--- | :---: | :--- | :--- |
+| **Cổng kiểm soát 1 (Đánh giá Thí điểm)** | Cuối tháng 12 | Tỷ lệ cảnh báo sai dưới 18%; tỷ lệ cố vấn học tập tại đơn vị thí điểm sử dụng hệ thống thường xuyên đạt từ 70% trở lên; mức độ hài lòng của sinh viên được hỗ trợ đạt từ 75% trở lên; không xảy ra bất kỳ sự cố vi phạm an toàn dữ liệu nào. | Tạm dừng việc mở rộng toàn trường; dành thêm ba tháng để rà soát lại các trọng số thuật toán và đơn giản hóa giao diện làm việc của cố vấn học tập. |
+| **Cổng kiểm soát 2 (Đánh giá Toàn diện)** | Cuối tháng 24 | Tỷ lệ sinh viên có nguy cơ tiếp nhận can thiệp đạt từ 75% trở lên; tỷ lệ sinh viên được can thiệp vượt qua diện cảnh báo học vụ đạt từ 55% trở lên; thời gian phản hồi trung bình của cố vấn học tập dưới 72 giờ; 100% các ca can thiệp liên thông được đóng hồ sơ đúng thời hạn cam kết. | Giữ nguyên quy mô vận hành hiện tại; tổ chức đối thoại mở với các đơn vị đào tạo để tháo gỡ vướng mắc về cơ chế tính giờ lao động cho cố vấn học tập. |
+
+================================================================================
+
+# 09. HỆ THỐNG KPI VÀ PHƯƠNG ÁN ĐÁNH GIÁ KIỂM CHỨNG
+
+## 1. Bảng ma trận KPI kiểm chứng được
+Để bảo đảm tính khả thi, minh bạch và có thể kiểm chứng được, hệ thống chỉ số đo lường hiệu quả của Dịch vụ Cố vấn học tập và Hỗ trợ sớm tại Đại học Bách khoa Hà Nội được xây dựng bao gồm cả nhóm chỉ số dẫn dắt đo lường quá trình vận hành và nhóm chỉ số kết quả đo lường giá trị giáo dục thực chất tạo ra.
+
+**Bảng 9.1. Ma trận chỉ số hiệu quả cho Dịch vụ Cố vấn học tập và Hỗ trợ sớm**
+
+| Phân nhóm chỉ số | Mã chỉ số | Tên chỉ số đo lường | Đường cơ sở hiện trạng | Mục tiêu Giai đoạn 1 (12 tháng) | Mục tiêu Giai đoạn 2 (24 tháng) | Mục tiêu Giai đoạn 3 (36 tháng) | Nguồn dữ liệu kiểm chứng | Tần suất đo lường | Đơn vị chủ sở hữu chỉ số |
+| :--- | :---: | :--- | :---: | :---: | :---: | :---: | :--- | :---: | :--- |
+| **Chỉ số Quá trình** | **KPI-01** | **Thời điểm nhận diện nguy cơ sớm** | Tuần thứ 17 đến 19 sau khi có điểm thi | Tuần thứ 5 đến 6 | Tuần thứ 4 | Tuần thứ 3 đến 4 | Nhật ký hệ thống của động cơ phân tích rủi ro | Hàng tuần | Bộ phận Kỹ thuật Dữ liệu |
+| | **KPI-02** | **Thời gian phản hồi của cố vấn học tập** | Không có quy định cụ thể | Dưới 120 giờ | Dưới 72 giờ | Dưới 48 giờ | Nhật ký truy cập cổng cố vấn và phân hệ hồ sơ | Hàng tháng | Trưởng Khoa Viện Đào tạo |
+| | **KPI-03** | **Tỷ lệ cảnh báo sai** | Không đo lường được | Dưới 20% | Dưới 15% | Dưới 10% | Báo cáo đối soát giữa cố vấn và điểm giữa kỳ | Từng học kỳ | Hội đồng Đánh giá Sư phạm |
+| | **KPI-04** | **Tỷ lệ sinh viên chấp nhận hỗ trợ** | Dưới 20% | Đạt từ 60% | Đạt từ 75% | Đạt từ 85% | Nhật ký các phiên tư vấn trên hệ thống hồ sơ | Hàng học kỳ | Ban Công tác Sinh viên |
+| **Chỉ số Kết quả** | **KPI-05** | **Tỷ lệ sinh viên thoát diện cảnh báo học vụ** | Ước tính khoảng 30% | Đạt từ 45% | Đạt từ 60% | Đạt từ 70% | Cơ sở dữ liệu điểm chính thức trên SIS | Hàng học kỳ | Ban Đào tạo |
+| | **KPI-06** | **Mức độ cải thiện điểm trung bình học kỳ** | Không có sự cải thiện rõ rệt | Tăng trung bình 0.2 điểm | Tăng trung bình 0.35 điểm | Tăng trung bình 0.5 điểm | Bảng điểm đối chứng trước và sau can thiệp | Hàng học kỳ | Ban Đào tạo |
+| | **KPI-07** | **Tỷ lệ sinh viên bị buộc thôi học hàng năm** | Khoảng 4.5% đến 5.5% | Giảm 5% so với hiện trạng | Giảm 15% so với hiện trạng | Giảm 25% so với hiện trạng | Quyết định xử lý học vụ chính thức của Đại học | Hàng năm | Ban Giám đốc Đại học |
+| | **KPI-08** | **Mức độ hài lòng của sinh viên** | Chưa từng khảo sát | Đạt từ 70% | Đạt từ 80% | Đạt từ 90% | Khảo sát ẩn danh của Trung tâm Đảm bảo Chất lượng | Hàng năm | Trung tâm Đảm bảo Chất lượng |
+
+## 2. Phương pháp Kiểm định và Đo lường Hiệu quả Can thiệp
+Để khẳng định sự cải thiện kết quả học tập của sinh viên là do tác động thực tế của dịch vụ hỗ trợ sớm chứ không phải do các yếu tố ngẫu nhiên bên ngoài, nhà trường áp dụng thiết kế nghiên cứu bán thực nghiệm kết hợp kỹ thuật ghép cặp điểm xu hướng Propensity Score Matching.
+
+```mermaid
+graph TD
+    A[Tổng số Sinh viên có Nguy cơ Học tập<br>Phát hiện ở Tuần 4] --> B[Ghép cặp tương đương Propensity Score Matching]
+    B --> C[NHÓM CAN THIỆP<br>Nhận hỗ trợ từ Cố vấn học tập và Phụ đạo]
+    B --> D[NHÓM ĐỐI CHỨNG<br>Chỉ nhận thông báo nhắc nhở thông thường]
+    
+    C --> E[Đánh giá Kết quả Cuối kỳ<br>Điểm GPA và Tỷ lệ Cảnh báo Học vụ]
+    D --> E
+    
+    E --> F{Phân tích Đối sánh Tác động Ròng<br>Net Treatment Effect}
+    F --> G[Kết luận Giá trị Giáo dục Thực chất]
+```
+
+Phương pháp được tiến hành bằng việc chia đối tượng nghiên cứu thành hai nhóm có đặc điểm tương đồng. Nhóm can thiệp gồm các sinh viên thuộc diện nguy cơ nhận được đầy đủ gói dịch vụ gồm tư vấn trực tiếp với cố vấn học tập, tham gia lớp phụ đạo của trợ giảng và điều chỉnh kế hoạch học tập cá nhân. Nhóm đối chứng gồm các sinh viên có cùng mức điểm tuyển sinh đầu vào, cùng ngành học và có mức độ sụt giảm tương tác tương đương ở tuần thứ tư nhưng học tập tại các đơn vị chưa triển khai thí điểm dịch vụ. 
+
+Bằng việc phân tích đối sánh mức độ cải thiện điểm trung bình học kỳ và tỷ lệ trượt môn giữa hai nhóm sau khi kết thúc học kỳ, nhà trường có thể bóc tách tác động ròng của dịch vụ, khẳng định giá trị gia tăng thực chất mà giải pháp mang lại cho chất lượng đào tạo.
+
+## 3. Chu trình Cải tiến Liên tục
+Dữ liệu chỉ số hiệu quả không chỉ dùng để lập báo cáo thành tích mà đóng vai trò là nguồn thông tin phản hồi sống động để vận hành chu trình cải tiến chất lượng liên tục PDCA cho toàn bộ hệ sinh thái dịch vụ.
+
+```mermaid
+flowchart TD
+    subgraph PLAN [1. KẾ HOẠCH]
+        P1[Xác định mục tiêu chỉ số học kỳ]
+        P2[Cập nhật trọng số thuật toán phân tích]
+        P3[Phân công chỉ tiêu cố vấn học tập phụ trách]
+    end
+
+    subgraph DO [2. THỰC HIỆN]
+        D1[Thu thập nhật ký tương tác thời gian thực]
+        D2[Kích hoạt cảnh báo tuần 3 đến 5]
+        D3[Cố vấn học tập tổ chức các phiên tư vấn bối cảnh]
+    end
+
+    subgraph CHECK [3. KIỂM TRA]
+        C1[Rà soát tỷ lệ cảnh báo sai định kỳ]
+        C2[Đo lường thời gian phản hồi của cố vấn]
+        C3[Khảo sát trải nghiệm sinh viên ẩn danh]
+    end
+
+    subgraph ACT [4. ĐIỀU CHỈNH]
+        A1[Tự động tinh chỉnh ngưỡng cảnh báo thuật toán]
+        A2[Tái phân bổ nguồn lực trợ giảng cho môn khó]
+        A3[Khen thưởng cố vấn có đóng góp xuất sắc]
+    end
+
+    PLAN --> DO --> CHECK --> ACT --> PLAN
+```
+
+Ở khía cạnh công nghệ, nếu tỷ lệ cảnh báo sai vượt quá ngưỡng 15%, hội đồng chuyên môn sẽ tiến hành rà soát lại các trọng số cấu thành chỉ số tham gia học tập; chẳng hạn như giảm bớt tỷ trọng của việc xem bài giảng trực tuyến nếu học phần đó chủ yếu giảng dạy trên lớp. 
+
+Ở khía cạnh sư phạm, nếu dữ liệu ghi nhận trên 40% sinh viên trong một lớp học phần đồng loạt rơi vào diện nguy cơ cao, hệ thống sẽ tự động gửi tín hiệu đến trưởng bộ môn để rà soát lại phương pháp giảng dạy hoặc độ khó của bài kiểm tra quá trình, bảo đảm việc can thiệp được thực hiện hai chiều giữa người học và người dạy.
+
+================================================================================
+
+# 10. KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN
+
+## 1. Tóm tắt Đóng góp Chính của Đề tài
+Tiểu luận học phần ED6211 đã giải quyết trọn vẹn bài toán chuyển đổi số từ góc độ hệ sinh thái dịch vụ, tập trung vào Dịch vụ Cố vấn học tập và Hỗ trợ sớm thông minh tại Đại học Bách khoa Hà Nội. Không dừng lại ở mức độ tổng thuật tài liệu hay đề xuất mua sắm công nghệ đơn thuần, đề tài đã tạo dựng một lập luận xuyên suốt từ vấn đề thực tiễn đến giải pháp ứng dụng khả thi.
+
+Về mặt lý luận, nghiên cứu đã vận dụng thành công khung khái niệm Smart University (Đại học thông minh) và sáu đặc tính thông minh của Uskov và cộng sự (2018), kết hợp với lý thuyết Phân tích Học tập (Learning Analytics) và nguyên tắc sư phạm nhân văn giữ con người trong trung tâm quyết định. Đề tài đã làm sáng tỏ ranh giới quan trọng: công nghệ phân tích dữ liệu chỉ đóng vai trò hỗ trợ con người ra quyết định, tuyệt đối không thay thế sự thấu cảm và trách nhiệm sư phạm của người thầy.
+
+Về mặt kiến trúc và thiết kế hệ thống, đề tài đề xuất mô hình kiến trúc sáu lớp hoàn chỉnh, giải quyết tận gốc điểm nghẽn ốc đảo dữ liệu giữa hệ thống quản trị học tập và hệ thống thông tin sinh viên; đồng thời xây dựng bản đồ dịch vụ Service Blueprint phân định rành mạch giữa trải nghiệm người học, hoạt động của cố vấn học tập và luồng công nghệ hỗ trợ bên dưới.
+
+Về mặt phương pháp luận đánh giá, nghiên cứu thực hiện đánh giá trưởng thành kép kết hợp song song mô hình năm cấp độ SMM và mô hình tám chiều năng lực của Amiri và cộng sự (2026), chỉ rõ hai khoảng cách năng lực cốt lõi cần ưu tiên hóa giải. 
+
+Về mặt thực thi và quản trị rủi ro, đề tài xây dựng sổ đăng ký rủi ro toàn diện nhằm kiểm soát triệt để nguy cơ dán nhãn định kiến và xâm phạm riêng tư theo Nghị định 13/2023/NĐ-CP; đồng thời thiết lập lộ trình ba giai đoạn trong 36 tháng với hệ thống chỉ số hiệu quả kiểm chứng được gắn với các cổng kiểm soát quyết định nghiêm ngặt.
+
+## 2. Ba Điều kiện Thành công Then chốt
+Để giải pháp không dừng lại trên trang giấy mà đi vào đời sống giảng đường, ba điều kiện tiên quyết sau đây bắt buộc phải được bảo đảm đồng thời.
+
+```mermaid
+graph TD
+    A[THÀNH CÔNG CỦA HỆ SINH THÁI DỊCH VỤ] --> B[1. Cam kết Thể chế và Lãnh đạo]
+    A --> C[2. Đổi mới Cơ chế Đãi ngộ cho Cố vấn]
+    A --> D[3. Xây dựng Niềm tin và Văn hóa Tôn trọng]
+    
+    B --> B1[Ban hành Quy chế Quản trị Dữ liệu có Trách nhiệm]
+    C --> C1[Tính quy đổi giờ tư vấn vào định mức giảng dạy]
+    D --> D1[Tuyệt đối không dùng dữ liệu để xử phạt hay dán nhãn]
+```
+
+Điều kiện thứ nhất là sự cam kết mạnh mẽ từ lãnh đạo đại học về mặt thể chế và nguồn lực. Lãnh đạo nhà trường cần xem công tác cố vấn và hỗ trợ sớm là một cấu phần chiến lược trong việc nâng cao chất lượng đào tạo và giữ chân người học, chứ không phải là nhiệm vụ hành chính phụ trợ. Việc sớm ban hành quy chế sử dụng dữ liệu học tập có trách nhiệm và đầu tư thích đáng cho hạ tầng dữ liệu tập trung dùng chung là điều kiện tiên quyết.
+
+Điều kiện thứ hai là đổi mới cơ chế đãi ngộ và công nhận khối lượng công việc cho đội ngũ cố vấn học tập. Giảng viên đại học hiện nay chịu áp lực rất lớn về khối lượng giảng dạy và công bố nghiên cứu khoa học. Nếu nhà trường không đưa công tác cố vấn sinh viên vào quy chế đánh giá thi đua và không tính quy đổi thành giờ lao động chuẩn, các công cụ phần mềm hiện đại sẽ nhanh chóng rơi vào tình trạng bị bỏ hoang.
+
+Điều kiện thứ ba là xây dựng niềm tin số và văn hóa học tập an toàn trong toàn trường. Sinh viên chỉ cởi mở đón nhận sự hỗ trợ khi các em thực sự tin tưởng rằng dữ liệu của mình không bị dùng để trừng phạt, xếp loại yếu kém hay bêu rếu trước tập thể. Môi trường đại học thông minh phải là môi trường của sự bao dung, nơi khó khăn học tập ban đầu được nhận diện kịp thời để nâng đỡ.
+
+## 3. Giới hạn của Nghiên cứu và Hướng Phát triển Tiếp theo
+Bên cạnh những đóng góp đạt được, nghiên cứu cũng ghi nhận một số giới hạn nhất định. Trước hết, nghiên cứu mới dừng lại ở việc thiết kế kiến trúc hệ thống và quy trình nghiệp vụ; các số liệu hiện trạng và tác động được ước tính dựa trên dữ liệu thứ cấp và giả định bối cảnh của Đại học Bách khoa Hà Nội, do đó cần được tinh chỉnh thêm qua giai đoạn khảo sát thực địa sâu. Đồng thời, mô hình phân tích rủi ro trong giai đoạn đầu còn phụ thuộc nhiều vào chất lượng và tần suất nhập liệu điểm quá trình của giảng viên bộ môn trên hệ thống quản trị học tập.
+
+Trong định hướng phát triển tương lai, đề tài đề xuất hai hướng mở rộng có giá trị thực tiễn. Thứ nhất là nghiên cứu ứng dụng Multimodal Learning Analytics (Phân tích Học tập Đa phương thức), kết hợp dữ liệu tương tác trực tuyến với dữ liệu không gian vật lý của khuôn viên đại học thông minh như tần suất sử dụng thư viện, hoạt động ngoại khóa để nhận diện bức tranh toàn diện hơn về sinh viên. Thứ hai là tích hợp trợ lý trí tuệ nhân tạo tạo sinh có trách nhiệm nhằm hỗ trợ cố vấn học tập tự động tóm tắt hồ sơ học tập và soạn thảo bản nháp kế hoạch học tập cá nhân hóa, giúp nâng cao năng suất tư vấn sư phạm.
+
+## 4. Thông điệp Khép lại
+Một đại học thông minh không được đánh giá bằng số lượng máy tính, màn hình cảm ứng hay các thuật toán trí tuệ nhân tạo hào nhoáng, mà được đánh giá bằng chính giá trị giáo dục được tạo ra, sự trưởng thành của từng người học và năng lực của tổ chức trong việc cải tiến liên tục một cách có trách nhiệm. 
+
+Dịch vụ Cố vấn học tập và Hỗ trợ sớm thông minh chính là lời khẳng định mạnh mẽ nhất cho triết lý: công nghệ sinh ra là để phục vụ con người, giải phóng con người khỏi sự đơn độc và kết nối thầy trò trong một hệ sinh thái giáo dục nhân bản và bền vững.
+
+================================================================================
+
+# TÀI LIỆU THAM KHẢO
+
+*(Danh mục tài liệu tham khảo được trình bày theo chuẩn trích dẫn quốc tế American Psychological Association - APA 7th Edition)*
+
+1. **Amiri, G. A., Suksa-Ngiam, W., Mongkolnam, P., Funilkul, S., & Pal, D.** (2026). Digital transformation maturity model for higher education institutions: A qualitative analysis of assessment frameworks. In *Proceedings of the 14th International Conference on Advances in Information Technology (IAIT 2026)*. Association for Computing Machinery. https://doi.org/10.1145/3816713.3816714  
+   *(Cung cấp khung trưởng thành số giáo dục đại học gồm tám chiều năng lực và bốn cấp độ).*
+
+2. **Ferguson, R.** (2012). The state of learning analytics in higher education: How research is shaping practice. *Knowledge Management & E-Learning: An International Journal*, 4(4), 304–317. https://doi.org/10.34105/j.kmel.2012.04.024  
+   *(Nghiên cứu nền tảng về sự hình thành và ứng dụng phân tích học tập trong giáo dục đại học).*
+
+3. **Jisc.** (2023). *Framework for digital transformation in higher education*. Jisc Publishing. https://www.jisc.ac.uk/guides/framework-for-digital-transformation-in-higher-education  
+   *(Khung tham chiếu thực hành chuyển đổi số và trưởng thành số trong giáo dục đại học của tổ chức Jisc).*
+
+4. **Lang, C., Siemens, G., Wise, A. F., & Gašević, D.** (Eds.). (2017). *Handbook of learning analytics* (1st ed.). Society for Learning Analytics Research (SoLAR). https://doi.org/10.18608/hla17  
+   *(Sổ tay nền tảng của Hiệp hội Nghiên cứu Phân tích Học tập quốc tế về vòng đời dữ liệu và hệ thống cảnh báo sớm).*
+
+5. **Long, P., & Siemens, G.** (2011). Penetrating the fog: Analytics in learning and education. *EDUCAUSE Review*, 46(5), 31–40. https://er.educause.edu/articles/2011/9/penetrating-the-fog-analytics-in-learning-and-education  
+   *(Bài báo định nghĩa khái niệm cốt lõi về phân tích học tập).*
+
+6. **OECD.** (2023). *How are OECD governments navigating the digital higher education landscape?: Evidence from a comparative policy survey* (OECD Education Working Papers, No. 303). OECD Publishing. https://doi.org/10.1787/93468ccb-en  
+   *(Báo cáo chiến lược của Tổ chức Hợp tác và Phát triển Kinh tế về quản trị dữ liệu có trách nhiệm và chuyển đổi số giáo dục đại học).*
+
+7. **Prinsloo, P., & Slade, S.** (2017). An ethics of care for higher education learning analytics. In C. Lang, G. Siemens, A. F. Wise, & D. Gašević (Eds.), *Handbook of learning analytics* (pp. 109–117). Society for Learning Analytics Research (SoLAR). https://doi.org/10.18608/hla17.010  
+   *(Cơ sở lý luận về khế ước đạo đức, bảo vệ quyền riêng tư và nguyên tắc giữ con người trong trung tâm quyết định).*
+
+8. **Trường Đại học Bách khoa Hà Nội.** (2023). *Quy chế đào tạo đại học chính quy theo hệ thống tín chỉ* (Ban hành kèm theo Quyết định của Giám đốc Đại học Bách khoa Hà Nội). Nhà xuất bản Bách khoa Hà Nội.  
+   *(Văn bản quy chế về xử lý học vụ, thang điểm trung bình tích lũy và vai trò của cố vấn học tập).*
+
+9. **Phùng Nhung.** (2022, 10 tháng 10). Tân sinh viên căng thẳng vì áp lực học tập. *Báo Lao Động*. https://laodong.vn/tuyen-sinh/tan-sinh-vien-cang-thang-vi-ap-luc-hoc-tap-1101714.ldo  
+   *(Nguồn dữ liệu thứ cấp công bố phỏng vấn lãnh đạo Đại học Bách khoa Hà Nội về thực trạng trung bình mỗi năm có từ 700 đến 800 sinh viên hệ chính quy bị buộc thôi học, trong đó 70% đến 80% trường hợp rơi vào sinh viên các năm đầu do khó khăn trong thích ứng).*
+
+10. **UNESCO.** (2023). *Guidance for generative AI in education and research*. UNESCO Publishing. https://unesdoc.unesco.org/ark:/48223/pf0000386693  
+    *(Hướng dẫn toàn cầu của UNESCO về việc sử dụng trí tuệ nhân tạo có trách nhiệm trong giáo dục).*
+
+11. **Uskov, V. L., Bakken, J. P., Pandey, A., Singh, U., Yalamanchili, M., & Penumatsa, A.** (2018). Smart university taxonomy: Features, components, systems. In V. L. Uskov, R. J. Howlett, & R. K. Jain (Eds.), *Smart universities: Concepts, systems, and technologies* (pp. 3–46). Springer. https://doi.org/10.1007/978-3-319-59454-5_1  
+    *(Tài liệu nền tảng định nghĩa đại học thông minh, sáu đặc tính thông minh và mô hình trưởng thành SMM).*

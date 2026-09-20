@@ -6,9 +6,9 @@ Chuyển đổi một quy trình hỗ trợ sinh viên tại đại học quy m�
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[
-    node distance=0.5cm,
-    phase/.style={rectangle, draw=blue!80, fill=blue!6, text width=4.3cm, rounded corners=3pt, inner sep=6pt, font=\fontsize{8.2}{10.5}\selectfont},
-    gate/.style={rectangle, draw=orange!80!black, fill=orange!10, text width=4.3cm, text centered, rounded corners=3pt, inner sep=4pt, font=\fontsize{8}{9.5}\selectfont\textbf}
+    node distance=0.45cm,
+    phase/.style={rectangle, draw=blue!80, fill=blue!6, text width=4.1cm, align=left, rounded corners=3pt, inner sep=6pt, font=\fontsize{8.2}{10.5}\selectfont},
+    gate/.style={rectangle, draw=orange!80!black, fill=orange!10, text width=4.1cm, align=center, rounded corners=3pt, inner sep=4pt, font=\fontsize{8}{9.5}\selectfont\textbf}
 ]
 \node (H1) [phase] {
     \textbf{\color{blue!80!black}GIAI ĐOẠN 1 (0--12 THÁNG)}\\
@@ -62,19 +62,19 @@ Giai đoạn ba kéo dài từ tháng thứ 24 đến tháng thứ 36, tập tru
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[
-    node distance=0.6cm,
-    gateb/.style={diamond, draw=orange!80!black, fill=orange!10, text width=2.5cm, text centered, font=\fontsize{8}{9.5}\selectfont\textbf, inner sep=0pt},
-    boxh/.style={rectangle, draw=blue!70, fill=blue!6, text width=3.2cm, text centered, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{8.5}{10.5}\selectfont},
-    fallback/.style={rectangle, draw=red!70, fill=red!6, text width=3.2cm, text centered, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{8}{9.5}\selectfont}
+    node distance=0.55cm,
+    gateb/.style={diamond, draw=orange!80!black, fill=orange!10, text width=1.1cm, align=center, font=\fontsize{7.5}{9}\selectfont\textbf, inner sep=1pt, aspect=1.1},
+    boxh/.style={rectangle, draw=blue!70, fill=blue!6, text width=2.4cm, align=center, rounded corners=3pt, minimum height=1.0cm, font=\fontsize{8}{10}\selectfont},
+    fallback/.style={rectangle, draw=red!70, fill=red!6, text width=2.6cm, align=center, rounded corners=3pt, font=\fontsize{7.5}{9.5}\selectfont, inner sep=4pt}
 ]
-\node (H1) [boxh] {Chân trời 1: Thí điểm\\(0 đến 12 tháng)};
+\node (H1) [boxh] {\textbf{Chân trời 1: Thí điểm}\\(0 đến 12 tháng)};
 \node (G1) [gateb, right=of H1] {CỔNG 1\\(Cuối T12)};
-\node (H2) [boxh, right=of G1] {Chân trời 2: Mở rộng\\(12 đến 24 tháng)};
+\node (H2) [boxh, right=of G1] {\textbf{Chân trời 2: Mở rộng}\\(12 đến 24 tháng)};
 \node (G2) [gateb, right=of H2] {CỔNG 2\\(Cuối T24)};
-\node (H3) [boxh, right=of G2] {Chân trời 3: Bền vững\\(24 đến 36 tháng)};
+\node (H3) [boxh, right=of G2] {\textbf{Chân trời 3: Bền vững}\\(24 đến 36 tháng)};
 
-\node (F1) [fallback, below=0.6cm of G1] {Tạm dừng mở rộng,\\tinh chỉnh thuật toán};
-\node (F2) [fallback, below=0.6cm of G2] {Củng cố cơ chế,\\tháo gỡ định mức giờ};
+\node (F1) [fallback, below=0.7cm of G1] {Tạm dừng mở rộng,\\tinh chỉnh thuật toán};
+\node (F2) [fallback, below=0.7cm of G2] {Củng cố cơ chế,\\tháo gỡ định mức giờ};
 
 \draw [->, >=stealth, line width=1pt] (H1) -- (G1);
 \draw [->, >=stealth, line width=1pt] (G1) -- node[above, font=\fontsize{7.5}{9}\selectfont] {Đạt} (H2);

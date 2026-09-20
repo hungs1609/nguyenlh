@@ -1,0 +1,4 @@
+- **Học phần:** Quản lý chất lượng giáo dục nghề nghiệp
+- **Đề tài:** Xây dựng bộ tiêu chí và thiết kế hệ thống đảm bảo chất lượng Trường Cao đẳng Kỹ Nghệ II (TP. Hồ Chí Minh)
+- **Website trường:** <https://hvct.edu.vn/>
+- **Báo cáo tự đánh giá chất lượng của trường (năm 2025):** <https://hvct.edu.vn/co-so-giao-duc-nghe-nghiep/>

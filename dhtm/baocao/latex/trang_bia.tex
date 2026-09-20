@@ -13,12 +13,16 @@
     \vspace{1.5cm}
     
     % Khối định vị LOGO Trường
-    \includegraphics[height=4.5cm]{hust_logo.png}
+    \IfFileExists{hust_logo.png}{%
+        \includegraphics[height=4.5cm]{hust_logo.png}%
+    }{%
+        \fbox{\begin{minipage}[c][4.5cm][c]{4.5cm}\centering\textbf{\color{red!80!black}HUST LOGO}\\\vspace{4pt}\fontsize{9}{11}\selectfont(Đặt file hust\_logo.png tại đây)\end{minipage}}%
+    }
     
     \vspace{1.5cm}
     
     % Loại hình tài liệu (Màu đỏ, in hoa đậm)
-    {\fontsize{16}{18}\selectfont\textbf{\color{red}BÁO CÁO BÀI LUẬN}\\} 
+    {\fontsize{16}{18}\selectfont\textbf{\color{red}TIỂU LUẬN HỌC PHẦN}\\} 
     
     \vspace{0.8cm}
     
@@ -30,7 +34,7 @@
     \vspace{0.6cm}
     
     % Tên Học phần tương ứng
-    {\fontsize{12}{14}\selectfont\textit{\textbf{Học phần:} Đại học thông minh (ED6211)}\\} 
+    {\fontsize{12}{14}\selectfont\textit{\textbf{Học phần:} Đại học thông minh - ED6211}\\} 
     
     \vspace{2.0cm}
     
@@ -38,8 +42,10 @@
     \begin{flushleft}
         \hspace{2.5cm} 
         \begin{tabular}{ll}
-            \fontsize{12}{14}\selectfont\textbf{Học viên thực hiện:} & \fontsize{12}{14}\selectfont Lê Hạnh Nguyên - 20252233M \\
-            \fontsize{12}{14}\selectfont\textbf{Giảng viên hướng dẫn:} & \fontsize{12}{14}\selectfont Giảng viên phụ trách học phần
+            \fontsize{12}{14}\selectfont\textbf{Học viên thực hiện:} & \fontsize{12}{14}\selectfont Lê Hạnh Nguyên \\
+             & \fontsize{12}{14}\selectfont Nguyễn Thị Hiếu Anh \\ % Mở comment khi có học viên thứ hai
+            \fontsize{12}{14}\selectfont\textbf{Giảng viên hướng dẫn:} & \fontsize{12}{14}\selectfont Th.S Lê Huy Cường
+            % \\ & \fontsize{12}{14}\selectfont TS. Họ và Tên % Mở comment khi có giảng viên hướng dẫn thứ hai
         \end{tabular}
     \end{flushleft}
     

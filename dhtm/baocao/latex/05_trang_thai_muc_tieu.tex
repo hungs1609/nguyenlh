@@ -7,9 +7,9 @@ Quá trình chuyển đổi từ mô hình cảnh báo học vụ truyền thố
 \centering
 \begin{tikzpicture}[
     node distance=0.5cm,
-    root/.style={rectangle, draw=blue!80, fill=blue!10, text width=4cm, text centered, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{9}{11}\selectfont\textbf},
-    stakeholder/.style={rectangle, draw=blue!60, fill=blue!5, text width=3.4cm, text centered, rounded corners=3pt, minimum height=0.9cm, font=\fontsize{8.5}{10.5}\selectfont\textbf},
-    val/.style={rectangle, draw=gray!40, fill=gray!5, text width=4.2cm, text left, rounded corners=2pt, font=\fontsize{8}{9.5}\selectfont, inner sep=4pt}
+    root/.style={rectangle, draw=blue!80, fill=blue!10, text width=4cm, align=center, rounded corners=3pt, minimum height=1.1cm, font=\fontsize{9}{11}\selectfont\textbf},
+    stakeholder/.style={rectangle, draw=blue!60, fill=blue!5, text width=3.4cm, align=center, rounded corners=3pt, minimum height=0.9cm, font=\fontsize{8.5}{10.5}\selectfont\textbf},
+    val/.style={rectangle, draw=gray!40, fill=gray!5, text width=4.2cm, align=left, rounded corners=2pt, font=\fontsize{8}{9.5}\selectfont, inner sep=4pt}
 ]
 \node (A) [root] {Hệ sinh thái Hỗ trợ sớm\\Thông minh (IAES)};
 
@@ -70,8 +70,8 @@ Trong trạng thái mục tiêu, hệ thống dịch vụ tại Đại học Bá
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[
-    boxgood/.style={rectangle, draw=green!60!black, fill=green!5, text width=6.5cm, rounded corners=4pt, inner sep=8pt, font=\fontsize{8.5}{11}\selectfont},
-    boxbad/.style={rectangle, draw=red!70, fill=red!5, text width=6.5cm, rounded corners=4pt, inner sep=8pt, font=\fontsize{8.5}{11}\selectfont}
+    boxgood/.style={rectangle, draw=green!60!black, fill=green!5, text width=6.2cm, align=left, rounded corners=4pt, inner sep=7pt, font=\fontsize{8.5}{11}\selectfont},
+    boxbad/.style={rectangle, draw=red!70, fill=red!5, text width=6.2cm, align=left, rounded corners=4pt, inner sep=7pt, font=\fontsize{8.5}{11}\selectfont}
 ]
 \node (Good) [boxgood] {
     \textbf{\color{green!50!black}HỆ THỐNG ĐƯỢC PHÉP THỰC HIỆN}\\[4pt]
@@ -80,7 +80,7 @@ Trong trạng thái mục tiêu, hệ thống dịch vụ tại Đại học Bá
     $\checkmark$ Đề xuất các phương án can thiệp sư phạm khả thi\\
     $\checkmark$ Tự động hóa thủ tục đặt lịch hẹn và theo dõi tiến độ
 };
-\node (Bad) [boxbad, right=0.6cm of Good] {
+\node (Bad) [boxbad, right=0.5cm of Good] {
     \textbf{\color{red!70!black}TUYỆT ĐỐI KHÔNG ĐƯỢC THỰC HIỆN}\\[4pt]
     $\times$ \textbf{KHÔNG} tự động ra quyết định kỷ luật học vụ\\
     $\times$ \textbf{KHÔNG} dán nhãn tiêu cực hay phân loại phẩm chất\\

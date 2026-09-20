@@ -6,7 +6,7 @@ Vận dụng khung kiến trúc hệ sinh thái Đại học thông minh đượ
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[
-    layer/.style={rectangle, draw=blue!80, fill=blue!5, text width=14cm, rounded corners=3pt, inner sep=6pt, font=\fontsize{8.5}{10.5}\selectfont},
+    layer/.style={rectangle, draw=blue!80, fill=blue!5, text width=14.0cm, align=left, rounded corners=3pt, inner sep=6pt, font=\fontsize{8.5}{10.5}\selectfont},
     titlel/.style={font=\fontsize{9}{11}\selectfont\textbf, text=blue!90!black}
 ]
 \node (L1) [layer] {
@@ -76,7 +76,7 @@ Bản đồ dịch vụ Service Blueprint trực quan hóa toàn bộ hành trì
 \centering
 \begin{tikzpicture}[
     node distance=0.5cm,
-    stepb/.style={rectangle, draw=blue!70, fill=blue!6, text width=2.4cm, text centered, rounded corners=3pt, minimum height=1.4cm, font=\fontsize{8}{10}\selectfont},
+    stepb/.style={rectangle, draw=blue!70, fill=blue!6, text width=2.4cm, align=center, rounded corners=3pt, minimum height=1.4cm, font=\fontsize{8}{10}\selectfont},
     arrow/.style={draw=blue!80, ->, >=stealth, line width=1pt}
 ]
 \node (P1) [stepb] {\textbf{Giai đoạn 1: Cảm nhận}\\(Tuần 1--4)\\LMS/SIS ghi nhận suy giảm tương tác};
@@ -123,10 +123,10 @@ Bản đồ dịch vụ Service Blueprint trực quan hóa toàn bộ hành trì
 \centering
 \begin{tikzpicture}[
     node distance=0.6cm,
-    eval/.style={rectangle, draw=blue!70, fill=blue!10, text width=4cm, text centered, rounded corners=3pt, minimum height=1cm, font=\fontsize{8.5}{10.5}\selectfont\textbf},
-    pac1/.style={rectangle, draw=green!60!black, fill=green!6, text width=4.2cm, text left, rounded corners=3pt, font=\fontsize{8}{10}\selectfont, inner sep=4pt},
-    pac2/.style={rectangle, draw=orange!80!black, fill=orange!6, text width=4.2cm, text left, rounded corners=3pt, font=\fontsize{8}{10}\selectfont, inner sep=4pt},
-    pac3/.style={rectangle, draw=red!70, fill=red!6, text width=4.2cm, text left, rounded corners=3pt, font=\fontsize{8}{10}\selectfont, inner sep=4pt}
+    eval/.style={rectangle, draw=blue!70, fill=blue!10, text width=4cm, align=center, rounded corners=3pt, minimum height=1cm, font=\fontsize{8.5}{10.5}\selectfont\textbf},
+    pac1/.style={rectangle, draw=green!60!black, fill=green!6, text width=4.2cm, align=left, rounded corners=3pt, font=\fontsize{8}{10}\selectfont, inner sep=4pt},
+    pac2/.style={rectangle, draw=orange!80!black, fill=orange!6, text width=4.2cm, align=left, rounded corners=3pt, font=\fontsize{8}{10}\selectfont, inner sep=4pt},
+    pac3/.style={rectangle, draw=red!70, fill=red!6, text width=4.2cm, align=left, rounded corners=3pt, font=\fontsize{8}{10}\selectfont, inner sep=4pt}
 ]
 \node (E) [eval] {Động cơ phân tích đánh giá nguy cơ (Tuần 3--5)};
 
