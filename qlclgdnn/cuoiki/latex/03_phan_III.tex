@@ -1,0 +1,208 @@
+\section{Hệ thống đảm bảo chất lượng bên trong trên nền tảng số hóa và ISO 21001:2018}
+
+\subsection{Triết lý quản trị và mô hình kiến trúc hệ thống}
+
+Nhằm tạo lập nền tảng quản trị chất lượng vững chắc và thích ứng với yêu cầu tự chủ toàn diện, Trường Cao đẳng Kỹ Nghệ II xác lập mô hình Hệ thống Đảm bảo chất lượng bên trong (Internal Quality Assurance -- IQA) thế hệ mới. Hệ thống này được xây dựng trên sự tích hợp hữu cơ giữa ba trụ cột khoa học hiện đại, bao gồm triết lý quản trị chất lượng toàn diện, bộ tiêu chuẩn quốc tế dành riêng cho tổ chức giáo dục và nền tảng hạ tầng công nghệ số hóa.
+
+Trụ cột thứ nhất là triết lý Quản lý chất lượng toàn diện (Total Quality Management -- TQM). Triết lý này định vị chất lượng không phải là nhiệm vụ hành chính biệt lập của riêng phòng ban chuyên trách, mà là đạo đức nghề nghiệp và trách nhiệm thường trực của toàn thể đội ngũ sư phạm, từ Ban Giám hiệu, đội ngũ giảng viên, viên chức quản lý cho đến từng người học. Mọi quy trình tác nghiệp đều hướng tới mục tiêu tối thượng là thỏa mãn tối đa nhu cầu của người học và yêu cầu kỹ năng khắt khe của doanh nghiệp sử dụng lao động.
+
+Trụ cột thứ hai là khung tiêu chuẩn quốc tế ISO 21001:2018 về Hệ thống quản lý dành riêng cho tổ chức giáo dục (Educational Organizations Management Systems). Nhà trường vận dụng triệt để cấu trúc bậc cao của tiêu chuẩn này nhằm chuẩn hóa toàn bộ chuỗi cung ứng dịch vụ đào tạo. Cấu trúc quản trị bao quát từ cam kết của Lãnh đạo cao nhất tại Điều khoản 5; công tác hoạch định quản trị rủi ro tại Điều khoản 6; phát triển nguồn lực và cơ sở vật chất tại Điều khoản 7; vận hành quá trình dạy và học tại Điều khoản 8; giám sát, đánh giá hiệu năng tại Điều khoản 9; cho đến các hành động cải tiến liên tục tại Điều khoản 10.
+
+Trụ cột thứ ba là nền tảng công nghệ số đóng vai trò như hệ thần kinh kết nối toàn bộ hoạt động của cơ sở giáo dục. Công nghệ số giúp chuyển hóa toàn bộ sáu mươi lăm quy trình vận hành trên văn bản giấy tờ thành các luồng dữ liệu tự động, khép kín và minh bạch theo thời gian thực. Sự kết hợp này hình thành nên mô hình Quản lý chất lượng toàn diện thúc đẩy bởi công nghệ số (Digital-driven TQM), loại bỏ hoàn toàn độ trễ thông tin và ngăn ngừa tình trạng ngụy tạo dữ liệu trong kiểm định.
+
+\begin{figure}[htbp]
+\centering
+\small
+\begin{tikzpicture}[
+    box/.style={rectangle, draw=blue!70, fill=blue!5, thick, text width=12.2cm, align=center, rounded corners=3pt, minimum height=1.1cm},
+    data/.style={rectangle, draw=teal!80, fill=teal!10, thick, text width=12.2cm, align=center, rounded corners=3pt, minimum height=1.3cm},
+    arrow/.style={thick, <->, >=stealth, color=blue!60}
+]
+\node[box] (L1) {\textbf{TẦNG CHIẾN LƯỢC VÀ CAM KẾT (Điều khoản 5 ISO 21001)}\\ Hội đồng trường -- Ban Giám hiệu (Hiệu trưởng cam kết và phân bổ nguồn lực)};
+\node[box, below=0.45cm of L1] (L2) {\textbf{TẦNG CHUYÊN TRÁCH VÀ ĐIỀU PHỐI (Đại diện Lãnh đạo \& Phòng Đảm bảo chất lượng)}\\ Ban Đảm bảo chất lượng Trường -- Phòng Đảm bảo chất lượng hạt nhân};
+\node[box, below=0.45cm of L2] (L3) {\textbf{TẦNG TÁC NGHIỆP VÀ THỰC THI (Văn hóa cải tiến tự giác)}\\ Mạng lưới Đảm bảo chất lượng Khoa/Phòng -- Giảng viên -- Cán bộ xưởng -- Sinh viên};
+\node[data, below=0.55cm of L3] (DATA) {\textbf{TRUNG TÂM DỮ LIỆU CHẤT LƯỢNG TÍCH HỢP TOÀN TRƯỜNG}\\ Liên thông: Phần mềm Đào tạo -- Cổng Công tác sinh viên -- Hệ thống LMS -- Kho Minh chứng};
+
+\draw[arrow] (L1.east) to[out=0, in=0] (DATA.east);
+\draw[arrow] (L2.west) to[out=180, in=180] (DATA.west);
+\draw[arrow] (L3) -- (DATA);
+\end{tikzpicture}
+\caption{\textbf{Kiến trúc tổng thể hệ thống đảm bảo chất lượng bên trong số hóa}}
+\end{figure}
+
+\subsection{Cơ cấu tổ chức và phân định trách nhiệm quản trị chất lượng}
+
+Để xóa bỏ triệt để tư duy thụ động coi công tác đảm bảo chất lượng là việc riêng của Phòng Đảm bảo chất lượng, bộ máy vận hành hệ thống được tái cấu trúc theo mô hình phân quyền ma trận. Trách nhiệm của từng chủ thể trong nhà trường được phân định tường minh theo chuẩn quản trị quốc tế RACI, bao gồm: Responsible (Trách nhiệm thực thi trực tiếp -- R), Accountable (Trách nhiệm giải trình cao nhất -- A), Consulted (Trách nhiệm tham vấn chuyên môn -- C) và Informed (Quyền tiếp nhận thông tin báo cáo -- I).
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\setstretch{1.15}
+\caption{\textbf{Ma trận phân quyền trách nhiệm trong hệ thống IQA của Trường Cao đẳng Kỹ Nghệ II}}
+\vspace{0.2cm}
+\begin{tabularx}{\textwidth}{X C{1.3cm} C{2.2cm} C{1.3cm} C{1.8cm} C{2.2cm} C{1.8cm}}
+\toprule
+\textbf{Nhóm quy trình và hoạt động cốt lõi} & \textbf{Hiệu trưởng} & \textbf{Trưởng phòng Đảm bảo chất lượng} & \textbf{Trưởng khoa} & \textbf{Giảng viên, xưởng} & \textbf{Đào tạo, Công tác sinh viên} & \textbf{Người học, Doanh nghiệp} \\
+\midrule
+1. Hoạch định Chính sách và Mục tiêu chất lượng & \textbf{A} & \textbf{R} & C & I & C & I \\
+\addlinespace
+2. Tự đánh giá cơ sở và chương trình (TT 14) & A & \textbf{R} & R & C & R & I \\
+\addlinespace
+3. Vận hành Hệ thống cảnh báo sớm biến động sĩ số & I & A & R & \textbf{R} & \textbf{R} & I \\
+\addlinespace
+4. Rà soát chuẩn đầu ra tích hợp năng lực số & I & C & \textbf{A} & \textbf{R} & C & \textbf{C} \\
+\addlinespace
+5. Triển khai khảo sát phản hồi tức thời & I & \textbf{A} & C & I & I & \textbf{R} \\
+\addlinespace
+6. Khảo sát việc làm sinh viên sau một năm & I & C & C & I & \textbf{R} / \textbf{A} & \textbf{R} \\
+\addlinespace
+7. Quản lý tính xác thực của kho dữ liệu minh chứng & I & \textbf{A} & R & R & R & I \\
+\addlinespace
+8. Cuộc họp xem xét của Lãnh đạo về chất lượng & \textbf{A} & \textbf{R} & C & I & C & I \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Trong cơ chế phân quyền nêu trên, Hiệu trưởng nhà trường giữ vai trò Lãnh đạo cao nhất theo quy định tại Điều khoản 5 tiêu chuẩn ISO 21001:2018, chịu trách nhiệm giải trình toàn diện trước cơ quan quản lý nhà nước và xã hội về chất lượng đào tạo, đồng thời trực tiếp phê duyệt ngân sách và phân bổ nguồn lực cho hoạt động đảm bảo chất lượng. Đại diện Lãnh đạo về chất lượng kiêm Trưởng phòng Đảm bảo chất lượng đóng vai trò kiến trúc sư trưởng và kiểm toán viên độc lập, chịu trách nhiệm thiết lập các chuẩn mực kỹ thuật và báo cáo trực tiếp với Hiệu trưởng về mọi dấu hiệu vi phạm tính toàn vẹn của dữ liệu. Trưởng các khoa chuyên môn và đội ngũ giảng viên là những người trực tiếp kiến tạo chất lượng tại giảng đường và xưởng thực hành, chịu trách nhiệm thực thi các chuẩn đầu ra và cập nhật minh chứng tác nghiệp hàng ngày, chấm dứt hoàn toàn tình trạng đùn đẩy công việc thu thập hồ sơ kiểm định lên các phòng chức năng.
+
+\subsection{Chu trình cải tiến liên tục theo tiêu chuẩn ISO 21001:2018}
+
+Chu trình cải tiến liên tục gồm bốn giai đoạn Plan (Hoạch định), Do (Thực hiện), Check (Kiểm tra) và Act (Cải tiến) được vận hành liên tục và đồng bộ ở ba cấp độ: cấp trường, cấp khoa chuyên môn và cấp từng môn học hoặc mô-đun thực hành. Chu trình này gắn kết chặt chẽ với các điều khoản của tiêu chuẩn ISO 21001:2018:
+
+\begin{figure}[htbp]
+\centering
+\small
+\setstretch{1.1}
+\begin{tikzpicture}[
+    pbox/.style={rectangle, draw=red!70, fill=red!5, thick, text width=5.9cm, align=left, rounded corners=3pt, minimum height=2.4cm},
+    dbox/.style={rectangle, draw=blue!70, fill=blue!5, thick, text width=5.9cm, align=left, rounded corners=3pt, minimum height=2.4cm},
+    cbox/.style={rectangle, draw=orange!70, fill=orange!5, thick, text width=5.9cm, align=left, rounded corners=3pt, minimum height=2.4cm},
+    abox/.style={rectangle, draw=green!70!black, fill=green!5, thick, text width=5.9cm, align=left, rounded corners=3pt, minimum height=2.4cm},
+    arrow/.style={->, >=stealth, very thick, color=gray!80}
+]
+\node[pbox] (P) {\textbf{[PLAN] HOẠCH ĐỊNH}\\ $\bullet$ Phân tích rủi ro và cơ hội (Khoản 6.1)\\ $\bullet$ Thiết lập Mục tiêu chất lượng số hóa (Khoản 6.2)\\ $\bullet$ Hoạch định nguồn lực và cơ sở vật chất (Khoản 7.1)};
+\node[dbox, right=0.8cm of P] (D) {\textbf{[DO] THỰC THI}\\ $\bullet$ Dạy học và đánh giá chuẩn đầu ra (Khoản 8.1--8.5)\\ $\bullet$ Số hóa bài giảng trên LMS (Khoản 7.5)\\ $\bullet$ Hỗ trợ người học đặc thù (Khoản 5.1.3)};
+\node[cbox, below=1.0cm of D] (C) {\textbf{[CHECK] KIỂM TRA}\\ $\bullet$ Vận hành cảnh báo sớm tự động\\ $\bullet$ Khảo sát phản hồi tức thời người học\\ $\bullet$ Tự đánh giá và đánh giá nội bộ (Khoản 9.2)\\ $\bullet$ Họp xem xét của Lãnh đạo (Khoản 9.3)};
+\node[abox, below=1.0cm of P] (A) {\textbf{[ACT] CẢI TIẾN}\\ $\bullet$ Xử lý sự không phù hợp (Khoản 10.1)\\ $\bullet$ Cải tiến liên tục quy trình tác nghiệp (Khoản 10.2)\\ $\bullet$ Tái xác lập chuẩn mực cho chu trình sau};
+
+\draw[arrow] (P) -- (D);
+\draw[arrow] (D) -- (C);
+\draw[arrow] (C) -- (A);
+\draw[arrow] (A) -- (P);
+\end{tikzpicture}
+\caption{\textbf{Chu trình cải tiến liên tục tích hợp tiêu chuẩn ISO 21001:2018}}
+\end{figure}
+
+Tại khâu Hoạch định, căn cứ vào dữ liệu phân tích từ trung tâm dữ liệu chất lượng của năm học trước, Ban Giám hiệu phối hợp với Phòng Đảm bảo chất lượng xây dựng hệ thống các mục tiêu chất lượng mới gắn với quản trị rủi ro; đồng thời phê duyệt kế hoạch tài chính nâng cấp nhà xưởng và bồi dưỡng chuyên môn cho giảng viên.
+
+Tại khâu Thực hiện, các khoa chuyên môn và bộ môn triển khai giảng dạy tích hợp chuẩn đầu ra số; cập nhật toàn bộ giáo trình, bài giảng số lên hệ thống quản lý học tập; thực hiện nghiêm túc quy định nhập điểm chuyên cần và điểm đánh giá thường xuyên lên phần mềm trong vòng hai mươi tư giờ sau khi kết thúc buổi học.
+
+Tại khâu Kiểm tra, hệ thống thông tin quản lý tự động phân tích dữ liệu chuyên cần để kích hoạt các cấp độ cảnh báo học vụ kịp thời. Song song với đó, Phòng Đảm bảo chất lượng tiến hành các đợt đánh giá nội bộ định kỳ hai lần trong một năm và kích hoạt các khảo sát phản hồi nhanh của sinh viên sau mỗi bài học thực hành trọng điểm.
+
+Tại khâu Cải tiến, đối với bất kỳ mô-đun nào có tỷ lệ hài lòng của người học dưới 80\% hoặc tỷ lệ sinh viên không đạt yêu cầu thực hành cao bất thường, Trưởng khoa và giảng viên phụ trách bắt buộc phải lập Báo cáo hành động khắc phục trong thời hạn bảy ngày. Các biện pháp khắc phục được rà soát và nghiệm thu thực tế trước khi môn học đó được tổ chức cho khóa tiếp theo.
+
+\subsection{Các quy trình kiểm soát chất lượng chủ động}
+
+Nhằm khắc phục triệt để các khoảng trống về quản trị biến động người học và độ trễ thông tin phản hồi, Trường Cao đẳng Kỹ Nghệ II đã xây dựng và đưa vào vận hành hai quy trình thao tác chuẩn nòng cốt.
+
+\subsubsection{Quy trình cảnh báo sớm biến động người học}
+
+Quy trình thao tác chuẩn có mã hiệu SOP/BĐCL/EWS-01 được thiết lập nhằm phát hiện sớm các chỉ dấu nguy cơ học sinh, sinh viên bỏ học hoặc thôi học. Quy trình giúp kích hoạt kịp thời mạng lưới hỗ trợ học tập, tư vấn tâm lý và giải pháp tài chính, hướng tới mục tiêu duy trì tỷ lệ sĩ số toàn khóa đạt từ 88\% trở lên trên phạm vi toàn trường.
+
+\begin{figure}[htbp]
+\centering
+\small
+\setstretch{1.1}
+\begin{tikzpicture}[
+    stepnode/.style={rectangle, draw=blue!70, fill=blue!5, thick, text width=12cm, align=left, rounded corners=3pt, minimum height=0.9cm},
+    arrow/.style={->, >=stealth, thick, color=blue!80}
+]
+\node[stepnode] (S1) {\textbf{1. Thu thập dữ liệu tác nghiệp (trong 24 giờ):}\\ Giảng viên cập nhật chuyên cần và điểm kiểm tra quá trình lên Hệ thống quản trị.};
+\node[stepnode, below=0.35cm of S1] (S2) {\textbf{2. Quét thuật toán tự động hàng đêm:}\\ Hệ thống tự động phân loại dấu hiệu bất thường vào 3 cấp độ cảnh báo rủi ro.};
+\node[stepnode, below=0.35cm of S2] (S3) {\textbf{3. Cảnh báo Mức 1 (Vắng 3 buổi / nợ học phí):}\\ Gửi thông báo đến Giáo viên chủ nhiệm; gặp gỡ xác minh trong vòng 48 giờ.};
+\node[stepnode, below=0.35cm of S3] (S4) {\textbf{4. Cảnh báo Mức 2 (Vắng > 15\% / điểm < 4,5):}\\ Mời phụ huynh đối thoại; bố trí giảng viên phụ đạo kỹ năng ngoài giờ xưởng.};
+\node[stepnode, below=0.35cm of S4] (S5) {\textbf{5. Cảnh báo Mức 3 (Nguy cơ thôi học cao):}\\ Phòng Công tác sinh viên kích hoạt Quỹ học bổng, giãn tiến độ học phí hoặc bảo lưu.};
+
+\draw[arrow] (S1) -- (S2);
+\draw[arrow] (S2) -- (S3);
+\draw[arrow] (S3) -- (S4);
+\draw[arrow] (S4) -- (S5);
+\end{tikzpicture}
+\caption{\textbf{Sơ đồ luồng vận hành Quy trình cảnh báo sớm biến động người học}}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\small
+\setstretch{1.2}
+\caption{\textbf{Bảng phân cấp chỉ báo rủi ro và hành động can thiệp trong Quy trình cảnh báo sớm}}
+\vspace{0.2cm}
+\begin{tabularx}{\textwidth}{L{3.2cm} X L{3.2cm} C{1.8cm}}
+\toprule
+\textbf{Cấp độ cảnh báo} & \textbf{Dấu hiệu nhận diện trên hệ thống} & \textbf{Hành động can thiệp cụ thể} & \textbf{Thời hạn} \\
+\midrule
+\textbf{Cảnh báo Vàng (Mức 1)} & Vắng không phép 03 buổi liên tiếp; chưa nộp học phí sau 07 ngày hạn chót. & Giáo viên chủ nhiệm gặp gỡ trực tiếp; gọi điện thoại xác minh lý do; lập biên bản tư vấn. & Trong vòng 48 giờ \\
+\addlinespace
+\textbf{Cảnh báo Cam (Mức 2)} & Vắng từ 15\% đến 20\% thời lượng; điểm quá trình bình quân dưới 4,5; không nộp bài tập. & Liên hệ mời phụ huynh phối hợp; bố trí giảng viên phụ đạo kỹ năng; phân công bạn học giúp đỡ. & Trong vòng 05 ngày \\
+\addlinespace
+\textbf{Cảnh báo Đỏ (Mức 3)} & Vắng trên 20\% thời lượng; gia đình gặp biến cố đột xuất; điểm tích lũy học kỳ dưới 1,0. & Kích hoạt Quỹ học bổng hỗ trợ khó khăn; xét miễn giảm học phí; tư vấn bảo lưu hoặc chuyển ngành. & Trong vòng 72 giờ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Quy trình khảo sát phản hồi tức thời}
+
+Quy trình thao tác chuẩn có mã hiệu SOP/BĐCL/MICRO-02 được thiết lập nhằm xóa bỏ độ trễ thông tin trong công tác đánh giá chất lượng. Thay vì chờ đợi các bảng hỏi dài dòng vào cuối học kỳ, quy trình cho phép thu nhận các phản hồi cô đọng, tức thời của người học ngay sau khi kết thúc từng mô-đun hoặc buổi thực hành xưởng trọng điểm.
+
+\begin{figure}[htbp]
+\centering
+\small
+\setstretch{1.1}
+\begin{tikzpicture}[
+    node distance=0.8cm,
+    flow/.style={rectangle, draw=teal!70, fill=teal!5, thick, text width=11cm, align=center, rounded corners=3pt, minimum height=0.85cm},
+    decision/.style={diamond, draw=orange!70, fill=orange!5, thick, text width=3.2cm, align=center, inner sep=1pt},
+    arrow/.style={->, >=stealth, thick, color=teal!80}
+]
+\node[flow] (F1) {Kết thúc Mô-đun hoặc Buổi thực hành xưởng trọng điểm};
+\node[flow, below=0.4cm of F1] (F2) {Ứng dụng di động tự động gửi thông báo khảo sát nhanh 60 giây};
+\node[flow, below=0.4cm of F2] (F3) {Sinh viên đánh giá ẩn danh ba chỉ báo cốt lõi từ 1 đến 5 sao};
+\node[flow, below=0.4cm of F3] (F4) {Hệ thống máy chủ tổng hợp và xử lý dữ liệu trong 02 giờ};
+\node[flow, below=0.4cm of F4] (F5) {Phân luồng: $\ge 4,0$ sao (Lưu hồ sơ khen thưởng) $| < 3,5$ sao (Kích hoạt khắc phục)};
+\node[flow, below=0.4cm of F5] (F6) {Giảng viên nộp kế hoạch điều chỉnh phương pháp trước buổi học kế tiếp};
+
+\draw[arrow] (F1) -- (F2);
+\draw[arrow] (F2) -- (F3);
+\draw[arrow] (F3) -- (F4);
+\draw[arrow] (F4) -- (F5);
+\draw[arrow] (F5) -- (F6);
+\end{tikzpicture}
+\caption{\textbf{Sơ đồ quy trình khảo sát phản hồi tức thời sau buổi học thực hành}}
+\end{figure}
+
+Nội dung khảo sát tức thời trên ứng dụng di động được thiết kế ngắn gọn với ba câu hỏi đánh giá cốt lõi kèm theo một khung góp ý mở:
+\begin{enumerate}
+    \item Đánh giá mức độ nhiệt tình hướng dẫn và uốn nắn thao tác mẫu của giảng viên trong buổi thực hành hôm nay.
+    \item Đánh giá tình trạng hoạt động ổn định của máy móc, dụng cụ và mức độ đáp ứng của vật tư thực hành tại xưởng.
+    \item Đánh giá mức độ tự tin làm chủ kỹ năng nghề nghiệp của bản thân sau khi hoàn thành bài học thực tế hôm nay.
+    \item Ý kiến đóng góp hoặc đề xuất khắc phục nhanh của người học với độ dài không quá một trăm từ.
+\end{enumerate}
+
+\subsection{Văn hóa chất lượng và chính sách giáo dục hòa nhập}
+
+Hệ thống đảm bảo chất lượng bên trong chỉ phát huy hiệu quả thực chất và bền vững khi chuyển hóa thành văn hóa chất lượng tự giác trong toàn trường, nơi mỗi cán bộ, giảng viên và người học chủ động cam kết với sự hoàn thiện liên tục.
+
+\subsubsection{Văn hóa cải tiến liên tục và quản trị rủi ro tự giác}
+
+Nhà trường xây dựng cơ chế khích lệ đội ngũ nhà giáo và viên chức chủ động phát hiện và báo cáo các sai sót kỹ thuật hoặc các điểm nghẽn quy trình. Trường nhất quán áp dụng nguyên tắc văn hóa không đổ lỗi đối với các sai lỗi được phát hiện sớm và chủ động báo cáo nhằm tìm kiếm giải pháp cải tiến tối ưu cho tập thể. Đồng thời, hàng năm nhà trường trích lập Quỹ sáng kiến cải tiến chất lượng từ nguồn thu tự chủ với mức kinh phí tối thiểu ba trăm triệu đồng để biểu dương, khen thưởng kịp thời các sáng kiến số hóa và cải tiến quy trình của cán bộ, giảng viên và người học.
+
+\subsubsection{Chính sách hỗ trợ người học có nhu cầu đặc biệt}
+
+Quán triệt sâu sắc tinh thần nhân văn và trách nhiệm xã hội quy định tại Khoản 5.1.3 của tiêu chuẩn ISO 21001:2018, Trường Cao đẳng Kỹ Nghệ II triển khai đồng bộ ba nhóm giải pháp hòa nhập:
+
+Về hạ tầng tiếp cận bình đẳng, toàn bộ các công trình giảng đường và xưởng thực hành mới đều được thiết kế bổ sung lối đi dốc dành riêng cho xe lăn, lắp đặt hệ thống tay vịn chuyên dụng, vận hành thang máy ưu tiên và bố trí các khu vệ sinh đạt chuẩn tiếp cận cho người khuyết tật.
+
+Về học liệu số hỗ trợ, Thư viện số của trường được trang bị phần mềm đọc màn hình chuyên dụng cho học sinh, sinh viên khiếm thị; đồng thời toàn bộ video bài giảng thực hành trực quan đều được tích hợp phụ đề văn bản hoặc thuyết minh ngôn ngữ ký hiệu hỗ trợ người học khiếm thính.
+
+Về chính sách hỗ trợ tài chính và việc làm, nhà trường duy trì nguồn quỹ học bổng hòa nhập, bảo đảm miễn giảm học phí một trăm phần trăm cho người khuyết tật theo đúng quy định pháp luật; đồng thời phối hợp chặt chẽ với các doanh nghiệp xã hội cam kết tuyển dụng và bố trí việc làm phù hợp cho người học đặc thù sau khi tốt nghiệp.

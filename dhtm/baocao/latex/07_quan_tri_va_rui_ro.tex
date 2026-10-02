@@ -5,12 +5,11 @@
 
 Trong ma trận này, chữ R đại diện cho chủ thể trực tiếp thực hiện công việc (Responsible); chữ A quy định người chịu trách nhiệm giải trình cuối cùng về kết quả và có thẩm quyền phê duyệt (Accountable); chữ C thể hiện các bên được tham vấn chuyên môn hai chiều (Consulted); và chữ I đại diện cho các đối tượng được thông báo kết quả thực hiện (Informed).
 
-\vspace{0.3cm}
-\noindent\textbf{Bảng 7.1. Ma trận phân định trách nhiệm RACI cho Dịch vụ Cố vấn học tập và Hỗ trợ sớm}
-\vspace{0.1cm}
-
 \begin{table}[htbp]
 \centering
+\caption{Ma trận phân định trách nhiệm RACI cho Dịch vụ Cố vấn học tập và Hỗ trợ sớm}
+\label{tab:raci}
+\vspace{0.2cm}
 \fontsize{8.5}{10.5}\selectfont
 \begin{tabularx}{\textwidth}{|Y|C{1.7cm}|C{1.7cm}|C{1.7cm}|C{2.2cm}|C{2.2cm}|}
 \hline
@@ -38,14 +37,13 @@ Trong ma trận này, chữ R đại diện cho chủ thể trực tiếp thực
 \end{table}
 
 \subsection{Sổ đăng ký rủi ro}
-Trong các dự án ứng dụng dữ liệu và phân tích học tập trong giáo dục đại học, rủi ro không chỉ dừng lại ở vấn đề kỹ thuật phần mềm mà nghiêm trọng hơn là rủi ro đạo đức, tâm lý và xã hội \citep{prinsloo2017, oecd2023}. Bảng dưới đây định danh năm nhóm rủi ro trọng yếu kèm theo chiến lược giảm thiểu tương ứng.
-
-\vspace{0.3cm}
-\noindent\textbf{Bảng 7.2. Sổ đăng ký rủi ro cho Dịch vụ Cố vấn học tập và Hỗ trợ sớm}
-\vspace{0.1cm}
+Trong các dự án ứng dụng dữ liệu và phân tích học tập trong giáo dục đại học, rủi ro không chỉ dừng lại ở vấn đề kỹ thuật phần mềm mà nghiêm trọng hơn là rủi ro đạo đức, tâm lý và xã hội \citep{prinsloo2017, oecd2023}. Bảng~\ref{tab:so_dang_ky_rui_ro} định danh năm nhóm rủi ro trọng yếu kèm theo chiến lược giảm thiểu tương ứng.
 
 \begin{table}[htbp]
 \centering
+\caption{Sổ đăng ký rủi ro cho Dịch vụ Cố vấn học tập và Hỗ trợ sớm}
+\label{tab:so_dang_ky_rui_ro}
+\vspace{0.2cm}
 \fontsize{8}{10}\selectfont
 \begin{tabularx}{\textwidth}{|C{0.8cm}|L{3.0cm}|C{0.9cm}|C{0.9cm}|C{0.9cm}|C{1.1cm}|Y|L{2.2cm}|}
 \hline
@@ -67,8 +65,35 @@ Trong các dự án ứng dụng dữ liệu và phân tích học tập trong g
 \end{flushleft}
 \end{table}
 
+Để trực quan hóa hiệu quả kiểm soát của các biện pháp đề xuất, Bảng~\ref{tab:doi_sanh_rui_ro} đối sánh mức độ rủi ro trước và sau khi áp dụng khung quản trị có trách nhiệm.
+
+\begin{table}[htbp]
+\centering
+\caption{Đối sánh mức độ rủi ro trước và sau khi áp dụng biện pháp kiểm soát tại ĐHBK Hà Nội}
+\label{tab:doi_sanh_rui_ro}
+\vspace{0.2cm}
+\begin{tabularx}{\textwidth}{|C{1.2cm}|L{3.2cm}|C{2.0cm}|Y|C{2.0cm}|C{2.0cm}|}
+\hline
+\textbf{Mã} & \textbf{Tên nhóm rủi ro} & \textbf{Trước (AS-IS)} & \textbf{Biện pháp kiểm soát chủ chốt} & \textbf{Sau (TO-BE)} & \textbf{Mức giảm} \\
+\hline
+\textbf{R01} & Dán nhãn định kiến người học & \textbf{15 (Rất cao)} & Ngôn ngữ phát triển; bảo mật điểm số nguy cơ; chỉ CVHT tiếp cận. & \textbf{3 (Thấp)} & \textbf{Giảm 80.0\%} \\
+\hline
+\textbf{R02} & Thiên lệch \& cảnh báo sai & \textbf{12 (Cao)} & Cơ chế Human-in-the-loop bắt buộc; kiểm định mô hình định kỳ $< 15\%$. & \textbf{4 (Thấp)} & \textbf{Giảm 66.7\%} \\
+\hline
+\textbf{R03} & Xâm phạm riêng tư dữ liệu & \textbf{10 (Cao)} & Tuân thủ Nghị định 13/2023/NĐ-CP; tối thiểu hóa dữ liệu; mã hóa AES-256. & \textbf{3 (Thấp)} & \textbf{Giảm 70.0\%} \\
+\hline
+\textbf{R04} & Quá tải cho đội ngũ CVHT & \textbf{12 (Cao)} & Phân tầng nguy cơ 3 cấp độ; tự động hóa Gói 1; quy đổi giờ lao động chuẩn. & \textbf{4 (Thấp)} & \textbf{Giảm 66.7\%} \\
+\hline
+\textbf{R05} & Đứt gãy quy trình bàn giao & \textbf{12 (Cao)} & Tích hợp hệ sinh thái một cửa liên thông; cam kết SLA phản hồi 48--72h. & \textbf{3 (Thấp)} & \textbf{Giảm 75.0\%} \\
+\hline
+\end{tabularx}
+\begin{flushleft}
+\textit{\fontsize{8}{10}\selectfont Ghi chú: Toàn bộ 5 rủi ro từ vùng "Nguy cơ Cao/Rất cao" đều được kéo giảm thành công về vùng "Nguy cơ Thấp" an toàn.}
+\end{flushleft}
+\end{table}
+
 \subsection{Khung Pháp lý và Chính sách Dữ liệu có Trách nhiệm}
-Để vận hành dịch vụ bền vững, Đại học Bách khoa Hà Nội cần ban hành Quy chế Quản trị và Sử dụng Dữ liệu Học tập có Trách nhiệm với bốn trụ cột pháp lý và đạo đức.
+Để vận hành dịch vụ bền vững, Đại học Bách khoa Hà Nội cần ban hành Quy chế Quản trị và Sử dụng Dữ liệu Học tập có Trách nhiệm với bốn trụ cột pháp lý và đạo đức (Hình~\ref{fig:four_pillars}).
 
 \begin{figure}[htbp]
 \centering

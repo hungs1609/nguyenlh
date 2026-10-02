@@ -39,13 +39,13 @@ Quá trình chuyển đổi từ mô hình cảnh báo học vụ truyền thố
 Đối với nhà trường và các cấp quản lý, dịch vụ giúp xóa bỏ tình trạng cát cứ dữ liệu giữa các phòng ban, hình thành dòng dữ liệu sống động xuyên suốt từ lớp học đến cấp điều hành chiến lược. Nhờ đó, việc phân bổ ngân sách trợ giảng và học bổng được thực hiện tối ưu, dựa trên nhu cầu thực tế của từng đơn vị. Về mặt chiến lược, việc giảm thiểu tỷ lệ sinh viên bị cảnh báo học vụ và buộc thôi học sẽ trực tiếp nâng cao tỷ lệ tốt nghiệp đúng hạn, bảo vệ uy tín học thuật và bảo đảm trách nhiệm giải trình xã hội của một đại học trọng điểm quốc gia.
 
 \subsection{Định vị Sáu Đặc tính Thông minh Mục tiêu}
-Trong trạng thái mục tiêu, hệ thống dịch vụ tại Đại học Bách khoa Hà Nội được nâng cấp năng lực tương ứng với sáu đặc tính thông minh theo khung phân loại của \citet{uskov2018}.
+Trong trạng thái mục tiêu, hệ thống dịch vụ tại Đại học Bách khoa Hà Nội được nâng cấp năng lực tương ứng với sáu đặc tính thông minh theo khung phân loại của \citet{uskov2018} (Bảng~\ref{tab:dinh_vi_thong_minh}).
 
-\vspace{0.3cm}
-\noindent\textbf{Bảng 5.1. Định vị sáu đặc tính thông minh mục tiêu của hệ thống}
-\vspace{0.1cm}
-
-\noindent
+\begin{table}[htbp]
+\centering
+\caption{Định vị sáu đặc tính thông minh mục tiêu của hệ thống}
+\label{tab:dinh_vi_thong_minh}
+\vspace{0.2cm}
 \begin{tabularx}{\textwidth}{|L{2.8cm}|Y|Y|Y|}
 \hline
 \textbf{Đặc tính thông minh} & \textbf{Hiện tại (AS-IS)} & \textbf{Mục tiêu (TO-BE)} & \textbf{Cơ chế hiện thực hóa} \\
@@ -63,6 +63,31 @@ Trong trạng thái mục tiêu, hệ thống dịch vụ tại Đại học Bá
 \textbf{06. Tự tổ chức (Self-org.)} & Phân bổ cố vấn tĩnh; không điều phối nguồn lực theo nhu cầu thực. & Tự động điều phối lịch làm việc của cố vấn và bố trí trợ giảng đến lớp khó. & Tự động cân bằng tải tư vấn và đề xuất mở lớp phụ đạo học phần khó. \\
 \hline
 \end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Bảng chỉ tiêu định lượng chuyển đổi trạng thái (AS-IS vs. TO-BE) tại Đại học Bách khoa Hà Nội}
+\label{tab:chi_tieu_dinh_luong}
+\vspace{0.2cm}
+\begin{tabularx}{\textwidth}{|L{3.5cm}|C{2.2cm}|C{2.4cm}|C{2.4cm}|Y|}
+\hline
+\textbf{Tiêu chí đo lường} & \textbf{Hiện tại (AS-IS)} & \textbf{Mục tiêu (TO-BE)} & \textbf{Mức cải thiện} & \textbf{Ý nghĩa thực tiễn đối với HUST} \\
+\hline
+\textbf{Thời điểm phát hiện} & Tuần 18--19 (sau kỳ thi) & \textbf{Tuần 3--5} & \textbf{Sớm hơn 13--15 tuần} & Kịp thời cứu vãn điểm quá trình $\text{ĐQT} \ge 3.0$ trước kỳ thi. \\
+\hline
+\textbf{Tỷ lệ tiếp cận can thiệp} & Dưới 20\% SV nguy cơ & \textbf{75\% -- 85\%} & \textbf{Tăng $>$ 3.5 lần} & Triệt tiêu tình trạng sinh viên đơn độc tự xoay xở khi sa sút. \\
+\hline
+\textbf{Thời gian phản hồi CVHT} & Không quy định ($>$15 ngày) & \textbf{$<$ 72 giờ} & \textbf{Rút ngắn $>$ 80\%} & Ngăn ngừa việc khó khăn học tập tích lũy thành khủng hoảng. \\
+\hline
+\textbf{Tỷ lệ thoát cảnh báo} & Ước tính $\sim$30\% & \textbf{60\% -- 70\%} & \textbf{Tăng gấp 2 lần} & Tăng tỷ lệ phục hồi điểm CPA và duy trì tiến độ học tập. \\
+\hline
+\textbf{SV thôi học/năm} & \textbf{700 -- 800 SV/năm} & \textbf{$<$ 520 -- 560 SV} & \textbf{Giảm 25\%} (Cứu $\sim$200 SV) & Bảo toàn nguồn thu học phí và nâng cao uy tín đào tạo của trường. \\
+\hline
+\textbf{Thời gian sự vụ CVHT} & 100\% thời lượng & \textbf{Tiết kiệm 70\%} & \textbf{Giải phóng 70\%} & Giúp giảng viên tập trung vào lắng nghe và thấu cảm sư phạm. \\
+\hline
+\end{tabularx}
+\end{table}
 
 \subsection{Tuyên bố Ranh giới Hệ thống}
 Để bảo đảm tính khả thi và giữ vững nguyên tắc đạo đức học thuật, trạng thái mục tiêu xác định ranh giới rõ ràng giữa những hành vi hệ thống được phép thực hiện và những hành vi tuyệt đối không được thực hiện.

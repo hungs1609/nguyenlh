@@ -36,6 +36,19 @@ Giai đoạn hai kéo dài từ tháng thứ 12 đến tháng thứ 24, hướng
 
 Giai đoạn ba kéo dài từ tháng thứ 24 đến tháng thứ 36, tập trung vào việc Thể chế hóa toàn diện và tự thích ứng. Mục tiêu là đưa năng lực tổ chức đạt cấp độ Được quản trị định lượng và Tối ưu hóa liên tục, hình thành văn hóa ra quyết định dựa trên bằng chứng dữ liệu trong toàn trường. Hệ thống kích hoạt tính năng tự tổ chức và thích ứng, tự động nhận diện các học phần có tỷ lệ sinh viên gặp khó khăn bất thường để cảnh báo điều chỉnh đề cương môn học, tự động cân bằng tải tư vấn cho cố vấn học tập, mở rộng kết nối với mạng lưới cựu sinh viên và thực hiện đánh giá tác động dài hạn đối với tỷ lệ tốt nghiệp đúng hạn.
 
+**Bảng 8.2. Kế hoạch định lượng nguồn lực và quy mô triển khai thí điểm Giai đoạn 1 tại Trường CNTT&TT (SoICT - ĐHBK Hà Nội)**
+
+| Hạng mục triển khai | Tham số định lượng thí điểm | Chi tiết phương án và Cơ chế bảo đảm thực thi | Đơn vị chủ trì phối hợp |
+| :--- | :---: | :--- | :--- |
+| **Quy mô người học thí điểm** | **1.500 sinh viên** | Toàn bộ sinh viên khóa mới K68 thuộc Trường CNTT&TT (SoICT). | Trường CNTT&TT |
+| **Học phần trọng điểm theo dõi** | **03 học phần nền tảng** | **Giải tích I (MI1111), Đại số (MI1141), Tin học đại cương (IT1110)**. | Viện Toán SAMI & SoICT |
+| **Đội ngũ Cố vấn học tập** | **30 giảng viên** | Mỗi CVHT phụ trách trung bình 50 sinh viên lớp học phần; tập huấn 12 giờ kỹ năng tư vấn bối cảnh. | Ban Lãnh đạo SoICT |
+| **Mạng lưới Trợ giảng đồng đẳng** | **15 sinh viên TA** | Tuyển chọn sinh viên năm 3, năm 4 (K65, K66) học lực Giỏi/Xuất sắc phụ trách nhóm kèm cặp bài tập. | Đoàn Thanh niên & Hội Sinh viên |
+| **Dự kiến số ca can thiệp kỳ 1** | **~180 sinh viên (~12%)** | Gồm ~50 ca Gói 3 (CVHT tư vấn 1-1 chuyên sâu) và ~130 ca Gói 2 (Học tập đồng đẳng với TA). | Cổng Cố vấn học tập |
+| **Cơ chế đãi ngộ thời gian** | **15 giờ chuẩn/năm** | Quy đổi chính thức vào định mức lao động giảng dạy hàng năm cho mỗi CVHT theo quy chế trường. | Ban Đào tạo & Ban Tổ chức Cán bộ |
+
+*(Ghi chú: Kế hoạch thí điểm được thiết kế có kiểm soát tại một đơn vị đào tạo mạnh về công nghệ của ĐHBK Hà Nội trước khi nhân rộng).*
+
 ## 2. Các Cổng Kiểm soát Quyết định
 Để bảo đảm kiểm soát rủi ro và tránh lãng phí nguồn lực đầu tư, lộ trình thiết lập hai cổng kiểm soát quyết định nghiêm ngặt.
 

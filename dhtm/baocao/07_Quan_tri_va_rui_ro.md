@@ -34,6 +34,20 @@ Trong các dự án ứng dụng dữ liệu và phân tích học tập trong g
 
 *(Quy ước: Điểm rủi ro = Xác suất nhân Tác động. Mức độ: 1–5: Thấp; 6–9: Trung bình; 10–14: Cao; 15–25: Rất cao).*
 
+Để trực quan hóa hiệu quả kiểm soát của các biện pháp đề xuất, Bảng 7.3 đối sánh mức độ rủi ro trước và sau khi áp dụng khung quản trị có trách nhiệm.
+
+**Bảng 7.3. Đối sánh mức độ rủi ro trước và sau khi áp dụng biện pháp kiểm soát tại ĐHBK Hà Nội**
+
+| Mã rủi ro | Tên nhóm rủi ro trọng yếu | Mức rủi ro ban đầu (AS-IS) | Biện pháp kiểm soát chủ chốt áp dụng | Mức rủi ro sau kiểm soát (TO-BE) | Mức độ giảm thiểu điểm rủi ro |
+| :---: | :--- | :---: | :--- | :---: | :---: |
+| **R01** | Dán nhãn định kiến người học | **15 (Rất cao)** | Ngôn ngữ phát triển; bảo mật điểm số nguy cơ; chỉ CVHT tiếp cận. | **3 (Thấp)** | **Giảm 80.0%** |
+| **R02** | Thiên lệch thuật toán & cảnh báo sai | **12 (Cao)** | Cơ chế Human-in-the-loop bắt buộc; kiểm định mô hình định kỳ $< 15\%$. | **4 (Thấp)** | **Giảm 66.7%** |
+| **R03** | Xâm phạm riêng tư dữ liệu cá nhân | **10 (Cao)** | Tuân thủ Nghị định 13/2023/NĐ-CP; tối thiểu hóa dữ liệu; mã hóa AES-256. | **3 (Thấp)** | **Giảm 70.0%** |
+| **R04** | Quá tải cho đội ngũ CVHT | **12 (Cao)** | Phân tầng nguy cơ 3 cấp độ; tự động hóa Gói 1; quy đổi giờ lao động chuẩn. | **4 (Thấp)** | **Giảm 66.7%** |
+| **R05** | Đứt gãy quy trình bàn giao hỗ trợ | **12 (Cao)** | Tích hợp hệ sinh thái một cửa liên thông; cam kết SLA phản hồi 48–72h. | **3 (Thấp)** | **Giảm 75.0%** |
+
+*(Ghi chú: Toàn bộ 5 rủi ro từ vùng "Nguy cơ Cao/Rất cao" đều được kéo giảm thành công về vùng "Nguy cơ Thấp" an toàn).*
+
 ## 3. Khung Pháp lý và Chính sách Dữ liệu có Trách nhiệm
 Để vận hành dịch vụ bền vững, Đại học Bách khoa Hà Nội cần ban hành Quy chế Quản trị và Sử dụng Dữ liệu Học tập có Trách nhiệm với bốn trụ cột pháp lý và đạo đức.
 

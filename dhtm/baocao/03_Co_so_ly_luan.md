@@ -57,6 +57,22 @@ flowchart LR
 
 Xét trên tiến trình vận hành, bước thứ nhất tập trung vào việc tiếp nhận dữ liệu sạch, có cấu trúc từ hệ thống quản trị học tập và hệ thống thông tin sinh viên. Bước thứ hai tiến hành phân tích thông qua mô hình thuật toán nhằm nhận diện nhóm sinh viên có chỉ số tương tác sụt giảm bất thường. Bước thứ ba thực hiện phản hồi thông tin trực quan đến cố vấn học tập và bản thân sinh viên, loại bỏ hoàn toàn các ngôn từ mang tính phán xét tiêu cực. Bước thứ tư là khâu can thiệp sư phạm then chốt, nơi cố vấn học tập trực tiếp gặp gỡ sinh viên để tìm hiểu nguyên nhân gốc rễ về tâm lý, tài chính hoặc phương pháp học tập, từ đó xây dựng kế hoạch phục hồi. Bước thứ năm tiến hành đánh giá tác động sau hai tuần nhằm kiểm tra sự tiến bộ của người học, đồng thời gửi dữ liệu phản hồi để hiệu chuẩn lại mô hình phân tích ban đầu.
 
+Thực tiễn quốc tế đã chứng minh tính hiệu quả của mô hình này thông qua công trình thực nghiệm kinh điển của Arnold và Pistilli (2012) tại Đại học Purdue (Mỹ). Hệ thống Course Signals của Purdue đã trích xuất dữ liệu tương tác từ hệ thống LMS Blackboard Vista ngay từ tuần thứ hai đến tuần thứ tư, phân loại nguy cơ theo ba mức tín hiệu đèn giao thông (Đỏ - Vàng - Xanh) để giảng viên gửi thông điệp can thiệp sớm. Nghiên cứu trên hơn 25.000 sinh viên tại 100 khóa học đã chứng minh tỷ lệ sinh viên tiếp tục theo học (Retention rate) tăng thêm 21.4% so với nhóm không nhận được can thiệp sớm (Arnold & Pistilli, 2012). Đây là bằng chứng khoa học vững chắc khẳng định: Việc trích xuất tín hiệu vi mô ở giai đoạn khởi đầu học kỳ hoàn toàn có khả năng tạo ra sự đảo chiều kết quả học tập của người học.
+
+Vận dụng bài học thực nghiệm trên vào bối cảnh hệ thống LMS Moodle và SIS của Đại học Bách khoa Hà Nội, nghiên cứu xây dựng bộ chỉ số phân tích học tập sớm làm cơ sở tham số hóa cho động cơ cảnh báo nguy cơ.
+
+**Bảng 3.2. Bộ chỉ số tín hiệu phân tích học tập sớm (Early Learning Analytics Indicators) trên LMS Moodle**
+
+| Nhóm chỉ báo | Mã chỉ báo | Tên chỉ số đo lường vi mô | Ngưỡng an toàn (Bình thường) | Ngưỡng kích hoạt nguy cơ sớm (Tuần 1–5) | Ý nghĩa sư phạm và Căn cứ kiểm chứng |
+| :--- | :---: | :--- | :---: | :---: | :--- |
+| **Tương tác nền tảng** | **IND-01** | **Tần suất đăng nhập LMS Moodle** | $\ge 4$ lần/tuần | $\le 1$ lần/tuần hoặc không truy cập trong 7 ngày liên tục | Dấu hiệu sớm nhất của sự buông lỏng hoặc mất kết nối học tập. |
+| **Tiếp cận học liệu** | **IND-02** | **Thời gian xem tài liệu và bài giảng số** | $\ge 60$ phút/tuần | $< 15$ phút/tuần đối với học phần lý thuyết kỹ thuật | Sinh viên không tích lũy kiến thức chuẩn bị trước khi lên lớp. |
+| **Tiến độ học tập** | **IND-03** | **Tỷ lệ nộp bài tập tuần đúng hạn** | $100\%$ đúng hạn | Nợ đọng hoặc trễ hạn $\ge 2$ bài tập liên tiếp từ tuần 1 đến tuần 4 | Nguy cơ hổng kiến thức cơ sở (đặc biệt ở Giải tích I và Vật lý I). |
+| **Chuyên cần trên lớp** | **IND-04** | **Điểm danh lớp học phần (SIS)** | Vắng $\le 1$ buổi có phép | Vắng $\ge 2$ buổi không phép trước tuần thứ 5 | Nguy cơ bị cấm thi theo quy chế nếu vắng quá 20% thời lượng. |
+| **Đánh giá quá trình** | **IND-05** | **Điểm bài kiểm tra nhanh giữa kỳ** | Điểm $\ge 6.0/10$ | Điểm kiểm tra $< 4.0$ hoặc dự báo $\text{ĐQT} < 3.0$ | **Nguy cơ rớt môn tự động (Điểm F)** theo quy chế SAMI HUST. |
+
+*(Ghi chú: Bộ chỉ báo được chuẩn hóa dựa trên khuyến nghị của Hiệp hội Nghiên cứu Phân tích Học tập SoLAR - Lang et al., 2017 và tham số hóa theo quy chế đào tạo ĐHBK Hà Nội).*
+
 ## 4. Nguyên tắc Sư phạm Đạo đức và Cơ chế Human-in-the-loop
 Thực tiễn triển khai các hệ thống cảnh báo sớm quốc tế cho thấy nhiều dự án đã thất bại do tiếp cận thuần túy theo hướng kỹ thuật số, dẫn đến những hệ lụy đạo đức và tâm lý xã hội sâu sắc. Để ngăn ngừa các rủi ro này, đề tài thiết lập ba nguyên tắc đạo đức cốt lõi dựa trên khuyến nghị của Prinsloo & Slade (2017) và Tổ chức Hợp tác và Phát triển Kinh tế (OECD, 2023).
 

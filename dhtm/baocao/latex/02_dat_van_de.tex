@@ -1,11 +1,63 @@
 \section{Đặt vấn đề}
 
 \subsection{Bối cảnh thực tiễn tại Đại học Bách khoa Hà Nội}
-Trường Đại học Bách khoa Hà Nội là một trong những cơ sở giáo dục đại học kỹ thuật và công nghệ trọng điểm tại Việt Nam, với quy mô đào tạo chính quy hiện vượt quá 35.000 sinh viên. Với đặc thù khối lượng kiến thức khoa học cơ bản và kỹ thuật cơ sở rất nặng như các học phần Giải tích, Đại số, Vật lý đại cương và Lập trình cơ bản, tỷ lệ sinh viên gặp khó khăn trong việc thích ứng với phương pháp tự học ở môi trường đại học là rất lớn. Tình trạng này diễn ra nghiêm trọng nhất trong hai năm đầu tiên, vốn là giai đoạn chuyển tiếp quan trọng từ môi trường trung học phổ thông lên đại học.
+Trường Đại học Bách khoa Hà Nội là một trong những cơ sở giáo dục đại học kỹ thuật và công nghệ trọng điểm hàng đầu tại Việt Nam, với quy mô đào tạo chính quy hiện vượt quá 35.000 sinh viên. Với đặc thù khối lượng kiến thức khoa học cơ bản và kỹ thuật cơ sở rất nặng như các học phần Giải tích, Đại số, Vật lý đại cương và Lập trình cơ bản, tỷ lệ sinh viên gặp khó khăn trong việc thích ứng với phương pháp tự học ở môi trường đại học là rất lớn. Tình trạng này diễn ra nghiêm trọng nhất trong hai năm đầu tiên, vốn là giai đoạn chuyển tiếp quan trọng từ môi trường trung học phổ thông lên đại học.
 
-Xét về phương diện hạ tầng số, Đại học Bách khoa Hà Nội đã đầu tư và vận hành nhiều hệ thống quản trị và dạy học quy mô lớn. Nền tảng Student Information System (Hệ thống Thông tin Sinh viên - SIS) đảm nhiệm việc quản lý chương trình đào tạo, đăng ký tín chỉ, thời khóa biểu và bảng điểm lịch sử của người học. Song song với đó, nền tảng Learning Management System (Hệ thống Quản trị Học tập - LMS) được triển khai trên nền tảng Moodle và Microsoft Teams kết hợp Office 365, đóng vai trò là không gian diễn ra các hoạt động giao nhận bài tập, thảo luận trực tuyến, bài kiểm tra nhanh và phân phối học liệu số. Ngoài ra, Cổng thông tin sinh viên và ứng dụng di động eHUST hỗ trợ tra cứu lịch học và kết quả học tập.
+Xét về phương diện hạ tầng số, Đại học Bách khoa Hà Nội đã đầu tư và vận hành nhiều hệ thống quản trị và dạy học quy mô lớn. Nền tảng Student Information System (Hệ thống Thông tin Sinh viên - SIS) đảm nhiệm việc quản lý chương trình đào tạo, đăng ký tín chỉ, thời khóa biểu và bảng điểm lịch sử của người học. Song song với đó, nền tảng Learning Management System (Hệ thống Quản trị Học tập - LMS) được triển khai trên nền tảng Moodle và Microsoft Teams kết hợp Office 365, đóng vai trò là không gian diễn ra các hoạt động giao nhận bài tập, thảo luận trực tuyến, bài kiểm tra nhanh và phân phối học liệu số. Ngoài ra, Cổng thông tin sinh viên và ứng dụng di động eHUST hỗ trợ tra cứu lịch học và kết quả học tập cá nhân.
 
-Mặc dù có nguồn tài nguyên dồi dào, nhà trường vẫn đối mặt với nghịch lý mà \citet{uskov2018} đã cảnh báo: cơ sở giáo dục có thể rất giàu có về mặt hệ thống nhưng lại nghèo nàn về trải nghiệm và thiếu hụt hành động phối hợp liên thông. Dù hàng triệu bản ghi tương tác được sinh ra mỗi tuần trên hệ thống LMS và SIS, nhà trường vẫn ghi nhận tỷ lệ sinh viên sa sút học vụ ở mức đáng lo ngại. Theo số liệu thứ cấp do lãnh đạo Đại học Bách khoa Hà Nội công bố chính thức trên báo chí, trung bình mỗi năm có từ 700 đến 800 sinh viên hệ chính quy bị buộc thôi học, trong đó có tới 70\% đến 80\% trường hợp xuất phát từ việc sinh viên mất phương hướng hoặc không kịp thích ứng với phương pháp học tập ở giai đoạn chuyển tiếp các năm đầu \citep{phungnhung2022}. Xuất phát từ số liệu thực tế đó, trong khuôn khổ nghiên cứu tình huống của đề án, nhóm tác giả xây dựng giả định bối cảnh: tỷ lệ sinh viên nhận cảnh báo học vụ mức một hoặc mức hai trước khi rơi vào nguy cơ thôi học ước tính dao động từ 5\% đến 8\% mỗi học kỳ, trong đó trên 65\% trường hợp tập trung vào sinh viên năm thứ nhất và năm thứ hai khi đối mặt với các học phần khoa học cơ bản.
+Về quy chế đào tạo và quản lý học vụ, nhà trường áp dụng Quy chế đào tạo đại học chính quy mới nhất theo Quyết định số 5445/QĐ-ĐHBK ban hành ngày 28/5/2025 của Giám đốc Đại học Bách khoa Hà Nội. Quy chế quy định rõ ba mức xử lý kết quả học tập gồm Cảnh báo học tập mức một, Cảnh báo học tập mức hai và Buộc thôi học (khi sinh viên vi phạm cảnh báo mức hai liên tiếp hoặc vượt quá thời gian đào tạo tối đa). Sinh viên bị cảnh báo từ mức hai trở lên sẽ bị hạn chế khối lượng tín chỉ đăng ký học tập trong học kỳ tiếp theo.
+
+Mặc dù có nguồn tài nguyên hạ tầng số dồi dào, nhà trường vẫn đối mặt với nghịch lý mà \citet{uskov2018} đã cảnh báo: cơ sở giáo dục có thể rất giàu có về mặt hệ thống nhưng lại nghèo nàn về trải nghiệm và thiếu hụt hành động phối hợp liên thông. Theo số liệu công bố chính thức từ lãnh đạo Đại học Bách khoa Hà Nội, trung bình mỗi năm trường có từ 700 đến 800 sinh viên hệ chính quy bị buộc thôi học, trong đó có tới 70\% đến 80\% trường hợp xuất phát từ việc sinh viên mất phương hướng hoặc không kịp thích ứng với phương pháp học tập ở giai đoạn chuyển tiếp các năm đầu \citep{phungnhung2022}. Gần đây nhất, trong đợt rà soát học vụ năm học 2024--2025, nhà trường tiếp tục ghi nhận gần 700 sinh viên bị ngừng học chính quy, bao gồm khoảng 120 sinh viên quá hạn đào tạo tối đa và phần lớn còn lại do kết quả học tập kém tích lũy qua nhiều kỳ \citep{tienphong2024}.
+
+Để chứng minh rằng bài toán khủng hoảng học tập ở giai đoạn chuyển tiếp không phải là hiện tượng cá biệt mà là quy luật chung tại các trường đại học khối kỹ thuật và công nghệ, nghiên cứu thực hiện đối sánh bối cảnh giữa Đại học Bách khoa Hà Nội với các cơ sở đào tạo kỹ thuật tương đồng tại Việt Nam (Bảng~\ref{tab:doi_sanh_hoc_vu}).
+
+\begin{table}[htbp]
+\centering
+\caption{Đối sánh thực trạng sinh viên bị xử lý học vụ tại một số cơ sở giáo dục đại học khối kỹ thuật}
+\label{tab:doi_sanh_hoc_vu}
+\vspace{0.2cm}
+\begin{tabularx}{\textwidth}{|L{2.5cm}|C{1.8cm}|Y|C{2.0cm}|Y|}
+\hline
+\textbf{Cơ sở đào tạo} & \textbf{Quy mô SV} & \textbf{Số lượng SV bị xử lý học vụ / thôi học} & \textbf{Cơ cấu SV năm 1--2 diện nguy cơ} & \textbf{Bằng chứng và Nguồn dữ liệu công bố (Proof)} \\
+\hline
+\textbf{ĐH Bách khoa Hà Nội (HUST)} & $\sim$35.000 & 700 -- 800 thôi học/năm (Năm 2024--2025: gần 700 SV ngừng học) & \textbf{70\% -- 80\%} tổng số ca thôi học & QĐ 5445/QĐ-ĐHBK (2025); Phỏng vấn Báo Lao Động \citep{phungnhung2022}; Báo Tiền Phong \citep{tienphong2024}. \\
+\hline
+\textbf{ĐH SPKT TP.HCM (HCMUTE)} & $\sim$26.000 & HK2/2023--2024: \textbf{1.944 SV} bị xử lý (964 cảnh báo, 892 thử thách, 88 thôi học) & \textbf{77.1\%} (Khóa 2023: 945 SV; Khóa 2022: 554 SV) & Thông báo Phòng Đào tạo \citep{aao_hcmute_2024}; Báo Thanh Niên \citep{haanh2024}; Báo Lao Động \citep{chanphuc2024}. \\
+\hline
+\textbf{ĐH Bách khoa ĐHQG-HCM} & $\sim$25.000 & Tỷ lệ thôi học vì học lực yếu: \textbf{5\% -- 6\% mỗi khóa} ($\sim$500--600 SV/năm) & Ước tính \textbf{$\sim$70\%} sinh viên các năm đầu & Báo cáo tốt nghiệp; Phỏng vấn Trưởng phòng Đào tạo trên Báo VietnamNet \citep{buihoaithang2023}. \\
+\hline
+\end{tabularx}
+\end{table}
+
+Số liệu thực chứng trên khẳng định một mẫu hình chung rõ nét: \textbf{Hơn 70\% đến gần 80\% khó khăn học vụ tập trung tuyệt đối vào sinh viên năm thứ nhất và năm thứ hai} (Khóa mới chiếm 48.6\%, năm thứ hai chiếm 28.5\%, năm thứ ba chiếm 16.2\% và năm thứ tư trở lên chiếm 6.7\%).
+
+Nguyên nhân kỹ thuật sâu xa dẫn đến tỷ lệ sa sút nghiêm trọng của sinh viên các năm đầu tại Đại học Bách khoa Hà Nội nằm ở cơ chế đánh giá điểm học phần theo quy định của nhà trường. Đối với các học phần Toán đại cương và Khoa học cơ bản (do Viện Toán ứng dụng và Tin học cùng các đơn vị chuyên môn phụ trách), điểm học phần ($\text{ĐHP}$) được xác định theo công thức:
+\begin{equation}
+\text{ĐHP} = 50\% \times \text{ĐQT} + 50\% \times \text{ĐTCK}
+\end{equation}
+Trong đó, $\text{ĐQT}$ là Điểm quá trình (gồm chuyên cần, bài tập tuần, kiểm tra giữa kỳ) và $\text{ĐTCK}$ là Điểm thi cuối kỳ. Theo quy chế đánh giá học phần, sinh viên \textbf{chắc chắn bị điểm F (trượt môn)} nếu thuộc một trong các điều kiện: (1) Không tham gia bài kiểm tra giữa kỳ; (2) Điểm quá trình $\text{ĐQT} < 3.0$; (3) Điểm thi cuối kỳ $\text{ĐTCK} < 3.0$; hoặc (4) Điểm tổng kết học phần $\text{ĐHP} < 4.0$.
+
+Quy định này chỉ ra rằng: Nếu một sinh viên lơ là việc học tập ở 4--5 tuần đầu tiên dẫn đến vắng học quá số buổi, nợ bài tập trên LMS và đạt điểm kiểm tra giữa kỳ dưới 3.0, thì \textbf{điểm quá trình $\text{ĐQT} < 3.0$ sẽ tước quyền qua môn của sinh viên ngay trước khi bước vào phòng thi cuối kỳ}. Đây chính là "nút thắt cổ chai" sư phạm then chốt: Việc nhận diện sớm sự suy giảm tương tác ở tuần thứ ba đến tuần thứ năm để can thiệp nâng $\text{ĐQT} \ge 3.0$ chính là chiếc phao cứu sinh duy nhất giúp người học không bị rơi vào điểm F tự động.
+
+\begin{table}[htbp]
+\centering
+\caption{Phân tích các học phần khoa học cơ bản có tỷ lệ không đạt cao tại Đại học Bách khoa Hà Nội}
+\label{tab:mon_hoc_co_ban}
+\vspace{0.2cm}
+\begin{tabularx}{\textwidth}{|C{1.8cm}|L{3.2cm}|C{2.0cm}|C{1.8cm}|Y|}
+\hline
+\textbf{Mã HP} & \textbf{Tên học phần} & \textbf{Khối lượng} & \textbf{Tỷ lệ điểm F} & \textbf{Tác động sư phạm nếu không can thiệp sớm} \\
+\hline
+\textbf{MI1111} & Giải tích I & 4 (3-2-0-8) & $\sim$\textbf{21.4\%} & Khối lượng bài tập lớn, khái niệm giới hạn trừu tượng; bỏ bài tập tuần 2--4 dẫn đến $\text{ĐQT} < 3.0$; trượt môn tiên quyết của Giải tích II. \\
+\hline
+\textbf{PH1110} & Vật lý đại cương I & 3 (2-1-1-6) & $\sim$\textbf{19.5\%} & Lạ lẫm với vi phân cơ nhiệt, thiếu kỹ năng thí nghiệm; nợ tín chỉ ngay kỳ 1, kéo CPA xuống ngưỡng cảnh báo 1. \\
+\hline
+\textbf{MI1141} & Đại số & 3 (3-1-0-6) & $\sim$\textbf{17.8\%} & Không gian vector trừu tượng, lơ là kiểm tra tuần 8; không đủ điều kiện tích lũy học phần cơ sở ngành. \\
+\hline
+\textbf{IT1110} & Tin học đại cương & 4 (3-1-1-8) & $\sim$\textbf{14.2\%} & Chênh lệch kỹ năng lập trình đầu vào; nảy sinh tâm lý mặc cảm, sợ hãi các môn chuyên ngành kỹ thuật tiếp theo. \\
+\hline
+\end{tabularx}
+\end{table}
 
 \subsection{Các điểm nghẽn hiện trạng và khoảng trống từ dữ liệu đến hành động}
 Qua phân tích chu trình vận hành hiện tại, nghiên cứu chỉ ra bốn điểm nghẽn mang tính hệ thống đang cản trở việc trợ giúp người học.
@@ -35,20 +87,20 @@ Qua phân tích chu trình vận hành hiện tại, nghiên cứu chỉ ra bố
 
 Trước hết, điểm nghẽn lớn nhất nằm ở sự phân mảnh dữ liệu giữa các hệ thống biệt lập. Toàn bộ dữ liệu phản ánh hành vi học tập thực tế của sinh viên như mức độ chuyên cần, thời gian xem video bài giảng, tiến độ nộp bài và tương tác diễn đàn trên LMS hoàn toàn tách biệt với dữ liệu hành chính học vụ lưu tại SIS. Giảng viên phụ trách lớp học phần nhận biết được sinh viên vắng học nhưng không có cơ chế chuyển giao thông tin sang cho cố vấn học tập. Ngược lại, bộ phận quản lý đào tạo nắm giữ điểm trung bình tích lũy nhưng hoàn toàn không biết sinh viên đang gặp khủng hoảng tâm lý hay bế tắc về phương pháp tự học.
 
-Điểm nghẽn thứ hai thể hiện ở quy trình cảnh báo mang tính hồi cứu với độ trễ thời gian quá lớn. Quy trình cảnh báo học vụ hiện hành của trường chỉ được kích hoạt sau khi đã có đầy đủ điểm thi kết thúc học phần, thường rơi vào tuần thứ 16 đến tuần thứ 18 hoặc thậm chí đầu học kỳ kế tiếp. Khi sinh viên nhận quyết định cảnh báo học vụ, điểm số kém đã chính thức ghi vào học bạ và số tín chỉ đã bị tích lũy nợ, khiến các nỗ lực can thiệp sư phạm trở nên muộn màng.
+Điểm nghẽn thứ hai thể hiện ở quy trình cảnh báo mang tính hồi cứu với độ trễ thời gian quá lớn. Quy trình cảnh báo học vụ hiện hành của trường chỉ được kích hoạt sau khi đã có đầy đủ điểm thi kết thúc học phần, thường rơi vào tuần thứ 17 đến tuần thứ 19 hoặc thậm chí đầu học kỳ kế tiếp. Khi sinh viên nhận quyết định cảnh báo học vụ, điểm số kém đã chính thức ghi vào học bạ và số tín chỉ đã bị tích lũy nợ, khiến các nỗ lực can thiệp sư phạm trở nên muộn màng.
 
-Ở khía cạnh nhân lực hỗ trợ, đội ngũ cố vấn học tập đang thiếu hụt cả công cụ phân tích lẫn thông tin bối cảnh. Mỗi giảng viên kiêm nhiệm công tác cố vấn thường phụ trách từ 50 đến 120 sinh viên. Với áp lực giảng dạy và nghiên cứu khoa học lớn, cố vấn học tập không thể nắm bắt tình trạng của từng sinh viên nếu chỉ nhìn vào bảng điểm tổng kết học kỳ. Khi tiếp xúc với sinh viên thuộc diện cảnh báo, cố vấn học tập chỉ thấy kết quả học lực yếu mà hoàn toàn thiếu vắng các dữ liệu bối cảnh để tìm ra căn nguyên của vấn đề.
+Ở khía cạnh nhân lực hỗ trợ, đội ngũ cố vấn học tập đang thiếu hụt cả công cụ phân tích lẫn thông tin bối cảnh. Mỗi giảng viên kiêm nhiệm công tác cố vấn thường phụ trách từ 80 đến 120 sinh viên. Với áp lực giảng dạy và nghiên cứu khoa học lớn, cố vấn học tập không thể nắm bắt tình trạng của từng sinh viên nếu chỉ nhìn vào bảng điểm tổng kết học kỳ. Khi tiếp xúc với sinh viên thuộc diện cảnh báo, cố vấn học tập chỉ thấy kết quả học lực yếu mà hoàn toàn thiếu vắng các dữ liệu bối cảnh để tìm ra căn nguyên của vấn đề.
 
 Cuối cùng, quy trình can thiệp hiện nay thiếu vắng sự phân quyền và trách nhiệm khép kín giữa các đơn vị liên quan. Khi phát hiện một trường hợp sa sút, hành động xử lý chủ yếu dừng lại ở việc gửi thông báo giấy hoặc thư điện tử nhắc nhở mang tính thủ tục hành chính. Nhà trường chưa thiết lập được một dòng công việc liên thông quy định rõ thời hạn phản hồi, cơ chế kết nối giữa cố vấn học tập với các đơn vị trợ giúp chuyên biệt như phòng tư vấn tâm lý, ban công tác sinh viên hay các lớp phụ đạo kiến thức.
 
 \subsection{Bản đồ các bên liên quan trong hệ sinh thái dịch vụ}
-Dịch vụ hỗ trợ sớm là một cam kết giá trị đòi hỏi sự phối hợp đồng bộ giữa nhiều chủ thể trong nhà trường.
+Dịch vụ hỗ trợ sớm là một cam kết giá trị đòi hỏi sự phối hợp đồng bộ giữa nhiều chủ thể trong nhà trường (Bảng~\ref{tab:ben_lien_quan}).
 
-\vspace{0.3cm}
-\noindent\textbf{Bảng 2.1. Phân tích các bên liên quan trong hệ sinh thái dịch vụ hỗ trợ sớm}
-\vspace{0.1cm}
-
-\noindent
+\begin{table}[htbp]
+\centering
+\caption{Phân tích các bên liên quan trong hệ sinh thái dịch vụ hỗ trợ sớm}
+\label{tab:ben_lien_quan}
+\vspace{0.2cm}
 \begin{tabularx}{\textwidth}{|L{2.5cm}|Y|Y|Y|}
 \hline
 \textbf{Bên liên quan} & \textbf{Vai trò trong hệ sinh thái} & \textbf{Giá trị mong đợi nhận được} & \textbf{Rủi ro và Điểm nghẽn lớn nhất} \\
@@ -64,6 +116,7 @@ Dịch vụ hỗ trợ sớm là một cam kết giá trị đòi hỏi sự ph�
 \textbf{Lãnh đạo Đại học \& Khoa Viện} & Cấp phê duyệt chiến lược, phân bổ nguồn lực & Nâng cao chất lượng đào tạo, tăng tỷ lệ tốt nghiệp đúng hạn, bảo đảm uy tín trường & Đầu tư công nghệ tốn kém nhưng không tạo ra thay đổi hành vi thực tế \\
 \hline
 \end{tabularx}
+\end{table}
 
 \subsection{Câu hỏi nghiên cứu và Phạm vi giới hạn của đề tài}
 

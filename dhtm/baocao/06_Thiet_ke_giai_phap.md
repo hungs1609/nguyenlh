@@ -127,3 +127,35 @@ graph TD
 Đối với nhóm sinh viên có mức độ nguy cơ trung bình tương ứng với điểm rủi ro từ 0.4 đến 0.7 khi có dấu hiệu vắng hai buổi học và điểm kiểm tra nhanh dưới trung bình, hệ thống đề xuất sinh viên tham gia nhóm hỗ trợ học tập đồng đẳng do các trợ giảng sinh viên khóa trên phụ trách. 
 
 Đối với nhóm sinh viên có mức độ nguy cơ cao tương ứng với điểm rủi ro từ 0.7 trở lên do vắng trên 30% thời lượng hoặc không tương tác liên tục trong hai tuần, hệ thống lập tức kích hoạt cảnh báo gửi đến cố vấn học tập. Cố vấn học tập bắt buộc phải tổ chức phiên tư vấn trực tiếp trong vòng 72 giờ và phối hợp cùng ban đào tạo để thiết lập kế hoạch can thiệp cá nhân hóa.
+
+Để trực quan hóa cơ chế vận hành của động cơ phân tích rủi ro trong môi trường thực tế của Đại học Bách khoa Hà Nội, Bảng 6.2 mô phỏng hồ sơ bối cảnh và kịch bản kích hoạt can thiệp đối với ba trường hợp sinh viên điển hình.
+
+**Bảng 6.2. Ma trận hồ sơ phân tích rủi ro học tập của ba sinh viên Bách khoa mẫu (Case Student Profiles)**
+
+| Thuộc tính phân tích | Trường hợp 1: Sinh viên Nguyễn Văn A | Trường hợp 2: Sinh viên Trần Thị B | Trường hợp 3: Sinh viên Lê Văn C |
+| :--- | :--- | :--- | :--- |
+| **Thông tin học vụ (SIS)** | K68 Trường Cơ khí (SME), CPA kỳ trước: Chưa có | K68 Trường CNTT&TT (SoICT), Điểm chuẩn đầu vào: 27.5 | K68 Trường Điện - Điện tử (SEEE), CPA tích lũy: 3.12 |
+| **Tần suất truy cập LMS Moodle** | **1 lần/tuần** (sụt giảm 80% từ tuần 2) | **3 lần/tuần** (đều đặn nhưng thời lượng ngắn) | **6 lần/tuần** (tương tác liên tục) |
+| **Thời gian học liệu số** | **12 phút/tuần** trên hệ thống | **45 phút/tuần** | **85 phút/tuần** |
+| **Tiến độ nộp bài tập tuần** | Nợ bài tập tuần 2 và tuần 3 học phần **Giải tích I** | Nộp trễ 1 bài tập **Tin học đại cương**, nợ 1 bài quiz | Hoàn thành 100% bài tập đúng hạn |
+| **Chuyên cần lớp học phần** | Vắng **2 buổi học** không phép học phần Giải tích I | Đi học đầy đủ | Đi học đầy đủ |
+| **Điểm kiểm tra nhanh** | Điểm quiz tuần 3: **2.5/10** (Nguy cơ ĐQT < 3.0) | Điểm quiz tuần 3: **5.0/10** | Điểm quiz tuần 3: **8.0/10** |
+| **Điểm số rủi ro tính toán ($R$)** | **$R = 0.78$ (Nguy cơ Cao - Cấp độ 3)** | **$R = 0.46$ (Nguy cơ Vừa - Cấp độ 2)** | **$R = 0.12$ (Nguy cơ Thấp - Cấp độ 1)** |
+| **Gói dịch vụ kích hoạt** | **GÓI 3: CAN THIỆP CHUYÊN SÂU** | **GÓI 2: HỖ TRỢ ĐỒNG ĐẲNG** | **GÓI 1: TỰ THÍCH ỨNG** |
+| **Hành động can thiệp cụ thể** | Hệ thống chuyển hồ sơ bảo mật sang Cổng CVHT. Cố vấn gửi lời mời tư vấn riêng trong 72h; phát hiện sinh viên làm thêm ban đêm và hổng kiến thức vi phân; kết nối Trợ giảng phụ đạo và Ban CTSV hỗ trợ. | Hệ thống tự động gửi thông báo gợi ý sinh viên đăng ký nhóm trợ giảng đồng đẳng sinh viên khóa trên (K66) để hướng dẫn sửa bài tập lập trình C++. | Hệ thống tự động gửi thông điệp biểu dương tiến độ học tập kèm tài liệu tham khảo nâng cao qua ứng dụng eHUST. |
+
+*(Ghi chú: Dữ liệu mô phỏng tham số hóa của nhóm nghiên cứu nhằm minh họa trực quan quy tắc suy diễn của động cơ phân tích rủi ro).*
+
+Dựa trên thuật toán phân tầng rủi ro, khối lượng công việc hỗ trợ sinh viên tại Đại học Bách khoa Hà Nội được phân bổ tối ưu theo nguyên tắc hình phễu, bảo đảm tính khả thi và không gây quá tải cho đội ngũ giảng viên kiêm nhiệm cố vấn học tập.
+
+**Bảng 6.3. Dự phóng phân bổ tải công việc can thiệp cho một khóa 8.000 sinh viên tại Đại học Bách khoa Hà Nội**
+
+| Phân tầng nguy cơ | Tỷ lệ sinh viên ước tính | Số lượng sinh viên ước tính (Khóa 8.000 SV) | Kênh thực hiện can thiệp chính | Khối lượng phụ trách trung bình trên 1 CVHT | Tác động tải công việc lên đội ngũ CVHT |
+| :--- | :---: | :---: | :--- | :---: | :--- |
+| **Cấp 1: Nguy cơ thấp** | **~15%** | **~1.200 sinh viên** | Tự động hóa 100% qua thông báo LMS Moodle và app eHUST | 12 – 15 SV/CVHT | **0 giờ** (Hệ thống tự động điều phối học liệu bổ trợ). |
+| **Cấp 2: Nguy cơ vừa** | **~8%** | **~640 sinh viên** | Mạng lưới Trợ giảng sinh viên (TA) và Nhóm học tập đồng đẳng | 6 – 8 SV/CVHT | **~1 giờ/kỳ** (CVHT chỉ duyệt danh sách ghép nhóm). |
+| **Cấp 3: Nguy cơ cao** | **~4%** | **~320 sinh viên** | **Cố vấn học tập trực tiếp tư vấn chuyên sâu 1-1** | **3 – 5 SV/CVHT** | **~6–10 giờ/kỳ** (Mỗi ca tư vấn 2 phiên $\times$ 45–60 phút). |
+
+*(Ghi chú: Phân bổ tham số hóa dựa trên quy mô tuyển sinh khóa mới của ĐHBK Hà Nội và tỷ lệ trượt môn thực tế của khối kỹ thuật).*
+
+Bảng 6.3 mang lại một luận cứ then chốt bảo vệ tính khả thi của giải pháp: Mặc dù mỗi cố vấn học tập quản lý danh nghĩa từ 80 đến 120 sinh viên, nhưng nhờ cơ chế sàng lọc thông minh ba cấp độ, người thầy chỉ phải tập trung nguồn lực tư vấn chuyên sâu cho **3 đến 5 sinh viên thực sự rơi vào khủng hoảng nặng nhất**. Điều này giải quyết triệt để nỗi lo ngại về tình trạng quá tải và "trơ lì cảnh báo" của giảng viên.

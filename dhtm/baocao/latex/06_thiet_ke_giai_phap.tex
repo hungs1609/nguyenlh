@@ -92,12 +92,11 @@ Bản đồ dịch vụ Service Blueprint trực quan hóa toàn bộ hành trì
 \label{fig:blueprint_flow}
 \end{figure}
 
-\vspace{0.3cm}
-\noindent\textbf{Bảng 6.1. Ma trận chi tiết Service Blueprint dịch vụ hỗ trợ sớm}
-\vspace{0.1cm}
-
 \begin{table}[htbp]
 \centering
+\caption{Ma trận chi tiết Service Blueprint dịch vụ hỗ trợ sớm}
+\label{tab:service_blueprint}
+\vspace{0.2cm}
 \fontsize{8}{10}\selectfont
 \begin{tabularx}{\textwidth}{|L{2.4cm}|Y|Y|Y|Y|Y|}
 \hline
@@ -117,7 +116,7 @@ Bản đồ dịch vụ Service Blueprint trực quan hóa toàn bộ hành trì
 \end{table}
 
 \subsection{Quy trình Can thiệp Sư phạm và Ma trận Phân tầng Nguy cơ}
-Để bảo đảm tính công bằng và cá nhân hóa, hệ thống phân loại rủi ro thành ba cấp độ với các kịch bản can thiệp tương ứng.
+Để bảo đảm tính công bằng và cá nhân hóa, hệ thống phân loại rủi ro thành ba cấp độ với các kịch bản can thiệp tương ứng (Hình~\ref{fig:three_tiers}).
 
 \begin{figure}[htbp]
 \centering
@@ -161,3 +160,62 @@ Bản đồ dịch vụ Service Blueprint trực quan hóa toàn bộ hành trì
 Đối với nhóm sinh viên có mức độ nguy cơ trung bình tương ứng với điểm rủi ro từ 0.4 đến 0.7 khi có dấu hiệu vắng hai buổi học và điểm kiểm tra nhanh dưới trung bình, hệ thống đề xuất sinh viên tham gia nhóm hỗ trợ học tập đồng đẳng do các trợ giảng sinh viên khóa trên phụ trách. 
 
 Đối với nhóm sinh viên có mức độ nguy cơ cao tương ứng với điểm rủi ro từ 0.7 trở lên do vắng trên 30\% thời lượng hoặc không tương tác liên tục trong hai tuần, hệ thống lập tức kích hoạt cảnh báo gửi đến cố vấn học tập. Cố vấn học tập bắt buộc phải tổ chức phiên tư vấn trực tiếp trong vòng 72 giờ và phối hợp cùng ban đào tạo để thiết lập kế hoạch can thiệp cá nhân hóa.
+
+Để trực quan hóa cơ chế vận hành của động cơ phân tích rủi ro trong môi trường thực tế của Đại học Bách khoa Hà Nội, Bảng~\ref{tab:case_profiles} mô phỏng hồ sơ bối cảnh và kịch bản kích hoạt can thiệp đối với ba trường hợp sinh viên điển hình.
+
+\begin{table}[htbp]
+\centering
+\caption{Ma trận hồ sơ phân tích rủi ro học tập của ba sinh viên Bách khoa mẫu (Case Student Profiles)}
+\label{tab:case_profiles}
+\vspace{0.2cm}
+\fontsize{8}{10}\selectfont
+\begin{tabularx}{\textwidth}{|L{2.8cm}|Y|Y|Y|}
+\hline
+\textbf{Thuộc tính phân tích} & \textbf{Trường hợp 1: SV Nguyễn Văn A} & \textbf{Trường hợp 2: SV Trần Thị B} & \textbf{Trường hợp 3: SV Lê Văn C} \\
+\hline
+\textbf{Thông tin học vụ (SIS)} & K68 Trường Cơ khí (SME), CPA kỳ trước: Chưa có & K68 Trường CNTT\&TT (SoICT), Điểm đầu vào: 27.5 & K68 SEEE, CPA tích lũy: 3.12 \\
+\hline
+\textbf{Truy cập LMS Moodle} & \textbf{1 lần/tuần} (giảm 80\% từ tuần 2) & \textbf{3 lần/tuần} (đều đặn, thời lượng ngắn) & \textbf{6 lần/tuần} (tương tác liên tục) \\
+\hline
+\textbf{Thời gian học liệu số} & \textbf{12 phút/tuần} trên hệ thống & \textbf{45 phút/tuần} & \textbf{85 phút/tuần} \\
+\hline
+\textbf{Tiến độ nộp bài tập} & Nợ bài tập tuần 2 và 3 môn \textbf{Giải tích I} & Nộp trễ 1 bài \textbf{Tin học đại cương}, nợ quiz & Hoàn thành 100\% bài tập đúng hạn \\
+\hline
+\textbf{Chuyên cần lớp} & Vắng \textbf{2 buổi} không phép môn Giải tích I & Đi học đầy đủ & Đi học đầy đủ \\
+\hline
+\textbf{Điểm kiểm tra nhanh} & Quiz tuần 3: \textbf{2.5/10} (Nguy cơ $\text{ĐQT} < 3.0$) & Quiz tuần 3: \textbf{5.0/10} & Quiz tuần 3: \textbf{8.0/10} \\
+\hline
+\textbf{Điểm rủi ro ($R$)} & \textbf{$R = 0.78$ (Nguy cơ Cao - Cấp 3)} & \textbf{$R = 0.46$ (Nguy cơ Vừa - Cấp 2)} & \textbf{$R = 0.12$ (Nguy cơ Thấp - Cấp 1)} \\
+\hline
+\textbf{Gói can thiệp} & \textbf{GÓI 3: CHUYÊN SÂU} & \textbf{GÓI 2: ĐỒNG ĐẲNG} & \textbf{GÓI 1: TỰ THÍCH ỨNG} \\
+\hline
+\textbf{Hành động cụ thể} & Chuyển hồ sơ bảo mật sang CVHT. CVHT hẹn gặp trong 72h; phát hiện làm thêm ban đêm và hổng vi phân; bố trí TA phụ đạo và Ban CTSV hỗ trợ. & Tự động gợi ý đăng ký nhóm TA sinh viên khóa trên (K66) hướng dẫn sửa bài tập C++. & Tự động gửi thông điệp biểu dương tiến độ học tập kèm tài liệu nâng cao qua eHUST. \\
+\hline
+\end{tabularx}
+\begin{flushleft}
+\textit{\fontsize{8}{9.5}\selectfont Ghi chú: Dữ liệu mô phỏng tham số hóa của nhóm nghiên cứu nhằm minh họa quy tắc suy diễn của động cơ rủi ro.}
+\end{flushleft}
+\end{table}
+
+Dựa trên thuật toán phân tầng rủi ro, khối lượng công việc hỗ trợ sinh viên tại Đại học Bách khoa Hà Nội được phân bổ tối ưu theo nguyên tắc hình phễu, bảo đảm tính khả thi và không gây quá tải cho đội ngũ giảng viên kiêm nhiệm cố vấn học tập (Bảng~\ref{tab:phan_bo_tai}).
+
+\begin{table}[htbp]
+\centering
+\caption{Dự phóng phân bổ tải công việc can thiệp cho một khóa 8.000 sinh viên tại Đại học Bách khoa Hà Nội}
+\label{tab:phan_bo_tai}
+\vspace{0.2cm}
+\begin{tabularx}{\textwidth}{|L{2.8cm}|C{1.8cm}|C{2.0cm}|Y|C{2.0cm}|Y|}
+\hline
+\textbf{Phân tầng nguy cơ} & \textbf{Tỷ lệ ước tính} & \textbf{Số lượng SV (Khóa 8.000)} & \textbf{Kênh thực hiện can thiệp chính} & \textbf{Tải TB trên 1 CVHT} & \textbf{Tác động lên CVHT} \\
+\hline
+\textbf{Cấp 1: Nguy cơ thấp} & \textbf{$\sim$15\%} & \textbf{$\sim$1.200 SV} & Tự động hóa qua LMS và eHUST & 12 -- 15 SV & \textbf{0 giờ} (Hệ thống tự động). \\
+\hline
+\textbf{Cấp 2: Nguy cơ vừa} & \textbf{$\sim$8\%} & \textbf{$\sim$640 SV} & Mạng lưới Trợ giảng sinh viên (TA) & 6 -- 8 SV & \textbf{$\sim$1 giờ/kỳ} (Duyệt danh sách). \\
+\hline
+\textbf{Cấp 3: Nguy cơ cao} & \textbf{$\sim$4\%} & \textbf{$\sim$320 SV} & \textbf{Cố vấn trực tiếp tư vấn chuyên sâu 1-1} & \textbf{3 -- 5 SV} & \textbf{$\sim$6--10 giờ/kỳ} (2 phiên $\times$ 45--60 phút). \\
+\hline
+\end{tabularx}
+\begin{flushleft}
+\textit{\fontsize{8}{10}\selectfont Ghi chú: Phân bổ tham số hóa dựa trên quy mô tuyển sinh khóa mới của ĐHBK Hà Nội và tỷ lệ trượt môn thực tế.}
+\end{flushleft}
+\end{table}

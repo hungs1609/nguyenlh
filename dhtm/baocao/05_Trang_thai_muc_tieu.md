@@ -42,6 +42,19 @@ Trong trạng thái mục tiêu, hệ thống dịch vụ tại Đại học Bá
 | **05. Thích ứng (Adapting)** | Quy trình cứng nhắc; áp dụng chung một thông báo nhắc nhở hành chính. | Cá nhân hóa nội dung thông điệp và gợi ý lộ trình hỗ trợ cho từng trường hợp cụ thể. | Phân hệ khuyến nghị tự động đề xuất tài liệu bổ trợ hoặc kết nối cố vấn tùy mức nguy cơ. |
 | **06. Tự tổ chức (Self-organizing)** | Phân bổ cố vấn học tập tĩnh; không điều phối nguồn lực theo nhu cầu thực. | Tự động điều phối lịch làm việc của cố vấn và bố trí trợ giảng đến lớp học phần có rủi ro cao. | Tự động cân bằng tải công việc tư vấn và đề xuất mở lớp phụ đạo cho học phần khó. |
 
+**Bảng 5.2. Bảng chỉ tiêu định lượng chuyển đổi trạng thái (AS-IS vs. TO-BE) tại Đại học Bách khoa Hà Nội**
+
+| Tiêu chí đo lường | Trạng thái hiện tại (AS-IS) | Trạng thái mục tiêu (TO-BE) | Mức độ cải thiện định lượng | Ý nghĩa thực tiễn đối với nhà trường |
+| :--- | :---: | :---: | :---: | :--- |
+| **Thời điểm phát hiện nguy cơ** | Tuần thứ 18–19 (sau khi có điểm thi) | **Tuần thứ 3–5** (ngay trong tiến trình học) | **Sớm hơn 13–15 tuần** | Kịp thời cứu vãn điểm quá trình $\text{ĐQT} \ge 3.0$ trước kỳ thi. |
+| **Tỷ lệ tiếp cận can thiệp sớm** | Dưới 20% sinh viên có nguy cơ | **Từ 75% đến 85%** sinh viên nguy cơ | **Tăng gấp hơn 3.5 lần** | Triệt tiêu tình trạng sinh viên đơn độc tự xoay xở khi sa sút. |
+| **Thời gian phản hồi của CVHT** | Không quy định cụ thể (> 15 ngày) | **Dưới 72 giờ** kể từ khi có tín hiệu | **Rút ngắn trên 80%** | Ngăn ngừa việc khó khăn học tập tích lũy thành khủng hoảng. |
+| **Tỷ lệ sinh viên thoát cảnh báo** | Ước tính khoảng 30% | **Đạt từ 60% đến 70%** | **Tăng gấp hơn 2 lần** | Tăng tỷ lệ phục hồi điểm CPA và duy trì tiến độ học tập. |
+| **Số lượng sinh viên thôi học/năm** | **700 – 800 SV/năm** (khoảng 2.2%) | **Dưới 520 – 560 SV/năm** | **Giảm 25%** (Cứu ~200 SV/năm) | Bảo toàn nguồn thu học phí và nâng cao uy tín đào tạo của trường. |
+| **Thời gian thủ tục sự vụ của CVHT** | Chiếm 100% thời lượng công tác | **Tiết kiệm 70%** thời gian hành chính | **Giải phóng 70% thời gian** | Giúp giảng viên tập trung vào lắng nghe và thấu cảm sư phạm. |
+
+*(Ghi chú: Các chỉ tiêu TO-BE được xây dựng dựa trên mục tiêu chiến lược chuyển đổi số của ĐHBK Hà Nội và tham chiếu hiệu quả thực nghiệm từ hệ thống Course Signals của Purdue University).*
+
 ## 3. Tuyên bố Ranh giới Hệ thống
 Để bảo đảm tính khả thi và giữ vững nguyên tắc đạo đức học thuật, trạng thái mục tiêu xác định ranh giới rõ ràng giữa những hành vi hệ thống được phép thực hiện và những hành vi tuyệt đối không được thực hiện.
 

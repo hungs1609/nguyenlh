@@ -7,11 +7,11 @@ Giai đoạn Digital University (Đại học số) chủ yếu tập trung vào
 
 Ngược lại, giai đoạn Smart University (Đại học thông minh) được định nghĩa là một hệ thống kinh tế xã hội kỹ thuật phức hợp, có khả năng liên tục thu nhận dữ liệu từ môi trường dạy và học, kết nối thông tin giữa các thực thể, suy diễn ý nghĩa bối cảnh, từ đó tự động thích ứng hoặc cung cấp thông tin kịp thời để hỗ trợ con người tối ưu hóa các quyết định giáo dục \citep{uskov2018}. Trọng tâm của một đại học thông minh không nằm ở số lượng thiết bị công nghệ được mua sắm, mà nằm ở năng lực tạo ra giá trị giáo dục đo lường được, nâng cao trải nghiệm học tập và tối ưu hóa vận hành dịch vụ.
 
-\vspace{0.3cm}
-\noindent\textbf{Bảng 3.1. So sánh đặc trưng giữa Đại học số và Đại học thông minh}
-\vspace{0.1cm}
-
-\noindent
+\begin{table}[htbp]
+\centering
+\caption{So sánh đặc trưng giữa Đại học số và Đại học thông minh}
+\label{tab:so_sanh_digital_smart}
+\vspace{0.2cm}
 \begin{tabularx}{\textwidth}{|L{3.2cm}|Y|Y|}
 \hline
 \textbf{Tiêu chí so sánh} & \textbf{Đại học số (Digital University)} & \textbf{Đại học thông minh (Smart University)} \\
@@ -27,6 +27,7 @@ Ngược lại, giai đoạn Smart University (Đại học thông minh) đượ
 \textbf{Tác động người học} & Tự tìm kiếm thông tin qua nhiều cổng khác nhau & Trải nghiệm học tập liền mạch, được nhận diện khó khăn kịp thời \\
 \hline
 \end{tabularx}
+\end{table}
 
 \subsection{Sáu đặc tính thông minh của Đại học thông minh}
 Theo khung lý thuyết của \citet{uskov2018}, tính thông minh của một hệ thống giáo dục đại học được cấu thành từ sáu năng lực cốt lõi. Trong giải pháp Dịch vụ Cố vấn học tập và Hỗ trợ sớm, sáu đặc tính này được cụ thể hóa thành một chuỗi năng lực tương hỗ.
@@ -97,6 +98,32 @@ Trong công tác cố vấn học tập, kết quả phân tích dữ liệu dù
 \end{figure}
 
 Xét trên tiến trình vận hành, bước thứ nhất tập trung vào việc tiếp nhận dữ liệu sạch, có cấu trúc từ hệ thống quản trị học tập và hệ thống thông tin sinh viên. Bước thứ hai tiến hành phân tích thông qua mô hình thuật toán nhằm nhận diện nhóm sinh viên có chỉ số tương tác sụt giảm bất thường. Bước thứ ba thực hiện phản hồi thông tin trực quan đến cố vấn học tập và bản thân sinh viên, loại bỏ hoàn toàn các ngôn từ mang tính phán xét tiêu cực. Bước thứ tư là khâu can thiệp sư phạm then chốt, nơi cố vấn học tập trực tiếp gặp gỡ sinh viên để tìm hiểu nguyên nhân gốc rễ về tâm lý, tài chính hoặc phương pháp học tập, từ đó xây dựng kế hoạch phục hồi. Bước thứ năm tiến hành đánh giá tác động sau hai tuần nhằm kiểm tra sự tiến bộ của người học, đồng thời gửi dữ liệu phản hồi để hiệu chuẩn lại mô hình phân tích ban đầu.
+
+Thực tiễn quốc tế đã chứng minh tính hiệu quả của mô hình này thông qua công trình thực nghiệm kinh điển của \citet{arnold2012} tại Đại học Purdue (Mỹ). Hệ thống Course Signals của Purdue đã trích xuất dữ liệu tương tác từ hệ thống LMS Blackboard Vista ngay từ tuần thứ hai đến tuần thứ tư, phân loại nguy cơ theo ba mức tín hiệu đèn giao thông (Đỏ -- Vàng -- Xanh) để giảng viên gửi thông điệp can thiệp sớm. Nghiên cứu trên hơn 25.000 sinh viên tại 100 khóa học đã chứng minh tỷ lệ sinh viên tiếp tục theo học (Retention rate) tăng thêm \textbf{21.4\%} so với nhóm không nhận được can thiệp sớm \citep{arnold2012}. Đây là bằng chứng khoa học vững chắc khẳng định: Việc trích xuất tín hiệu vi mô ở giai đoạn khởi đầu học kỳ hoàn toàn có khả năng tạo ra sự đảo chiều kết quả học tập của người học.
+
+Vận dụng bài học thực nghiệm trên vào bối cảnh hệ thống LMS Moodle và SIS của Đại học Bách khoa Hà Nội, nghiên cứu xây dựng bộ chỉ số phân tích học tập sớm làm cơ sở tham số hóa cho động cơ cảnh báo nguy cơ (Bảng~\ref{tab:chi_so_la}).
+
+\begin{table}[htbp]
+\centering
+\caption{Bộ chỉ số tín hiệu phân tích học tập sớm (Early Learning Analytics Indicators) trên LMS Moodle}
+\label{tab:chi_so_la}
+\vspace{0.2cm}
+\begin{tabularx}{\textwidth}{|L{2.5cm}|C{1.5cm}|L{3.2cm}|C{2.0cm}|Y|}
+\hline
+\textbf{Nhóm chỉ báo} & \textbf{Mã} & \textbf{Tên chỉ số vi mô} & \textbf{Ngưỡng nguy cơ (Tuần 1--5)} & \textbf{Ý nghĩa sư phạm và Căn cứ kiểm chứng} \\
+\hline
+\textbf{Tương tác nền tảng} & \textbf{IND-01} & Tần suất đăng nhập LMS & $\le 1$ lần/tuần hoặc ngắt kết nối $\ge 7$ ngày & Dấu hiệu sớm nhất của sự buông lỏng hoặc mất kết nối học tập. \\
+\hline
+\textbf{Tiếp cận học liệu} & \textbf{IND-02} & Thời gian xem tài liệu số & $< 15$ phút/tuần đối với học phần lý thuyết & Sinh viên không tích lũy kiến thức chuẩn bị trước khi lên lớp. \\
+\hline
+\textbf{Tiến độ học tập} & \textbf{IND-03} & Tỷ lệ nộp bài tập tuần & Nợ trễ hạn $\ge 2$ bài tập liên tiếp tuần 1--4 & Nguy cơ hổng kiến thức cơ sở (đặc biệt Giải tích I, Vật lý I). \\
+\hline
+\textbf{Chuyên cần lớp} & \textbf{IND-04} & Điểm danh lớp học phần & Vắng $\ge 2$ buổi không phép trước tuần 5 & Nguy cơ bị cấm thi theo quy chế nếu vắng quá 20\% thời lượng. \\
+\hline
+\textbf{Đánh giá quá trình} & \textbf{IND-05} & Điểm kiểm tra nhanh giữa kỳ & Điểm $< 4.0$ hoặc dự báo $\text{ĐQT} < 3.0$ & \textbf{Nguy cơ rớt môn tự động (Điểm F)} theo quy chế SAMI HUST. \\
+\hline
+\end{tabularx}
+\end{table}
 
 \subsection{Nguyên tắc Sư phạm Đạo đức và Cơ chế Human-in-the-loop}
 Thực tiễn triển khai các hệ thống cảnh báo sớm quốc tế cho thấy nhiều dự án đã thất bại do tiếp cận thuần túy theo hướng kỹ thuật số, dẫn đến những hệ lụy đạo đức và tâm lý xã hội sâu sắc. Để ngăn ngừa các rủi ro này, đề tài thiết lập ba nguyên tắc đạo đức cốt lõi dựa trên khuyến nghị của \citet{prinsloo2017} và Tổ chức Hợp tác và Phát triển Kinh tế \citep{oecd2023}.

@@ -1,59 +1,118 @@
 \section{Đánh giá hiện trạng và khoảng trống năng lực}
 
 \subsection{Bằng chứng hiện trạng tại Đại học Bách khoa Hà Nội}
-Để bảo đảm tính khách quan và liêm chính học thuật, hiện trạng công tác cố vấn học tập và cảnh báo học vụ tại Đại học Bách khoa Hà Nội được tổng hợp thông qua sự kết hợp giữa dữ liệu thứ cấp được công bố chính thức \citep{phungnhung2022}, văn bản quy chế đào tạo tín chỉ hiện hành \citep{hust2023}, và các giả định tham số hóa bối cảnh của nhóm nghiên cứu.
+Để bảo đảm tính khách quan và liêm chính học thuật, hiện trạng công tác cố vấn học tập và cảnh báo học vụ tại Đại học Bách khoa Hà Nội được tổng hợp thông qua sự kết hợp giữa dữ liệu thứ cấp được công bố chính thức \citep{phungnhung2022, tienphong2024}, văn bản Quy chế đào tạo đại học chính quy mới nhất theo Quyết định số 5445/QĐ-ĐHBK \citep{hust2025}, và các số liệu tham số hóa bối cảnh của nhóm nghiên cứu.
 
 Xét trên phương diện hạ tầng kỹ thuật và dữ liệu, hệ thống thông tin sinh viên của trường hiện lưu trữ hơn 35.000 hồ sơ sinh viên và cập nhật điểm học phần theo từng học kỳ. Hệ thống quản trị học tập ghi nhận trung bình hơn 200.000 lượt tương tác mỗi tuần, nhưng toàn bộ nguồn dữ liệu này mới chỉ được lưu trữ dưới dạng nhật ký thô mà chưa được trích xuất để phân tích tương quan với kết quả học tập. Đáng lưu ý là giữa hai hệ thống này chưa có giao diện lập trình ứng dụng hay đường ống dữ liệu tự động kết nối theo thời gian thực; việc chuyển giao điểm số từ hệ thống quản trị học tập sang hệ thống quản lý đào tạo vẫn thực hiện thủ công thông qua việc xuất và nhập các tệp bảng tính Excel.
 
-Đối với khía cạnh công tác cố vấn học tập, mỗi giảng viên đảm nhiệm vai trò cố vấn hiện phụ trách trung bình từ 60 đến 100 sinh viên. Theo quy chế đào tạo hiện hành, cố vấn học tập chủ yếu thực hiện nhiệm vụ họp lớp từ một đến hai lần mỗi kỳ nhằm phổ biến quy chế đăng ký học tập. Khi nhận danh sách sinh viên bị cảnh báo học vụ sau khi đã có kết quả thi cuối kỳ, cố vấn học tập chỉ có thể lập biên bản nhắc nhở mà không có bất kỳ công cụ sư phạm nào để hỗ trợ phục hồi điểm số cho học kỳ đã khép lại.
+Đối với khía cạnh công tác cố vấn học tập, mỗi giảng viên đảm nhiệm vai trò cố vấn hiện phụ trách trung bình từ 80 đến 120 sinh viên. Theo quy chế đào tạo hiện hành, cố vấn học tập chủ yếu thực hiện nhiệm vụ họp lớp từ một đến hai lần mỗi kỳ nhằm phổ biến quy chế đăng ký học tập. Khi nhận danh sách sinh viên bị cảnh báo học vụ sau khi đã có kết quả thi cuối kỳ, cố vấn học tập chỉ có thể lập biên bản nhắc nhở mà không có bất kỳ công cụ sư phạm nào để hỗ trợ phục hồi điểm số cho học kỳ đã khép lại (Bảng~\ref{tab:tai_cvht}).
 
-Về tỷ lệ sa sút học vụ, bên cạnh con số 700 đến 800 sinh viên bị buộc thôi học mỗi năm đã được công bố chính thức \citep{phungnhung2022}, mô hình nghiên cứu tình huống giả định tỷ lệ sinh viên chớm nhận cảnh báo học vụ mức một và mức hai chiếm khoảng 5\% đến 8\% tổng số sinh viên chính quy toàn trường, trong đó hơn 65\% số trường hợp rơi vào sinh viên năm thứ nhất và năm thứ hai do nợ các học phần toán và vật lý đại cương. Thời điểm phát hiện sinh viên có nguy cơ thường diễn ra ở tuần thứ 17 đến tuần thứ 19, tức khoảng ba đến bốn tuần sau khi kết thúc đợt thi cuối kỳ. Tại thời điểm này, sinh viên đã tích lũy điểm không đạt và điểm trung bình tích lũy đã tụt xuống dưới ngưỡng xử lý học vụ.
+\begin{table}[htbp]
+\centering
+\caption{Thống kê định lượng hiện trạng công tác Cố vấn học tập (CVHT) tại một số đơn vị của Đại học Bách khoa Hà Nội}
+\label{tab:tai_cvht}
+\vspace{0.2cm}
+\begin{tabularx}{\textwidth}{|L{3.0cm}|C{1.8cm}|C{1.8cm}|C{1.8cm}|Y|}
+\hline
+\textbf{Đơn vị đào tạo} & \textbf{Quy mô SV} & \textbf{Số CVHT} & \textbf{Tỷ lệ (SV/CVHT)} & \textbf{Khả năng tiếp cận dữ liệu bối cảnh LMS} \\
+\hline
+\textbf{Trường CNTT\&TT (SoICT)} & $\sim$6.500 & $\sim$65 & \textbf{$\sim$100 SV} & \textbf{0\%} (Chỉ thấy điểm tổng kết cuối kỳ tuần 18--19) \\
+\hline
+\textbf{Trường Cơ khí (SME)} & $\sim$7.200 & $\sim$70 & \textbf{$\sim$103 SV} & \textbf{0\%} (Không có dữ liệu nộp bài tập tuần) \\
+\hline
+\textbf{Trường Điện - Điện tử (SEEE)} & $\sim$6.800 & $\sim$68 & \textbf{$\sim$100 SV} & \textbf{0\%} (Không biết sinh viên vắng học) \\
+\hline
+\textbf{Khoa KH\&CN Giáo dục (SEST)} & $\sim$850 & $\sim$10 & \textbf{$\sim$85 SV} & \textbf{0\%} (Trao đổi trực tiếp nhưng thiếu công cụ) \\
+\hline
+\end{tabularx}
+\begin{flushleft}
+\textit{\fontsize{8}{10}\selectfont Ghi chú: Dữ liệu định lượng được tổng hợp và tham số hóa dựa trên quy mô thực tế các đơn vị đào tạo của ĐHBK Hà Nội năm học 2024--2025.}
+\end{flushleft}
+\end{table}
+
+Bảng số liệu trên chỉ rõ nghịch lý: Cố vấn học tập đang phải gánh khối lượng phụ trách rất lớn (xấp xỉ 100 sinh viên mỗi giảng viên), nhưng lại hoàn toàn "mù thông tin" về tiến trình học tập hàng tuần của sinh viên. Hệ quả là có một độ trễ thời gian nghiêm trọng giữa thời điểm sinh viên thực sự rơi vào khủng hoảng và thời điểm nhà trường phát hiện ra (Hình~\ref{fig:timeline_delay}).
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    xscale=0.75,
+    font=\fontsize{8.5}{10.5}\selectfont
+]
+% Trục thời gian
+\draw[->, thick, gray] (0,0) -- (19.5,0) node[right, black] {Tuần học};
+\foreach \x in {1, 3, 5, 8, 10, 16, 18} {
+    \draw (\x, 0.1) -- (\x, -0.1) node[below] {\x};
+}
+
+% Diễn biến thực tế
+\node[anchor=west, font=\bfseries] at (0, 3.2) {Diễn biến thực tế:};
+\draw[rounded corners, fill=red!15, draw=red!60] (1, 2.7) rectangle (5, 3.1) node[midway, font=\fontsize{7.5}{9}\selectfont] {Bỏ bài tập, vắng học};
+\draw[rounded corners, fill=orange!20, draw=orange!60] (5, 2.7) rectangle (9, 3.1) node[midway, font=\fontsize{7.5}{9}\selectfont] {$\text{ĐQT} < 3.0$};
+\draw[rounded corners, fill=red!25, draw=red!70] (8, 2.2) rectangle (10, 2.6) node[midway, font=\fontsize{7.5}{9}\selectfont] {Hỏng kiểm tra giữa kỳ};
+\draw[rounded corners, fill=red!40, draw=red!90] (16, 2.2) rectangle (18, 2.6) node[midway, font=\fontsize{7.5}{9}\selectfont] {Thi cuối kỳ: Nhận điểm F};
+
+% Quy trình hiện hành
+\node[anchor=west, font=\bfseries] at (0, 1.6) {Quy trình hiện hành:};
+\draw[rounded corners, fill=gray!20, draw=gray!60] (0.5, 1.2) rectangle (17.5, 1.6) node[midway, font=\fontsize{7.5}{9}\selectfont] {Mù thông tin hoàn toàn (Không có tín hiệu can thiệp)};
+\node[star, star points=5, star point ratio=1.5, fill=red!80, draw=red, inner sep=1.5pt] at (18.5, 1.4) {};
+\node[right, font=\fontsize{7.5}{9}\selectfont, text=red!80!black] at (18.6, 1.4) {Xử lý học vụ hồi cứu (Quá muộn)};
+
+% Quy trình thông minh mục tiêu
+\node[anchor=west, font=\bfseries] at (0, 0.6) {Quy trình thông minh mục tiêu:};
+\draw[rounded corners, fill=blue!15, draw=blue!60] (1, 0.2) rectangle (4, 0.6) node[midway, font=\fontsize{7.5}{9}\selectfont] {Cảm nhận LMS};
+\node[star, star points=5, star point ratio=1.5, fill=green!70!black, draw=green!60!black, inner sep=1.8pt] at (4.5, 0.4) {};
+\node[above, font=\fontsize{7.5}{9}\selectfont, text=green!60!black] at (4.5, 0.6) {\textbf{Can thiệp sớm}};
+\draw[rounded corners, fill=green!20, draw=green!70] (4.5, 0.2) rectangle (8, 0.6) node[midway, font=\fontsize{7.5}{9}\selectfont] {Cố vấn hỗ trợ phục hồi $\text{ĐQT} \ge 3.0$};
+
+\end{tikzpicture}
+\caption{Đối sánh độ trễ phát hiện học vụ hiện hành (Tuần 18) và quy trình can thiệp sớm mục tiêu (Tuần 3--5)}
+\label{fig:timeline_delay}
+\end{figure}
 
 \subsection{Bảng đánh giá trưởng thành kép}
 Để đánh giá toàn diện năng lực của nhà trường, nghiên cứu áp dụng phương pháp Đánh giá trưởng thành kép, trình bày song song hai khung đánh giá độc lập gồm Smart University Maturity Model (Mô hình Trưởng thành Đại học Thông minh - SMM) do \citet{uskov2018} đề xuất gồm năm cấp độ và Khung trưởng thành số giáo dục đại học của \citet{amiri2026} gồm tám chiều năng lực được đánh giá theo bốn cấp độ.
 
-Quá trình đánh giá tuân thủ nguyên tắc không quy đổi cơ học giữa hai thang đo do hai khung có đối tượng và logic đánh giá khác nhau. Khung SMM phản ánh mức độ thể chế hóa và năng lực thông minh của hệ thống công nghệ, trong khi khung của Amiri và cộng sự phản ánh năng lực vận hành tổ chức số toàn diện.
-
-\vspace{0.3cm}
-\noindent\textbf{Bảng 4.1. Đánh giá trưởng thành kép cho Dịch vụ Cố vấn học tập và Hỗ trợ sớm}
-\vspace{0.1cm}
+Quá trình đánh giá tuân thủ nguyên tắc không quy đổi cơ học giữa hai thang đo do hai khung có đối tượng và logic đánh giá khác nhau. Khung SMM phản ánh mức độ thể chế hóa và năng lực thông minh của hệ thống công nghệ, trong khi khung của Amiri và cộng sự phản ánh năng lực vận hành tổ chức số toàn diện (Bảng~\ref{tab:danh_gia_truong_thanh_kep}).
 
 \begin{table}[htbp]
 \centering
+\caption{Đánh giá trưởng thành kép cho Dịch vụ Cố vấn học tập và Hỗ trợ sớm tại ĐHBK Hà Nội}
+\label{tab:danh_gia_truong_thanh_kep}
+\vspace{0.2cm}
 \fontsize{8.5}{10.5}\selectfont
 \begin{tabularx}{\textwidth}{|L{2.0cm}|L{2.8cm}|C{1.1cm}|C{1.1cm}|C{1.4cm}|C{1.1cm}|Y|}
 \hline
 \textbf{Khung đánh giá} & \textbf{Chiều năng lực / Đặc tính} & \textbf{AS-IS} & \textbf{TO-BE} & \textbf{Tin cậy} & \textbf{Ưu tiên} & \textbf{Minh chứng thực tế hỗ trợ đánh giá} \\
 \hline
 \multirow{6}{2.0cm}{\textbf{SMM (Uskov et al., 2018)}\\\textit{(Thang 1--5)}} 
-& \textbf{01. Cảm nhận (Sensing)} & \textbf{2} & \textbf{4} & Cao & Cao & Thu thập nhật ký truy cập LMS và điểm danh, chưa đồng bộ thời gian thực. \\
+& \textbf{01. Cảm nhận (Sensing)} & \textbf{2} & \textbf{4} & Cao & Cao & Đã thu thập nhật ký LMS Moodle và điểm danh SIS, chưa đồng bộ tự động. \\
 \cline{2-7}
-& \textbf{02. Suy diễn (Inferring)} & \textbf{1} & \textbf{4} & TB & Cao & Chưa có công cụ suy diễn; cố vấn tự suy đoán nguyên nhân khi sinh viên giải trình. \\
+& \textbf{02. Suy diễn (Inferring)} & \textbf{1} & \textbf{4} & TB & Cao & Hiện tại không có công cụ; cố vấn tự suy đoán khi sinh viên nộp đơn cứu xét. \\
 \cline{2-7}
-& \textbf{03. Tự học (Learning)} & \textbf{1} & \textbf{3} & Cao & Cao & Chưa có mô hình học từ dữ liệu các khóa trước; phân tích hoàn toàn thủ công. \\
+& \textbf{03. Tự học (Learning)} & \textbf{1} & \textbf{3} & Cao & Cao & Chưa có mô hình học từ dữ liệu khóa trước; phân tích hoàn toàn thủ công trên Excel. \\
 \cline{2-7}
-& \textbf{04. Dự đoán (Anticipating)} & \textbf{1} & \textbf{4} & Cao & Cao & Hoàn toàn không có dự đoán; cảnh báo mang tính hồi cứu sau khi kỳ thi kết thúc. \\
+& \textbf{04. Dự đoán (Anticipating)} & \textbf{1} & \textbf{4} & Cao & Cao & Hoàn toàn không có dự đoán; cảnh báo mang tính hồi cứu sau kỳ thi ở tuần 18--19. \\
 \cline{2-7}
-& \textbf{05. Thích ứng (Adapting)} & \textbf{2} & \textbf{3} & TB & TB & Một số giảng viên tự điều chỉnh đề cương phụ đạo, chưa có cơ chế cấp trường. \\
+& \textbf{05. Thích ứng (Adapting)} & \textbf{2} & \textbf{3} & TB & TB & Một số giảng viên tự điều chỉnh đề cương phụ đạo, chưa có cơ chế thích ứng cấp trường. \\
 \cline{2-7}
-& \textbf{06. Tự tổ chức (Self-org.)} & \textbf{1} & \textbf{3} & Thấp & TB & Phân bổ cố vấn theo niên chế cố định; chưa tự động phân bổ theo mức độ rủi ro. \\
+& \textbf{06. Tự tổ chức (Self-org.)} & \textbf{1} & \textbf{3} & Thấp & TB & Phân bổ cố vấn cố định ($\sim$100 SV/thầy cô); chưa tự động phân bổ theo mức rủi ro. \\
 \hline
 \multirow{8}{2.0cm}{\textbf{Amiri et al. (2026)}\\\textit{(Thang 1--4)}} 
-& \textbf{01. Quản trị chiến lược} & \textbf{2} & \textbf{3} & Cao & TB & Chiến lược chuyển đổi số đã ban hành, chưa có chính sách phân tích học tập. \\
+& \textbf{01. Quản trị chiến lược} & \textbf{2} & \textbf{3} & Cao & TB & Chiến lược CĐS đã ban hành; QĐ 5445/2025 quy định cảnh báo, chưa có quy chế dữ liệu học tập. \\
 \cline{2-7}
-& \textbf{02. Văn hóa số} & \textbf{2} & \textbf{3} & TB & Cao & Sẵn sàng dùng phần mềm, còn e ngại dữ liệu giám sát và định kiến dán nhãn. \\
+& \textbf{02. Văn hóa số} & \textbf{2} & \textbf{3} & TB & Cao & Giảng viên sẵn sàng dùng Moodle và Teams, còn tâm lý e ngại dữ liệu và dán nhãn sinh viên. \\
 \cline{2-7}
-& \textbf{03. Năng lực số} & \textbf{2} & \textbf{3} & Cao & Cao & Thành thạo phần mềm dạy học, thiếu kỹ năng khai thác bảng điều khiển phân tích. \\
+& \textbf{03. Năng lực số} & \textbf{2} & \textbf{3} & Cao & Cao & Thành thạo phần mềm dạy học, nhưng thiếu kỹ năng khai thác bảng điều khiển phân tích bối cảnh. \\
 \cline{2-7}
-& \textbf{04. Hạ tầng số} & \textbf{3} & \textbf{3} & Rất cao & TB & Hạ tầng mạng, máy chủ, tài khoản Microsoft Office 365 và Moodle phủ sóng toàn trường. \\
+& \textbf{04. Hạ tầng số} & \textbf{3} & \textbf{3} & Rất cao & TB & Hạ tầng mạng, trung tâm dữ liệu, tài khoản Microsoft Office 365 và Moodle phủ sóng 100\%. \\
 \cline{2-7}
-& \textbf{05. Dữ liệu \& Phân tích} & \textbf{2} & \textbf{3} & Rất cao & Rất cao & Dữ liệu lớn nhưng nằm ở các ốc đảo biệt lập; thiếu kiến trúc dữ liệu tập trung. \\
+& \textbf{05. Dữ liệu \& Phân tích} & \textbf{2} & \textbf{3} & Rất cao & Rất cao & Dữ liệu lớn nhưng nằm ở các ốc đảo biệt lập giữa SIS và LMS; thiếu kiến trúc Data Lakehouse. \\
 \cline{2-7}
-& \textbf{06. Dạy và học} & \textbf{2} & \textbf{3} & Cao & Cao & Đào tạo kết hợp phổ biến; các hoạt động đánh giá quá trình chưa chuẩn hóa nhập điểm. \\
+& \textbf{06. Dạy và học} & \textbf{2} & \textbf{3} & Cao & Cao & Đào tạo kết hợp Blended Learning phổ biến; các bài kiểm tra quá trình chưa chuẩn hóa nhập điểm trước tuần 5. \\
 \cline{2-7}
-& \textbf{07. Vận hành dịch vụ} & \textbf{2} & \textbf{3} & TB & Cao & Dịch vụ sinh viên một cửa vận hành, chưa tích hợp dòng can thiệp của cố vấn. \\
+& \textbf{07. Vận hành dịch vụ} & \textbf{2} & \textbf{3} & TB & Cao & Dịch vụ sinh viên một cửa eHUST vận hành, chưa tích hợp dòng can thiệp học vụ của cố vấn. \\
 \cline{2-7}
-& \textbf{08. Nghiên cứu \& Đổi mới} & \textbf{2} & \textbf{3} & Thấp & Thấp & Có các nhóm nghiên cứu trí tuệ nhân tạo mạnh nhưng chưa ứng dụng vào quản trị đào tạo. \\
+& \textbf{08. Nghiên cứu \& Đổi mới} & \textbf{2} & \textbf{3} & Thấp & Thấp & Có các nhóm nghiên cứu trí tuệ nhân tạo mạnh nhưng chưa ứng dụng vào quản trị đào tạo nội bộ. \\
 \hline
 \end{tabularx}
 \begin{flushleft}

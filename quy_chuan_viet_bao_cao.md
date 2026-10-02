@@ -3,7 +3,26 @@
 
 ---
 
-## I. MỤC ĐÍCH & PHẠM VI ÁP DỤNG
+## I. QUY CHUẨN ĐẶT TÊN TIÊU ĐỀ VÀ ĐỀ MỤC CON (TITLES & SUBTITLES)
+
+* **Sử dụng danh ngữ học thuật khái quát:** Toàn bộ hệ thống tiêu đề và đề mục con (cấp 1, 2, 3...) bắt buộc phải được cấu tạo bằng **danh ngữ khoa học cô đọng**, có tính khái quát cao, sang trọng và chuẩn mực theo phong cách luận văn, đề án trình độ cao học.
+* **Cấm dùng động từ hành động đầu câu (Loại bỏ văn phong AI và lối liệt kê công việc):** Tuyệt đối không đặt tiêu đề bằng các động ngữ chỉ thao tác (như: *Xây dựng..., Phân tích..., Thiết kế..., Thực hành..., Xử lý..., Đánh giá...*). Lối đặt tên bằng động từ hành động khiến văn bản mang tính chất "kể việc", giống như một bản đề cương công việc (work plan), to-do list hoặc prompt của AI hơn là một công trình nghiên cứu khoa học.
+* **Không đưa chi tiết vụn vặt vào tiêu đề:** Tiêu đề định vị chủ đề nghiên cứu, không liệt kê số lượng, công cụ hay chi tiết tác nghiệp nhỏ nhặt (ví dụ: viết *"Bộ công cụ đo lường và đánh giá chất lượng"* thay vì *"Thiết kế hai công cụ đo lường..."*; viết *"Chu trình cải tiến liên tục theo tiêu chuẩn ISO 21001:2018"* thay vì *"Vận hành chu trình Hoạch định - Thực hiện - Kiểm tra - Cải tiến khép kín..."*).
+* **Không đặt dấu hai chấm `:` ở cuối tiêu đề:** Tiêu đề là một cụm từ độc lập, tuyệt đối không dùng dấu `:` làm cầu nối văn bản.
+
+---
+
+## II. QUY CHUẨN KIẾN TRÚC TỆP TIN CHO BÁO CÁO ĐA PHẦN (MULTI-PART FILE SEPARATION)
+
+* **Mỗi phần (Part/Chương) bắt buộc phải là 01 file độc lập:** Khi báo cáo hoặc đề án có quy mô từ hai phần (Parts) hoặc nhiều chương lớn trở lên, **tuyệt đối không gom toàn bộ nội dung đồ sộ vào một file duy nhất**.
+* **Nguyên tắc phân chia tệp tin:**
+  * Mỗi phần lớn/chương lớn được biên soạn và lưu trữ trong một tệp tin Markdown độc lập (ví dụ: `part_1_thuc_trang.md`, `part_2_tieu_chuan.md`, `part_3_he_thong_iqa.md`, `part_4_dao_duc.md`...).
+  * Duy trì một tệp tin tổng quan (`README.md`, `de_an_tong_the.md` hoặc `index.md`) chứa trang bìa, mục lục tổng thể, tóm tắt đề án và liên kết dẫn đến từng file thành phần.
+* **Mục đích:** Đảm bảo tính module hóa cao, kiểm soát phiên bản chính xác, dễ dàng đọc, rà soát chuyên sâu từng phần mà không bị quá tải ngữ cảnh (context limit) hoặc nguy cơ lỗi ghi đè dữ liệu lớn.
+
+---
+
+## III. MỤC ĐÍCH & PHẠM VI ÁP DỤNG
 
 Tài liệu này tổng hợp toàn bộ các quy chuẩn về **Nội dung, Thuật ngữ, Hình thức Trình bày và Văn phong** nhằm giúp tạo ra các bài báo cáo khoa học, tiểu luận môn học đạt chuẩn mực học thuật tại Việt Nam, đồng thời **loại bỏ hoàn toàn các vết dấu văn mẫu và định dạng đặc trưng của AI (AI-isms)**.
 
@@ -11,7 +30,7 @@ Cẩm nang này được thiết kế để tái sử dụng làm tiêu chuẩn 
 
 ---
 
-## II. QUY TẮC NGHỆ THUẬT VIẾT VĂN & LOẠI BỎ VẾT DẤU AI
+## IV. QUY TẮC NGHỆ THUẬT VIẾT VĂN & LOẠI BỎ VẾT DẤU AI
 
 ### 1. Danh sách Cụm từ Cấm (Blacklisted AI Tropes & Buzzwords)
 Khi viết báo cáo, **TUYỆT ĐỐI KHÔNG SỬ DỤNG** các cụm từ chuyển ý gượng gạo và văn mẫu AI thường gặp sau:
@@ -36,7 +55,7 @@ Khi viết báo cáo, **TUYỆT ĐỐI KHÔNG SỬ DỤNG** các cụm từ chuy
 
 ---
 
-## III. QUY TẮC NGÔN NGỮ & XỬ LÝ THUẬT NGỮ
+## V. QUY TẮC NGÔN NGỮ & XỬ LÝ THUẬT NGỮ
 
 ### 1. Quy tắc Ngôn ngữ Tiếng Việt (Quy tắc Vàng)
 > [!CAUTION]
@@ -61,7 +80,7 @@ $$\text{"Từ tiếng Anh (Từ tiếng Việt)"}$$
 
 ---
 
-## IV. QUY CHUẨN HÌNH THỨC TRÌNH BÀY (LAYOUT & FORMATTING)
+## VI. QUY CHUẨN HÌNH THỨC TRÌNH BÀY (LAYOUT & FORMATTING)
 
 ### 1. Triệt tiêu Lạm dụng Bullet Point dạng `* **Từ khóa:** Nội dung` (Vết dấu AI số 1)
 * **Dấu hiệu AI cần tránh:**
@@ -106,7 +125,7 @@ Tất cả các bảng trong báo cáo bắt buộc phải có **Tên Bảng ch�
 
 ---
 
-## V. MA TRẬN ÁNH XẠ CẤU TRÚC BÁO CÁO (STRUCTURAL ALIGNMENT)
+## VII. MA TRẬN ÁNH XẠ CẤU TRÚC BÁO CÁO (STRUCTURAL ALIGNMENT)
 
 Để đảm bảo tính logic và chặt chẽ của một bài báo cáo khoa học, cấu trúc phải đảm bảo tính đối ứng 1:1 giữa các phần:
 
@@ -127,18 +146,20 @@ graph TD
 
 ---
 
-## VI. BẢNG CHECKLIST KIỂM TRA TRƯỚC KHI XUẤT BẢN
+## VIII. BẢNG CHECKLIST KIỂM TRA TRƯỚC KHI XUẤT BẢN
 
-Trước khi hoàn tất bài báo cáo, hãy tự kiểm tra qua Bảng Checklist 8 điểm sau:
+Trước khi hoàn tất bài báo cáo, hãy tự kiểm tra qua Bảng Checklist 10 điểm sau:
 
 - [ ] **Check 1:** Có từ tiếng Việt nào bị viết tắt không? (Nếu có *SV, GV, ĐH, CHNC, KQNC* $\rightarrow$ Sửa ngay!).
-- [ ] **Check 2:** Các từ tiếng Anh lần đầu xuất hiện có đúng dạng `"Từ tiếng Anh (Từ tiếng Việt)"` không?
-- [ ] **Check 3:** Thuật ngữ `Process Mining` có được viết đúng tên tiếng Anh từ lần thứ 2 trở đi không?
-- [ ] **Check 4:** Có bị lạm dụng bullet point dạng `* **Từ khóa:** ...` không? (Nếu có $\rightarrow$ Chuyển thành đoạn văn liên tục!).
-- [ ] **Check 5:** Có đường kẻ ngang `---` thừa nào trong bài không? (Nếu có $\rightarrow$ Xóa ngay!).
-- [ ] **Check 6:** Có tiêu đề nào kết thúc bằng dấu hai chấm `:` không? (Nếu có $\rightarrow$ Xóa dấu `:`!).
-- [ ] **Check 7:** Các Bảng biểu có tên bảng phía trên chưa? (Ví dụ: *Bảng 1. ...*).
-- [ ] **Check 8:** Đã loại bỏ hoàn toàn các cụm từ sáo rỗng AI (*Nhìn chung, Bên cạnh đó, Không thể phủ nhận...*) chưa?
+- [ ] **Check 2:** Tiêu đề (titles/subtitles) đã dùng danh ngữ học thuật khái quát chưa? Có bị bắt đầu bằng động từ hành động (*Xây dựng..., Phân tích..., Thiết kế...*) hay mang văn phong liệt kê/AI prompt không?
+- [ ] **Check 3:** Nếu báo cáo có nhiều phần (multi-part), mỗi phần đã được tách thành 01 file độc lập riêng biệt chưa?
+- [ ] **Check 4:** Các từ tiếng Anh lần đầu xuất hiện có đúng dạng `"Từ tiếng Anh (Từ tiếng Việt)"` không?
+- [ ] **Check 5:** Thuật ngữ `Process Mining` có được viết đúng tên tiếng Anh từ lần thứ 2 trở đi không?
+- [ ] **Check 6:** Có bị lạm dụng bullet point dạng `* **Từ khóa:** ...` không? (Nếu có $\rightarrow$ Chuyển thành đoạn văn liên tục!).
+- [ ] **Check 7:** Có đường kẻ ngang `---` thừa nào trong bài không? (Nếu có $\rightarrow$ Xóa ngay!).
+- [ ] **Check 8:** Có tiêu đề nào kết thúc bằng dấu hai chấm `:` không? (Nếu có $\rightarrow$ Xóa dấu `:`!).
+- [ ] **Check 9:** Các Bảng biểu có tên bảng phía trên chưa? (Ví dụ: *Bảng 1. ...*).
+- [ ] **Check 10:** Đã loại bỏ hoàn toàn các cụm từ sáo rỗng AI (*Nhìn chung, Bên cạnh đó, Không thể phủ nhận...*) chưa?
 
 ---
 
