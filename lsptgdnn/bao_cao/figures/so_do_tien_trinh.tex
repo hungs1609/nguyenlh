@@ -1,0 +1,77 @@
+\begin{figure}[htbp]
+\centering
+\resizebox{0.95\linewidth}{!}{%
+\begin{tikzpicture}[
+    node distance = 0.85cm and 0cm,
+    box/.style = {
+        rectangle, 
+        rounded corners=4pt, 
+        draw=blue!70!black, 
+        fill=blue!4, 
+        line width=0.8pt, 
+        text width=14.2cm, 
+        align=center,
+        inner sep=6pt,
+        font=\small
+    },
+    arrow/.style = {
+        -{Stealth[scale=1.1]}, 
+        line width=1.1pt, 
+        draw=blue!60!black
+    }
+]
+
+% Node 1
+\node (n1) [box] {
+    \textbf{Giai đoạn 1945 -- 1954: Kháng chiến kiến quốc và đặt nền móng}\\
+    \textit{Cơ quan chủ quản:} Nha Kỹ thuật vụ (Bộ Quốc gia Giáo dục, theo Sắc lệnh số 119/SL)\\
+    \textit{Mô hình:} Đào tạo công nhân kỹ thuật quốc phòng, phục vụ công xưởng chiến khu
+};
+
+% Node 2
+\node (n2) [box, below=of n1] {
+    \textbf{Giai đoạn 1954 -- 1975: Xây dựng chủ nghĩa xã hội ở miền Bắc và chi viện miền Nam}\\
+    \textit{Cơ quan chủ quản:} Vụ Quản lý nhân công $\rightarrow$ Tổng cục Đào tạo công nhân kỹ thuật (1969)\\
+    \textit{Mô hình:} Đào tạo theo ngành công nghiệp nặng; hợp tác với Liên Xô và Đông Âu
+};
+
+% Node 3
+\node (n3) [box, below=of n2] {
+    \textbf{Giai đoạn 1975 -- 1986: Thống nhất đất nước và kinh tế kế hoạch hóa bao cấp}\\
+    \textit{Cơ quan chủ quản:} Tổng cục Dạy nghề trực thuộc Hội đồng Chính phủ (Nghị định số 240/CP)\\
+    \textit{Mô hình:} Đào tạo theo chỉ tiêu pháp lệnh; Nhà nước bao cấp và phân bổ việc làm
+};
+
+% Node 4
+\node (n4) [box, below=of n3] {
+    \textbf{Giai đoạn 1986 -- 2006: Bước ngoặt Đổi mới và chuyển giao thể chế}\\
+    \textit{Cơ quan chủ quản:} Bộ Giáo dục và Đào tạo $\rightarrow$ Tổng cục Dạy nghề thuộc Bộ Lao động (1998)\\
+    \textit{Mô hình:} Đa dạng hóa loại hình cơ sở dạy nghề thích ứng kinh tế thị trường (Quyết định 253)
+};
+
+% Node 5
+\node (n5) [box, below=of n4] {
+    \textbf{Giai đoạn 2006 -- 2014: Thể chế hóa chuyên biệt theo Luật Dạy nghề 2006}\\
+    \textit{Cơ quan chủ quản:} Tổng cục Dạy nghề (Bộ Lao động -- Thương binh và Xã hội)\\
+    \textit{Mô hình:} Ba cấp trình độ (Sơ cấp nghề, Trung cấp nghề, Cao đẳng nghề); Đề án 1956
+};
+
+% Node 6
+\node (n6) [box, below=of n5] {
+    \textbf{Giai đoạn 2014 -- nay: Hợp nhất toàn diện theo Luật Giáo dục nghề nghiệp 2014}\\
+    \textit{Cơ quan chủ quản:} Tổng cục Giáo dục nghề nghiệp (Bộ Lao động -- Thương binh và Xã hội)\\
+    \textit{Mô hình:} Hệ thống giáo dục nghề nghiệp mở, liên thông; Khung trình độ quốc gia (VQF)
+};
+
+% Lines with arrows
+\draw [arrow] (n1) -- (n2);
+\draw [arrow] (n2) -- (n3);
+\draw [arrow] (n3) -- (n4);
+\draw [arrow] (n4) -- (n5);
+\draw [arrow] (n5) -- (n6);
+
+\end{tikzpicture}%
+}
+\caption{Tiến trình lịch sử và sự chuyển biến thể chế quản lý hệ thống giáo dục nghề nghiệp Việt Nam (1945 -- nay)}
+\label{fig:so_do_tien_trinh}
+\end{figure}
