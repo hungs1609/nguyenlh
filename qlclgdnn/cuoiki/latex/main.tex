@@ -3,23 +3,34 @@
 \usepackage[utf8]{inputenc}
 \usepackage[vietnamese]{babel}
 \shorthandoff{"}
+
+% Cấu hình Font chữ Times New Roman và Cỡ chữ 13pt theo đúng quy định của đề bài
 \usepackage[fontsize=13pt]{scrextend}
 \usepackage{mathptmx}
+
+% Cấu hình lề trang theo quy chuẩn học thuật
 \usepackage[top=2.5cm,bottom=2.5cm,left=3.5cm,right=2.0cm]{geometry}
+
+% Cấu hình giãn dòng 1.3 theo đúng yêu cầu riêng của đề bài
 \usepackage{setspace}
-\setstretch{1.5}
+\setstretch{1.3}
 \usepackage{indentfirst}
+\setlength{\parindent}{1.0cm}
+\setlength{\parskip}{4pt}
+
+% Các gói bảng biểu và đồ họa nâng cao
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amsmath,amssymb}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{calc,shapes.geometric,arrows,positioning}
 \usepackage{url}
-\usepackage{booktabs}
-\usepackage{array}
-\usepackage{tabularx}
-\usepackage{longtable}
-\usepackage{multirow}
 \usepackage[hidelinks]{hyperref}
 
 % Cấu hình đánh số trang ở góc dưới bên phải
@@ -33,54 +44,55 @@
 \usepackage[round]{natbib}
 \newcommand{\parencite}{\citep}
 
-% Thiết lập kiểu cột căn lề linh hoạt cho bảng tabularx
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
-\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
-
-% Cấu hình paragraph thành tiêu đề dạng khối (xuống dòng và thụt đầu dòng đoạn văn tiếp theo)
-\makeatletter
-\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
-  {2.5ex \@plus 1ex \@minus .2ex}%
-  {1.0ex \@plus .2ex}%
-  {\normalfont\normalsize\bfseries}}
-\makeatother
+% Thiết lập khoảng cách cho các tiêu đề
+\usepackage{titlesec}
+\titleformat{\section}{\fontsize{14}{17}\selectfont\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\fontsize{13}{16}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\fontsize{13}{16}\selectfont\bfseries\itshape}{\thesubsubsection.}{0.5em}{}
 
 \begin{document}
 
-% Trang bìa chuẩn
+% 1. Trang bìa chuẩn của Đại học Bách khoa Hà Nội
 \input{trang_bia}
 
 \newpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-% Trang mục lục
+% 2. Phần Tóm tắt đề án
+\input{01_abstract}
+\addcontentsline{toc}{section}{Tóm tắt đề án}
+\newpage
+
+% 3. Mục lục tự động
 \renewcommand{\contentsname}{Mục lục}
+{\setstretch{1.15}
 \tableofcontents
+}
 \newpage
 
-% Phần I: Thực trạng và định hướng quản lý chất lượng
-\input{01_phan_I}
+% 4. Mở đầu đề án
+\input{02_mo_dau}
 \newpage
 
-% Phần II: Tiêu chuẩn đánh giá, hệ thống minh chứng và thực hành tự đánh giá
-\input{02_phan_II}
+% 5. Phần I: Bối cảnh chất lượng và hiện trạng kiểm định cấp cơ sở
+\input{03_phan1_chan_doan_hien_trang}
 \newpage
 
-% Phần III: Hệ thống đảm bảo chất lượng bên trong trên nền tảng số hóa và ISO 21001:2018
-\input{03_phan_III}
+% 6. Phần II: Khung bộ tiêu chí, minh chứng và kết quả tự đánh giá chương trình đào tạo nghề Điện công nghiệp
+\input{04_phan2_tu_danh_gia_ctdt}
 \newpage
 
-% Phần IV: Đạo đức nghề nghiệp và bảo đảm tính toàn vẹn của dữ liệu chất lượng
-\input{04_phan_IV}
+% 7. Phần III: Thiết kế hệ thống đảm bảo chất lượng bên trong và kế hoạch hành động cải tiến theo chu trình PDCA
+\input{05_phan3_he_thong_iqa_pdca}
 \newpage
 
-% Kết luận và Kiến nghị
-\input{05_ket_luan_kien_nghi}
+% 8. Kết luận và Khuyến nghị
+\input{06_ket_luan}
 \newpage
 
-% Danh mục tài liệu tham khảo
-\input{06_tai_lieu_tham_khao}
+% 9. Danh mục tài liệu tham khảo (Bỏ qua Bản cam kết và Phụ lục theo yêu cầu)
+\input{07_tai_lieu_tham_khao}
+\newpage
 
 \end{document}

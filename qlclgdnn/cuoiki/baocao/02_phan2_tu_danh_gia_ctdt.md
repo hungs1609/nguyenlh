@@ -1,0 +1,127 @@
+# PHẦN II. KHUNG BỘ TIÊU CHÍ, MINH CHỨNG VÀ KẾT QUẢ TỰ ĐÁNH GIÁ CHƯƠNG TRÌNH ĐÀO TẠO NGHỀ ĐIỆN CÔNG NGHIỆP
+
+## 2.1. Căn cứ pháp lý và phương pháp luận thiết lập bộ tiêu chí chương trình đào tạo
+
+Việc xây dựng bộ tiêu chí và hệ thống công cụ tự đánh giá cho chương trình đào tạo trình độ cao đẳng nghề Điện công nghiệp tại Trường Cao đẳng nghề Kỹ thuật - Công nghiệp A được thiết lập trên nền tảng pháp lý trực tiếp là Chương III của Thông tư số 14/2024/TT-BLĐTBXH do Bộ Lao động - Thương binh và Xã hội ban hành. Chương này quy định hệ thống chuẩn mực kiểm định đối với chương trình đào tạo trình độ trung cấp và cao đẳng, bao gồm bảy tiêu chí đánh giá toàn diện từ khâu xác định mục tiêu, thiết kế cấu trúc nội dung, điều kiện giảng viên, cơ sở vật chất cho đến công tác giám sát đầu ra và việc làm của người học.
+
+Đồng thời, phương pháp luận thiết lập bộ tiêu chí bám sát quy định tại Quyết định số 1982/QĐ-TTg của Thủ tướng Chính phủ phê duyệt Khung trình độ quốc gia Việt Nam, trong đó xác định trình độ cao đẳng tương ứng với Bậc 5. Ở bậc trình độ này, người học sau khi tốt nghiệp nghề Điện công nghiệp bắt buộc phải có kiến thức thực tế và lý thuyết chuyên sâu về hệ thống cung cấp điện, trang bị điện máy công nghiệp, điều khiển tự động hóa; có kỹ năng phân tích, thiết kế, lắp đặt, vận hành, bảo dưỡng và xử lý sự cố trong các hệ thống điện công nghiệp phức tạp; đồng thời có năng lực làm việc độc lập, sáng tạo, chịu trách nhiệm cá nhân và trách nhiệm đối với nhóm làm việc.
+
+Về phương pháp luận xây dựng chỉ báo, bộ tiêu chí tuân thủ chặt chẽ bốn nguyên tắc khoa học: tính chuẩn mực pháp lý, tính định lượng có thể đo lường được, tính tương thích với chuẩn kỹ năng nghề quốc gia và tính thực chứng của dữ liệu minh chứng. Đối với nghề Điện công nghiệp, một ngành kỹ thuật chịu tác động trực tiếp của quá trình tự động hóa và số hóa công nghiệp, các tiêu chí và tiêu chuẩn không dừng lại ở các yêu cầu cơ học truyền thống mà được cụ thể hóa thành các chỉ báo kỹ thuật chuyên sâu như năng lực lập trình bộ điều khiển logic khả trình (Programmable Logic Controller - PLC), vận hành hệ thống giám sát và thu thập dữ liệu (Supervisory Control and Data Acquisition - SCADA), sử dụng phần mềm thiết kế điện chuyên dụng và tuân thủ các quy chuẩn nghiêm ngặt về an toàn, vệ sinh lao động điện.
+
+## 2.2. Khung bộ tiêu chí và hệ thống chỉ báo đánh giá chương trình đào tạo nghề Điện công nghiệp
+
+Căn cứ quy định tại Điều 9, Điều 10 và Phụ lục 03 ban hành kèm theo Thông tư số 14/2024/TT-BLĐTBXH, hệ thống đánh giá chất lượng chương trình đào tạo trình độ cao đẳng nghề Điện công nghiệp được cấu trúc thành bảy tiêu chí với tổng số bốn mươi tiêu chuẩn. Thang điểm đánh giá áp dụng quy tắc tuyệt đối: mỗi tiêu chuẩn khi đáp ứng đầy đủ các yêu cầu theo quy định được tính 2.5 điểm; tiêu chuẩn không đáp ứng hoặc không có đủ minh chứng hợp lệ bị tính 0 điểm. Tổng số điểm chuẩn tối đa của toàn bộ hệ thống là 100 điểm.
+
+**Bảng 2.1. Khung cấu trúc 07 tiêu chí, 40 tiêu chuẩn và thang điểm kiểm định chương trình đào tạo trình độ cao đẳng nghề Điện công nghiệp**
+
+| Mã tiêu chí | Tên tiêu chí kiểm định | Số lượng tiêu chuẩn | Điểm chuẩn tối đa | Tỷ trọng hệ thống | Các yêu cầu và chỉ báo kỹ thuật trọng tâm của nghề Điện công nghiệp |
+| :---: | :--- | :---: | :---: | :---: | :--- |
+| TC-01 | Mục tiêu, chuẩn đầu ra của chương trình đào tạo | 3 | 7.5 | 7.5% | Mục tiêu phù hợp sứ mạng nhà trường và nhu cầu công nghiệp; chuẩn đầu ra tương thích Bậc 5 Khung trình độ quốc gia; tích hợp năng lực số ứng dụng trong thiết kế và điều khiển điện. |
+| TC-02 | Cấu trúc và nội dung của chương trình đào tạo, giáo trình | 7 | 17.5 | 17.5% | Tỷ lệ thời lượng thực hành đạt tối thiểu 65% tổng thời lượng; có sự tham gia của kỹ sư doanh nghiệp vào rà soát chương trình; giáo trình chuyên ngành được thẩm định và có bản quyền phần mềm hỗ trợ. |
+| TC-03 | Hoạt động đào tạo | 7 | 17.5 | 17.5% | Kế hoạch đào tạo chi tiết đến từng bài thực hành xưởng; áp dụng phương pháp dạy học tích hợp và học theo dự án; phương thức đánh giá năng lực thực hành dựa trên sản phẩm thực tế và thao tác an toàn. |
+| TC-04 | Đội ngũ nhà giáo, cán bộ quản lý và viên chức, người lao động | 6 | 15.0 | 15.0% | Nhà giáo giảng dạy chuyên ngành đạt chuẩn trình độ chuyên môn và nghiệp vụ sư phạm dạy nghề; tối thiểu 50% nhà giáo dạy thực hành đạt chứng chỉ kỹ năng nghề bậc cao; định kỳ đi thực tế tại doanh nghiệp sản xuất điện. |
+| TC-05 | Cơ sở vật chất, thiết bị đào tạo và học liệu | 7 | 17.5 | 17.5% | Xưởng thực hành trang bị điện, xưởng PLC và xưởng máy điện đạt chuẩn diện tích; thiết bị thực hành đồng bộ, tỷ lệ không quá 3 sinh viên trên một mô hình thực hành; hệ thống bảo hộ và an toàn điện đạt chuẩn quốc gia. |
+| TC-06 | Người học và hoạt động hỗ trợ người học | 5 | 12.5 | 12.5% | Công tác tuyển sinh minh bạch; các chính sách miễn giảm học phí, trao học bổng khuyến khích và tư vấn nghề nghiệp; câu lạc bộ kỹ thuật và hỗ trợ khởi nghiệp cho sinh viên ngành điện. |
+| TC-07 | Giám sát, đánh giá chất lượng | 5 | 12.5 | 12.5% | Tỷ lệ duy trì sĩ số toàn khóa đạt trên 85%; tỷ lệ sinh viên tốt nghiệp có việc làm đúng ngành trong 12 tháng đạt trên 75%; cơ chế khảo sát tự động sự hài lòng của doanh nghiệp và người học. |
+| **Tổng** | **Toàn bộ hệ thống tiêu chuẩn kiểm định** | **40** | **100** | **100%** | **Hệ thống đánh giá chất lượng toàn diện chương trình đào tạo nghề Điện công nghiệp** |
+
+Trong cơ cấu phân bổ điểm số, nhóm tiêu chí về chuyên môn trực tiếp bao gồm Tiêu chí 2 (Cấu trúc chương trình), Tiêu chí 3 (Hoạt động đào tạo) và Tiêu chí 5 (Cơ sở vật chất) chiếm tỷ trọng lớn nhất với 17.5 điểm mỗi tiêu chí. Điều này phản ánh rõ nét triết lý của giáo dục nghề nghiệp là lấy năng lực thực hành, tính công nghệ của môi trường đào tạo và phương pháp tổ chức rèn luyện kỹ năng làm trọng tâm cốt lõi.
+
+## 2.3. Khung danh mục minh chứng chuẩn hóa cho chương trình đào tạo nghề Điện công nghiệp
+
+Một hệ thống tiêu chuẩn kiểm định chỉ có giá trị thực tiễn khi được bảo đảm bằng một khung danh mục minh chứng chặt chẽ, đầy đủ và có khả năng kiểm chứng độc lập. Nhằm chấm dứt tình trạng lưu trữ minh chứng phân tán, hình thức và e ngại chia sẻ số liệu từng xảy ra trong đợt tự đánh giá cấp trường năm 2026, nhà trường đã thiết lập quy tắc mã hóa minh chứng chuẩn mực theo cấu trúc mã bốn trường thông tin: ký hiệu H1 đại diện cho Báo cáo tự đánh giá chương trình đào tạo, tiếp theo là số thứ tự tiêu chí gồm hai chữ số, số thứ tự tiêu chuẩn gồm hai chữ số và số thứ tự của minh chứng thành phần gồm hai chữ số.
+
+**Bảng 2.2. Khung danh mục minh chứng chuẩn hóa cho chương trình đào tạo trình độ cao đẳng nghề Điện công nghiệp**
+
+| Mã minh chứng | Tên danh mục minh chứng cốt lõi | Nguồn dữ liệu thu thập và Nơi lưu trữ hồ sơ | Đơn vị đầu mối chủ trì | Hình thức quản lý và Tình trạng số hóa |
+| :---: | :--- | :--- | :--- | :--- |
+| `H1.01.01.01` | Quyết định ban hành mục tiêu chương trình đào tạo nghề Điện công nghiệp; Biên bản lấy ý kiến chuyên gia doanh nghiệp về mục tiêu đào tạo. | Hồ sơ quản lý chương trình; Văn phòng Khoa Điện - Điện tử. | Khoa Điện - Điện tử | Bản giấy có dấu pháp lý và bản điện tử định dạng PDF trên phần mềm nội bộ. |
+| `H1.01.02.01` | Bản mô tả chuẩn đầu ra nghề Điện công nghiệp đối sánh với Bậc 5 Khung trình độ quốc gia; Quyết định công bố công khai trên cổng thông tin điện tử trường. | Trang thông tin điện tử nhà trường; Hồ sơ Phòng Đào tạo. | Phòng Đào tạo | Bản điện tử công khai trực tuyến; lưu trữ lưu chiểu tại Thư viện. |
+| `H1.01.03.01` | Đề cương chi tiết các mô-đun chuyên ngành có tích hợp chuẩn năng lực số; Ma trận chuẩn đầu ra năng lực số ngành Điện công nghiệp. | Kho tài liệu học tập của Khoa; Hồ sơ Phòng Bảo đảm chất lượng. | Khoa Điện - Điện tử | Số hóa toàn bộ trên hệ thống quản lý học tập điện tử của trường. |
+| `H1.02.02.01` | Biên bản các cuộc họp Hội đồng khoa học rà soát, điều chỉnh chương trình đào tạo nghề Điện công nghiệp; Văn bản góp ý của 05 doanh nghiệp đối tác. | Hồ sơ lưu trữ tại Phòng Đào tạo; Biên bản ký kết hợp tác doanh nghiệp. | Phòng Đào tạo, Khoa Điện - Điện tử | Bản in đóng cuốn kèm chữ ký chuyên gia doanh nghiệp; bản quét lưu trữ đám mây. |
+| `H1.02.05.01` | Quyết định ban hành danh mục giáo trình nghề Điện công nghiệp; Biên bản thẩm định giáo trình của Hội đồng chuyên môn; Giấy lưu chiểu giáo trình tại Thư viện. | Thư viện nhà trường; Kho lưu trữ hồ sơ thẩm định chuyên môn. | Thư viện, Khoa Điện - Điện tử | Bản in lưu chiểu tại Thư viện tối thiểu 5 cuốn/giáo trình và bản sách điện tử. |
+| `H1.03.01.01` | Tiến độ đào tạo toàn khóa và thời khóa biểu chi tiết từng học kỳ của các lớp cao đẳng nghề Điện công nghiệp; Sổ tay theo dõi tiến độ giảng dạy của nhà giáo. | Phần mềm quản lý đào tạo trực tuyến; Văn phòng Khoa Điện - Điện tử. | Phòng Đào tạo, Khoa Điện - Điện tử | Dữ liệu số hóa trích xuất theo thời gian thực từ phần mềm quản lý đào tạo. |
+| `H1.03.04.01` | Ngân hàng câu hỏi, đề thi lý thuyết và đề thi thực hành kết thúc mô-đun nghề Điện công nghiệp; Hướng dẫn chấm thi và đáp án biểu điểm chi tiết. | Phòng Khảo thí và Đảm bảo chất lượng; Niêm phong tủ đề thi chuyên dụng. | Phòng Khảo thí và Bảo đảm chất lượng | Bản in niêm phong tuyệt mật và cơ sở dữ liệu ngân hàng đề thi số hóa có mã hóa bảo mật. |
+| `H1.04.02.01` | Hồ sơ trích ngang, văn bằng đại học, thạc sĩ, chứng chỉ kỹ năng nghề quốc gia và quyết định phân công giảng dạy của toàn bộ nhà giáo dạy nghề Điện. | Phòng Tổ chức Cán bộ; Hồ sơ cá nhân của viên chức, người lao động. | Phòng Tổ chức Cán bộ | Bản sao công chứng lưu trữ hồ sơ viên chức kết hợp cơ sở dữ liệu nhân sự điện tử. |
+| `H1.04.05.01` | Kế hoạch và quyết định cử nhà giáo Khoa Điện đi thực tế tại các nhà máy, doanh nghiệp sản xuất điện; Báo cáo thu hoạch sau đợt đi thực tế có xác nhận của doanh nghiệp. | Hồ sơ bồi dưỡng chuyên môn; Văn phòng Khoa Điện - Điện tử. | Khoa Điện - Điện tử | Bản lưu giấy có xác nhận dấu mộc của doanh nghiệp tiếp nhận thực tập. |
+| `H1.05.01.01` | Bảng kê danh mục diện tích xưởng thực hành trang bị điện, xưởng PLC, xưởng điện tử công suất; Sơ đồ bố trí mặt bằng và tải trọng xưởng theo quy chuẩn. | Hồ sơ quản trị cơ sở vật chất; Phòng Quản trị Thiết bị. | Phòng Quản trị Thiết bị | Hồ sơ kỹ thuật bản vẽ hoàn công và dữ liệu kiểm kê tài sản công hàng năm. |
+| `H1.05.03.01` | Sổ nhật ký vận hành, bảo dưỡng định kỳ máy móc thiết bị xưởng điện; Biên bản kiểm tra an toàn điện, an toàn phòng chống cháy nổ và hệ thống tiếp địa định kỳ. | Nhật ký gắn tại từng xưởng thực hành; Hồ sơ kỹ thuật an toàn lao động. | Khoa Điện - Điện tử, Phòng Quản trị Thiết bị | Sổ ghi chép trực tiếp tại hiện trường xưởng và biên bản nghiệm thu kỹ thuật. |
+| `H1.06.02.01` | Danh sách sinh viên nhận học bổng khuyến khích học tập, sinh viên được miễn giảm học phí; Chứng từ chi trả tài chính qua tài khoản ngân hàng sinh viên. | Phòng Công tác học sinh sinh viên; Phòng Kế hoạch Tài chính. | Phòng Công tác học sinh sinh viên | Chứng từ kế toán bản gốc và dữ liệu quản lý dòng tiền sinh viên trên phần mềm. |
+| `H1.07.01.01` | Báo cáo thống kê số liệu sinh viên trúng tuyển, nhập học, biến động sĩ số và tỷ lệ tốt nghiệp các khóa đào tạo cao đẳng nghề Điện công nghiệp. | Cơ sở dữ liệu đào tạo; Phòng Đào tạo và Phòng Công tác học sinh sinh viên. | Phòng Đào tạo | Dữ liệu số liên thông giữa các phần mềm tác nghiệp của nhà trường. |
+| `H1.07.02.01` | Báo cáo kết quả điều tra tình hình việc làm của sinh viên tốt nghiệp nghề Điện công nghiệp sau mười hai tháng; Bản tổng hợp phiếu khảo sát có chữ ký và số điện thoại đối soát. | Cơ sở dữ liệu việc làm sinh viên; Trung tâm Hợp tác Doanh nghiệp và Việc làm. | Trung tâm Hợp tác Doanh nghiệp | Báo cáo phân tích định lượng chính thức và danh sách sinh viên có phản hồi kiểm chứng. |
+| `H1.07.03.01` | Báo cáo tổng hợp ý kiến phản hồi của doanh nghiệp sử dụng lao động về năng lực làm việc của sinh viên nghề Điện công nghiệp sau khi tuyển dụng. | Hồ sơ khảo sát khách hàng; Phòng Bảo đảm chất lượng. | Phòng Bảo đảm chất lượng | Bản báo cáo phân tích số liệu khảo sát điện tử kèm biên bản tọa đàm doanh nghiệp. |
+
+Khung danh mục minh chứng trên đã thiết lập mối liên kết hữu cơ giữa các yêu cầu pháp lý của Thông tư 14/2024/TT-BLĐTBXH với hệ thống quản trị tác nghiệp thực tế của Trường Cao đẳng nghề Kỹ thuật - Công nghiệp A, bảo đảm tính minh bạch, hạn chế tối đa sự đứt gãy thông tin và triệt tiêu tâm lý e ngại cung cấp dữ liệu giữa các đơn vị.
+
+## 2.4. Kết quả thẩm định và phân tích minh chứng thử cho năm tiêu chuẩn điển hình
+
+Để đánh giá mức độ sẵn sàng và độ tin cậy của nguồn dữ liệu trước khi đăng ký kiểm định ngoài, Hội đồng tự đánh giá nhà trường đã tiến hành thu thập thử và thẩm định độc lập hồ sơ minh chứng của năm tiêu chuẩn đại diện cho các nhóm hoạt động chuyên môn trọng yếu của chương trình đào tạo nghề Điện công nghiệp.
+
+**Bảng 2.3. Bảng thẩm định thử hồ sơ minh chứng cho 05 tiêu chuẩn điển hình của chương trình đào tạo nghề Điện công nghiệp**
+
+| Mã tiêu chuẩn | Tên tiêu chuẩn thẩm định | Danh mục minh chứng thu thập thử nghiệm | Đánh giá 04 thuộc tính chất lượng của minh chứng | Kết luận mức độ đáp ứng và Hành động khắc phục |
+| :---: | :--- | :--- | :--- | :--- |
+| **Tiêu chuẩn 1.2** | Chuẩn đầu ra được xác định rõ ràng, đáp ứng Khung trình độ quốc gia và công bố công khai | Bản mô tả chuẩn đầu ra (`H1.01.02.01`); Quyết định phê duyệt của Hiệu trưởng; Ảnh chụp công khai trên trang điện tử trường. | - Tính pháp lý: Xuất sắc, có dấu mộc và chữ ký hợp lệ.<br>- Tính đầy đủ: Đầy đủ các khối kiến thức, kỹ năng.<br>- Tính tin cậy: Cao, đối soát khớp với Bậc 5 VQF.<br>- Tính tương thích: Hoàn toàn phù hợp với tiêu chuẩn. | **ĐẠT YÊU CẦU**<br>Tiếp tục duy trì đường dẫn truy cập công khai và cập nhật định kỳ khi có rà soát chuẩn đầu ra. |
+| **Tiêu chuẩn 1.3** | Chuẩn đầu ra được tích hợp năng lực số phù hợp chuyển đổi số giáo dục nghề nghiệp | Đề cương chi tiết mô-đun CAD điện và PLC (`H1.01.03.01`); Phiếu đánh giá kỹ năng mô phỏng của người học. | - Tính pháp lý: Đạt, đề cương đã được phê duyệt.<br>- Tính đầy đủ: Thiếu ma trận năng lực số toàn khóa.<br>- Tính tin cậy: Trung bình, chưa có bài kiểm tra số độc lập.<br>- Tính tương thích: Khá, đã đưa phần mềm mô phỏng vào giảng dạy. | **ĐẠT CÓ ĐIỀU KIỆN**<br>Bổ sung ma trận tích hợp năng lực số cho toàn bộ 28 mô-đun chuyên ngành trước tháng 10/2026. |
+| **Tiêu chuẩn 2.2** | Nội dung chương trình đào tạo đáp ứng sự thay đổi và có sự tham gia của doanh nghiệp | Biên bản họp Hội đồng khoa học (`H1.02.02.01`); Bản nhận xét của 05 doanh nghiệp; Thỏa thuận hợp tác đào tạo. | - Tính pháp lý: Đạt, biên bản có đầy đủ thành phần.<br>- Tính đầy đủ: Khá, có đại diện doanh nghiệp tham gia.<br>- Tính tin cậy: Cao, doanh nghiệp có địa chỉ pháp nhân rõ ràng.<br>- Tính tương thích: Tốt, nội dung rà soát bám sát yêu cầu mới. | **ĐẠT YÊU CẦU**<br>Mở rộng mạng lưới doanh nghiệp góp ý lên 10 đơn vị trong đợt rà soát chương trình năm tiếp theo. |
+| **Tiêu chuẩn 4.2** | Năng lực chuyên môn và kỹ năng nghề bậc cao của đội ngũ nhà giáo dạy thực hành | Bằng tốt nghiệp đại học, thạc sĩ (`H1.04.02.01`); Chứng chỉ kỹ năng nghề quốc gia Bậc 3/5 trở lên của 12 nhà giáo. | - Tính pháp lý: Xuất sắc, văn bằng chuẩn quốc gia.<br>- Tính đầy đủ: Đạt, 55% nhà giáo đạt kỹ năng nghề cao.<br>- Tính tin cậy: Rất cao, văn bằng có hồ sơ gốc đối soát.<br>- Tính tương thích: Hoàn toàn đáp ứng tiêu chuẩn kiểm định. | **ĐẠT YÊU CẦU**<br>Lập kế hoạch cử 03 nhà giáo đi thi đánh giá kỹ năng nghề quốc gia Bậc 4 trong quý I năm 2027. |
+| **Tiêu chuẩn 5.3** | Cơ sở vật chất, xưởng thực hành và thiết bị bảo đảm an toàn, vệ sinh lao động | Bảng kiểm kê thiết bị xưởng (`H1.05.01.01`); Nhật ký bảo dưỡng xưởng (`H1.05.03.01`); Biên bản kiểm định tiếp địa. | - Tính pháp lý: Đạt, có biên bản kiểm định an toàn.<br>- Tính đầy đủ: Thiếu nhật ký bảo dưỡng máy dập phôi.<br>- Tính tin cậy: Trung bình, nhật ký ghi chép ngắt quãng.<br>- Tính tương thích: Đạt yêu cầu về diện tích và an toàn điện. | **ĐẠT CÓ ĐIỀU KIỆN**<br>Chuẩn hóa sổ nhật ký bảo dưỡng kỹ thuật số và kiểm định lại toàn bộ hệ thống tiếp địa an toàn xưởng. |
+
+Kết quả thẩm định độc lập cho thấy ba trên năm tiêu chuẩn đã đáp ứng xuất sắc các thuộc tính chất lượng của minh chứng, trong khi hai tiêu chuẩn (Tiêu chuẩn 1.3 và Tiêu chuẩn 5.3) cần phải được bổ sung và chuẩn hóa dữ liệu thực chứng trước khi bước vào đợt đánh giá ngoài chính thức.
+
+## 2.5. Báo cáo tự đánh giá hoàn chỉnh cho Tiêu chuẩn 1.3 về tích hợp năng lực số
+
+Nhằm minh họa quy chuẩn kỹ thuật viết báo cáo tự đánh giá theo đúng hướng dẫn của cơ quan kiểm định, Tiêu chuẩn 1.3 thuộc Tiêu chí 1 được biên soạn trọn vẹn với đầy đủ bốn cấu phần bắt buộc.
+
+### BÁO CÁO TỰ ĐÁNH GIÁ TIÊU CHUẨN 1.3
+**Tiêu chí 1: Mục tiêu, chuẩn đầu ra của chương trình đào tạo**  
+**Tiêu chuẩn 1.3: Chuẩn đầu ra của chương trình đào tạo được tích hợp năng lực số cho phù hợp với yêu cầu của chuyển đổi số trong giáo dục nghề nghiệp.**
+
+#### 1. Mô tả hiện trạng
+Thực hiện chủ trương chuyển đổi số của Chính phủ theo Quyết định số 2222/QĐ-TTg và định hướng chỉ đạo của Bộ Lao động - Thương binh và Xã hội, trong đợt rà soát chương trình đào tạo năm 2025, Khoa Điện - Điện tử đã phối hợp cùng Hội đồng khoa học nhà trường tiến hành cập nhật, bổ sung các tiêu chuẩn năng lực số vào cấu trúc chuẩn đầu ra của chương trình đào tạo trình độ cao đẳng nghề Điện công nghiệp `[H1.01.01.01]`.
+
+Nội hàm năng lực số đã được cụ thể hóa thành các chỉ số hành vi đo lường được trong bản mô tả chuẩn đầu ra chính thức `[H1.01.02.01]`. Cụ thể, người học sau khi tốt nghiệp phải có khả năng sử dụng thành thạo các phần mềm chuyên ngành như AutoCAD Electrical và EPLAN Electric để thiết kế bản vẽ sơ đồ nguyên lý và bản vẽ lắp đặt hệ thống điện công nghiệp; có khả năng lập trình điều khiển, mô phỏng hoạt động của hệ thống tự động hóa sử dụng bộ điều khiển logic khả trình thông qua phần mềm TIA Portal; đồng thời có năng lực thu thập dữ liệu vận hành và giám sát trạng thái năng lượng của động cơ điện qua mạng công nghiệp Modbus TCP/IP `[H1.01.03.01]`. 
+
+Các năng lực số này đã được tích hợp trực tiếp vào đề cương chi tiết của tám mô-đun chuyên ngành trọng điểm, chiếm 28.5% tổng khối lượng mô-đun chuyên môn của toàn khóa học `[H1.01.03.02]`. Nhà trường đã đầu tư một phòng thực hành mô phỏng số chuyên dụng với ba mươi máy tính cấu hình cao kết nối mạng nội bộ và cài đặt đầy đủ các phần mềm kỹ thuật điện có bản quyền giáo dục để phục vụ cho sinh viên học tập và rèn luyện kỹ năng số trước khi thao tác trên thiết bị phần cứng thực tế `[H1.05.01.02]`.
+
+#### 2. Điểm mạnh
+Nhà trường đã chủ động đi đầu trong việc xác lập khung năng lực số chi tiết cho nghề Điện công nghiệp, gắn liền năng lực số với các tác vụ kỹ thuật cụ thể mà các doanh nghiệp sản xuất trong khu công nghiệp đang đòi hỏi. Việc sinh viên được rèn luyện kỹ năng lập trình và thiết kế trên các phần mềm mô phỏng hiện đại giúp giảm thiểu nguy cơ tai nạn điện, tiết kiệm vật tư tiêu hao trong các giờ học ban đầu và nâng cao khả năng tiếp cận nhanh chóng với các dây chuyền sản xuất tự động hóa sau khi tốt nghiệp. Toàn bộ tài liệu hướng dẫn thực hành số hóa đã được đưa lên hệ thống học tập trực tuyến, tạo điều kiện thuận lợi cho sinh viên tự học và tự rèn luyện kỹ năng ngoài giờ lên lớp.
+
+#### 3. Tồn tại và nguyên nhân
+Mặc dù chuẩn đầu ra đã được ban hành và đưa vào đề cương mô-đun, việc triển khai đánh giá kết quả học tập đối với năng lực số vẫn chưa được tách biệt thành một cấu phần bài thi độc lập mà vẫn ghép chung vào điểm đánh giá thực hành truyền thống, khiến việc đo lường mức độ thuần thục kỹ năng số của từng sinh viên chưa thật sự sâu sắc. 
+
+Nguyên nhân của hạn chế này là do một bộ phận nhà giáo lớn tuổi trong khoa còn lúng túng trong việc sử dụng các tính năng nâng cao của phần mềm mô phỏng công nghiệp; mặt khác, hệ thống phòng máy tính mô phỏng và xưởng thực hành phần cứng chưa được kết nối mạng truyền thông công nghiệp thời gian thực để truyền dữ liệu lập trình trực tiếp xuống các tủ điều khiển xưởng máy, gây ra sự phân tách nhất định giữa kỹ năng số trên máy tính và thao tác đấu nối phần cứng thực tế.
+
+#### 4. Kế hoạch cải tiến chất lượng
+Để khắc phục dứt điểm các tồn tại trên, nhà trường và Khoa Điện - Điện tử xác lập kế hoạch hành động cải tiến chất lượng cụ thể như sau:
+* Thứ nhất, tổ chức khóa đào tạo, bồi dưỡng nâng cao năng lực ứng dụng phần mềm thiết kế và điều khiển điện công nghiệp cho 100% nhà giáo trong Khoa Điện - Điện tử; thời gian hoàn thành trong quý IV năm 2026; đơn vị chủ trì là Khoa Điện - Điện tử phối hợp cùng các chuyên gia kỹ thuật của hãng cung cấp thiết bị; kinh phí dự kiến trích từ quỹ đào tạo bồi dưỡng của trường là 120 triệu đồng.
+* Thứ hai, hoàn thiện ma trận và bộ công cụ đánh giá xác thực năng lực số độc lập cho từng học phần chuyên môn, ban hành ngân hàng bài thi kỹ năng số trước tháng 12 năm 2026; người chịu trách nhiệm là Trưởng bộ môn Tự động hóa thuộc Khoa Điện - Điện tử.
+* Thứ ba, nâng cấp đường truyền mạng công nghiệp kết nối liên thông giữa phòng mô phỏng máy tính và ba xưởng thực hành điện để sinh viên có thể nạp chương trình điều khiển trực tiếp từ máy tính xuống mô hình vật lý tại xưởng; thời gian thực hiện trong quý I năm 2027; đơn vị chủ trì là Phòng Quản trị Thiết bị phối hợp Khoa Điện - Điện tử.
+* Chỉ số đầu ra cần đạt: 100% sinh viên tốt nghiệp từ năm 2027 đạt chuẩn đầu ra năng lực số chuyên ngành được xác nhận thông qua bài kiểm tra đánh giá năng lực thực hành trên máy tính và dây chuyền mô phỏng.
+
+## 2.6. Điểm đánh giá dự kiến và đối chiếu các điều kiện công nhận đạt theo Điều 11 Thông tư số 14/2024/TT-BLĐTBXH
+
+Dựa trên kết quả tự rà soát toàn diện bốn mươi tiêu chuẩn kiểm định của chương trình đào tạo trình độ cao đẳng nghề Điện công nghiệp và căn cứ vào hồ sơ minh chứng đã được chuẩn bị, Hội đồng tự đánh giá nhà trường đã xây dựng bảng dự kiến điểm số chính thức.
+
+**Bảng 2.4. Bảng tổng hợp dự kiến điểm số tự đánh giá chương trình đào tạo nghề Điện công nghiệp theo Thông tư số 14/2024/TT-BLĐTBXH**
+
+| Mã tiêu chí | Tên tiêu chí kiểm định | Số tiêu chuẩn | Điểm chuẩn tối đa | Số tiêu chuẩn dự kiến đạt | Điểm dự kiến đạt | Tỷ lệ hoàn thành | Đánh giá ngưỡng tối thiểu theo Điều 11 |
+| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| TC-01 | Mục tiêu, chuẩn đầu ra của chương trình | 3 | 7.5 | 3 | 7.5 | 100.0% | Đạt (Ngưỡng quy định $\ge$ 50%) |
+| TC-02 | Cấu trúc và nội dung chương trình, giáo trình | 7 | 17.5 | 6 | 15.0 | 85.7% | Đạt (Ngưỡng quy định $\ge$ 75%) |
+| TC-03 | Hoạt động đào tạo | 7 | 17.5 | 5 | 12.5 | 71.4% | Đạt (Ngưỡng quy định $\ge$ 50%) |
+| TC-04 | Đội ngũ nhà giáo, cán bộ quản lý | 6 | 15.0 | 5 | 12.5 | 83.3% | Đạt (Ngưỡng quy định $\ge$ 75%) |
+| TC-05 | Cơ sở vật chất, thiết bị đào tạo và học liệu | 7 | 17.5 | 6 | 15.0 | 85.7% | Đạt (Ngưỡng quy định $\ge$ 75%) |
+| TC-06 | Người học và hoạt động hỗ trợ người học | 5 | 12.5 | 4 | 10.0 | 80.0% | Đạt (Ngưỡng quy định $\ge$ 50%) |
+| TC-07 | Giám sát, đánh giá chất lượng | 5 | 12.5 | 4 | 10.0 | 80.0% | Đạt (Ngưỡng quy định $\ge$ 75%) |
+| **Tổng** | **Toàn bộ hệ thống tiêu chí chương trình đào tạo** | **40** | **100** | **33** | **82.5** | **82.5%** | **ĐẠT TIÊU CHUẨN KIỂM ĐỊNH** |
+
+Căn cứ theo quy định tại Khoản 1 Điều 11 Thông tư số 14/2024/TT-BLĐTBXH, chương trình đào tạo trình độ cao đẳng được đánh giá là đạt tiêu chuẩn kiểm định chất lượng khi đáp ứng đồng thời cả ba điều kiện pháp lý. Kết quả đối chiếu bảng điểm dự kiến với các quy định này được phân tích cụ thể:
+
+Thứ nhất, đối chiếu với Điều kiện a về tổng điểm đánh giá, thông tư yêu cầu tổng số điểm đánh giá của chương trình đào tạo phải đạt từ 80 điểm trở lên. Điểm tự đánh giá dự kiến của chương trình đào tạo nghề Điện công nghiệp đạt 82.5 điểm trên 100 điểm, vượt ngưỡng sàn 2.5 điểm. Do đó, chương trình hoàn toàn đáp ứng được Điều kiện a.
+
+Thứ hai, đối chiếu với Điều kiện b về ngưỡng chất lượng của các tiêu chí trọng tâm, thông tư quy định điểm đánh giá của các tiêu chí 2, 4, 5 và 7 phải đạt từ 75% điểm chuẩn của từng tiêu chí trở lên. Kết quả tính toán cho thấy: Tiêu chí 2 đạt 15.0 trên 17.5 điểm (85.7%); Tiêu chí 4 đạt 12.5 trên 15.0 điểm (83.3%); Tiêu chí 5 đạt 15.0 trên 17.5 điểm (85.7%); Tiêu chí 7 đạt 10.0 trên 12.5 điểm (80.0%). Cả bốn tiêu chí cốt lõi này đều vượt trên mức sàn 75% theo quy định. Do đó, chương trình hoàn toàn đáp ứng được Điều kiện b.
+
+Thứ ba, đối chiếu với Điều kiện c về ngưỡng chất lượng đối với các tiêu chí thành phần còn lại, thông tư quy định điểm đánh giá của các tiêu chí 1, 3 và 6 phải đạt từ 50% điểm chuẩn của từng tiêu chí trở lên. Kết quả tính toán ghi nhận: Tiêu chí 1 đạt 7.5 trên 7.5 điểm (100.0%); Tiêu chí 3 đạt 12.5 trên 17.5 điểm (71.4%); Tiêu chí 6 đạt 10.0 trên 12.5 điểm (80.0%). Tất cả các tiêu chí này đều vượt trên mức tối thiểu 50%. Do đó, chương trình hoàn toàn đáp ứng được Điều kiện c.
+
+Mặc dù kết quả dự kiến đạt 82.5 điểm bảo đảm cho chương trình đào tạo nghề Điện công nghiệp đủ điều kiện pháp lý để được công nhận đạt tiêu chuẩn kiểm định, nhà trường cần đặc biệt lưu ý đến các rủi ro cận biên. Khoảng cách an toàn của tổng điểm so với ngưỡng sàn chỉ là 2.5 điểm (tương đương với điểm số của đúng một tiêu chuẩn). Nếu trong quá trình đánh giá ngoài thực tế, đoàn chuyên gia kiểm định độc lập bác bỏ tính xác thực của một tiêu chuẩn thuộc Tiêu chí 5 về an toàn xưởng hoặc Tiêu chí 7 về khảo sát việc làm, tổng điểm sẽ tụt xuống 80 điểm hoặc dưới 80 điểm, dẫn đến nguy cơ không đạt kiểm định. Do đó, việc xây dựng và vận hành một hệ thống đảm bảo chất lượng bên trong vững chắc để liên tục củng cố các tiêu chuẩn này là yêu cầu cấp thiết mang tính sống còn.
