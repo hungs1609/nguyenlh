@@ -1,0 +1,249 @@
+\section*{CHƯƠNG 4. KẾ HOẠCH QUẢN LÝ TIẾN ĐỘ DỰ ÁN}
+\addcontentsline{toc}{section}{CHƯƠNG 4. KẾ HOẠCH QUẢN LÝ TIẾN ĐỘ DỰ ÁN}
+
+Chương này xác định danh mục mười công việc trên sơ đồ mạng từ cấu trúc phân rã công việc, ước lượng thời gian thực hiện, mô hình hóa mạng công việc theo phương pháp mũi tên và phương pháp nút, tính toán sáu bước thông số mạng theo phương pháp đường găng, lập biểu đồ tiến độ ngang Gantt và đề xuất phương án điều hòa nguồn lực trong khung thời gian 90 ngày lịch (từ ngày 02/03/2026 đến ngày 30/05/2026).
+
+\subsection*{4.1. Danh mục công việc và ước lượng thời gian thực hiện}
+\addcontentsline{toc}{subsection}{4.1. Danh mục công việc và ước lượng thời gian thực hiện}
+
+Từ 20 gói công việc tại Chương 3, tiến trình thực thi dự án được tích hợp thành mười công việc mạng ký hiệu từ A đến J, nối giữa mười sự kiện đánh số từ 1 đến 10. Thời gian thực hiện từng công việc ($t_{ij}$) được ước lượng theo phương pháp tất định dựa trên khối lượng trang viết, quy trình thẩm định xuất bản và định mức thời gian chào hàng cạnh tranh.
+
+\begin{table}[htbp]
+\centering
+\caption{Danh mục công việc, mã phân rã tương ứng và thời gian thực hiện}
+\label{tab:danh_muc_cong_viec}
+\begin{tabularx}{\textwidth}{cCCCYcL}
+\toprule
+\textbf{TT} & \textbf{Ký hiệu} & \textbf{Sự kiện} & \textbf{Mã WBS} & \textbf{Nội dung công việc chi tiết} & \textbf{$t_{ij}$ (ngày)} & \textbf{Điều kiện bắt đầu} \\
+\midrule
+\textbf{1} & \textbf{A} & $(1 - 2)$ & 1.1, 1.2 & Khảo sát nhu cầu (350 phiếu) \& dữ liệu & \textbf{8} & Khởi công ngày 1 (02/03/2026) \\
+\textbf{2} & \textbf{B} & $(2 - 3)$ & 1.3 & Xây dựng cấu trúc \& phê duyệt đề cương & \textbf{6} & Ngay sau khi xong A \\
+\textbf{3} & \textbf{C} & $(3 - 4)$ & 2.1--2.5 & Biên soạn bản thảo lần một (80 trang) & \textbf{26} & Ngay sau khi xong B \\
+\textbf{4} & \textbf{D} & $(3 - 5)$ & 4.1 & Lựa chọn nhà in và ký hợp đồng & \textbf{18} & Sau B (song song với C, E) \\
+\textbf{5} & \textbf{E} & $(4 - 5)$ & 3.1--3.3 & Phản biện độc lập \& họp thẩm định & \textbf{12} & Ngay sau khi xong C \\
+\textbf{6} & \textbf{F} & $(5 - 6)$ & 3.4 & Tiếp thu góp ý, hiệu đính bản sạch & \textbf{8} & Sau khi xong cả D và E \\
+\textbf{7} & \textbf{G} & $(6 - 7)$ & 4.2 & Thiết kế bìa, vẽ 25 hình, dàn trang & \textbf{12} & Ngay sau khi xong F \\
+\textbf{8} & \textbf{H} & $(7 - 8)$ & 4.3 & In thử bản bông màu, ký duyệt mẫu & \textbf{4} & Ngay sau khi xong G \\
+\textbf{9} & \textbf{I} & $(8 - 9)$ & 4.4 & In offset 2.000 cuốn, cán màng, keo gáy & \textbf{8} & Ngay sau khi xong H \\
+\textbf{10} & \textbf{J} & $(9 - 10)$ & 5.1--5.4 & Kiểm định 384 cuốn, nghiệm thu bàn giao & \textbf{6} & Ngay sau khi xong I \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{4.2. Sơ đồ mạng công việc theo phương pháp mũi tên và phương pháp nút}
+\addcontentsline{toc}{subsection}{4.2. Sơ đồ mạng công việc theo phương pháp mũi tên và phương pháp nút}
+
+\subsubsection*{4.2.1. Sơ đồ mạng công việc theo phương pháp mũi tên (AOA)}
+
+Phương pháp \textit{Activity on Arrow -- AOA} (Phương pháp biểu diễn công việc trên mũi tên) biểu thị mỗi công việc bằng một mũi tên nối giữa hai sự kiện tròn. Tại Sự kiện 3 (sau khi duyệt đề cương), mạng công việc tách thành hai nhánh chạy song song gồm nhánh biên soạn, thẩm định học thuật ($C \rightarrow E$) và nhánh lựa chọn nhà thầu in ấn ($D$). Hai nhánh này hội tụ tại Sự kiện 5, xác lập điều kiện rằng khâu hoàn thiện bản thảo sạch để chuyển giao chế bản (công việc F) chỉ bắt đầu khi cả bản thảo đã được Hội đồng thẩm định thông qua và hợp đồng in ấn đã được ký kết.
+
+\begin{figure}[htbp]
+\centering
+\caption{Sơ đồ mạng công việc theo phương pháp mũi tên (AOA)}
+\label{fig:so_do_aoa}
+\resizebox{0.95\textwidth}{!}{%
+\begin{tikzpicture}[
+    node distance = 1.3cm and 1.5cm,
+    event/.style = {circle, draw=red!80!black, fill=red!6, line width=1.1pt, minimum size=0.9cm, inner sep=0pt, font=\small\bfseries},
+    arr_crit/.style = {-{Stealth[scale=1.0]}, line width=1.3pt, draw=red!80!black},
+    arr_noncrit/.style = {-{Stealth[scale=1.0]}, line width=1.0pt, draw=blue!80!black, dashed}
+]
+
+\node (s1) [event] {1};
+\node (s2) [event, right=1.6cm of s1] {2};
+\node (s3) [event, right=1.6cm of s2] {3};
+\node (s4) [event, above right=0.9cm and 2.2cm of s3] {4};
+\node (s5) [event, below right=0.9cm and 2.2cm of s4] {5};
+\node (s6) [event, right=1.6cm of s5] {6};
+\node (s7) [event, right=1.6cm of s6] {7};
+\node (s8) [event, right=1.6cm of s7] {8};
+\node (s9) [event, right=1.6cm of s8] {9};
+\node (s10) [event, right=1.6cm of s9] {10};
+
+\draw [arr_crit] (s1) -- node[above, font=\footnotesize] {A, 8} (s2);
+\draw [arr_crit] (s2) -- node[above, font=\footnotesize] {B, 6} (s3);
+\draw [arr_crit] (s3) -- node[above left, font=\footnotesize] {C, 26} (s4);
+\draw [arr_noncrit] (s3) -- node[below, font=\footnotesize] {D, 18} (s5);
+\draw [arr_crit] (s4) -- node[above right, font=\footnotesize] {E, 12} (s5);
+\draw [arr_crit] (s5) -- node[above, font=\footnotesize] {F, 8} (s6);
+\draw [arr_crit] (s6) -- node[above, font=\footnotesize] {G, 12} (s7);
+\draw [arr_crit] (s7) -- node[above, font=\footnotesize] {H, 4} (s8);
+\draw [arr_crit] (s8) -- node[above, font=\footnotesize] {I, 8} (s9);
+\draw [arr_crit] (s9) -- node[above, font=\footnotesize] {J, 6} (s10);
+
+\end{tikzpicture}%
+}
+\end{figure}
+
+\subsubsection*{4.2.2. Sơ đồ mạng công việc theo phương pháp nút (AON)}
+
+Phương pháp \textit{Activity on Node -- AON} (Phương pháp biểu diễn công việc trên nút) đặt các công việc vào trong các ô hình chữ nhật kèm theo thông số thời điểm bắt đầu sớm ($ES$), thời điểm kết thúc sớm ($EF$) và thời gian thực hiện ($t$), còn các mũi tên thể hiện quan hệ phụ thuộc trước sau:
+
+\begin{figure}[htbp]
+\centering
+\caption{Sơ đồ mạng công việc theo phương pháp nút (AON)}
+\label{fig:so_do_aon}
+\resizebox{0.95\textwidth}{!}{%
+\begin{tikzpicture}[
+    node distance = 0.5cm and 0.6cm,
+    crit_box/.style = {rectangle, rounded corners=3pt, draw=red!80!black, fill=red!6, line width=1.1pt, text width=2.6cm, align=center, inner sep=4pt, font=\scriptsize},
+    noncrit_box/.style = {rectangle, rounded corners=3pt, draw=blue!80!black, fill=blue!6, line width=1.0pt, text width=2.6cm, align=center, inner sep=4pt, font=\scriptsize},
+    arr_c/.style = {-{Stealth[scale=0.9]}, line width=1.1pt, draw=red!80!black},
+    arr_nc/.style = {-{Stealth[scale=0.9]}, line width=0.9pt, draw=blue!80!black}
+]
+
+\node (A) [crit_box] {\textbf{[A] Khảo sát nhu cầu}\\ES = 0 $\vert$ EF = 8\\t = 8 ngày};
+\node (B) [crit_box, right=of A] {\textbf{[B] Duyệt đề cương}\\ES = 8 $\vert$ EF = 14\\t = 6 ngày};
+\node (C) [crit_box, above right=0.3cm and 0.6cm of B] {\textbf{[C] Biên soạn bản thảo}\\ES = 14 $\vert$ EF = 40\\t = 26 ngày};
+\node (D) [noncrit_box, below right=0.3cm and 0.6cm of B] {\textbf{[D] Chọn nhà in ấn}\\ES = 14 $\vert$ EF = 32\\t = 18 ngày};
+\node (E) [crit_box, right=of C] {\textbf{[E] Thẩm định bài}\\ES = 40 $\vert$ EF = 52\\t = 12 ngày};
+\node (F) [crit_box, below right=0.3cm and 0.6cm of E] {\textbf{[F] Hiệu đính bản sạch}\\ES = 52 $\vert$ EF = 60\\t = 8 ngày};
+\node (G) [crit_box, right=of F] {\textbf{[G] Thiết kế dàn trang}\\ES = 60 $\vert$ EF = 72\\t = 12 ngày};
+\node (H) [crit_box, right=of G] {\textbf{[H] In thử duyệt mẫu}\\ES = 72 $\vert$ EF = 76\\t = 4 ngày};
+\node (I) [crit_box, right=of H] {\textbf{[I] In offset hàng loạt}\\ES = 76 $\vert$ EF = 84\\t = 8 ngày};
+\node (J) [crit_box, right=of I] {\textbf{[J] Nghiệm thu bàn giao}\\ES = 84 $\vert$ EF = 90\\t = 6 ngày};
+
+\draw [arr_c] (A) -- (B);
+\draw [arr_c] (B) |- (C);
+\draw [arr_nc] (B) |- (D);
+\draw [arr_c] (C) -- (E);
+\draw [arr_c] (E) -| (F);
+\draw [arr_nc] (D) -| (F);
+\draw [arr_c] (F) -- (G);
+\draw [arr_c] (G) -- (H);
+\draw [arr_c] (H) -- (I);
+\draw [arr_c] (I) -- (J);
+
+\end{tikzpicture}%
+}
+\end{figure}
+
+\subsection*{4.3. Các thông số sơ đồ mạng và xác định đường găng}
+\addcontentsline{toc}{subsection}{4.3. Các thông số sơ đồ mạng và xác định đường găng}
+
+Việc giải sơ đồ mạng được tiến hành theo quy trình sáu bước của phương pháp \textit{Critical Path Method -- CPM} (Phương pháp đường găng).
+
+\subsubsection*{4.3.1. Thời điểm sớm của các sự kiện}
+
+Thời điểm sớm của sự kiện $j$ ($E_j$) được tính theo chiều thuận từ Sự kiện 1 đến Sự kiện 10 theo công thức $E_1 = 0$ và $E_j = \max_{i} (E_i + t_{ij})$. Cụ thể, xuất phát từ $E_1 = 0$, ta xác định được $E_2 = 0 + 8 = 8$ ngày; $E_3 = 8 + 6 = 14$ ngày; và $E_4 = 14 + 26 = 40$ ngày. Tại Sự kiện 5, do có hai công việc E và D cùng đi vào, thời điểm sớm được lấy theo giá trị cực đại giữa hai nhánh:
+\[
+E_5 = \max\left[E_4 + t_{45};\ E_3 + t_{35}\right] = \max\left[40 + 12;\ 14 + 18\right] = \max[52;\ 32] = 52\text{ ngày}
+\]
+Tiếp tục tính thuận theo chuỗi công việc nối tiếp phía sau, ta thu được $E_6 = 52 + 8 = 60$ ngày; $E_7 = 60 + 12 = 72$ ngày; $E_8 = 72 + 4 = 76$ ngày; $E_9 = 76 + 8 = 84$ ngày; và tại sự kiện kết thúc dự án là $E_{10} = 84 + 6 = 90$ ngày.
+
+\subsubsection*{4.3.2. Thời điểm muộn của các sự kiện}
+
+Thời điểm muộn của sự kiện $i$ ($L_i$) được tính lùi từ Sự kiện 10 về Sự kiện 1 theo công thức $L_{10} = E_{10} = 90$ ngày và $L_i = \min_{j} (L_j - t_{ij})$. Lần lượt trừ lùi thời gian thực hiện của các công việc cuối mạng, ta có $L_9 = 90 - 6 = 84$ ngày; $L_8 = 84 - 8 = 76$ ngày; $L_7 = 76 - 4 = 72$ ngày; $L_6 = 72 - 12 = 60$ ngày; $L_5 = 60 - 8 = 52$ ngày; và $L_4 = 52 - 12 = 40$ ngày. Tại Sự kiện 3, do có hai công việc C và D cùng đi ra, thời điểm muộn được xác định bằng giá trị cực tiểu:
+\[
+L_3 = \min\left[L_4 - t_{34};\ L_5 - t_{35}\right] = \min\left[40 - 26;\ 52 - 18\right] = \min[14;\ 34] = 14\text{ ngày}
+\]
+Từ kết quả $L_3 = 14$ ngày, tính lùi tiếp về đầu mạng xác định được $L_2 = 14 - 6 = 8$ ngày và $L_1 = 8 - 8 = 0$ ngày.
+
+\subsubsection*{4.3.3. Thời gian dự trữ sự kiện và xác định đường găng}
+
+Thời gian dự trữ của sự kiện $j$ được tính bằng hiệu số $R_j = L_j - E_j$. Các sự kiện có $R_j = 0$ là các sự kiện găng.
+
+\begin{table}[htbp]
+\centering
+\caption{Thời gian dự trữ của các sự kiện và xác định sự kiện găng}
+\label{tab:du_tru_su_kien}
+\begin{tabularx}{0.85\textwidth}{CCCCCY}
+\toprule
+\textbf{Sự kiện ($j$)} & \textbf{$E_j$ (ngày)} & \textbf{$L_j$ (ngày)} & \textbf{$R_j = L_j - E_j$} & \textbf{Tính chất sự kiện} \\
+\midrule
+\textbf{1} & 0 & 0 & 0 & \textbf{Sự kiện găng} \\
+\textbf{2} & 8 & 8 & 0 & \textbf{Sự kiện găng} \\
+\textbf{3} & 14 & 14 & 0 & \textbf{Sự kiện găng} \\
+\textbf{4} & 40 & 40 & 0 & \textbf{Sự kiện găng} \\
+\textbf{5} & 52 & 52 & 0 & \textbf{Sự kiện găng} \\
+\textbf{6} & 60 & 60 & 0 & \textbf{Sự kiện găng} \\
+\textbf{7} & 72 & 72 & 0 & \textbf{Sự kiện găng} \\
+\textbf{8} & 76 & 76 & 0 & \textbf{Sự kiện găng} \\
+\textbf{9} & 84 & 84 & 0 & \textbf{Sự kiện găng} \\
+\textbf{10} & 90 & 90 & 0 & \textbf{Sự kiện găng} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Đường găng của dự án đi qua toàn bộ mười sự kiện găng theo tuyến chín công việc nối tiếp:
+\[
+A \rightarrow B \rightarrow C \rightarrow E \rightarrow F \rightarrow G \rightarrow H \rightarrow I \rightarrow J
+\]
+Độ dài đường găng ấn định tổng thời gian hoàn thành dự án:
+\[
+T_{CP} = 8 + 6 + 26 + 12 + 8 + 12 + 4 + 8 + 6 = 90\text{ ngày}
+\]
+
+\subsubsection*{4.3.4. Các thông số thời gian của công việc và bảng tổng hợp thông số mạng}
+
+Đối với mỗi công việc $(i - j)$, bốn mốc thời điểm sớm/muộn được xác định gồm: bắt đầu sớm ($ES_{ij} = E_i$), kết thúc sớm ($EF_{ij} = E_i + t_{ij}$), kết thúc muộn ($LF_{ij} = L_j$) và bắt đầu muộn ($LS_{ij} = L_j - t_{ij}$). Bốn thông số thời gian dự trữ của công việc gồm: dự trữ toàn phần ($GR_{ij} = L_j - E_i - t_{ij}$), dự trữ bắt đầu ($SR_{ij} = L_j - L_i - t_{ij}$), dự trữ kết thúc ($FR_{ij} = E_j - E_i - t_{ij}$) và dự trữ độc lập ($IR_{ij} = E_j - L_i - t_{ij}$).
+
+\begin{table}[htbp]
+\centering
+\caption{Bảng tổng hợp các thông số thời gian và dự trữ của công việc (CPM)}
+\label{tab:cpm_tong_hop}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccccc}
+\toprule
+\textbf{Công việc} & \textbf{Mã $(i - j)$} & \textbf{$t_{ij}$} & \textbf{$ES_{ij}$} & \textbf{$EF_{ij}$} & \textbf{$LF_{ij}$} & \textbf{$LS_{ij}$} & \textbf{$GR_{ij}$} & \textbf{$SR_{ij}$} & \textbf{$FR_{ij}$} & \textbf{$IR_{ij}$} & \textbf{Tính chất} \\
+\midrule
+\textbf{A} & $(1 - 2)$ & 8 & 0 & 8 & 8 & 0 & \textbf{0} & 0 & 0 & 0 & \textbf{Găng} \\
+\textbf{B} & $(2 - 3)$ & 6 & 8 & 14 & 14 & 8 & \textbf{0} & 0 & 0 & 0 & \textbf{Găng} \\
+\textbf{C} & $(3 - 4)$ & 26 & 14 & 40 & 40 & 14 & \textbf{0} & 0 & 0 & 0 & \textbf{Găng} \\
+\textbf{D} & $(3 - 5)$ & 18 & 14 & 32 & 52 & 34 & \textbf{20} & 20 & 20 & 20 & \textbf{Không găng} \\
+\textbf{E} & $(4 - 5)$ & 12 & 40 & 52 & 52 & 40 & \textbf{0} & 0 & 0 & 0 & \textbf{Găng} \\
+\textbf{F} & $(5 - 6)$ & 8 & 52 & 60 & 60 & 52 & \textbf{0} & 0 & 0 & 0 & \textbf{Găng} \\
+\textbf{G} & $(6 - 7)$ & 12 & 60 & 72 & 72 & 60 & \textbf{0} & 0 & 0 & 0 & \textbf{Găng} \\
+\textbf{H} & $(7 - 8)$ & 4 & 72 & 76 & 76 & 72 & \textbf{0} & 0 & 0 & 0 & \textbf{Găng} \\
+\textbf{I} & $(8 - 9)$ & 8 & 76 & 84 & 84 & 76 & \textbf{0} & 0 & 0 & 0 & \textbf{Găng} \\
+\textbf{J} & $(9 - 10)$ & 6 & 84 & 90 & 90 & 84 & \textbf{0} & 0 & 0 & 0 & \textbf{Găng} \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+Bảng \ref{tab:cpm_tong_hop} cho thấy chín công việc trên đường găng có mọi thông số dự trữ bằng không. Riêng công việc D (lựa chọn nhà thầu in ấn) có thời gian dự trữ ở cả bốn chỉ số bằng 20 ngày ($GR_D = SR_D = FR_D = IR_D = 20$ ngày), cho phép bộ phận mua sắm hoàn thành ký hợp đồng sớm nhất vào ngày thứ 32 hoặc muộn nhất vào ngày thứ 52 mà không làm chậm tiến độ chung.
+
+\subsection*{4.4. Phương pháp biểu đồ tiến độ ngang Gantt}
+\addcontentsline{toc}{subsection}{4.4. Phương pháp biểu đồ tiến độ ngang Gantt}
+
+Trục thời gian 90 ngày lịch được chia thành 13 tuần (mỗi tuần 7 ngày, riêng tuần 13 gồm 6 ngày cuối từ ngày 85 đến ngày 90). Bảng \ref{tab:bieu_do_gantt_tuan} mô tả tiến trình thực hiện của toàn bộ mười công việc qua các tuần:
+
+\begin{table}[htbp]
+\centering
+\caption{Phân bổ tiến độ dự án theo tuần trên biểu đồ ngang Gantt}
+\label{tab:bieu_do_gantt_tuan}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcccccccccccc}
+\toprule
+\textbf{Mã} & \textbf{Tên công việc} & \textbf{$t$} & \textbf{T1--2} & \textbf{T3--4} & \textbf{T5--6} & \textbf{T7--8} & \textbf{T9} & \textbf{T10--11} & \textbf{T12} & \textbf{T13} \\
+& & \textbf{(ngày)} & \textbf{(N1--14)} & \textbf{(N15--28)} & \textbf{(N29--42)} & \textbf{(N43--56)} & \textbf{(N57--63)} & \textbf{(N64--77)} & \textbf{(N78--84)} & \textbf{(N85--90)} \\
+\midrule
+\textbf{A} & Khảo sát nhu cầu \& dữ liệu & 8 & $\blacksquare\blacksquare\blacksquare\blacksquare$ & & & & & & & \\
+\textbf{B} & Duyệt khung đề cương chi tiết & 6 & \phantom{$\blacksquare\blacksquare$}$\blacksquare\blacksquare$ & & & & & & & \\
+\textbf{C} & Biên soạn bản thảo lần một & 26 & & $\blacksquare\blacksquare\blacksquare\blacksquare$ & $\blacksquare\blacksquare\blacksquare$ & & & & & \\
+\textbf{D} & Chọn nhà in ấn \& ký hợp đồng & 18 & & $\square\square\square\square$ & $\square$ \footnotesize{[+20d]} & \footnotesize{[+20d]} & & & & \\
+\textbf{E} & Thẩm định chuyên môn bản thảo & 12 & & & \phantom{$\blacksquare\blacksquare$}$\blacksquare$ & $\blacksquare\blacksquare\blacksquare$ & & & & \\
+\textbf{F} & Hiệu đính, hoàn thiện bản sạch & 8 & & & & \phantom{$\blacksquare\blacksquare$}$\blacksquare$ & $\blacksquare$ & & & \\
+\textbf{G} & Thiết kế đồ họa và dàn trang & 12 & & & & & $\blacksquare$ & $\blacksquare\blacksquare\blacksquare$ & & \\
+\textbf{H} & In bản bông thử và duyệt mẫu & 4 & & & & & & \phantom{$\blacksquare\blacksquare$}$\blacksquare$ & & \\
+\textbf{I} & In offset hàng loạt 2.000 cuốn & 8 & & & & & & \phantom{$\blacksquare\blacksquare$}$\blacksquare$ & $\blacksquare\blacksquare$ & \\
+\textbf{J} & Kiểm định mẫu và bàn giao & 6 & & & & & & & & $\blacksquare\blacksquare$ \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\subsection*{4.5. Cơ chế kiểm soát tiến độ và điều hòa nguồn lực}
+\addcontentsline{toc}{subsection}{4.5. Cơ chế kiểm soát tiến độ và điều hòa nguồn lực}
+
+\subsubsection*{4.5.1. Kiểm soát các mốc sự kiện găng trung gian}
+
+Ban Quản lý dự án giám sát chặt chẽ bảy mốc sự kiện găng gắn với sản phẩm nghiệm thu và lịch giải ngân: Mốc 1 tại ngày thứ 14 (15/03/2026) phê duyệt khung đề cương chi tiết; Mốc 2 tại ngày thứ 40 (10/04/2026) thu hồi bản thảo lần một đủ 80 trang ruột; Mốc 3 tại ngày thứ 52 (22/04/2026) ký biên bản kết luận của Hội đồng thẩm định chuyên môn; Mốc 4 tại ngày thứ 60 (30/04/2026) ký duyệt bản thảo sạch để chuyển giao chế bản; Mốc 5 tại ngày thứ 76 (16/05/2026) ký niêm phong bản bông mẫu màu; Mốc 6 tại ngày thứ 84 (24/05/2026) tiếp nhận lô hàng 2.000 cuốn xuất xưởng tại kho; và Mốc 7 tại ngày thứ 90 (30/05/2026) hoàn tất nghiệm thu cấp cơ sở, bàn giao tài liệu cho năm trường trung học cơ sở.
+
+\subsubsection*{4.5.2. Điều hòa nguồn lực và nén tiến độ khi phát sinh chậm trễ}
+
+Nhờ công việc D có thời gian dự trữ độc lập 20 ngày, trong trường hợp bộ phận hành chính và mua sắm cần tập trung hỗ trợ nhóm tác giả tổng hợp dữ liệu trường nghề ở tuần thứ ba, thời điểm phát hành hồ sơ mời báo giá có thể lùi từ ngày thứ 15 sang ngày thứ 25 mà vẫn hoàn tất ký hợp đồng trước ngày thứ 52.
+
+Đối với nhánh công việc găng có thời lượng dài nhất là biên soạn bản thảo (C, 26 ngày), nếu một nhóm tác giả chậm tiến độ tổng hợp số liệu tuyển sinh, Giám đốc dự án sẽ điều động trợ lý nghiên cứu hỗ trợ chuẩn hóa bảng biểu. Đồng thời, dự án áp dụng kỹ thuật \textit{Fast-tracking} (Kỹ thuật thực hiện gối đầu) bằng cách gửi trước các phần bản thảo đã hoàn chỉnh cho ba chuyên gia phản biện đọc độc lập ngay từ ngày thứ 36, giúp rút ngắn thời gian thẩm định (công việc E) từ 12 ngày xuống 9 ngày để bù đắp độ trễ mà không làm tăng chi phí dự toán.
+

@@ -1,0 +1,156 @@
+\section{CHƯƠNG 7. KẾ HOẠCH QUẢN LÝ NGUỒN NHÂN LỰC DỰ ÁN}
+
+Chương này thiết lập sơ đồ cơ cấu tổ chức dự án theo mô hình ma trận cân bằng, phân định trách nhiệm của từng vị trí bằng ma trận phân công trách nhiệm, đồng thời vận dụng thuyết thứ bậc nhu cầu, mười phẩm chất tâm lý của người lãnh đạo và bảy thói quen quản lý hiệu quả vào điều hành đội ngũ nhân sự dự án.
+
+\subsection{7.1. Cơ cấu tổ chức và bộ máy quản lý dự án}
+
+Ban Quản lý dự án được tổ chức theo mô hình ma trận chức năng cân bằng nhằm huy động đội ngũ chuyên gia tâm lý học, giáo dục học từ các trường đại học, viện nghiên cứu phối hợp cùng đội ngũ cán bộ quản lý của Phòng Giáo dục và Đào tạo và các trường trung học cơ sở mà không làm xáo trộn biên chế thường xuyên của các đơn vị.
+
+\subsubsection{7.1.1. Sơ đồ cơ cấu tổ chức Ban Quản lý dự án}
+
+Bộ máy dự án gồm bốn tiểu ban chuyên trách đặt dưới sự điều phối trực tiếp của Giám đốc dự án, trong đó Tiểu ban Chuyên môn nội dung quản lý bốn nhóm tác giả phụ trách bốn phần của bộ tài liệu (Hình~\ref{fig:co_cau_to_chuc}):
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    level 1/.style={sibling distance=3.6cm, level distance=1.4cm},
+    level 2/.style={sibling distance=1.8cm, level distance=1.8cm},
+    box/.style={rectangle, draw=blue!80, fill=blue!5, thick, rounded corners=2pt, align=center, inner sep=4pt, font=\scriptsize},
+    root/.style={rectangle, draw=red!80, fill=red!10, thick, rounded corners=3pt, align=center, inner sep=5pt, font=\footnotesize\bfseries},
+    manager/.style={rectangle, draw=blue!80, fill=blue!15, thick, rounded corners=3pt, align=center, inner sep=5pt, font=\scriptsize\bfseries},
+    subbox/.style={rectangle, draw=gray!80, fill=gray!10, thin, rounded corners=2pt, align=center, inner sep=3pt, font=\tiny}
+]
+    \node (CDT) [root] {LÃNH ĐẠO PHÒNG GIÁO DỤC VÀ ĐÀO TẠO\\(Cơ quan phê duyệt và Chủ đầu tư)}
+        child {
+            node (GD) [manager] {GIÁM ĐỐC DỰ ÁN\\ThS. Lê Hoàng Nam (Phòng GD\&ĐT)}
+            child {
+                node (CB) [box] {\textbf{Tiểu ban Chuyên môn}\\\textit{Chủ biên: PGS.TS. Nguyễn Minh Hà}}
+                child { node [subbox] {4 Nhóm tác giả\\(Phần 1 đến Phần 4)} }
+            }
+            child {
+                node (HD) [box] {\textbf{Hội đồng Thẩm định}\\\textit{Chủ tịch: TS. Vũ Thị Mai}}
+                child { node [subbox] {3 Chuyên gia phản biện\\và Thư ký thẩm định} }
+            }
+            child {
+                node (MS) [box] {\textbf{Tiểu ban Mua sắm \& TC}\\\textit{Phụ trách: ThS. Phạm Quang Thắng}}
+                child { node [subbox] {Kế toán, Thiết kế\\và Nhà thầu in} }
+            }
+            child {
+                node (TH) [box] {\textbf{Tiểu ban Kiểm định}\\\textit{Đại diện: ThS. Đỗ Thị Lan}}
+                child { node [subbox] {Tổ giáo viên 5 trường\\và Nhóm đo đạc mẫu} }
+            }
+        };
+\end{tikzpicture}
+\caption{Sơ đồ cơ cấu tổ chức Ban Quản lý dự án theo mô hình ma trận cân bằng}
+\label{fig:co_cau_to_chuc}
+\end{figure}
+
+\subsubsection{7.1.2. Chức năng và nhiệm vụ của các tiểu ban chuyên trách}
+
+Trên cơ sở danh sách nhân sự chủ chốt đã xác lập tại Bảng 2.1 (Chương 2), phạm vi điều hành của bốn tiểu ban được quy định cụ thể theo từng mảng nghiệp vụ:
+
+Tiểu ban Chuyên môn nội dung (do Chủ biên Phó Giáo sư, Tiến sĩ Nguyễn Minh Hà phụ trách) chịu trách nhiệm thiết kế khung đề cương 20 bài chuẩn, điều phối bốn nhóm tác giả biên soạn 80 trang ruột, tổ chức đọc chéo nội bộ, biên tập đồng nhất văn phong sư phạm và trực tiếp chỉnh sửa, hiệu đính bản thảo sạch theo kết luận của Hội đồng thẩm định.
+
+Hội đồng thẩm định độc lập (do Tiến sĩ Vũ Thị Mai làm Chủ tịch) chịu trách nhiệm điều phối ba chuyên gia phản biện độc lập đánh giá toàn văn bản thảo, chủ trì hai phiên họp thẩm định chính thức và giám sát mức độ tiếp thu chỉnh sửa trước khi cấp phép chế bản.
+
+Tiểu ban Mua sắm và Tài chính (do Thạc sĩ Phạm Quang Thắng phụ trách) điều phối nhóm họa sĩ thiết kế bìa, vẽ 25 hình minh họa và dàn trang điện tử; đồng thời tổ chức quy trình chào hàng cạnh tranh rút gọn để lựa chọn nhà thầu in ấn, kiểm soát chứng từ giải ngân năm đợt theo mốc nghiệm thu và thực hiện thủ tục thanh quyết toán, lưu trữ hồ sơ.
+
+Tiểu ban Kiểm định và Thụ hưởng (do Thạc sĩ Đỗ Thị Lan đại diện) điều phối mạng lưới giáo viên tư vấn tại năm trường trung học cơ sở để thu thập 350 bộ phiếu khảo sát đầu vào, tổ chức hai nhóm đọc thử bản thảo (20 học sinh và 5 giáo viên), chủ trì rút mẫu phân tầng 384 cuốn để kiểm định chất lượng kỹ thuật tại kho và tổ chức tiếp nhận, phân phối 2.000 cuốn ấn phẩm về các trường.
+
+\subsection{7.2. Ma trận phân bổ trách nhiệm}
+
+Dự án áp dụng mô hình \textit{RACI} (\textit{Responsible} -- Người trực tiếp thực hiện, \textit{Accountable} -- Người chịu trách nhiệm phê duyệt, \textit{Consulted} -- Người được tham vấn, \textit{Informed} -- Người được thông báo) đối với mười công việc từ A đến J trên sơ đồ mạng. Nguyên tắc cốt lõi được duy trì xuyên suốt là mỗi công việc chỉ có duy nhất một vị trí giữ vai trò \texttt{A} để tránh chồng chéo thẩm quyền hoặc đùn đẩy trách nhiệm khi nghiệm thu.
+
+\begin{table}[htbp]
+\centering
+\caption{Ma trận phân bổ trách nhiệm theo mô hình RACI}
+\label{tab:raci}
+\small
+\setstretch{1.15}
+\begin{tabularx}{\textwidth}{|C{0.6cm}|Y|C{0.9cm}|C{0.9cm}|C{0.9cm}|C{0.9cm}|C{0.9cm}|C{0.9cm}|C{0.9cm}|C{0.9cm}|}
+\hline
+\textbf{Mã} & \textbf{Tên công việc trên sơ đồ mạng} & \textbf{LĐ Phòng} & \textbf{GĐ DA} & \textbf{Chủ biên} & \textbf{Tác giả} & \textbf{HĐ Thẩm} & \textbf{Mua sắm} & \textbf{In \& TK} & \textbf{Trường cơ sở} \\
+\hline
+\textbf{A} & Khảo sát nhu cầu và thu thập dữ liệu & I & \textbf{A} & C & \textbf{R} & I & I & I & C \\
+\hline
+\textbf{B} & Lập khung cấu trúc và duyệt đề cương & \textbf{A} & C & \textbf{R} & C & C & I & I & I \\
+\hline
+\textbf{C} & Biên soạn bản thảo lần một (80 trang) & I & \textbf{A} & \textbf{R} & \textbf{R} & I & I & I & I \\
+\hline
+\textbf{D} & Chọn nhà thầu in và ký hợp đồng & C & \textbf{A} & I & I & I & \textbf{R} & C & I \\
+\hline
+\textbf{E} & Đọc phản biện và họp thẩm định & I & \textbf{A} & C & I & \textbf{R} & I & I & C \\
+\hline
+\textbf{F} & Tiếp thu ý kiến, hiệu đính bản sạch & I & \textbf{A} & \textbf{R} & C & C & I & I & I \\
+\hline
+\textbf{G} & Thiết kế đồ họa và dàn trang chế bản & I & \textbf{A} & C & I & I & C & \textbf{R} & I \\
+\hline
+\textbf{H} & In bản bông và ký duyệt mẫu in thử & I & \textbf{A} & \textbf{R} & I & I & C & C & I \\
+\hline
+\textbf{I} & In offset hàng loạt 2.000 cuốn & I & \textbf{A} & I & I & I & C & \textbf{R} & I \\
+\hline
+\textbf{J} & Kiểm định mẫu, nghiệm thu, bàn giao & \textbf{A} & \textbf{R} & C & I & C & C & C & C \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{7.3. Động lực làm việc và nghệ thuật lãnh đạo nhóm dự án}
+
+\subsubsection{7.3.1. Ứng dụng thuyết thứ bậc nhu cầu trong tạo động lực nhân sự}
+
+Do đội ngũ tham gia dự án gồm cả các giảng viên đại học, nghiên cứu viên và cán bộ quản lý cơ sở có đặc thù công việc kiêm nhiệm, Giám đốc dự án vận dụng thuyết thứ bậc nhu cầu của Abraham Maslow để thiết kế cơ chế khuyến khích phù hợp với từng nhóm nhân sự:
+
+Ở tầng nhu cầu cơ bản và nhu cầu an toàn, dự án bảo đảm chi trả thù lao viết bài, phản biện và dàn trang đúng định mức tại Thông tư số 51/2019/TT-BTC, giải ngân kịp thời ngay sau từng mốc nghiệm thu để các thành viên yên tâm công tác. Ở tầng nhu cầu xã hội và sự gắn kết, Ban Quản lý dự án duy trì không khí trao đổi học thuật cởi mở trong các buổi hội thảo đề cương và thảo luận nhóm, kết nối góc nhìn lý luận của nhà nghiên cứu với kinh nghiệm thực tiễn của giáo viên trung học cơ sở.
+
+Ở tầng nhu cầu được tôn trọng và tự khẳng định bản thân, học hàm, học vị và họ tên của Chủ biên, từng tác giả biên soạn bốn phần và các ủy viên Hội đồng thẩm định được ghi nhận trang trọng tại trang thông tin xuất bản của cuốn sách. Đồng thời, giá trị thực tiễn của bộ tài liệu khi đến tay 2.000 học sinh lớp 9 và các gia đình trên địa bàn chính là động lực nghề nghiệp bền vững đối với đội ngũ những người làm giáo dục.
+
+\subsubsection{7.3.2. Mười phẩm chất tâm lý của người lãnh đạo tài năng}
+
+Trong điều hành tác nghiệp, Giám đốc dự án rèn luyện phong cách lãnh đạo đồng hành thông qua mười chuẩn mực hành vi đối lập với lối quản lý mệnh lệnh hành chính đơn thuần (Bảng~\ref{tab:lanh_dao}):
+
+\begin{table}[htbp]
+\centering
+\caption{Bảng đối chiếu mười phẩm chất tâm lý của người lãnh đạo nhóm dự án}
+\label{tab:lanh_dao}
+\small
+\setstretch{1.15}
+\begin{tabularx}{\textwidth}{|C{0.8cm}|Y|Y|}
+\hline
+\textbf{TT} & \textbf{Phẩm chất tâm lý của người lãnh đạo tài năng} & \textbf{Hành vi quản lý tiêu cực cần loại bỏ} \\
+\hline
+\textbf{1} & Hướng dẫn, chia sẻ chuyên môn; cung cấp rõ quy chuẩn biên soạn ngay từ đầu. & Ra lệnh cứng nhắc, áp đặt ý kiến chủ quan từ trên xuống. \\
+\hline
+\textbf{2} & Đặt niềm tin vào năng lực học thuật và trách nhiệm nghề nghiệp của tác giả. & Sử dụng quyền lực hành chính để gây sức ép nặng nề. \\
+\hline
+\textbf{3} & Động viên, khích lệ khi xử lý các bộ dữ liệu tuyển sinh và trường nghề phức tạp. & Tạo tâm lý căng thẳng, đe dọa cắt giảm kinh phí hoặc kỷ luật. \\
+\hline
+\textbf{4} & Dùng đại từ tập thể ``chúng ta'', ``các bạn'' để đề cao sự đóng góp của nhóm. & Thường xuyên nhấn mạnh chữ ``tôi'', đề cao cái tôi cá nhân. \\
+\hline
+\textbf{5} & Chủ động tháo gỡ vướng mắc thủ tục và nhận trách nhiệm khi trễ tiến độ. & Đổ lỗi cho tác giả hoặc đối tác khi xảy ra sự cố tiến độ. \\
+\hline
+\textbf{6} & Lắng nghe cầu thị ý kiến phản biện độc lập nâng cao chất lượng bản thảo. & Độc đoán, tự quyết định chuyên môn không qua tham vấn. \\
+\hline
+\textbf{7} & Khơi dậy niềm hứng khởi sáng tạo học liệu phục vụ học sinh cuối cấp. & Biến việc viết tài liệu thành nghĩa vụ hành chính khô khan. \\
+\hline
+\textbf{8} & Khuyến khích giải pháp sơ đồ hóa thông tin và bảng hỏi trực quan sinh động. & Bảo thủ, định kiến, chỉ tin dùng một nhóm hẹp quen thuộc. \\
+\hline
+\textbf{9} & Xây dựng quan hệ hợp tác tôn trọng, minh bạch với nhà thầu in ấn. & Đặt ra các yêu cầu phi thực tế rồi dồn ép đối tác thực hiện. \\
+\hline
+\textbf{10} & Trực tiếp sát cánh cùng các tiểu ban tại cơ sở theo tinh thần cùng làm việc. & Đứng ngoài chỉ đạo hình thức và khoán trắng cho cấp dưới. \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsubsection{7.3.3. Hệ thống bảy thói quen quản lý hiệu quả trong điều hành dự án}
+
+Cùng với mười phẩm chất tâm lý trên, bảy thói quen quản lý hiệu quả được cụ thể hóa vào quy trình điều hành 90 ngày của dự án:
+\begin{enumerate}
+    \item \textit{Thói quen 1 (Chủ động):} Giữ thái độ chủ động trong việc cập nhật sớm chỉ tiêu tuyển sinh lớp 10 và khảo sát giá vật tư giấy in;
+    \item \textit{Thói quen 2 (Bắt đầu từ mục tiêu):} Luôn bắt đầu từ hình ảnh cuốn cẩm nang hoàn chỉnh đến tay học sinh trước kỳ đăng ký nguyện vọng;
+    \item \textit{Thói quen 3 (Ưu tiên điều quan trọng nhất):} Ưu tiên nguồn lực cao nhất cho chín công việc nằm trên đường găng 90 ngày;
+    \item \textit{Thói quen 4 (Tư duy cùng thắng):} Duy trì tinh thần cùng thắng trong thương thảo hợp đồng in ấn và thỏa thuận thù lao tác giả;
+    \item \textit{Thói quen 5 (Lắng nghe để thấu hiểu):} Lắng nghe thấu đáo phản hồi của học sinh, giáo viên trong buổi đọc thử nghiệm trước khi chốt bản thảo;
+    \item \textit{Thói quen 6 (Hợp lực cộng hưởng):} Kết hợp sức mạnh cộng hưởng giữa chuyên gia tâm lý, nhà giáo dục và họa sĩ thiết kế đồ họa;
+    \item \textit{Thói quen 7 (Rèn giũa bản thân):} Bố trí nhịp độ làm việc hợp lý giữa các chặng biên soạn và thẩm định để tái tạo sức sáng tạo cho toàn đội ngũ.
+\end{enumerate}
+

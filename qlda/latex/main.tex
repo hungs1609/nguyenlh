@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage[T5]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\shorthandoff{"}
+
+% Cấu hình Font chữ và Cỡ chữ 13pt tiêu chuẩn
+\usepackage[fontsize=13pt]{scrextend}
+\usepackage{mathptmx}
+
+% Cấu hình lề trang theo quy chuẩn kỹ thuật
+\usepackage[top=2.5cm,bottom=2.5cm,left=3.5cm,right=2.0cm]{geometry}
+
+% Cấu hình giãn dòng và thụt lề đoạn văn
+\usepackage{setspace}
+\setstretch{1.5}
+\usepackage{indentfirst}
+\setlength{\parindent}{1.0cm}
+\setlength{\parskip}{4pt}
+
+% Các gói đồ họa, bảng biểu và toán học
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes.geometric,arrows,arrows.meta,positioning,fit,trees}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\captionsetup[table]{labelfont=bf,textfont=bf,position=above,skip=6pt}
+\captionsetup[figure]{labelfont=bf,textfont=bf,position=below,skip=6pt}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+% Cấu hình Header, Footer và Đánh số trang góc dưới bên phải
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Cấu hình trích dẫn chuẩn APA bằng natbib
+\usepackage[round]{natbib}
+\newcommand{\parencite}{\citep}
+
+% Định dạng cột tự canh lề và xuống dòng cho tabularx
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{Z}{>{\centering\arraybackslash}X}
+
+% Cấu hình định dạng tiêu đề
+\usepackage{titlesec}
+\titleformat{\section}{\fontsize{14}{17}\selectfont\bfseries}{}{0em}{}
+\titleformat{\subsection}{\fontsize{13}{16}\selectfont\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\fontsize{13}{16}\selectfont\bfseries\itshape}{}{0em}{}
+\titlespacing*{\section}{0pt}{16pt}{7pt}
+\titlespacing*{\subsection}{0pt}{12pt}{5pt}
+\titlespacing*{\subsubsection}{0pt}{8pt}{3pt}
+
+% Cấu hình mục lục có dấu chấm nối cho tất cả các cấp
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftsecindent}{0pt}
+\setlength{\cftsubsecindent}{15pt}
+\setlength{\cftsubsubsecindent}{30pt}
+
+\begin{document}
+
+% 1. Trang bìa chuẩn của Đại học Bách khoa Hà Nội
+\input{trang_bia}
+
+\newpage
+% 2. Trang mục lục (không đánh số trang)
+\pagenumbering{gobble}
+\renewcommand{\contentsname}{\centering\fontsize{14}{17}\selectfont\textbf{MỤC LỤC}}
+{\setstretch{1.2}
+\tableofcontents
+}
+\newpage
+
+% Bắt đầu đánh số trang Ả Rập từ Phần Mở đầu
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% 3. Phần Mở đầu
+\input{00_mo_dau}
+\newpage
+
+% 4. Chương 1: Bối cảnh thực tiễn và cơ sở xác định dự án giáo dục
+\input{01_boi_canh_va_xac_dinh_du_an}
+\newpage
+
+% 5. Chương 2: Kế hoạch quản lý tổng thể và khởi động dự án
+\input{02_quan_ly_tong_the}
+\newpage
+
+% 6. Chương 3: Kế hoạch quản lý phạm vi dự án
+\input{03_quan_ly_pham_vi}
+\newpage
+
+% 7. Chương 4: Kế hoạch quản lý tiến độ dự án
+\input{04_quan_ly_tien_do}
+\newpage
+
+% 8. Chương 5: Kế hoạch quản lý chi phí dự án
+\input{05_quan_ly_chi_phi}
+\newpage
+
+% 9. Chương 6: Kế hoạch quản lý chất lượng dự án
+\input{06_quan_ly_chat_luong}
+\newpage
+
+% 10. Chương 7: Kế hoạch quản lý nguồn nhân lực dự án
+\input{07_quan_ly_nhan_luc}
+\newpage
+
+% 11. Chương 8: Kế hoạch phân tích và quản lý rủi ro dự án
+\input{08_quan_ly_rui_ro}
+\newpage
+
+% 12. Chương 9: Kế hoạch quản lý truyền thông dự án
+\input{09_quan_ly_truyen_thong}
+\newpage
+
+% 13. Chương 10: Kế hoạch quản lý mua sắm dự án
+\input{10_quan_ly_mua_sam}
+\newpage
+
+% 14. Phần Kết luận
+\input{11_ket_luan}
+\newpage
+
+% 15. Danh mục Tài liệu tham khảo
+\input{12_tai_lieu_tham_khao}
+\newpage
+
+\end{document}
+

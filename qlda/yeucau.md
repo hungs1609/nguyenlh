@@ -1,0 +1,1 @@
+chúng ta học theo hình thức project. Các em nghiên cứu tài liệu rồi lựa chọn một vấn đề giáo dục thực tế rồi áp dụng các kiến thức đã học để xây dựng một dự án nhằm giải quyết vấn đề đó.

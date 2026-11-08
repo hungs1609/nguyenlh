@@ -1,0 +1,187 @@
+\section{CHƯƠNG 8. KẾ HOẠCH PHÂN TÍCH VÀ QUẢN LÝ RỦI RO DỰ ÁN}
+
+Chương này vận dụng quy trình quản lý rủi ro sáu bước nhằm nhận diện các yếu tố bất định qua ma trận bốn chiều, phân tích định tính danh mục rủi ro trọng yếu theo tháng, phân tích định lượng phương án hợp đồng in ấn bằng mô hình cây quyết định và giá trị tiền tệ kỳ vọng, từ đó xác lập các chiến lược ứng phó và kế hoạch dự phòng.
+
+\subsection{8.1. Khung quản lý rủi ro dự án}
+
+Trong dự án phát triển học liệu hướng nghiệp, rủi ro bao gồm mọi biến cố không chắc chắn có thể làm chậm tiến độ đường găng 90 ngày, làm biến động dự toán 185.000.000 đồng hoặc ảnh hưởng đến chất lượng của 2.000 cuốn tài liệu. Quy trình quản lý rủi ro được thiết lập khép kín qua sáu bước (Hình~\ref{fig:quy_trinh_rui_ro}):
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    box/.style={rectangle, draw=red!80, fill=red!5, thick, rounded corners=2pt, align=center, inner sep=4pt, font=\scriptsize},
+    arr/.style={->, thick, >=stealth, draw=red!80}
+]
+    \node (s1) [box] {\textbf{8.1. Lập kế hoạch}\\\textit{Quản lý rủi ro}};
+    \node (s2) [box, right=0.35cm of s1] {\textbf{8.2. Nhận diện}\\\textit{Mô hình SWOT}};
+    \node (s3) [box, right=0.35cm of s2] {\textbf{8.3. Định tính}\\\textit{Ưu tiên theo tháng}};
+    \node (s4) [box, right=0.35cm of s3] {\textbf{8.4. Định lượng}\\\textit{Cây quyết định}};
+    \node (s5) [box, right=0.35cm of s4] {\textbf{8.5. Ứng phó}\\\textit{4 Chiến lược}};
+    \node (s6) [box, right=0.35cm of s5] {\textbf{8.6. Kiểm soát}\\\textit{Giám sát định kỳ}};
+
+    \draw [arr] (s1) -- (s2);
+    \draw [arr] (s2) -- (s3);
+    \draw [arr] (s3) -- (s4);
+    \draw [arr] (s4) -- (s5);
+    \draw [arr] (s5) -- (s6);
+\end{tikzpicture}
+\caption{Quy trình sáu bước quản lý và kiểm soát rủi ro dự án}
+\label{fig:quy_trinh_rui_ro}
+\end{figure}
+
+\subsection{8.2. Ma trận nhận diện rủi ro theo mô hình điểm mạnh, điểm yếu, thời cơ và nguy cơ}
+
+Nhóm lập kế hoạch sử dụng mô hình \textit{SWOT} (\textit{Strengths} -- Điểm mạnh, \textit{Weaknesses} -- Điểm yếu, \textit{Opportunities} -- Thời cơ, \textit{Threats} -- Nguy cơ) để rà soát các yếu tố nội tại của Ban Quản lý dự án và các tác động từ môi trường bên ngoài, làm cơ sở nhận diện các rủi ro tiềm ẩn:
+
+\begin{table}[htbp]
+\centering
+\caption{Ma trận nhận diện rủi ro dự án theo mô hình SWOT}
+\label{tab:swot}
+\small
+\setstretch{1.15}
+\begin{tabularx}{\textwidth}{|p{2.8cm}|Y|Y|}
+\hline
+\textbf{Chiều phân tích} & \textbf{Đặc điểm thực tế của dự án} & \textbf{Rủi ro tiềm ẩn được nhận diện} \\
+\hline
+\textbf{Điểm mạnh (S)} & Đội ngũ Chủ biên và tác giả có chuyên môn sâu về tâm lý học và giáo dục học; Ban QLDA trực thuộc Phòng GD\&ĐT thuận lợi điều phối 5 trường. & Nguy cơ tác giả trình bày thiên về lý luận hàn lâm, thiếu tính trực quan đối với học sinh lớp 9. \\
+\hline
+\textbf{Điểm yếu (W)} & Nhân sự làm việc kiêm nhiệm; ít kinh nghiệm giám sát in công nghiệp; 9/10 công việc nằm trên đường găng không có thời gian dự trữ. & Rủi ro chậm hạn nộp bản thảo lần một (ngày 40); rủi ro lỗi màu sắc hoặc bung keo gáy nếu thiếu khâu duyệt bản bông. \\
+\hline
+\textbf{Thời cơ (O)} & Quyết định số 522/QĐ-TTg và chính sách miễn 100\% học phí học nghề được ưu tiên; các trường THCS đang cần tài liệu chuẩn hóa. & Thuận lợi trong khâu khảo sát đầu vào, đọc thử bản thảo và tiếp nhận ấn phẩm tại các nhà trường. \\
+\hline
+\textbf{Nguy cơ (T)} & Tâm lý chuộng bằng cấp đại học của phụ huynh; giá giấy in có xu hướng biến động; chỉ tiêu tuyển sinh lớp 10 có thể điều chỉnh. & Phụ huynh ít quan tâm lộ trình học nghề hệ 9+; rủi ro trượt giá vật tư in ấn; dữ liệu tuyển sinh cần cập nhật gấp. \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{8.3. Danh mục các rủi ro trọng yếu theo chu kỳ tháng}
+
+Từ các rủi ro đã nhận diện, dự án lập bảng theo dõi thứ hạng ưu tiên của năm rủi ro trọng yếu nhất qua ba tháng thực hiện (Tháng 1: từ ngày 1 đến ngày 30; Tháng 2: từ ngày 31 đến ngày 60; Tháng 3: từ ngày 61 đến ngày 90):
+
+\begin{table}[htbp]
+\centering
+\caption{Bảng theo dõi danh mục năm rủi ro trọng yếu theo chu kỳ tháng}
+\label{tab:rui_ro_thang}
+\small
+\setstretch{1.15}
+\begin{tabularx}{\textwidth}{|Y|C{1.1cm}|C{1.1cm}|C{1.1cm}|p{2.2cm}|Y|}
+\hline
+\textbf{Danh mục rủi ro trọng yếu} & \textbf{Hạng T1} & \textbf{Hạng T2} & \textbf{Hạng T3} & \textbf{Xu hướng} & \textbf{Biện pháp kiểm soát theo giai đoạn} \\
+\hline
+\textbf{1. Tác giả chậm nộp bản thảo (CV C)} & \textbf{1} & \textbf{2} & Đã qua & Giảm dần sau ngày 40 & Khoán theo 20 bài chuẩn; giao ban tiến độ sáng thứ Hai; bố trí trợ lý hỗ trợ dữ liệu. \\
+\hline
+\textbf{2. Bản thảo phải sửa nhiều sau thẩm định (CV E, F)} & \textbf{3} & \textbf{1} & Đã qua & Đạt đỉnh ở Tháng 2 & Duyệt đề cương kỹ tại ngày 14; đọc chéo nội bộ và đọc thử 20 học sinh trước họp Hội đồng. \\
+\hline
+\textbf{3. Nhà in trễ hạn hoặc lỗi kỹ thuật (CV I)} & \textbf{4} & \textbf{3} & \textbf{1} & Tăng cao ở Tháng 3 & Duyệt bản bông tại ngày 76; phạt trễ hạn 1\%/ngày; kiểm định mẫu 384 cuốn tại kho. \\
+\hline
+\textbf{4. Biến động tăng giá giấy in (CV D, I)} & \textbf{2} & \textbf{4} & Đã qua & Giảm sau khi ký HĐ & Chào hàng cạnh tranh sớm và ký hợp đồng trọn gói cố định đơn giá từ ngày thứ 32. \\
+\hline
+\textbf{5. Phụ huynh e ngại thông tin phân luồng nghề} & \textbf{5} & \textbf{5} & \textbf{2} & Tăng khi bàn giao sách & Thiết kế bộ phiếu đối thoại gia đình; làm rõ quyền lợi miễn 100\% học phí và liên thông. \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{8.4. Mô hình cây quyết định và giá trị tiền tệ kỳ vọng}
+
+Để định lượng rủi ro khi lựa chọn phương thức thực hiện gói thầu in ấn 2.000 cuốn tài liệu (mục \texttt{4.4}), Ban Quản lý dự án sử dụng \textit{Decision Tree} (Mô hình cây quyết định) kết hợp chỉ số \textit{Expected Monetary Value -- EMV} (Giá trị tiền tệ kỳ vọng).
+
+\subsubsection{8.4.1. Bài toán lựa chọn phương án hợp đồng in ấn công nghiệp}
+
+Tại điểm quyết định lựa chọn nhà thầu in ấn, dự án cân nhắc hai phương án có cấu trúc chi phí và phân bố xác suất rủi ro khác nhau:
+
+\textbf{Phương án 1 (Ký hợp đồng in ấn trọn gói với nhà in công nghiệp uy tín A):} Chi phí hợp đồng dự toán là \textbf{95.000.000 đồng}. Nếu quá trình bình bản kẽm và chạy máy offset diễn ra thuận lợi (xác suất $P_1 = 0,80$), sản phẩm đạt chuẩn ngay lần đầu và đúng tiến độ, mang lại giá trị quy đổi cho dự án là 120.000.000 đồng; lợi ích ròng đạt $120.000.000 - 95.000.000 = +25.000.000$ đồng. Nếu xảy ra lỗi lệch màu nhẹ ở một số tay sách phải căn chỉnh chạy lại máy làm chậm tiến độ 2 ngày (xác suất $P_2 = 0,20$), giá trị thu về giảm xuống còn 75.000.000 đồng do phát sinh chi phí giám sát hiện trường và áp lực tiến độ; lợi ích ròng trong trường hợp này là $75.000.000 - 95.000.000 = -20.000.000$ đồng.
+
+\textbf{Phương án 2 (Thuê cơ sở in gia công giá rẻ B sử dụng thiết bị cũ):} Chi phí hợp đồng là \textbf{80.000.000 đồng} (thấp hơn 15.000.000 đồng so với Phương án 1). Nếu quá trình in thuận lợi (xác suất $P_1 = 0,40$), giá trị mang lại ước tính đạt 110.000.000 đồng; lợi ích ròng đạt $110.000.000 - 80.000.000 = +30.000.000$ đồng. Nếu gặp sự cố lệch tram khi xuất kẽm làm kéo dài thời gian in thêm 5 ngày (xác suất $P_2 = 0,40$), giá trị thu về giảm xuống còn 55.000.000 đồng; lợi ích ròng là $55.000.000 - 80.000.000 = -25.000.000$ đồng. Nếu xảy ra lỗi nghiêm trọng (lem mực, bung keo gáy diện rộng không vượt qua kỳ kiểm định mẫu 384 cuốn với xác suất $P_3 = 0,20$), giá trị thu về chỉ còn 20.000.000 đồng; lợi ích ròng âm ở mức $20.000.000 - 80.000.000 = -60.000.000$ đồng.
+
+\subsubsection{8.4.2. Sơ đồ cây quyết định và tính toán giá trị tiền tệ kỳ vọng}
+
+Trên sơ đồ cây quyết định Hình~\ref{fig:decision_tree}, điểm quyết định được biểu diễn bằng ô hình vuông và các điểm cơ hội gắn với xác suất biến cố được biểu diễn bằng nút hình tròn:
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    decision/.style={rectangle, draw=blue!90, fill=blue!10, thick, minimum size=8mm, align=center, font=\small\bfseries},
+    chance/.style={circle, draw=orange!90, fill=orange!15, thick, minimum size=7mm, font=\small\bfseries},
+    outcome/.style={rectangle, draw=gray!70, fill=gray!5, rounded corners=2pt, font=\scriptsize, align=left, inner sep=3pt},
+    edge from parent/.style={draw=black!70, thick, -{Stealth[length=2mm]}}
+]
+    % Điểm quyết định
+    \node (dec) at (0,0) [decision] {Quyết định\\chọn gói\\in ấn};
+
+    % Nút cơ hội 1
+    \node (c1) at (3.5, 2.0) [chance] {$O_1$};
+    % Nút cơ hội 2
+    \node (c2) at (3.5, -2.0) [chance] {$O_2$};
+
+    \draw [thick, -{Stealth[length=2mm]}] (dec) -- node[above=2pt, sloped, font=\scriptsize] {PA 1: Nhà in uy tín A (95 tr)} (c1);
+    \draw [thick, -{Stealth[length=2mm]}] (dec) -- node[below=2pt, sloped, font=\scriptsize] {PA 2: Xưởng in giá rẻ B (80 tr)} (c2);
+
+    % Nhánh của C1
+    \node (o11) at (8.5, 2.7) [outcome] {Thuận lợi ($P=0,80$): \textbf{+25.000.000 đ}};
+    \node (o12) at (8.5, 1.3) [outcome] {Lỗi nhẹ ($P=0,20$): \textbf{-20.000.000 đ}};
+    \draw [thick, -{Stealth[length=2mm]}] (c1) -- (o11);
+    \draw [thick, -{Stealth[length=2mm]}] (c1) -- (o12);
+
+    % Nhánh của C2
+    \node (o21) at (8.5, -1.0) [outcome] {Thuận lợi ($P=0,40$): \textbf{+30.000.000 đ}};
+    \node (o22) at (8.5, -2.0) [outcome] {Lỗi kẽm trễ 5 ngày ($P=0,40$): \textbf{-25.000.000 đ}};
+    \node (o23) at (8.5, -3.0) [outcome] {Hỏng lô hàng ($P=0,20$): \textbf{-60.000.000 đ}};
+    \draw [thick, -{Stealth[length=2mm]}] (c2) -- (o21);
+    \draw [thick, -{Stealth[length=2mm]}] (c2) -- (o22);
+    \draw [thick, -{Stealth[length=2mm]}] (c2) -- (o23);
+\end{tikzpicture}
+\caption{Sơ đồ cây quyết định lựa chọn phương án hợp đồng in ấn công nghiệp}
+\label{fig:decision_tree}
+\end{figure}
+
+Tính toán giá trị tiền tệ kỳ vọng từ phải sang trái tại hai nút cơ hội:
+
+\begin{equation}
+\begin{split}
+\text{EMV}_1 &= (0,80 \times 25.000.000) + (0,20 \times (-20.000.000)) \\
+&= 20.000.000 - 4.000.000 = \mathbf{+16.000.000\text{ đồng}}
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\text{EMV}_2 &= (0,40 \times 30.000.000) + (0,40 \times (-25.000.000)) + (0,20 \times (-60.000.000)) \\
+&= 12.000.000 - 10.000.000 - 12.000.000 = \mathbf{-10.000.000\text{ đồng}}
+\end{split}
+\end{equation}
+
+Do $\text{EMV}(\text{Phương án 1}) = +16.000.000\text{ đồng} > \text{EMV}(\text{Phương án 2}) = -10.000.000\text{ đồng}$, Ban Quản lý dự án quyết định lựa chọn Phương án 1 (mời thầu các doanh nghiệp in công nghiệp uy tín có máy in offset bốn màu hiện đại với mức trần dự toán gói thầu 95.000.000 đồng) và loại bỏ hoàn toàn phương án thuê cơ sở in gia công giá rẻ.
+
+\subsection{8.5. Chiến lược đối phó rủi ro và kế hoạch dự phòng}
+
+\subsubsection{8.5.1. Bốn chiến lược đối phó rủi ro}
+
+Dự án thiết lập hệ thống giải pháp ứng phó theo bốn nhóm chiến lược gồm \textit{Risk Avoidance} (Tránh rủi ro), \textit{Risk Mitigation} (Giảm nhẹ rủi ro), \textit{Risk Transference} (Thuyên chuyển rủi ro) và \textit{Risk Acceptance} (Chấp nhận rủi ro) tại Bảng~\ref{tab:chien_luoc_rui_ro}:
+
+\begin{table}[htbp]
+\centering
+\caption{Phân nhóm chiến lược đối phó rủi ro của dự án}
+\label{tab:chien_luoc_rui_ro}
+\small
+\setstretch{1.15}
+\begin{tabularx}{\textwidth}{|p{2.6cm}|p{3.2cm}|Y|Y|}
+\hline
+\textbf{Chiến lược} & \textbf{Nguyên tắc tác động} & \textbf{Rủi ro áp dụng} & \textbf{Giải pháp thực thi cụ thể} \\
+\hline
+\textbf{Tránh rủi ro} & Thay đổi phương thức thực hiện loại bỏ nguyên nhân. & Hỏng hàng và trễ tiến độ do thuê cơ sở in gia công lạc hậu. & Đưa tiêu chí bắt buộc máy offset 4 màu và mẫu giấy đạt chuẩn vào vòng kỹ thuật để loại cơ sở yếu kém. \\
+\hline
+\textbf{Giảm nhẹ rủi ro} & Giảm xác suất xảy ra hoặc thu hẹp mức độ thiệt hại. & Chậm nộp bản thảo (C) và bản thảo không qua thẩm định (E). & Áp dụng kỹ thuật gối đầu gửi phản biện từng phần và đọc thử với học sinh để chỉnh sửa sớm. \\
+\hline
+\textbf{Thuyên chuyển rủi ro} & Chuyển giao gánh nặng tài chính sang bên thứ ba qua hợp đồng. & Rủi ro trượt giá giấy và sai hỏng kỹ thuật khi in hàng loạt. & Ký hợp đồng trọn gói cố định 47.000 đ/cuốn; ràng buộc nhà thầu chịu 100\% phí in bù nếu mẫu vượt ngưỡng lỗi. \\
+\hline
+\textbf{Chấp nhận rủi ro} & Ghi nhận rủi ro khách quan và chuẩn bị phương án dự phòng. & Địa phương điều chỉnh chỉ tiêu tuyển sinh sau khi sách đã in. & Chuẩn bị sẵn mẫu tờ rời phụ lục cập nhật chỉ tiêu kẹp bổ sung vào cuốn sách khi bàn giao về trường. \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsubsection{8.5.2. Kế hoạch dự phòng và kế hoạch rút lui}
+
+Đối với nhân sự biên soạn, dự án thiết lập \textit{Contingency Plan} (Kế hoạch dự phòng): nếu một tác giả chính gặp sự cố sức khỏe đột xuất trong giai đoạn viết bản thảo (từ ngày 15 đến ngày 40), Chủ biên chuyên môn cùng thành viên dự bị trong nhóm tác giả sẽ trực tiếp tiếp quản phần bài viết đó để giữ vững mốc bàn giao bản thảo lần một vào ngày thứ 40.
+
+Đối với nhà thầu in ấn, dự án xác lập \textit{Fallback Plan} (Kế hoạch rút lui): trong trường hợp dây chuyền in của nhà thầu trúng thầu gặp sự cố kỹ thuật không thể khắc phục trước ngày thứ 77, Ban Quản lý dự án sẽ kích hoạt biên bản bảo lưu kết quả chào hàng để ký hợp đồng thay thế với nhà thầu xếp hạng hai (Công ty Cổ phần In và Truyền thông Giáo dục Thủ đô). Các phát sinh tài chính ngoài dự toán (nếu có) được xử lý thông qua Quỹ dự phòng rủi ro chi phí 9.500.000 đồng theo đúng quy trình phê duyệt đã xác lập tại Mục 5.4.2 (Chương 5).
+

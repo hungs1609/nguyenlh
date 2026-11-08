@@ -1,0 +1,113 @@
+\section{CHƯƠNG 6. KẾ HOẠCH QUẢN LÝ CHẤT LƯỢNG DỰ ÁN}
+
+Chương này thiết lập bộ tiêu chuẩn chất lượng kép cho sản phẩm xuất bản, xác định quy trình đảm bảo chất lượng ở giai đoạn biên soạn và chế bản, áp dụng công thức tính kích cỡ mẫu thống kê trong kiểm tra chất lượng nghiệm thu và bóc tách cơ cấu năm nhóm chi phí chất lượng của dự án.
+
+\subsection{6.1. Khung khái niệm và nguyên tắc quản lý chất lượng}
+
+Quản lý chất lượng trong dự án phát triển học liệu hướng nghiệp được vận hành theo hai nguyên tắc nền tảng: nguyên tắc \textit{Fitness for requirements} (Nguyên tắc yêu cầu phù hợp), đòi hỏi ấn phẩm tuân thủ đúng yêu cầu cần đạt của môn Hoạt động trải nghiệm, hướng nghiệp lớp 9 thuộc Chương trình Giáo dục phổ thông 2018 (Thông tư số 32/2018/TT-BGDĐT) và các quy định của Luật Xuất bản năm 2012; cùng nguyên tắc \textit{Fitness for use} (Nguyên tắc tiện lợi cho sử dụng), yêu cầu ngôn ngữ trình bày, cấu trúc bảng hỏi trắc nghiệm và hệ thống sơ đồ phải trực quan, vừa sức tiếp nhận của học sinh độ tuổi 14 đến 15 và phụ huynh.
+
+Chu trình quản lý chất lượng được thực hiện liên hoàn qua ba bước: lập kế hoạch chất lượng, thực hiện \textit{Quality Assurance -- QA} (Đảm bảo chất lượng) trong quá trình tạo lập sản phẩm và tiến hành \textit{Quality Control -- QC} (Kiểm tra chất lượng) khi nghiệm thu lô hàng xuất bản (Hình~\ref{fig:quy_trinh_chat_luong}).
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    box/.style={rectangle, draw=blue!80, fill=blue!5, thick, rounded corners=3pt, align=center, inner sep=6pt, font=\small},
+    arr/.style={->, thick, >=stealth, draw=blue!80}
+]
+    \node (step1) [box] {\textbf{6.1. LẬP KẾ HOẠCH CHẤT LƯỢNG}\\\textit{Bộ tiêu chuẩn kép: Học thuật sư phạm}\\\textit{và Kỹ thuật in ấn công nghiệp}};
+    \node (step2) [box, right=0.8cm of step1] {\textbf{6.2. ĐẢM BẢO CHẤT LƯỢNG}\\\textit{Thẩm định 2 vòng kín, đọc thử nhóm}\\\textit{và ký duyệt niêm phong bản bông}};
+    \node (step3) [box, right=0.8cm of step2] {\textbf{6.3. KIỂM TRA CHẤT LƯỢNG}\\\textit{Rút mẫu phân tầng $n = 384$ cuốn,}\\\textit{đo độ lệch chuẩn và nghiệm thu}};
+
+    \draw [arr] (step1) -- (step2);
+    \draw [arr] (step2) -- (step3);
+\end{tikzpicture}
+\caption{Quy trình ba bước quản lý chất lượng toàn diện của dự án}
+\label{fig:quy_trinh_chat_luong}
+\end{figure}
+
+\subsection{6.2. Bộ tiêu chuẩn chất lượng sản phẩm xuất bản}
+
+\subsubsection{6.2.1. Tiêu chuẩn về nội dung học thuật và sư phạm}
+
+Nội dung bốn phần của bộ tài liệu phải bảo đảm độ chính xác về pháp lý và dữ liệu tuyển sinh: phản ánh đúng thông tin bốn hướng đi sau trung học cơ sở, danh bạ 25 cơ sở giáo dục nghề nghiệp trên địa bàn và chính sách miễn 100\% học phí học nghề theo Nghị định số 81/2021/NĐ-CP và Nghị định số 97/2023/NĐ-CP.
+
+Đối với công cụ trắc nghiệm sở thích nghề nghiệp theo mật mã Holland rút gọn (36 chỉ báo hành vi tại Phần 1), thang đo phải đạt hệ số tin cậy nội tại từ 0,80 trở lên theo chuẩn thích ứng tâm lý học tại Việt Nam, đi kèm hướng dẫn giải mã kết quả mang tính định hướng mở, không dán nhãn hay áp đặt năng lực của học sinh.
+
+\subsubsection{6.2.2. Tiêu chuẩn về kỹ thuật chế bản và in ấn công nghiệp}
+
+Trên cơ sở quy cách sản phẩm đã xác lập tại Chương 3 (khổ 17 $\times$ 24 cm, gồm 80 trang ruột giấy Fort 100 gsm và 4 trang bìa ngoài giấy Couche 250 gsm cán màng mờ), bộ tiêu chuẩn kỹ thuật nghiệm thu ấn định các ngưỡng dung sai cụ thể: sai số kích thước thành phẩm sau cắt xén không vượt quá $\pm 1\text{ mm}$; độ trắng của giấy ruột đạt từ 84\% ISO trở lên để chống thấu mực và chống lóa; độ phân giải của toàn bộ 25 hình minh họa và đồ họa thông tin đạt tối thiểu 300 DPI; bản in offset bốn màu sắc nét, chồng màu chuẩn xác, không lem mực hoặc nhảy trang; gáy sách phay rãnh và vào keo nhiệt chuyên dụng bảo đảm góc mở phẳng $180^\circ$ không bong tróc khi lật mở nhiều lần.
+
+\subsection{6.3. Quy trình đảm bảo chất lượng học thuật và kỹ thuật}
+
+Hoạt động đảm bảo chất lượng tập trung vào bốn chốt phòng ngừa sai lỗi trước khi đưa vào in ấn hàng loạt:
+
+Trong giai đoạn viết bản thảo, bốn nhóm tác giả thực hiện cơ chế đọc chéo giữa chuyên gia tâm lý và chuyên gia giáo dục học, sau đó Chủ biên biên tập đồng nhất thuật ngữ trên toàn bộ 80 trang ruột (gói công việc \texttt{2.5}).
+
+Khi hoàn thành bản thảo lần một, dự án thực hiện thẩm định chuyên môn qua hai vòng độc lập: gửi toàn văn bản thảo cho ba chuyên gia ngoài dự án đọc phản biện kín theo phiếu tiêu chí (gói công việc \texttt{3.1}), tiếp theo là tổ chức hai phiên họp Hội đồng thẩm định gồm năm thành viên để đánh giá báo cáo giải trình tiếp thu (gói công việc \texttt{3.2}); bản thảo chỉ được thông qua khi đạt tối thiểu 4/5 phiếu đồng thuận.
+
+Song song với thẩm định chuyên gia, dự án tổ chức khảo nghiệm thực tế theo phương pháp \textit{Focus Group} (Thảo luận nhóm tập trung) với 20 học sinh lớp 9 và 5 giáo viên tư vấn (gói công việc \texttt{3.3}) để rà soát các từ ngữ khó hiểu hoặc cách tính điểm trắc nghiệm còn gây nhầm lẫn, làm cơ sở hiệu đính bản thảo sạch (gói công việc \texttt{3.4}).
+
+Ở khâu chế bản, sau khi hoàn tất dàn trang điện tử, bộ phận kỹ thuật và nhà thầu phải in thử nghiệm hai bộ bản bông màu (gói công việc \texttt{4.3}). Giám đốc dự án và Chủ biên trực tiếp kiểm tra đối soát từng trang và ký niêm phong lên bản bông làm mẫu đối chứng pháp lý duy nhất cho khâu in offset hàng loạt.
+
+\subsection{6.4. Quy trình kiểm tra chất lượng theo phương pháp lấy mẫu thống kê}
+
+\subsubsection{6.4.1. Công thức và bài toán tính kích cỡ mẫu thống kê}
+
+Để kiểm định khách quan lô hàng 2.000 cuốn tài liệu khi xuất xưởng mà không cần kiểm tra toàn bộ 100\% sản phẩm, dự án áp dụng công thức xác định kích cỡ mẫu thống kê:
+
+\begin{equation}
+n = 0,25 \times \left(\frac{Z}{e}\right)^2
+\end{equation}
+
+Trong đó, $Z$ là hệ số tra bảng tương ứng với mức độ tin cậy của phép lấy mẫu (theo bảng chuẩn trong quản lý chất lượng: độ tin cậy 80\% ứng với $Z = 1,281$; độ tin cậy 90\% ứng với $Z = 1,645$; độ tin cậy 95\% ứng với $Z = 1,960$). Dự án lựa chọn mức độ tin cậy 95\% ($Z = 1,960$) và biên độ sai số chấp nhận được là $e = 5\% = 0,05$. Thay số vào công thức:
+
+\begin{equation}
+n = 0,25 \times \left(\frac{1,960}{0,05}\right)^2 = 0,25 \times (39,2)^2 = 0,25 \times 1.536,64 = 384,16
+\end{equation}
+
+Làm tròn theo quy chuẩn thống kê, kích cỡ mẫu kiểm tra chất lượng là \textbf{$n = 384\text{ cuốn}$}.
+
+\subsubsection{6.4.2. Quy trình rút mẫu phân tầng và ngưỡng chấp nhận nghiệm thu}
+
+Khi nhà thầu giao 2.000 cuốn đóng trong 40 thùng giấy tiêu chuẩn (50 cuốn/thùng), Tiểu ban Kiểm định tiến hành rút mẫu phân tầng ngẫu nhiên bằng cách lấy từ mỗi thùng từ 9 đến 10 cuốn ở cả ba lớp (trên, giữa, đáy thùng) cho đủ 384 cuốn mẫu.
+
+Trên 384 cuốn mẫu, nhóm kiểm định đo kích thước cạnh xén (yêu cầu độ lệch chuẩn $\sigma \le 0,5\text{ mm}$, nằm trong giới hạn kiểm soát $\pm 3\sigma$), kiểm tra thứ tự trang từ trang 1 đến trang 80, thử nghiệm mở phẳng $180^\circ$ kiểm tra keo gáy và đối chiếu màu sắc với bản bông đã niêm phong.
+
+Quy tắc nghiệm thu lô hàng được ấn định theo ba mức cụ thể:
+\begin{itemize}
+    \item Nếu số cuốn lỗi trong mẫu 384 cuốn từ 1 cuốn trở xuống (tỷ lệ lỗi $\le 0,26\%$), lô hàng 2.000 cuốn đạt yêu cầu và được ký biên bản nghiệm thu;
+    \item Nếu phát hiện từ 2 đến 4 cuốn lỗi, nhà thầu phải rà soát lại toàn bộ 40 thùng hàng và in bù đổi mới các cuốn lỗi trong vòng 48 giờ;
+    \item Nếu phát hiện từ 5 cuốn lỗi trở lên (tỷ lệ lỗi $> 1,30\%$), Hội đồng nghiệm thu từ chối tiếp nhận và yêu cầu nhà thầu tái sản xuất toàn bộ lô hàng bằng kinh phí của nhà thầu.
+\end{itemize}
+
+\subsection{6.5. Cơ cấu chi phí chất lượng của dự án}
+
+Từ bảng dự toán ngân sách tại Chương 5 (Bảng 5.1), các khoản chi phục vụ trực tiếp cho công tác quản lý chất lượng được phân nhóm theo năm cấu phần chi phí chất lượng tại Bảng 6.1 (đảm bảo truy vết 1-1 theo mã công việc và không tính trùng giữa các nhóm):
+
+\begin{table}[htbp]
+\centering
+\caption{Phân tích năm nhóm chi phí chất lượng của dự án}
+\label{tab:chi_phi_chat_luong}
+\small
+\setstretch{1.15}
+\begin{tabularx}{\textwidth}{|p{3.2cm}|Y|Y|r|c|}
+\hline
+\textbf{Nhóm chi phí} & \textbf{Nội hàm quản lý} & \textbf{Các gói công việc cấu thành (Bảng 5.1)} & \textbf{Chi phí (đ)} & \textbf{Tỷ trọng} \\
+\hline
+\textbf{1. Chi phí ngăn ngừa} & Hoạch định và thiết kế chuẩn đầu vào nhằm ngăn ngừa sai lỗi ngay từ đầu. & Khảo sát thực tế, phân tích dữ liệu, xây dựng và phê duyệt khung đề cương (\texttt{1.1a, 1.1b, 1.2, 1.3a, 1.3b}). & \textbf{12.500.000} & 6,76\% \\
+\hline
+\textbf{2. Chi phí đánh giá} & Phản biện, thẩm định chuyên môn và duyệt mẫu kỹ thuật đánh giá sự phù hợp. & Phản biện độc lập (\texttt{3.1}: 2,4 tr); họp Hội đồng thẩm định (\texttt{3.2a, 3.2b}: 3,6 tr); duyệt bản bông (\texttt{4.3}: 1,0 tr); họp nghiệm thu (\texttt{5.2}: 2,5 tr). & \textbf{9.500.000} & 5,14\% \\
+\hline
+\textbf{3. Chi phí sai sót bên trong} & Rà soát, chỉnh sửa và khắc phục các khiếm khuyết nội dung trước xuất bản. & Biên tập đồng nhất văn phong 80 trang bản thảo 1 (\texttt{2.5} phần biên tập: 6,0 tr); chỉnh sửa sau thẩm định (\texttt{3.4}: 8,0 tr). & \textbf{14.000.000} & 7,57\% \\
+\hline
+\textbf{4. Chi phí sai sót bên ngoài} & Thu hồi, in đền bù nếu sản phẩm đã bàn giao phát sinh lỗi nghiêm trọng. & Kiểm soát tuyệt đối qua chốt duyệt bản bông và kiểm định mẫu thống kê tại kho trước khi nhận. & \textbf{0} & 0,00\% \\
+\hline
+\textbf{5. Chi phí thử nghiệm, đo lường} & Khảo nghiệm thực tế trên người dùng và đo đạc mẫu kiểm định thống kê. & Đọc thử nghiệm với học sinh, giáo viên (\texttt{3.3}: 3,2 tr); đo đạc kiểm định 384 cuốn tại kho (\texttt{5.1}: 2,0 tr). & \textbf{5.200.000} & 2,81\% \\
+\hline
+\multicolumn{3}{|l|}{\textbf{Tổng cộng chi phí chất lượng toàn diện của dự án}} & \textbf{41.200.000} & \textbf{22,27\%} \\
+\hline
+\end{tabularx}
+\end{table}
+
+Tổng chi phí chất lượng của dự án là \textbf{41.200.000 đồng}, chiếm \textbf{22,27\%} tổng ngân sách 185.000.000 đồng. Việc phân bổ nguồn lực thỏa đáng cho khâu ngăn ngừa, đánh giá và thử nghiệm đo lường (tổng cộng 27.200.000 đồng) cùng khâu biên tập, hiệu đính nội bộ (14.000.000 đồng) giúp dự án loại bỏ hoàn toàn rủi ro phát sinh chi phí sai sót bên ngoài sau khi bàn giao ấn phẩm cho các nhà trường.
+

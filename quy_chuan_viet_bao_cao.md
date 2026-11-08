@@ -163,4 +163,7 @@ Trước khi hoàn tất bài báo cáo, hãy tự kiểm tra qua Bảng Checkli
 
 ---
 
+kiểm tra vấn đề lặp ý và cách nói lòng vòng vòng vo lặp ý của AI, nhưng chưa sửa ngay. lỗi đó khiến văn bản đọc không thoát ý, bị tù và dài dòng không cần thiết.
+kiểm tra số liệu hay các con số trong báo cáo
+
 *Tài liệu này được lưu giữ làm Quy chuẩn dùng chung cho tất cả các dự án báo cáo nghiên cứu và tiểu luận môn học.*
